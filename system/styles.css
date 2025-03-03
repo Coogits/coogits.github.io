@@ -415,3 +415,31 @@ th:empty, td:empty {
 #searchResults li:hover {
   background-color: #f9f9f9;
 }
+
+
+
+
+
+
+
+
+
+/* For .header-block with class h1 */
+.header-block.h1 p {
+  font-size: 20px; /* Font size for paragraph inside h1 block */
+}
+
+/* For .header-block with class h2 */
+.header-block.h2 p {
+  font-size: 18px; /* Font size for paragraph inside h1 block */
+}
+
+/* For .header-block with class h3 */
+.header-block.h3 p {
+  font-size: 16px; /* Font size for paragraph inside h1 block */
+}
+
+/* For .header-block with class h3 */
+.header-block.h4 p {
+  font-size: 14px; /* Font size for paragraph inside h1 block */
+}
