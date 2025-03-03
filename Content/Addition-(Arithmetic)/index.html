@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Addition (Arithmetic)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Arithmetic/">Arithmetic</a> &gt; <a href="/Content/Arithmetic-Operator/">Arithmetic Operator</a></p>
+<div class="header-block h1">
+<h1 id="addition">Addition</h1>
+<p><strong>Addition</strong> is the arithmetical operation of combining two or more numbers to obtain their total or sum. It is denoted by the plus sign +.</p>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$a,b\quad$ <strong>Addends</strong>:  the numbers or values being added (e.g. 1, 2, 45, variable...).</li>
+<li>$c\quad$ <strong>Sum</strong>: the result of the addition.</li>
+<li>$i\quad$ <strong>Index</strong>: variable used in summation to iterate through terms.</li>
+<li>$\sum\quad$ <a href="/Content/Summation-(Arithmetic)/">Summation (Arithmetic)</a></li>
+<li>$i=0\quad$ <strong>Starting index</strong> in summation.</li>
+<li>$n\quad$ <strong>End index</strong> in summation.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="notation">Notation</h3>
+<ul>
+<li><strong>Basic Form</strong>:
+Addition of two numbers is expressed as: $$a+b=c$$</li>
+<li><strong>Summation</strong>:<br />
+Represents the addition of multiple terms. $$\displaystyle\sum_{i=0}^na_i=a_0+a_1+\ldots+a_n$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="properties">Properties</h3>
+<ul>
+<li><strong>Commutative</strong>:<br />
+The order of addition does not change the sum: $$a+b=b+a$$</li>
+<li><strong>Associative Property</strong>:<br />
+Grouping does not affect the sum: $$(a+b)+c=a+(b+c)$$</li>
+<li><strong>Identity Element</strong>:<br />
+Adding zero to any number leaves it unchanged: $$a+0=a$$</li>
+<li><strong>Parity Rule</strong> (Even/Odd Sum Property):
+<ul>
+<li>The sum of two even numbers is <strong>even</strong>.</li>
+<li>The sum of two odd numbers is <strong>even</strong>.</li>
+<li>The sum of an even and an odd number is <strong>odd</strong>.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="examples">Examples</h3>
+<p><label for="num1">Number 1: </label>
+<input type="number" id="num1"><br><br>
+<label for="num2">Number 2: </label>
+<input type="number" id="num2"><br><br>
+<button onclick="addNumbers()">Add</button></p>
+<p>Result: <span id="result">0</span></p>
+<script>
+	function addNumbers() {
+		// Get values from input fields
+		var num1 = parseFloat(document.getElementById('num1').value);
+		var num2 = parseFloat(document.getElementById('num2').value);
+		// Add the numbers
+		var sum = num1 + num2;
+		// Display the result
+		document.getElementById('result').textContent = sum;
+	}
+</script>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#addition">Addition</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#notation">Notation</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#properties">Properties</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#examples">Examples</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3x3 System of Linear Equations</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Algebra/">Algebra</a> &gt; <a href="/Content/Linear-Algebra/">Linear Algebra</a> &gt;  <a href="/Content/System-of-Linear-Equations/">System of Linear Equations</a></p>
+<div class="header-block h1">
+<h1 id="3x3-system-of-linear-equations">3x3 System of Linear Equations</h1>
+<p>A <strong>3x3 System of Linear Equations</strong> consists in a system of three linear equations with three variables.</p>
+<div class="header-block h3">
+<h3 id="key-points">Key Points</h3>
+<ul>
+<li>**Consists of three <a href="/Content/Linear-Equation/">linear equations</a> with three variables.</li>
+<li><strong>Only first-degree terms</strong> (no exponents, products of variables, or non-linear functions).</li>
+<li><strong>Exactly three equations and three unknowns</strong>, forming a solvable system under most conditions.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$x,y\quad$ are <strong>variables</strong>.</li>
+<li>$a_1,b_1,c_1\quad$  are <strong>coefficient</strong> of the first equation</li>
+<li>$a_2,b_2,c_2\quad$  are <strong>coefficient</strong> of the second equation</li>
+<li>$a_3,b_3,c_3\quad$  are <strong>coefficient</strong> of the third equation</li>
+<li>$d_1,d_2,d_3\quad$ are the <strong>constants</strong></li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="notation">Notation</h3>
+<ul>
+<li><strong>3x3 System of Linear Equations</strong>:<br />
+It can be written in the general form:  $$\begin{cases} a_1x+b_1y+c_1z=d_1 \\ a_2x+b_2y+c_2z=d_2 \\ a_3x+b_3y+c_3z=d_3\end{cases}$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="solutions">Solutions</h3>
+<p><strong>Types of Solutions</strong>:</p>
+<ul>
+<li><strong>Unique Solution</strong>:<br />
+The system has exactly one solution, where the lines represented by the equations intersect at a single point.</li>
+<li><strong>Infinitely Many Solutions</strong>:<br />
+The two equations are dependent (represent the same line), and every point on the line is a solution.</li>
+<li><strong>No Solution</strong>:<br />
+The two equations are inconsistent (represent parallel lines that never intersect), and there is no point of intersection.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="solving">Solving</h3>
+<p><strong>Methods of Solving</strong>:</p>
+<ul>
+<li><strong>Graphically</strong>:<br />
+Plot both equations on a graph and find the point of intersection (if any).</li>
+<li><strong><a href="/Content/Substitution-Method-(System-or-Linear-Equations)/">Substitution</a></strong>:<br />
+Solve one equation for one variable and substitute into the second equation.</li>
+<li><strong>Elimination</strong>:<br />
+Add or subtract the equations to eliminate one variable, then solve for the other.</li>
+<li><strong>Matrix Method</strong>:<br />
+Represent the system as a matrix and solve using Gaussian elimination or matrix inversion.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a href="/Content/2x2-System-of-Linear-Equations/">2x2 System of Linear Equations</a></li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#3x3-system-of-linear-equations">3x3 System of Linear Equations</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-points">Key Points</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#notation">Notation</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#solutions">Solutions</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#solving">Solving</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#see-also">See Also</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>
