@@ -1,0 +1,83 @@
+/* General styling for callouts */
+.callout {
+    padding: 6px 10px;
+    margin: 8px 0;
+    border-left: 4px solid currentColor;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Maintain wide left indentation but reduce vertical gaps */
+.callout blockquote {
+    margin-left: 20px;
+    /* Keep indentation standard */
+    margin-top: 2px;
+    /* Reduce vertical spacing */
+    margin-bottom: 2px;
+    /* Reduce vertical spacing */
+    padding: 4px 8px;
+    /* Less padding for compactness */
+}
+
+/* Reduce paragraph spacing inside callouts */
+.callout p {
+    margin: 2px 0;
+}
+
+/* Adjust heading sizes inside callouts */
+.callout p strong {
+    font-size: 1em;
+}
+
+.callout.formula {
+    border-left-color: #428bca;
+    background-color: #e7f3ff;
+}
+
+.callout.success {
+    border-left-color: #5cb85c;
+    background-color: #dff0d8;
+}
+
+/* Style the first-level 'abstract' callout headers */
+.callout.abstract > p:first-of-type {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 3px solid red;
+    padding-bottom: 5px;
+}
+
+/* Style for first-level 'abstract' callout */
+.callout.abstract > p:first-of-type {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 3px solid red;
+    padding-bottom: 5px;
+}
+
+/* Style for first-level 'success' callout */
+.callout.success > p:first-of-type {
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    padding-left: 10px;
+}
+
+/* Style for first-level 'classx' callout */
+.callout.classx > p:first-of-type {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: blue;
+    padding-left: 10px;
+}
+
+/* Reset styling ONLY for nested callouts that have the SAME class as their parent */
+.callout.success > .callout.success > p:first-of-type,
+.callout.abstract > .callout.abstract > p:first-of-type,
+.callout.classx > .callout.classx > p:first-of-type {
+    font-size: 1em;
+    font-weight: normal;
+    color: black;
+    padding-left: 0;
+}

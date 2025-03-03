@@ -1,0 +1,92 @@
+pre code {
+    font-size: 14px; /* Increase or decrease font size */
+    padding: 1px; /* Adjust padding inside the code block */
+}
+
+/* Positioning for the label */
+pre code[class*="language-"] {
+    position: relative;
+    display: block;
+    padding-top: 2px;
+}
+
+pre code[class*="language-"]::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 1px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Manually set the language label */
+pre code.language-c::before {
+    content: "C";
+}
+
+pre code.language-cs::before {
+    content: "C#";
+}
+
+pre code.language-cpp::before {
+    content: "C++";
+}
+
+pre code.language-java::before {
+    content: "Java";
+}
+
+pre code.language-python::before {
+    content: "Python";
+}
+
+pre code.language-javascript::before {
+    content: "JavaScript";
+}
+
+pre code.language-rust::before {
+    content: "Rust";
+}
+
+pre code.language-swift::before {
+    content: "Swift";
+}
+
+pre code.language-go::before {
+    content: "Go";
+}
+
+pre code.language-kotlin::before {
+    content: "Kotlin";
+}
+
+pre code.language-php::before {
+    content: "PHP";
+}
+
+pre code.language-perl::before {
+    content: "Perl";
+}
+
+pre code.language-ruby::before {
+    content: "Ruby";
+}
+
+pre code.language-lua::before {
+    content: "Lua";
+}
+
+pre code.language-fortran::before {
+    content: "Fortran";
+}
+
+pre code.language-sh::before {
+    content: "Shell";
+}
+
+/* Add more languages as needed */
