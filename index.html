@@ -14,108 +14,7 @@
         <script id="Prism-script" async src="/system/prism.js"></script>
         <link href="/system/prism.css" rel="stylesheet" />
         
-        <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-
-    mermaid.initialize({
-        startOnLoad: true,
-        themeVariables: {
-            fontSize: '12px',
-            nodePadding: '1px',
-            edgeSpacing: '1px',
-            nodeSpacing: '1px',
-            rankSpacing: '1px',
-            clusterBkg: '#d0d0d0',
-            clusterBorder: '#505050',
-        },
-        flowchart: {
-            curve: 'linear',
-            nodePadding: '1px',
-            edgeSpacing: '1px',
-            nodeSpacing: '1px',
-            rankSpacing: '1px'
-        }
-    });
-
-    function activateLinks() {
-        setTimeout(() => {
-            document.querySelectorAll('g[class*="link:"]').forEach(node => {
-                node.classList.forEach(className => {
-                    if (className.startsWith('link:')) {
-                        let url = className.split(':')[1]; // Extract URL
-                        if (!url) return;
-
-                        // Ensure internal links are handled properly
-                        if (!url.startsWith('http') && !url.startsWith('/')) {
-                            url = '/' + url; // Force internal paths to start with '/'
-                        }
-
-                        if (url === "/Content/index") {
-                            url = "/"; // Handle index separately
-                        }
-
-                        // Prevent multiple event listeners
-                        if (!node.dataset.linkActivated) {
-                            node.dataset.linkActivated = "true";
-                            node.style.cursor = "pointer";
-
-                            node.addEventListener('mousedown', (event) => {
-                                if (event.button === 0) {
-                                    window.location.href = url; // Left click  same tab
-                                } else if (event.button === 1) {
-                                    event.preventDefault();
-                                    window.open(url, '_blank'); // Middle click  new tab
-                                }
-                            });
-
-                            // Handle touch events (for mobile)
-                            node.addEventListener('touchstart', () => {
-                                window.location.href = url;
-                            });
-                        }
-                    }
-                });
-            });
-            // Internal links (links with 'internal-link' class)
-            document.querySelectorAll('g[class*="internal-link"]').forEach(node => {
-                node.classList.forEach(className => {
-                    if (className === 'internal-link') {
-                        const label = node.querySelector('text') ? node.querySelector('text').textContent : '';
-                        let internalUrl = `/Content/${label.replace(/\s+/g, "_")}/`; // Replace spaces with underscores
-                        if (label === "Home") {
-                            internalUrl = "/";
-                        }
-                        if (!node.dataset.linkActivated) {
-                            node.dataset.linkActivated = "true";
-                            node.style.cursor = "pointer";
-                            node.addEventListener('mousedown', (event) => {
-                                // Handle left click (opens in same tab)
-                                if (event.button === 0) {
-                                    console.log(`Opening internal link: ${internalUrl}`);
-                                    window.location.href = internalUrl; // Open in same tab
-                                }
-                                // Handle middle click (opens in new tab)
-                                if (event.button === 1) {
-                                    console.log(`Opening internal link: ${internalUrl}`);
-                                    window.open(internalUrl, '_blank'); // Open in new tab
-                                }
-                            });
-                        }
-                    }
-                });
-            });
-        }, 500); // Delay to ensure Mermaid rendering is done
-
-    }
-
-    function renderMermaid() {
-        mermaid.run().then(() => {
-            activateLinks();
-        });
-    }
-
-    window.addEventListener('load', renderMermaid);
-</script>
+        <script type="module" src="/system/mermaid-setup.js"></script>
         
         <script src="/system/search.js"></script>
 
@@ -140,11 +39,11 @@
                 </button>
                 <div class="dropdown-content">
                     <a href="/Content/Mathematics/">Mathematics</a>
-                    <a href="/Content/Discrete_Mathematics/">Discrete Math</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
                     <a href="/Content/Arithmetic/">Arithmetic</a>
                     <a href="/Content/Algebra/">Algebra</a>
                     <a href="/Content/Geometry/">Geometry</a>
-                    <a href="/Content/Analysis_1/">Analysis 1</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -153,7 +52,7 @@
                 </button>
                 <div class="dropdown-content">
                     <a href="/Content/Physics/">Physics</a>
-                    <a href="/Content/Classical_Physics/">Classical Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -161,7 +60,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="/Content/Computer_Science/">Computer Science</a>
+                    <a href="/Content/Computer-Science/">Computer Science</a>
                     <a href="/Content/Hardware/">Hardware</a>
                     <a href="/Content/Software/">Software</a>
                     <a href="/Content/Programming/">Programming</a>
@@ -248,24 +147,24 @@ mindmap
 <div class="header-block h4">
 <h4 id="mathematics"><a href="/Content/Mathematics/">Mathematics</a></h4>
 <ul>
-<li><a href="/Content/Set_Theory/">Set Theory</a></li>
+<li><a href="/Content/Set-Theory/">Set Theory</a></li>
 <li><a href="/Content/Arithmetic/">Arithmetic</a></li>
 <li><a href="/Content/Algebra/">Algebra</a></li>
 <li><a href="/Content/Geometry/">Geometry</a></li>
-<li><a href="/Content/Analysis_1/">Analysis 1</a></li>
+<li><a href="/Content/Analysis-1/">Analysis 1</a></li>
 <li><a href="/Content/Calculus/">Calculus</a></li>
 </ul>
 </div>
 <div class="header-block h4">
 <h4 id="physics"><a href="/Content/Physics/">Physics</a></h4>
 <ul>
-<li><a href="/Content/Physical_Quantity/">Physical Quantity</a></li>
-<li><a href="/Content/Physical_System/">Physical System</a></li>
-<li><a href="/Content/Classical_Physics/">Classical Physics</a></li>
+<li><a href="/Content/Physical-Quantity/">Physical Quantity</a></li>
+<li><a href="/Content/Physical-System/">Physical System</a></li>
+<li><a href="/Content/Classical-Physics/">Classical Physics</a></li>
 </ul>
 </div>
 <div class="header-block h4">
-<h4 id="computer-science"><a href="/Content/Computer_Science/">Computer Science</a></h4>
+<h4 id="computer-science"><a href="/Content/Computer-Science/">Computer Science</a></h4>
 <ul>
 <li><a href="/Content/Hardware/">Hardware</a></li>
 <li><a href="/Content/Software/">Software</a></li>
