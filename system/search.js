@@ -20,7 +20,7 @@ let jsonData = {};
 
 // Load the JSON data from the file when the page loads
 window.onload = function() {
-    fetch('/final_output.json')
+    fetch('/system/search.json')
         .then(response => response.json())
         .then(data => {
             jsonData = data; // Store the JSON data into the variable
