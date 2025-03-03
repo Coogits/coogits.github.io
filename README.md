@@ -24,5 +24,5 @@ This repository serves as the source for my website. The content is stored in HT
 
 ## License
 
-This project is licensed under All Rights Reserved unless otherwise specified. However, specific code snippets or tools may be released under a separate open-source license in the future.
+This project is licensed under All Rights Reserved, except where explicitly stated otherwise.
 
