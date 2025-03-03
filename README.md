@@ -20,7 +20,7 @@ This repository serves as the source for my website. The content is stored in HT
 - Enhanced styling and layouts.
 - More interactive features for mathematical visualization.
 - Expanded content coverage.
-- Possible release of the Markdown-to-HTML conversion software for public use.
+- Potential release of specific code components for public use.
 
 ## License
 
