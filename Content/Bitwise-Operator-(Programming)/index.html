@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bitwise Operator (Programming)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a> &gt; <a href="/Content/Operator-(Programming)/">Operator (Programming)</a></p>
+<div class="header-block h1">
+<h1 id="bitwise-operator--programming">Bitwise Operator (Programming)</h1>
+<p>A <strong>bitwise operator</strong> is an operator that manipulates individual bits within binary numbers. These operators are fundamental in low-level programming tasks such as <strong>bit manipulation, flag management, data compression, cryptography, and performance optimization</strong>.</p>
+<div class="header-block h3">
+<h3 id="core">Core</h3>
+<ul>
+<li><a href="/Content/Boolean-Type-(Programming)/">Boolean Type (Programming)</a></li>
+<li><a href="/Content/Boolean-Algebra/">Boolean Algebra</a></li>
+<li><a href="/Content/Binary-Digit-(Bit)/">Binary Digit (Bit)</a></li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="common-bitwise-operators">Common Bitwise Operators</h3>
+<div class="header-block h4">
+<h4 id="and">And</h4>
+<ul>
+<li><strong>Bitwise AND (<code>&amp;</code>)</strong></li>
+<li><strong>Rule</strong>: <code>1 &amp; 1 = 1</code>, otherwise <code>0</code></li>
+<li><strong>Example</strong></li>
+</ul>
+<pre><code class="language-c">  1100 (12) 
+&amp; 1010 (10) 
+------------
+  1000 (8)
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="or">OR</h4>
+<ul>
+<li><strong>Bitwise OR (<code>|</code>)</strong></li>
+<li><strong>Rule</strong>: <code>1 | 0 = 1</code>, <code>1 | 1 = 1</code>, <code>0 | 0 = 0</code></li>
+<li><strong>Example</strong>:</li>
+</ul>
+<pre><code class="language-c">  1100 (12) 
+| 1010 (10) 
+------------
+  1110 (14)
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="not">NOT</h4>
+<ul>
+<li><strong>Bitwise NOT (<code>~</code>)</strong></li>
+<li><strong>Rule</strong>: Flips each bit (<code>0</code> → <code>1</code>, <code>1</code> → <code>0</code>)</li>
+<li><strong>Example</strong> (8-bit representation):</li>
+</ul>
+<pre><code class="language-c">~ 1100 (12)
+------------
+  0011 (-13 in Two’s Complement)
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="xor">XOR</h4>
+<ul>
+<li><strong>Bitwise XOR (<code>^</code>)</strong></li>
+<li><strong>Rule</strong>: <code>1 ^ 1 = 0</code>, <code>0 ^ 0 = 0</code>, <code>1 ^ 0 = 1</code></li>
+<li><strong>Example</strong></li>
+</ul>
+<pre><code class="language-c">  1100 (12) 
+^ 1010 (10) 
+------------
+  0110 (6)
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="left-shift">Left Shift</h4>
+<ul>
+<li><strong>Left Shift (<code>&lt;&lt;</code>)</strong></li>
+<li><strong>Rule</strong>: <code>x &lt;&lt; n</code> shifts bits left by <code>n</code> positions (multiplies by <code>2^n</code>)</li>
+<li><strong>Example</strong>:</li>
+</ul>
+<pre><code class="language-c">00001100 (12)
+   &lt;&lt; 2
+------------
+00110000 (48)
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="right-shift">Right Shift</h4>
+<ul>
+<li><strong>Right Shift (<code>&gt;&gt;</code>)</strong></li>
+<li><strong>Rule</strong>: <code>x &gt;&gt; n</code> shifts bits right by <code>n</code> positions (divides by <code>2^n</code>)</li>
+<li><strong>Example</strong>:</li>
+</ul>
+<pre><code class="language-c">00001100 (12)
+.   &gt;&gt; 2
+------------
+00000011 (3)
+</code></pre>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="summary">Summary</h3>
+<p><strong>Common Bitwise Operators:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AND</strong></td>
+<td><code>&amp;</code></td>
+<td>Performs a bitwise AND operation, setting each bit to <code>1</code> only if both corresponding bits are <code>1</code>.</td>
+</tr>
+<tr>
+<td><strong>OR</strong></td>
+<td>`</td>
+<td>`</td>
+</tr>
+<tr>
+<td><strong>NOT</strong></td>
+<td><code>~</code></td>
+<td>Inverts each bit (0 becomes 1, 1 becomes 0), also known as <strong>bitwise negation</strong>.</td>
+</tr>
+<tr>
+<td><strong>XOR</strong></td>
+<td><code>^</code></td>
+<td>Performs a bitwise exclusive OR, setting each bit to <code>1</code> if the corresponding bits are different.</td>
+</tr>
+<tr>
+<td><strong>Left Shift</strong></td>
+<td><code>&lt;&lt;</code></td>
+<td>Shifts bits to the left, introducing zeros from the right, effectively multiplying by powers of 2.</td>
+</tr>
+<tr>
+<td><strong>Right Shift</strong></td>
+<td><code>&gt;&gt;</code></td>
+<td>Shifts bits to the right. Behavior depends on whether it is <strong>logical (zero-fill)</strong> or <strong>arithmetic (sign-preserving)</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#bitwise-operator--programming">Bitwise Operator (Programming)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#core">Core</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#common-bitwise-operators">Common Bitwise Operators</a></li>
+<ul>
+<li class="toc-level-4"><a href="#and">And</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#or">OR</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#not">NOT</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#xor">XOR</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#left-shift">Left Shift</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#right-shift">Right Shift</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#summary">Summary</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

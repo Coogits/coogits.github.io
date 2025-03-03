@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Right Triangle</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Geometry/">Geometry</a> &gt; <a href="/Content/Euclidean-Geometry/">Euclidean Geometry</a> &gt;  <a href="/Content/Plane-Geometry/">Plane Geometry</a> &gt; <a href="/Content/Triangle/">Triangle</a></p>
+<div class="header-block h1">
+<h1 id="right-triangle">Right Triangle</h1>
+<p><a href="https://www.desmos.com/calculator/nadwphhswu" target="_blank" rel="noopener noreferrer"> <img src="http://localhost/_media/Right_Triangle.svg" style="width: 250px; float: right; margin-left: 10px;" /> </a>
+A <strong>right triangle</strong> (or <strong>right-angled triangle</strong>) is a triangle that has one of its angles measuring <strong>90 degrees</strong> (a right angle). The side opposite the right angle is called the <strong>hypotenuse</strong>, which is the longest side of the triangle. The other two sides, which form the right angle, are called the <strong>legs</strong>.</p>
+<p><strong>In the image</strong>:<br />
+A right triangle; <strong>Click on the image to interact</strong></p>
+<br clear="both" />
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$2p\quad$ <a href="/Content/Perimeter-(Geometry)/">Perimeter (Geometry)</a></li>
+<li>$a\quad$ <strong>Leg</strong> opposite to angle $\alpha$ and adjacent to  $\beta$</li>
+<li>$b\quad$ <strong>Leg</strong> adjacent to $\alpha$ and opposite to $\beta$</li>
+<li>$c\quad$ <strong>hypotenuse</strong>, the longest side</li>
+<li>$\alpha\quad$ <a href="/Content/Angle-(Trigonometry)/">Angle (Trigonometry)</a> opposite to leg $a$ and adjacent to $b$</li>
+<li>$\beta\quad$ <a href="/Content/Angle-(Trigonometry)/">Angle (Trigonometry)</a> adjacent to $a$ and opposite to $b$</li>
+<li>$\gamma\quad$ <strong>Right angle</strong>, always $90^\circ$, opposite to the hypotenuse $c$</li>
+<li>$\mathcal{A}\quad$ <a href="/Content/Area-(Plane-Geometry)/">Area (Plane Geometry)</a></li>
+<li>$R\quad$ <strong>Circumradius</strong> the radius of the circumscribed circle.</li>
+<li>$r\quad$ <strong>Inradius</strong> the radius of the inscribed circle.</li>
+<li>$m_c\quad$ <strong>Median to the Hypotenuse</strong>, half of the hypotenuse.</li>
+<li>$\sin,\cos,\tan\quad$ <a href="/Content/Trigonometric-Function/">Trigonometric Function</a></li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="formulas">Formulas</h3>
+<ul>
+<li><strong>Perimeter</strong>:
+The sum of the sides:  $$2p=a+b+c$$</li>
+<li><strong>Area</strong>:
+Half the product of the legs: $$\mathcal{A}=\cfrac{ab}{2}$$</li>
+<li><strong>Height</strong>:<br />
+The altitude from the right angle to the hypotenuse:  $$h=\cfrac{ab}{c}$$</li>
+<li><strong>Circumradius and Median to the Hypotenuse</strong>:<br />
+The circumradius and the median to the hypotenuse are equal: $$R=m_c=\cfrac{c}{2}$$</li>
+<li><strong>Inradius (for right triangles)</strong>:<br />
+The radius of the inscribed circle:  $$r=\cfrac{a+b-c}{2}$$</li>
+<li><strong>Legs in terms of Hypotenuse and Angles</strong>:<br />
+Using trigonometric ratios:  $$\begin{align} \alpha=c\sin\alpha=c\cos\beta \\ b=c\sin\beta=c\cos\alpha\end{align}$$</li>
+<li><strong>Trigonometric Definitions</strong>:<br />
+Fundamental trigonometric ratios in a right triangle:  $$\begin{align} \sin\alpha=\cfrac{a}{c}\quad;\quad\cos\alpha=\cfrac{b}{c}\quad;\quad\tan\alpha=\cfrac{a}{b} \\ \sin\beta=\cfrac{b}{c}\quad;\quad\cos\beta=\cfrac{a}{c}\quad;\quad\tan\beta=\cfrac{b}{a} \end{align}$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="properties">Properties</h3>
+<ul>
+<li><strong>Angle Sum Property</strong>:<br />
+In a right triangle, the two non-right angles are always complementary.  $$\alpha+\beta=90^\circ$$</li>
+<li><strong><a href="/Content/Pythagorean-Theorem/">Pythagorean Theorem</a></strong>:<br />
+The square of the hypotenuse is equal to the sum of the squares of the legs.  $$c^2=a^2+b^2$$</li>
+<li><strong>Law of Sines (for right triangles)</strong>:<br />
+Relates side lengths to their opposite angles:  $$\cfrac{a}{\sin\alpha}=\cfrac{b}{\sin\beta}=c$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="formulary">Formulary</h3>
+<ul>
+<li><a href="/Content/Formulary-(Plane-Geometry)/#right-triangle">Formulary Right Triangle</a></li>
+</ul>
+<hr />
+<hr />
+<p>[[#^Area]]</p>
+<blockquote class="callout abstract">
+<p>Formulas</p>
+<blockquote class="callout success">
+<p><strong>Perimeter</strong>:</p>
+<blockquote class="callout success">
+<p>The sum of the sides:  $$2p=a+b+c$$</p>
+<p></p>
+</blockquote>
+</blockquote>
+<blockquote class="callout success">
+<p><strong>Area</strong>:</p>
+<blockquote class="callout success">
+<p>Half the product of the legs: $$\mathcal{A}=\cfrac{ab}{2}$$</p>
+<blockquote class="callout success">
+<p>$A\quad$ this is a nested test</p>
+<p></p>
+</blockquote>
+</blockquote>
+<blockquote class="callout success">
+<p>$\rho\quad$ this is another test</p>
+<p></p>
+</blockquote>
+</blockquote>
+<blockquote class="callout success">
+<p><strong>Height</strong>:</p>
+<blockquote class="callout success">
+<p>The altitude from the right angle to the hypotenuse:  $$h=\cfrac{ab}{c}$$</p>
+<p></p>
+</blockquote>
+</blockquote>
+<blockquote class="callout success">
+<p><strong>Circumradius and Median to the Hypotenuse</strong>:</p>
+<blockquote class="callout success">
+<p>The circumradius and the median to the hypotenuse are equal: $$R=m_c=\cfrac{c}{2}$$</p>
+<p></p>
+</blockquote>
+</blockquote>
+<blockquote class="callout success">
+<p><strong>Inradius (for right triangles)</strong>:</p>
+<blockquote class="callout success">
+<p>The radius of the inscribed circle:  $$r=\cfrac{a+b-c}{2}$$</p>
+<p></p>
+</blockquote>
+</blockquote>
+<blockquote class="callout success">
+<p><strong>Legs in terms of Hypotenuse and Angles</strong>:</p>
+<blockquote class="callout success">
+<p>Using trigonometric ratios <a href="/Content/Trigonometric-Function/">Trigonometric Function</a>:  $$\begin{align} \alpha=c\sin\alpha=c\cos\beta \\ b=c\sin\beta=c\cos\alpha\end{align}$$</p>
+<p></p>
+</blockquote>
+</blockquote>
+<blockquote class="callout success">
+<p><strong>Trigonometric Definitions</strong>:</p>
+<blockquote class="callout success">
+<p>Fundamental trigonometric ratios in a right triangle:  $$\begin{align} \sin\alpha=\cfrac{a}{c}\quad;\quad\cos\alpha=\cfrac{b}{c}\quad;\quad\tan\alpha=\cfrac{a}{b} \\ \sin\beta=\cfrac{b}{c}\quad;\quad\cos\beta=\cfrac{a}{c}\quad;\quad\tan\beta=\cfrac{b}{a} \end{align}$$</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote class="callout formula">
+<p>Formulas</p>
+<blockquote class="callout success">
+<p><strong>Perimeter</strong>:</p>
+<blockquote class="callout success">
+<p>this is not nested:  $$2p=a+b+c$$</p>
+<p></p>
+</blockquote>
+</blockquote>
+<blockquote class="callout formula">
+<p>nested 1</p>
+<blockquote class="callout formula">
+<p>nested 2</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote class="callout note">
+<p>hello 1</p>
+<blockquote class="callout note">
+<p>2 hello</p>
+<blockquote class="callout note">
+<p>3 hello</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote class="callout success">
+<p><strong>Perimeter</strong>:</p>
+<blockquote class="callout success">
+<p>The sum of the sides:  $$2p=a+b+c$$</p>
+</blockquote>
+</blockquote>
+<blockquote class="callout success">
+<p><strong>Area</strong>:</p>
+<blockquote class="callout success">
+<p>Half the product of the legs: $$\mathcal{A}=\cfrac{ab}{2}$$</p>
+<blockquote class="callout success">
+<p>$A\quad$ this is a nested test</p>
+<p></p>
+</blockquote>
+</blockquote>
+<blockquote class="callout success">
+<p>$\rho\quad$ this is another test</p>
+</blockquote>
+</blockquote>
+<blockquote class="callout success">
+<p><strong>Height</strong>:</p>
+<blockquote class="callout success">
+<p>The altitude from the right angle to the hypotenuse:  $$h=\cfrac{ab}{c}$$</p>
+</blockquote>
+</blockquote>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#right-triangle">Right Triangle</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#formulas">Formulas</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#properties">Properties</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#formulary">Formulary</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

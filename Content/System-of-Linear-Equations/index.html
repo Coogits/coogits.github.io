@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>System of Linear Equations</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Algebra/">Algebra</a> &gt; <a href="/Content/Linear-Algebra/">Linear Algebra</a></p>
+<div class="header-block h1">
+<h1 id="system-of-linear-equations">System of Linear Equations</h1>
+<p><strong>Systems of Linear Equations</strong> are collections of one or more <a href="/Content/Linear-Equation/">linear equations</a> involving the same set of variables. The goal is to find the values of the variables that satisfy all the equations simultaneously. These systems can have no solution, one solution, or infinitely many solutions, depending on the relationships between the equations.</p>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$a,b,c,d\quad$ <strong>coefficients</strong></li>
+<li>$x,y\quad$ <strong>variables</strong></li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="common-systems">Common Systems</h3>
+<p><strong>Common Systems of Linear Equations</strong>:</p>
+<ul>
+<li><strong><a href="/Content/2x2-System-of-Linear-Equations/">2x2 System of Linear Equations</a></strong>:<br />
+A system of two linear equations with two variables: $$\begin{cases} a_1x+b_1y=c_1 \\ a_2x+b_2y=c_2\end{cases}$$</li>
+<li><strong><a href="/Content/3x3-System-of-Linear-Equations/">3x3 System of Linear Equations</a></strong>:<br />
+A system of three linear equations with three variables:  $$\begin{cases} a_1x+b_1y+c_1z=d_1 \\ a_2x+b_2y+c_2z=d_2 \\ a_3x+b_3y+c_3z=d_3\end{cases}$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="types">Types</h3>
+<p><strong>Types of Systems</strong>:</p>
+<ul>
+<li><strong>Consistent</strong>:<br />
+The system has at least one solution.
+<ul>
+<li><strong>Independent</strong>: Exactly one solution exists.</li>
+<li><strong>Dependent</strong>: Infinitely many solutions exist, often represented as a family of solutions.</li>
+</ul>
+</li>
+<li><strong>Inconsistent</strong>:<br />
+The system has no solution, often when the equations contradict each other.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="solving">Solving</h3>
+<p><strong>Methods of Solving</strong>:</p>
+<ul>
+<li><strong>Graphically</strong>:<br />
+Plot both equations on a graph and find the point of intersection (if any).</li>
+<li><strong><a href="/Content/Substitution-Method-(System-or-Linear-Equations)/">Substitution</a></strong>:<br />
+Solve one equation for one variable and substitute into the second equation.</li>
+<li><strong>Elimination</strong>:<br />
+Add or subtract the equations to eliminate one variable, then solve for the other.</li>
+<li><strong>Matrix Method</strong>:<br />
+Represent the system as a matrix and solve using Gaussian elimination or matrix inversion.
+<ul>
+<li><strong>Cramer's Rule</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a href="/Content/Linear-Equation/">Linear Equation</a></li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#system-of-linear-equations">System of Linear Equations</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#common-systems">Common Systems</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#types">Types</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#solving">Solving</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#see-also">See Also</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

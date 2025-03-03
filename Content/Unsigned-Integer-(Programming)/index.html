@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unsigned Integer (Programming)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a> &gt; <a href="/Content/Identifier-(Programming)/">Identifier</a> &gt; <a href="/Content/Data-Type-(Programming)/">Type</a> &gt; <a href="/Content/Integer-(Programming)/">Integer</a></p>
+<div class="header-block h1">
+<h1 id="unsigned-integer--programming">Unsigned Integer (Programming)</h1>
+<p>An <strong>unsigned integer</strong> is a numeric data type that can represent only <strong>non-negative whole numbers</strong> (0 and positive values). Unlike signed integers, unsigned integers <strong>do not use a sign bit</strong>, allowing them to store a larger positive range for the same bit width.</p>
+<ul>
+<li><strong>Key Points</strong>
+<ul>
+<li><strong>Only stores non-negative values</strong> (0 and positive integers).</li>
+<li>Uses all bits to represent magnitude (no sign bit).</li>
+<li>Has a larger maximum value compared to its signed counterpart for the same bit width.</li>
+<li>Overflow occurs when exceeding the maximum value, often wrapping around to 0.</li>
+<li>Can be mathematically represented as a limited <a href="/Content/Whole-Number-Set/">Whole Number Set</a></li>
+</ul>
+</li>
+</ul>
+<div class="header-block h3">
+<h3 id="value-range">Value Range</h3>
+<ul>
+<li><strong>Unsigned Integer Value Range</strong>:<br />
+Since no bits are reserved for the sign (unlike signed integers), the range is <strong>twice</strong> that of a signed integer: $$2^{n}-1$$
+Explicitly:  $$\{0,1,\ldots,2^n-1\}$$
+where:
+<ul>
+<li>$n\quad$ is the total number of bits in the integer.</li>
+</ul>
+</li>
+</ul>
+<div class="header-block h4">
+<h4 id="common-sizes">Common Sizes</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Bit Width</strong></th>
+<th style="text-align:right"><strong>Minimum Value</strong></th>
+<th><strong>Maximum Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">8-bit</td>
+<td style="text-align:right">0</td>
+<td>255</td>
+</tr>
+<tr>
+<td style="text-align:center">16-bit</td>
+<td style="text-align:right">0</td>
+<td>65,535</td>
+</tr>
+<tr>
+<td style="text-align:center">32-bit</td>
+<td style="text-align:right">0</td>
+<td>4,294,967,295</td>
+</tr>
+<tr>
+<td style="text-align:center">64-bit</td>
+<td style="text-align:right">0</td>
+<td>18,446,744,073,709,551,615</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="special-cases">Special Cases</h3>
+<p>Some programming languages do <strong>not</strong> support unsigned integers explicitly, meaning all integers are signed by default. Examples include:</p>
+<ul>
+<li><strong>Python</strong>:<br />
+Due to it's dynamical-type nature, python don't handle data types directly, including unsigned integers.</li>
+<li><strong>JavaScript</strong>:<br />
+Uses <strong>floating-point (<code>Number</code> type)</strong> for all numbers, including unsigned integers. Introduces <strong><code>BigInt</code></strong> for true integer arithmetic.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="syntax">Syntax</h3>
+<pre><code class="language-c">unsigned int myUInt = 42;
+unsigned long myULong = 123456789UL;
+unsigned short myUShort = 32000;
+unsigned char myUByte = 255;
+</code></pre>
+<pre><code class="language-cpp">unsigned int myUInt = 42;
+unsigned long myULong = 123456789UL;
+unsigned short myUShort = 32000;
+</code></pre>
+<pre><code class="language-cs">uint myUInt = 42;
+ulong myULong = 123456789UL;
+ushort myUShort = 32000;
+byte myUByte = 255;
+</code></pre>
+<pre><code class="language-java">// Java does not have unsigned integers, except for methods like
+// `Integer.toUnsignedLong()` for treating signed numbers as unsigned.  
+</code></pre>
+<pre><code class="language-python"># Python does not have explicit unsigned integers, 
+# but `int` can store arbitrarily large values.
+</code></pre>
+<pre><code class="language-javascript">// JavaScript does not support explicit unsigned integers, 
+// but `BigInt` can be used for large numbers.
+let myBigUInt = 42n;  // BigInt type (suffix 'n' indicates BigInt)
+</code></pre>
+<pre><code class="language-go">var myUInt uint = 42
+var myULong uint64 = 123456789
+var myUShort uint16 = 32000
+</code></pre>
+<pre><code class="language-rust">let my_uint: u32 = 42;
+let my_ulong: u64 = 123456789;
+let my_ushort: u16 = 32000;
+let my_ubyte: u8 = 255;
+</code></pre>
+<pre><code class="language-swift">var myUInt: UInt = 42
+var myULong: UInt64 = 123456789
+var myUShort: UInt16 = 32000
+var myUByte: UInt8 = 255
+</code></pre>
+<pre><code class="language-kotlin">// Kotlin does not have built-in unsigned integers by default but provides them as an experimental feature in `Unsigned` types:
+val myUInt: UInt = 42u
+val myULong: ULong = 123456789uL
+val myUShort: UShort = 32000u
+val myUByte: UByte = 255u
+</code></pre>
+<pre><code class="language-php">// PHP does not support unsigned integers explicitly.
+
+</code></pre>
+<pre><code class="language-perl"># Perl uses signed integers only.
+ 
+</code></pre>
+<pre><code class="language-ruby"># Ruby does not support unsigned integers natively.
+
+</code></pre>
+<pre><code class="language-Lua">-- Lua does not differentiate between signed and unsigned integers
+
+</code></pre>
+<pre><code class="language-fortran">! No true unsigned type, but can define large integers
+integer(kind=8) :: myUInt = 42  
+</code></pre>
+<pre><code class="language-sh"># Bash and Awk treat numbers as signed, and there is no explicit unsigned integer support.
+</code></pre>
+</div>
+<div class="header-block h3">
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a href="/Content/Signed-Integer-(Programming)/">Signed Integer (Programming)</a></li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#unsigned-integer--programming">Unsigned Integer (Programming)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#value-range">Value Range</a></li>
+<ul>
+<li class="toc-level-4"><a href="#common-sizes">Common Sizes</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#special-cases">Special Cases</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#syntax">Syntax</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#see-also">See Also</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

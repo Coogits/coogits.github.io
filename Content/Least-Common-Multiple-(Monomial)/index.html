@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Least Common Multiple (Monomial)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Algebra/">Algebra</a> &gt; <a href="/Content/Elementary-Algebra/">Elementary Algebra</a> &gt; <a href="/Content/Polynomial/">Polynomial</a> &gt; <a href="/Content/Monomial/">Monomial</a></p>
+<div class="header-block h1">
+<h1 id="least-common-multiple--monomials">Least Common Multiple (Monomials)</h1>
+<p><strong>Least Common Multiple (Monomials)</strong>: <strong>(LCM)</strong> of two or more <a href="/Content/Monomial/">Monomials</a> is the smallest monomial (in terms of divisibility) that is divisible by all the given monomials.</p>
+<ul>
+<li><strong>Notation</strong>: Where $m_1,m_2$ are generic monomials $\begin{cases}m_1=c_1x^{a_1}y^{b_1}z^{d_1} \\ m_2 =c_2x^{a_2}y^{b_2}z^{d_2} \end{cases}\quad$.
+<ul>
+<li>$\mbox{LCM}(m_1,m_2)=\mbox{LCM}(c_1,c_2)\cdot x^{\mbox{max}(a_1-a_2)}\cdot y^{\mbox{max}(b_1-b_2)}\cdot z^{\mbox{max}(d_1-d_2)}$</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Symbols
+<ul>
+<li>$m_1\quad$ Generic monomials</li>
+<li>$m_2\quad$ Generic monomials</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>Steps to Determine the LCM Between Monomials</strong></p>
+<ol>
+<li><strong>Numerica Coefficient</strong>: Find the <a href="/Content/Least-Common-Multiple/">LCM</a> of the coefficients:<br />
+Identify the least common multiple of the numerical coefficients of the monomials.</li>
+<li><strong>Variables</strong>: Find the greater exponent for each variable:<br />
+For each variable common to all the monomials, take the greater exponent among them.</li>
+<li><strong>Result</strong>: Combine the results:<br />
+Assign it the highest exponent found among the monomials.</li>
+</ol>
+<hr />
+<p><strong>Example</strong></p>
+<ol>
+<li>$\mbox{LCM}(8x^4z^2,\quad 20x^3y^5z^3)$
+<ol>
+<li><strong>Numerica Coefficient</strong>: LCM of the coefficients
+<ul>
+<li>$\mbox{LCM}(8,20)=4$</li>
+</ul>
+</li>
+<li><strong>Variables</strong>: Greater exponents
+<ul>
+<li>For $x$:  $\mbox{min}(4,3)=4$</li>
+<li>For $y$:  $\mbox{min}(0,5)=5$</li>
+<li>For $z$:  $\mbox{min}(2,3)=3$</li>
+</ul>
+</li>
+<li>Combine the result:
+<ul>
+<li>$\mbox{GCD}(8x^4z^2,\quad 20x^3y^5z^3)=4x^4y^5z^3$</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<hr />
+<p><strong>Properties</strong>:</p>
+<ul>
+<li>The LCM of monomials is always another monomial.</li>
+<li>It includes every factor (variable or coefficient) needed to make all the given monomials divisors of the result.</li>
+</ul>
+
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#least-common-multiple--monomials">Least Common Multiple (Monomials)</a></li>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Computer Architecture</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Hardware/">Hardware</a></p>
+<div class="header-block h1">
+<h1 id="computer-architecture">Computer Architecture</h1>
+<p><strong>Computer Architecture</strong> is the discipline concerned with the design, structure, and behavior of computer systems. It involves both the theoretical and practical aspects of organizing the hardware to meet specific performance, energy, and cost requirements.</p>
+<div class="header-block h3">
+<h3 id="key-concepts">key Concepts</h3>
+<ul>
+<li>
+<p><a href="/Content/Instruction-Set-Architecture/">Instruction Set Architecture</a> (ISA):<br />
+The abstract model that defines the supported instructions, data types, registers, addressing modes, and memory models.</p>
+</li>
+<li>
+<p><a href="/Content/Microarchitecture/">Microarchitecture</a>:<br />
+The detailed organization of the processor's internal components (such as the ALU, control unit, registers, and cache) that implements the ISA.</p>
+</li>
+<li>
+<p>Architectural Models</p>
+<ul>
+<li><a href="/Content/Von-Neumann-Architecture/">Von Neumann Architecture</a></li>
+<li><a href="/Content/Harvard-Architecture/">Harvard Architecture</a></li>
+<li><a href="/Content/RISC-vs.-CISC-Architecture/">RISC vs. CISC Architecture</a></li>
+</ul>
+</li>
+<li>
+<p>Central Processing Unit CPU</p>
+<ul>
+<li>Arithmetic Logic Unit ALU</li>
+<li>Control Unit CU</li>
+</ul>
+</li>
+<li>
+<p>Memory Systems</p>
+<ul>
+<li>Random Access Memory RAM</li>
+<li>Read Only Memory ROM</li>
+<li><em>Memory Hierarchy</em> (including caches, virtual memory, etc.)</li>
+</ul>
+</li>
+<li>
+<p>Input Output and Interconnection</p>
+<ul>
+<li>Input and Output</li>
+<li>Bus</li>
+</ul>
+</li>
+</ul>
+<hr />
+<div class="mermaid">
+%%{init: {"flowchart": { "rankSpacing": 20,"nodeSpacing": 5, "nodePadding": 5 }}}%%
+flowchart LR
+  subgraph TOP[ ]
+    direction TB
+	CPU --> memory
+	memory --> CPU
+  end
+  in[In] --> TOP --> out[Out]
+  in --> memory --> memory
+</div>
+<iframe frameborder="0" style="width:70%;height:323px;" src="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1#R%3Cmxfile%3E%3Cdiagram%20name%3D%22Pagina-1%22%20id%3D%224kHbmd253Xjw2oig8k_9%22%3E3VvZctowFP0aHsvYktdHStNlJmkzpZ02femotoLVGosRokC%2FvjKWsBUT4hBAgqdYV4vlc6%2FOXUR6cDhZvmNomt3QFOc94KTLHnzTA8D1oCf%2BlJJVJQkjpxKMGUnloFowIv%2BwFKphc5LimTaQU5pzMtWFCS0KnHBNhhijC33YPc31t07RGLcEowTlbek3kvKskkYgrOXvMRln6s1uEFc9E6QGyy%2BZZSili4YIXvXgkFHKq6fJcojzEjyFSzXv7SO9m40xXPAuE%2F6EH3%2BkIy%2F7EH0l118GX4Yff%2F585cll%2FqJ8Lr9Y7pavFASMzosUl6u4Pfh6kRGOR1OUlL0LoXQhy%2Fgkl93tXak3YMbxsiGSu3yH6QRzthJDVK8vEZMmAwPZXtQKcKGUZU3wlW0hqfTxZu0aF%2FEgoXkGTDaiFPkaSl7ot1AKtoAEj4URsA8jX4cIOm1D8k8JkQtbkOBU0I1sUsYzOqYFyq9q6esaNEe06jHXlE4lVL8x5yvJnWjOqQ4kXhL%2BvZze92XrTi5WPr9ZNhsr1SjE9zYmlc07tV7ZqKetW2reo0qb0TlL8A5sJDQcsTHmuzCUZlUCt9MGGM4RJ391Hj%2B81UcmVeo2FdoHfjeduk2NNhRsTqe%2BVTpV598GnYYddWrdOQWeXTqNjVLvXufUse2cQtcqnXpG3al%2BTvej3tC8TsHB%2Fel66oAxtGoMmFJS8Flj5dtSUIdqm9hMhbPxg2zmifFQOuLHxoPQ3zVePFQ7rq1x8%2BkvIJ1WSDz82jJZEcty3cJQTsaFeE6E0jETgjLiJSInHciOCUnTtTFvC6F1Az9AFG1fpuGf3bl%2FJpXfkzwf0pyy9dfB%2ByjBSSLkM87oH9zo%2BRX5nv8yovCMEcXLHLrRwFvPpdy9jOCI5N9Vp9AqlXotuvxQnB9dPqxebSk6nJQt3XMoXgHDLsUNzbIJ2Ks0A56V853Sqagqzbml%2FmrfjcMyuL6EmM34AWuTu3UsBE0Htq7hmCbcJ6hpxDF3zU4bWMjvykJ2xbZq343D8hmPyaxklrOnIuOnDFgYEEHo9p%2B%2BrApPCpPRkOjSsmxlY0%2Bn2ZbVWD2zLgkGccMSXjl9xwm7OiYYQN0g4jg6uEms599iRgTeJdtudvRQdgLbOXx9fq9arhvHGpUpej9qrdUznMFdWuzU2egsy%2BDUvm3y7u6DH6KAeMsvmsAW5%2B4fzbm3ryZuECmE5AZPqHzBeYeZputuoJ3xfprz8wMWwqBDaHpSaD2jF0BOPwBRk%2Bz7jhvsJPzn8%2FZ9TheDgkwEYdLiKEHFkWKF9sUr1OvhG%2B5TS1QORs6qDePxoEMznUPc0lqYD7Y8BujoMbxjnTnY9qsjnNAiRet9X4rbAKYLpV4b5%2BHtBVSgfde00wjMOo39rnjgJmOVrsZ5qqqxNSG1suqqePbomYNo1v9nUbmN%2Br9V4NV%2F%3C%2Fdiagram%3E%3C%2Fmxfile%3E"></iframe>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#computer-architecture">Computer Architecture</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-concepts">key Concepts</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

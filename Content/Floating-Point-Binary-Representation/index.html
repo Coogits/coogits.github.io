@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Floating-Point Binary Representation</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Hardware/">Hardware</a> &gt; <a href="/Content/Digital-Logic-Design/">Digital Logic Design</a> &gt; <a href="/Content/Binary-Arithmetic-(Digital-Logic-Design)/">Binary Arithmetic</a></p>
+<div class="header-block h1">
+<h1 id="floating-point-binary-representation">Floating-Point Binary Representation</h1>
+<p>The <strong>IEEE 754 standard</strong> is the most widely used standard for <strong>floating-point arithmetic</strong> in computing. It defines the representation and behavior of floating-point numbers in binary and decimal formats across various hardware and software implementations.</p>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$N_2\quad$ Binary number.</li>
+<li>$\color{red}S\quad$ <strong>Sign Bit</strong> the sign of the binary number.<br />
+Determines if the number is positive (0) or negative (1).
+<ul>
+<li>$\color{red}\pm\quad$ another representation of the sign</li>
+</ul>
+</li>
+<li>$\color{green}E\quad$ <strong>Exponent</strong> of the Scientific notation:<br />
+Stores the exponent, biased to allow both positive and negative exponents.
+<ul>
+<li>$\color{green}e\quad$ exponent digits (binary)</li>
+</ul>
+</li>
+<li>$\color{violet}M\quad$ <strong>Mantissa</strong> of the scientific notation:<br />
+Stores the significant digits of the number in normalized form.
+<ul>
+<li>$\color{violet}m\quad$ digits of the mantissa (binary)</li>
+</ul>
+</li>
+<li>$B\quad$ <strong>Bias</strong><br />
+Is a <strong>constant value</strong> to get the actual exponent used in the floating-point calculation. It ensures that both positive and negative exponents can be represented using only <strong>unsigned integers</strong>.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="internal-representation">Internal Representation</h3>
+<ul>
+<li><strong>Floating-Point Number Representation in IEEE 754</strong>
+A floating-point number is represented as:  $$N_2=-1^{\color{red}S}\times {\color{violet}M}\times2^{{\color{green}E}-B}$$</li>
+<li><strong>Bit Layout (IEEE 754 16-bit Floating-Point)</strong>:<br />
+A binary number in <strong>scientific notation</strong>:  $${\color{red}\pm} 1.{\color{violet}M}\times^{{\color{green}E}-{B}}$$
+<strong>Bit structure</strong>:  $${\color{red} S} \quad \underbrace{{\color{green} \mathtt{eeeee}}}_{\text{Exponent (5 bits)}} \quad \underbrace{{\color{violet} \mathtt{mmmmmmmmmm}}}_{\text{Mantissa (10 bits)}}$$
+<strong>Note:</strong> The <strong>leading 1</strong> in scientific notation, <strong>base 2</strong>, and <strong>bias</strong> are <strong>not stored in memory</strong>, as they are implicit constants.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="tables">Tables</h3>
+<div class="header-block h4">
+<h4 id="common-ieee-754-floating-point-formats">Common IEEE 754 Floating-Point Formats</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Format</strong></th>
+<th><strong>Bit Width</strong></th>
+<th><strong>Exponent Bits</strong></th>
+<th><strong>Mantissa Bits</strong></th>
+<th><strong>Bias</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Half-Precision (binary16)</strong></td>
+<td>16</td>
+<td>5</td>
+<td>10</td>
+<td>15</td>
+</tr>
+<tr>
+<td><strong>Single-Precision (binary32)</strong></td>
+<td>32</td>
+<td>8</td>
+<td>23</td>
+<td>127</td>
+</tr>
+<tr>
+<td><strong>Double-Precision (binary64)</strong></td>
+<td>64</td>
+<td>11</td>
+<td>52</td>
+<td>1023</td>
+</tr>
+<tr>
+<td><strong>Quadruple-Precision (binary128)</strong></td>
+<td>128</td>
+<td>15</td>
+<td>112</td>
+<td>16383</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="header-block h4">
+<h4 id="special-values-in-ieee-754">Special Values in IEEE 754</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Value</strong></th>
+<th><strong>Sign Bit</strong></th>
+<th><strong>Exponent</strong></th>
+<th><strong>Mantissa</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zero ($\pm0$)</strong></td>
+<td>0 or 1</td>
+<td>00000000</td>
+<td>00000000000000000000000</td>
+<td>Represents positive or negative zero.</td>
+</tr>
+<tr>
+<td><strong>Infinity ($\pm \infty$)</strong></td>
+<td>0 or 1</td>
+<td>11111111</td>
+<td>00000000000000000000000</td>
+<td>Represents positive or negative infinity.</td>
+</tr>
+<tr>
+<td><strong>NaN (Not a Number)</strong></td>
+<td>0 or 1</td>
+<td>11111111</td>
+<td>Non-zero</td>
+<td>Represents undefined or invalid operations like $0\div0$ or $\infty-\infty$.</td>
+</tr>
+<tr>
+<td><strong>Subnormal Numbers</strong></td>
+<td>0 or 1</td>
+<td>00000000</td>
+<td>Non-zero</td>
+<td>Represents numbers smaller than the smallest normalized number.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a href="/Content/Floating-Point-(Programming)/">Floating-Point (Programming)</a></li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#floating-point-binary-representation">Floating-Point Binary Representation</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#internal-representation">Internal Representation</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#tables">Tables</a></li>
+<ul>
+<li class="toc-level-4"><a href="#common-ieee-754-floating-point-formats">Common IEEE 754 Floating-Point Formats</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#special-values-in-ieee-754">Special Values in IEEE 754</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#see-also">See Also</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

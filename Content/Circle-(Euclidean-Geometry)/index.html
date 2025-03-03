@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Circle (Euclidean Geometry)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Geometry/">Geometry</a> &gt; <a href="/Content/Euclidean-Geometry/">Euclidean Geometry</a> &gt;  <a href="/Content/Plane-Geometry/">Plane Geometry</a></p>
+<div class="header-block h1">
+<h1 id="circle--euclidean-geometry">Circle (Euclidean Geometry)</h1>
+<p>A <strong>circle</strong> is the set of all points in a plane that are equidistant from a fixed point called the <strong>center</strong>. The constant distance from the center to any point on the circle is called the <strong>radius</strong> $R$.</p>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$O\quad$ <strong>Origin</strong> or <strong>Center</strong> of the circle</li>
+<li>$R\quad$ <strong>radius</strong></li>
+<li>$\mathcal{A}\quad$ <a href="/Content/Area-(Plane-Geometry)/">Area (Plane Geometry)</a></li>
+<li>$2p\quad$ <a href="/Content/Perimeter-(Geometry)/">Perimeter (Geometry)</a> or <strong>Circumference</strong></li>
+<li>$P\quad$ a generic Euclidean point on the circumference</li>
+<li>$L\quad$ <strong>Arc Length</strong></li>
+<li>$\theta\quad$ a generic <a href="/Content/Angle-(Trigonometry)/">Angle (Trigonometry)</a> (in radians)</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="formulas">Formulas</h3>
+<ul>
+<li><strong>Definition</strong><br />
+Formally, given a point $O$ (the center) and a positive real number $R$ (the radius), the <strong>circle</strong> is defined as: $$\{P\in\mathbb{R}^2:d(O,P)=R\}$$</li>
+<li><strong>Euclidean Distance from Center</strong><br />
+the <strong>Euclidean distance</strong> between the points $O(x_0,y_0)$ and $P(x,y)$, given by the <a href="/Content/Pythagorean-Theorem/">Pythagorean Theorem</a>: $$d(O,P)=R=\sqrt{(x-x_0)^2+(y-y_0)^2}$$</li>
+<li><strong>Diameter</strong>:<br />
+The <strong>diameter</strong> is twice the radius: $$d=2R$$</li>
+<li><strong>Perimeter (Circumference)</strong>:
+The perimeter is: $$2p=2\pi R$$</li>
+<li><strong>Area</strong>:<br />
+The Area is given by:  $$\mathcal{A}=\pi R^2$$</li>
+<li><strong>Arc Length</strong><br />
+quick description:  $$L=R\theta$$</li>
+<li><strong>Sector Area</strong>:<br />
+The area of a circular sector (a &quot;pizza slice&quot; of the circle) is:  $$S = \frac{1}{2} R^2 \theta$$</li>
+<li><strong>Chord Length</strong>:<br />
+A <strong>chord</strong> is a line segment connecting two points on the circle, and its length is given by:  $$C=2R\sin\left(\frac{\theta}{2}\right)$$
+<ul>
+<li>$\theta\quad$ is the central angle subtended by the chord.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="formulary">Formulary</h3>
+<ul>
+<li><a href="/Content/Formulary-(Plane-Geometry)/#circle">Circle Formulary</a></li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a href="/Content/Circle-(Analytic-Geometry)/">Circle (Analytic Geometry)</a> for the circle equations</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#circle--euclidean-geometry">Circle (Euclidean Geometry)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#formulas">Formulas</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#formulary">Formulary</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#see-also">See Also</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

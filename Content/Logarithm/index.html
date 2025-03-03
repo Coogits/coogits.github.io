@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Logarithm</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Arithmetic/">Arithmetic</a> &gt; <a href="/Content/Arithmetic-Operator/">Arithmetic Operator</a></p>
+<div class="header-block h1">
+<h1 id="logarithm">Logarithm</h1>
+<p>The <strong>logarithm operator</strong> is the inverse operation of exponentiation. It determines the exponent to which a given base must be raised to produce a specified number.</p>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$a\quad$ <strong>Base</strong> of the logarithm,</li>
+<li>$x\quad$ <strong>Argument</strong></li>
+<li>$y\quad$ <strong>Exponent</strong> that satisfies the equation</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="formulas">Formulas</h3>
+<ul>
+<li><strong>Definition</strong><br />
+Is defined as:  $$\log_a(x)=y$$
+where  $$a&gt;0;a\neq1$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="properties">Properties</h3>
+<ul>
+<li><strong>Inverse of Exponentiation</strong>:<br />
+The logarithm and exponentiation are inverse operations:
+<ul>
+<li>When the <strong>base appears as the argument</strong>: $$\log_a(a^x)=x$$</li>
+<li>When the <strong>base is raised to the logarithm</strong>:  $$a^{log_a^x}=x$$</li>
+</ul>
+</li>
+<li><strong>Product Rule</strong>:<br />
+log of a product is the sum of logs:  $$\log_a(xy)=\log_ax+\log_ay$$</li>
+<li><strong>Quotient Rule</strong>:<br />
+log of a fraction is the difference of logs:  $$\log_a\left(\frac{x}{y}\right)=\log_ax-\log_ay$$</li>
+<li><strong>Power Rule</strong>:<br />
+log of an exponentiated value is the exponent times the log:  $$\log_a(x^r)=r\log_ax$$</li>
+<li><strong>Change of Base</strong>:<br />
+The logarithm of <strong>x</strong> with base <strong>a</strong> can be rewritten using a different base <strong>b</strong>:$$\log_ax=\cfrac{\log_bx}{\log_ba}$$
+where:
+<ul>
+<li>$a\quad$ is the original base</li>
+<li>$b\quad$ is the new base (any valid logarithm base, typically <strong>10</strong> or <strong>e</strong>)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h2">
+<h2 id="natural-logarithm">Natural Logarithm</h2>
+<p>The <strong>natural logarithm</strong> (denoted as $\ln x$) is the logarithm with base $( e )$, where $e \approx 2.718$:</p>
+<div class="header-block h3">
+<h3 id="key-concepts">Key Concepts</h3>
+<ul>
+<li><strong>Base</strong>:<br />
+The natural logarithm is a special case of logarithm with base e $$\ln x = \log_e x$$</li>
+<li><strong>Properties</strong><br />
+It follows all standard logarithm properties.</li>
+<li><strong>Uses</strong>:<br />
+Commonly used in calculus, exponential growth/decay, and probability theory.</li>
+<li><strong>Derivative</strong>:<br />
+Its derivative is: $$\frac{d}{dx} \ln x = \frac{1}{x}$$</li>
+</ul>
+</div>
+</div>
+<div class="header-block h2">
+<h2 id="common-logarithm">Common Logarithm</h2>
+<p>The <strong>common logarithm</strong> (denoted as $\log x$) is the logarithm with base 10.</p>
+<div class="header-block h3">
+<h3 id="key-concepts">Key Concepts</h3>
+<ul>
+<li><strong>Base</strong>:<br />
+The common logarithm is a special case of logarithm with base 10 $$\log x = \log_{10} x$$</li>
+<li><strong>Properties</strong><br />
+It follows all standard logarithm properties.</li>
+<li><strong>Uses</strong>:<br />
+Widely used in engineering, scientific notation, and logarithmic scales (e.g., decibels, pH).<br />
+Often used in computations before calculators supported other bases.</li>
+</ul>
+
+</div>
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#logarithm">Logarithm</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#formulas">Formulas</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#properties">Properties</a></li>
+</ul>
+<ul>
+<li class="toc-level-2"><a href="#natural-logarithm">Natural Logarithm</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-concepts">Key Concepts</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-2"><a href="#common-logarithm">Common Logarithm</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-concepts">Key Concepts</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

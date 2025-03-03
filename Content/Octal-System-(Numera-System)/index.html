@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Octal System (Numera System)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Arithmetic/">Arithmetic</a> &gt; <a href="/Content/Numeral-System/">Numeral System</a></p>
+<div class="header-block h1">
+<h1 id="octal-system">Octal System</h1>
+<p>The <strong>octal system</strong> (also called <strong>base 8 numeral system</strong>) is a <strong>positional numeral system</strong> that uses <strong>eight digits</strong> to represent numbers. The digits in the octal system range from <strong>0 to 7</strong>, and each position represents a power of 8.</p>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$N_8\quad$ Represent a Octal number $b=8$.</li>
+<li>$N_{10}\quad$ Represent the equivalent decimal number.</li>
+<li>$n\quad$ Represent the most significative digit position ($n\geq0$).</li>
+<li>$-m\quad$ Represent the least significative digit position ($m\leq0$).
+<ul>
+<li>$m=0\quad$ No fractional digits.</li>
+<li>$m&gt;0\quad$ Fractional digits</li>
+</ul>
+</li>
+<li>$i\quad$ Represent the position of the digit.</li>
+<li>$a_i\quad$ Represent the digit of the number at position $i$ ($0\leq a_i&lt; 8$).</li>
+<li>$b^i\quad$ Represent the positional weight associated with digit $a_i$.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="definition">Definition</h3>
+<ul>
+<li><strong><a href="/Content/Expanded-Form-(Numeral-System)/">Expanded Form (Numeral System)</a></strong>:<br />
+A number in the octal system can be expressed with a subscript $_8$:  $$N_8=\displaystyle\sum_{i=-m}^na_i\cdot 8^i$$</li>
+<li><strong>From Octal to Decima</strong>:<br />
+Using the Expanded Form of the binary number:  $$N_8=\displaystyle\sum_{i=-m}^na_i\cdot 8^i\quad\to\quad N_{10}$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="programming">Programming</h3>
+<p>In most <a href="/Content/Programming-Language/">Programming Languages</a> <strong>literal</strong> octal numbers are represented as:</p>
+<pre><code class="language-cpp">// zero before the octal number
+int octal = 0200;
+</code></pre>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#octal-system">Octal System</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#definition">Definition</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#programming">Programming</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

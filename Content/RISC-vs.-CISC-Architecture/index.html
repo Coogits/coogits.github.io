@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RISC vs. CISC Architecture</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Hardware/">Hardware</a> &gt; <a href="/Content/Computer-Architecture/">Computer Architecture</a></p>
+<div class="header-block h1">
+<h1 id="risc-vs--cisc-architecture">RISC vs. CISC Architecture</h1>
+<p>RISC (<strong>Reduced Instruction Set Computing</strong>) and CISC (<strong>Complex Instruction Set Computing</strong>) are two primary CPU design philosophies that define how processors execute instructions.</p>
+<div class="header-block h3">
+<h3 id="comparison">Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>RISC</th>
+<th>CISC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Instruction Set</strong></td>
+<td>Small, fixed</td>
+<td>Large, variable</td>
+</tr>
+<tr>
+<td><strong>Instruction Execution</strong></td>
+<td>Single or few cycles</td>
+<td>Multi-cycle</td>
+</tr>
+<tr>
+<td><strong>Memory Access</strong></td>
+<td>Load/store model</td>
+<td>Direct memory operations</td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>Simple hardware</td>
+<td>Complex hardware</td>
+</tr>
+<tr>
+<td><strong>Performance Optimization</strong></td>
+<td>Faster with pipelining</td>
+<td>Optimized for fewer instructions</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="header-block h3">
+<h3 id="modern-usage">Modern Usage</h3>
+<ul>
+<li><strong>Hybrid Approach:</strong>
+<ul>
+<li>Modern x86 CPUs (Intel/AMD) <strong>internally translate CISC instructions into RISC-like micro-operations</strong> to gain efficiency.</li>
+<li>ARM chips dominate <strong>mobile and embedded systems</strong> due to power efficiency, while x86 excels in <strong>PCs, servers, and high-performance computing</strong>.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h2">
+<h2 id="risc--reduced-instruction-set-computing">RISC (Reduced Instruction Set Computing)</h2>
+<ul>
+<li>
+<p><strong>Definition:</strong><br />
+RISC processors use a <strong>small, highly optimized set of instructions</strong>, designed for fast execution with simple hardware.</p>
+</li>
+<li>
+<p><strong>Key Characteristics:</strong></p>
+<ul>
+<li><strong>Fixed-length, simple instructions</strong> that complete in a single or few clock cycles.</li>
+<li><strong>Load/store architecture</strong>, where operations are performed on registers, not directly on memory.</li>
+<li><strong>Efficient pipelining</strong>, improving instruction throughput.</li>
+<li><strong>Less hardware complexity</strong>, reducing power consumption and cost.</li>
+</ul>
+</li>
+<li>
+<p><strong>Examples of RISC Processors:</strong></p>
+<ul>
+<li><strong>ARM processors</strong> (used in smartphones, tablets, IoT devices).</li>
+<li><strong>PowerPC (used in older Macs and gaming consoles like the PlayStation 3).</strong></li>
+<li><strong>RISC-V</strong> (an open-source RISC architecture gaining popularity).</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h2">
+<h2 id="cisc--complex-instruction-set-computing">CISC (Complex Instruction Set Computing)</h2>
+<ul>
+<li><strong>Definition:</strong><br />
+CISC processors use a <strong>large and complex set of instructions</strong>, allowing direct memory operations and multi-step execution within a single instruction.</li>
+</ul>
+<p>-<strong>Key Characteristics:</strong><br />
+- <strong>Variable-length, multi-cycle instructions</strong>, which can perform multiple operations in one instruction.
+- <strong>Direct memory access</strong>, reducing the need for multiple simple instructions.
+- <strong>More complex hardware</strong> to decode and execute instructions.
+- <strong>Optimized for fewer instructions per program, reducing memory usage.</strong></p>
+<ul>
+<li><strong>Examples of CISC Processors:</strong>
+<ul>
+<li><strong>x86 processors</strong> (Intel and AMD CPUs used in PCs and servers).</li>
+<li><strong>IBM System/360</strong> (one of the earliest CISC architectures).</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#risc-vs--cisc-architecture">RISC vs. CISC Architecture</a></li>
+<ul>
+<li class="toc-level-3"><a href="#comparison">Comparison</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#modern-usage">Modern Usage</a></li>
+</ul>
+<ul>
+<li class="toc-level-2"><a href="#risc--reduced-instruction-set-computing">RISC (Reduced Instruction Set Computing)</a></li>
+</ul>
+<ul>
+<li class="toc-level-2"><a href="#cisc--complex-instruction-set-computing">CISC (Complex Instruction Set Computing)</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

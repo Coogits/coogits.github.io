@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Physical Quantity</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt;</p>
+<div class="header-block h1">
+<h1 id="physical-quantity">Physical Quantity</h1>
+<p>A <strong>physical quantity</strong> is any property or characteristic of a <a href="/Content/Physical-System/">Physical System</a> that can be measured or quantified. It represents a measurable aspect of the physical world and is expressed with both a numerical value and a unit. Physical quantities can be classified as either <strong>fundamental</strong> or <strong>derived</strong>.</p>
+<div class="header-block h3">
+<h3 id="fundamental-quantities">Fundamental Quantities</h3>
+<table>
+<thead>
+<tr>
+<th>Quantity <br>Name</th>
+<th style="text-align:center">Quantity<br>Symbol</th>
+<th style="text-align:center">SI Unit<br>Name</th>
+<th style="text-align:center">SI Unit<br>Symbol</th>
+<th style="text-align:center">Dimensional<br>Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Length</td>
+<td style="text-align:center">$l,x,r$</td>
+<td style="text-align:center">meter</td>
+<td style="text-align:center">$m$</td>
+<td style="text-align:center">$L$</td>
+</tr>
+<tr>
+<td><a href="/Content/Time-(Physics)/">Time</a></td>
+<td style="text-align:center">$t$</td>
+<td style="text-align:center">second</td>
+<td style="text-align:center">$s$</td>
+<td style="text-align:center">$T$</td>
+</tr>
+<tr>
+<td><a href="/Content/Mass/">Mass</a></td>
+<td style="text-align:center">$m$</td>
+<td style="text-align:center">kilogram</td>
+<td style="text-align:center">$kg$</td>
+<td style="text-align:center">$M$</td>
+</tr>
+<tr>
+<td><a href="/Content/Temperature/">Temperature</a></td>
+<td style="text-align:center">$T$</td>
+<td style="text-align:center">kelvin</td>
+<td style="text-align:center">$K$</td>
+<td style="text-align:center">$\Theta$</td>
+</tr>
+<tr>
+<td><a href="/Content/Number-of-Mole/">Amount of substance</a></td>
+<td style="text-align:center">$n$</td>
+<td style="text-align:center">mole</td>
+<td style="text-align:center">$mol$</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>Electric current</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>Luminous intensity</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="header-block h3">
+<h3 id="derived-quantities">Derived Quantities</h3>
+<table>
+<thead>
+<tr>
+<th>Quantity <br>Name</th>
+<th style="text-align:center">Quantity<br>Symbol</th>
+<th style="text-align:center">SI Unit<br>Name</th>
+<th style="text-align:center">SI Unit<br>Symbol</th>
+<th style="text-align:center">SI Unit<br>Breakdown</th>
+<th>SI Unit<br>Relations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Area</td>
+<td style="text-align:center">$S$</td>
+<td style="text-align:center">meter square</td>
+<td style="text-align:center">$m^2$</td>
+<td style="text-align:center"></td>
+<td></td>
+</tr>
+<tr>
+<td>Volume</td>
+<td style="text-align:center">$V$</td>
+<td style="text-align:center">meter cubic</td>
+<td style="text-align:center">$m^3$</td>
+<td style="text-align:center"></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/Content/Density-(Physics)/">Density</a></td>
+<td style="text-align:center">$\rho$</td>
+<td style="text-align:center">kilograms per cubic meter</td>
+<td style="text-align:center">$\cfrac{kg}{m^3}$</td>
+<td style="text-align:center"></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/Content/Velocity/">Velocity</a></td>
+<td style="text-align:center">$\vec v$</td>
+<td style="text-align:center">meter per seconds</td>
+<td style="text-align:center">$\cfrac{m}{s}$</td>
+<td style="text-align:center"></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/Content/Acceleration/">Acceleration</a></td>
+<td style="text-align:center">$\vec a$</td>
+<td style="text-align:center">meter per second square</td>
+<td style="text-align:center">$\cfrac{m}{s^2}$</td>
+<td style="text-align:center"></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/Content/Force-(Physics)/">Force</a></td>
+<td style="text-align:center">$\vec F$</td>
+<td style="text-align:center">Newton</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">$\cfrac{kg\cdot m}{s^2}$</td>
+<td>$N=kg\cdot\cfrac{m}{s^2}$</td>
+</tr>
+<tr>
+<td><a href="/Content/Work-(Physics)/">Work</a>,<br><a href="/Content/Energy-(Physics)/">Energy</a>,</td>
+<td style="text-align:center">$W,E$</td>
+<td style="text-align:center">Joule</td>
+<td style="text-align:center">J</td>
+<td style="text-align:center">$\cfrac{kg\cdot m^2}{s^2}$</td>
+<td>$J=N\cdot m=kg\cdot\cfrac{m}{s^2}\cdot m$</td>
+</tr>
+<tr>
+<td><a href="/Content/Power-(Physics)/">Power</a></td>
+<td style="text-align:center">$P$</td>
+<td style="text-align:center">Watt</td>
+<td style="text-align:center">W</td>
+<td style="text-align:center">$\cfrac{kg\cdot m^2}{s^3}$</td>
+<td>$W=\cfrac{J}{s}=\cfrac{N\cdot m}{s}$</td>
+</tr>
+<tr>
+<td><a href="/Content/Linear-Momentum/">Linear Momentum</a></td>
+<td style="text-align:center">$\vec p$</td>
+<td style="text-align:center">kilogram-meters per second</td>
+<td style="text-align:center">$\cfrac{kg\cdot m}{s}$</td>
+<td style="text-align:center">$\cfrac{kg\cdot m}{s}$</td>
+<td>$\vec p=N\cdot s=kg\cdot m\cdot s^{-1}$</td>
+</tr>
+<tr>
+<td><a href="/Content/Impulse-(Physics)/">Impulse</a></td>
+<td style="text-align:center">$\vec J$</td>
+<td style="text-align:center">Newton-seconds</td>
+<td style="text-align:center">$N\cdot s$</td>
+<td style="text-align:center">$\cfrac{kg\cdot m}{s}$</td>
+<td>$\vec J=N\cdot s=kg\cdot m\cdot s^{-1}$</td>
+</tr>
+<tr>
+<td><a href="/Content/Torque-(Physics)/">Torque</a></td>
+<td style="text-align:center">$\vec\tau$</td>
+<td style="text-align:center">Newton-meter</td>
+<td style="text-align:center">$N\cdot m$</td>
+<td style="text-align:center">$\cfrac{kg\cdot m^2}{s^2}$</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/Content/Moment-Of-Inertia/">Moment Of Inertia</a></td>
+<td style="text-align:center">$I$</td>
+<td style="text-align:center">Kilogram-meter squared</td>
+<td style="text-align:center">$kg\cdot m^2$</td>
+<td style="text-align:center">$kg\cdot m^2$</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/Content/Rotational-Work/">Rotational Work</a></td>
+<td style="text-align:center">$W_{rot}$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/Content/Rotational-Kinetic-Energy/">Rotational Kinetic Energy</a></td>
+<td style="text-align:center">$K_{rot}$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/Content/Angular-Momentum/">Angular Momentum</a></td>
+<td style="text-align:center">$\vec L$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="header-block h3">
+<h3 id="physical-constant-physical-constant"><a href="/Content/Physical-Constant/">Physical Constant</a></h3>
+<p>In Physics, a <strong>constant</strong> is a quantity that remains fixed and does not change over time or in different conditions. Constants can be classified into different types based on their nature and role in equations.</p>
+</div>
+<div class="header-block h3">
+<h3 id="extensive-and-intensive-quantity"><a href="/Content/Extensive-and-Intensive-Quantity/">Extensive and Intensive Quantity</a></h3>
+<ul>
+<li><strong>Extensive Properties:</strong>
+<ul>
+<li>Depend on the system size or the amount of matter.</li>
+<li>Are additive (e.g., mass, volume, heat capacity).</li>
+</ul>
+</li>
+<li><strong>Intensive Properties:</strong>
+<ul>
+<li>Independent of the system size or the amount of matter.</li>
+<li>Remain the same when systems are divided (e.g., temperature, pressure, density).</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="key-characteristics">Key Characteristics:</h3>
+<ul>
+<li><strong>Numerical Value</strong>: A quantity is always paired with a number, which represents the amount or magnitude of the physical quantity.</li>
+<li><strong>Unit</strong>: Every physical quantity has a unit, which defines the standard for measurement. The unit specifies the reference used for measurement (e.g., meter for length, second for time).</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#physical-quantity">Physical Quantity</a></li>
+<ul>
+<li class="toc-level-3"><a href="#fundamental-quantities">Fundamental Quantities</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#derived-quantities">Derived Quantities</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#physical-constant-physical-constant">Physical Constant</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#extensive-and-intensive-quantity">Extensive and Intensive Quantity</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#key-characteristics">Key Characteristics:</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

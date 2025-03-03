@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Namespace (Programing)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a> &gt; <a href="/Content/Identifier-(Programming)/">Identifier</a></p>
+<div class="header-block h1">
+<h1 id="namespace">Namespace</h1>
+<p>A <strong>namespace</strong> is a declarative region that provides a scope to group <strong>identifiers</strong> (such as variables, functions, classes, or modules) to prevent naming conflicts and organize code efficiently.</p>
+<div class="header-block h3">
+<h3 id="key-concepts">Key Concepts</h3>
+<ul>
+<li><strong>Encapsulation of Identifiers</strong>:<br />
+Avoids name clashes by grouping related identifiers.</li>
+<li><strong>Hierarchical Organization</strong>:<br />
+Supports nesting to structure large programs.</li>
+<li><strong>Language-Specific Implementations</strong>:<br />
+Namespaces appear in different forms across languages.</li>
+<li><strong>Explicit Access Using Scope Operators</strong>:<br />
+Access elements using <code>::</code> (C++), <code>.</code> (Python, Java), etc.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="examples">Examples</h3>
+<div class="header-block h4">
+<h4 id="c">C++</h4>
+<p><strong><code>namespace</code> Keyword</strong>: C++ allows defining multiple namespaces to avoid naming conflicts.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+namespace Math {
+    int add(int a, int b) { return a + b; }
+}
+int main() {
+    std::cout &lt;&lt; Math::add(5, 3); // Access function using scope resolution (::)
+    return 0;
+}
+</code></pre>
+<p><strong>Prevents conflicts</strong>: If another <code>add</code> function exists elsewhere, it won’t interfere.</p>
+</div>
+<div class="header-block h4">
+<h4 id="python">Python</h4>
+<p><strong>Modules as Namespaces</strong>: In Python, modules and packages serve as namespaces.</p>
+<pre><code class="language-python">import math  # math is a namespace
+print(math.sqrt(25))  # Accessing sqrt function inside math namespace
+</code></pre>
+<p><strong>Modules prevent conflicts</strong>: <code>sqrt</code> in <code>math</code> won’t clash with a different <code>sqrt</code> function.</p>
+</div>
+<div class="header-block h4">
+<h4 id="java">Java</h4>
+<p><strong>Packages as Namespaces</strong>: Java uses <strong>packages</strong> to manage namespaces and avoid conflicts.</p>
+<pre><code class="language-java">// --- Definition ---
+package mypackage;  // Defines a namespace
+public class MyClass {
+    public static void sayHello() {
+        System.out.println(&quot;Hello from MyClass!&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">// --- Implementation ---
+import mypackage.MyClass;  // Importing namespace
+public class Main {
+    public static void main(String[] args) {
+        MyClass.sayHello();
+    }
+}
+</code></pre>
+<p><strong>Organizes large projects</strong>: Java packages act as namespaces to structure code.</p>
+</div>
+<div class="header-block h4">
+<h4 id="javascript">JavaScript</h4>
+<p><strong>Objects as Namespaces</strong>: JavaScript lacks a built-in namespace feature, but objects act as namespaces.</p>
+<pre><code class="language-javascript">const MathOperations = {
+    add: (a, b) =&gt; a + b
+};
+console.log(MathOperations.add(5, 3)); // Access function via namespace
+</code></pre>
+<p><strong>Encapsulates functions and variables</strong> to avoid polluting the global scope.</p>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="why">Why</h3>
+<p><strong>Why Use Namespaces?</strong></p>
+<ul>
+<li><strong>Prevents Naming Conflicts</strong>:<br />
+Organizes code and prevents collision between identifiers.</li>
+<li><strong>Improves Code Maintainability</strong>:<br />
+Large codebases stay structured.</li>
+<li><strong>Supports Modular Development</strong>:<br />
+Enables better reusability across projects.</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#namespace">Namespace</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-concepts">Key Concepts</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#examples">Examples</a></li>
+<ul>
+<li class="toc-level-4"><a href="#c">C++</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#python">Python</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#java">Java</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#javascript">JavaScript</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#why">Why</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Communicating Vessels</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Classical-Physics/">Classical Physics</a> &gt; <a href="/Content/Classical-Mechanics/">Classical Mechanics</a> &gt; <a href="/Content/Fluid-Mechanics/">Fluid Mechanics</a> &gt; <a href="/Content/Fluid-Statics/">Fluid Statics</a> &gt;</p>
+<div class="header-block h1">
+<h1 id="communicating-vessels">Communicating Vessels</h1>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/ANIMvasicomunicanti.gif" style="width: 250px; float: right; margin-left: 10px;" /> <strong>Communicating vessels</strong> are a set of interconnected containers or vessels filled with a fluid, where the fluid is free to move between the vessels. When the vessels are connected, the fluid will adjust itself until it reaches a state of <strong>hydrostatic equilibrium</strong>, meaning the pressure at the same height is equal across all vessels.<br />
+In essence, the concept of communicating vessels is a practical example of the broader principles of <strong>fluid statics</strong>.</p>
+<br clear="both" />
+### Formulas
+<ul>
+<li>
+<p><strong>Communication Vessels</strong>: When two vessels are connected, the pressure at the same height in both vessels must be equal, leading to the following relationship: $$p_1=p_2\quad\implies\quad p_0+\rho{g}h_1=p_0+\rho{g}h_2\quad\implies\quad h_1=h2$$
+Where:</p>
+</li>
+<li>
+<p>$p_1,p_2\quad$ are the pressures at the same height in different vessels.</p>
+</li>
+<li>
+<p>$p_0\quad$ is the <a href="/Content/Atmospheric-Pressure/">Atmospheric Pressure</a> acting on the surface of the fluid in both vessels.</p>
+</li>
+<li>
+<p>$\rho\quad$ is the <a href="/Content/Density-(Physics)/">Density (Physics)</a> of the fluid.</p>
+</li>
+<li>
+<p>$g\quad$ is the <a href="/Content/Gravitational-Acceleration/">Gravitational Acceleration</a>.</p>
+</li>
+<li>
+<p>$h_1,h_2\quad$ are the heights of the fluid column in each vessel.</p>
+</li>
+</ul>
+<hr />
+<div class="header-block h3">
+<h3 id="key-characteristics">Key Characteristics:</h3>
+<ol>
+<li>
+<p><strong>Equal Pressure at Same Height</strong>: The fluid will rise or fall within the vessels until the pressure at the same height in each vessel is the same, regardless of the shape or size of the vessels.</p>
+</li>
+<li>
+<p><strong>Hydrostatic Equilibrium</strong>: In this state, the pressure at any given height within the fluid will be the same throughout all the communicating vessels. The height of the fluid in each vessel adjusts according to the amount of fluid in each vessel, but the pressure at the same level must always balance out.</p>
+</li>
+<li>
+<p><strong>Fluid Distribution</strong>: If the vessels have different shapes or volumes, the fluid will move between them to balance the pressure. For example, a taller vessel might have a higher fluid level, while a wider vessel might have a lower fluid level, but the pressure at the same height in each vessel will be the same.</p>
+</li>
+</ol>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="example">Example:</h3>
+<p>If you have a U-shaped tube with liquid in both arms, and both arms are connected to a reservoir, the liquid levels in both arms will stabilize at the same height once equilibrium is reached. This is an example of communicating vessels in action, as the liquid moves until the pressures at the same level are equal.</p>
+<hr />
+<hr />
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#communicating-vessels">Communicating Vessels</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-characteristics">Key Characteristics:</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#example">Example:</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stack</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a> &gt; <a href="/Content/Data-(Programming)/">Data</a> &gt; <a href="/Content/Data-Structure/">Data Structure</a></p>
+<div class="header-block h1">
+<h1 id="stack">Stack</h1>
+<p>A <strong>stack</strong> is a <strong>linear data structure</strong> that follows the <strong>Last In, First Out (LIFO)</strong> principle, meaning the last element added is the first one to be removed. It is analogous to a stack of plates where the topmost plate is removed first.</p>
+<div class="header-block h3">
+<h3 id="key-points">Key Points</h3>
+<ul>
+<li><strong>LIFO</strong>:<br />
+<strong>Last In, First Out</strong>, meaning the last element added is the first one to be removed</li>
+<li><strong>Time Complexity</strong>:<br />
+Stack operations (<code>push</code>, <code>pop</code>, <code>peek</code>, <code>isEmpty</code>) run in <strong><a href="/Content/Time-Complexity/#o-1----constant-time">O(1)</a></strong> time since they only modify or access the top element.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="implementation">Implementation</h3>
+<p>Stacks can be implemented using:</p>
+<div class="header-block h4">
+<h4 id="arrays">Arrays</h4>
+<p>Fixed-size stack with a predefined limit.<br />
+✅ <strong>Pros:</strong> Fast, simple, uses contiguous memory.<br />
+❌ <strong>Cons:</strong> Fixed size, cannot grow dynamically.<br />
+<strong>Example</strong>:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+class MyStack {
+private:
+    int* stack;
+    int top;
+    int maxSize;
+public:
+    MyStack(int size) {
+        maxSize = size;
+        stack = new int[maxSize];
+        top = -1;
+    }
+    void push(int value) {
+        if (top == maxSize - 1) {
+            cout &lt;&lt; &quot;Stack Overflow\n&quot;;
+            return;
+        }
+        stack[++top] = value;
+    }
+    int pop() {
+        if (top == -1) {
+            cout &lt;&lt; &quot;Stack Underflow\n&quot;;
+            return -1;
+        }
+        return stack[top--];
+    }
+    int peek() {
+        if (top == -1) {
+            cout &lt;&lt; &quot;Stack is empty\n&quot;;
+            return -1;
+        }
+        return stack[top];
+    }
+    bool isEmpty() {
+        return top == -1;
+    }
+    ~MyStack() {
+        delete[] stack;
+    }
+};
+// Example Usage
+int main() {
+    MyStack s(5);
+    s.push(10);
+    s.push(20);
+    cout &lt;&lt; &quot;Top element: &quot; &lt;&lt; s.peek() &lt;&lt; endl; // Output: 20
+    cout &lt;&lt; &quot;Popped: &quot; &lt;&lt; s.pop() &lt;&lt; endl;       // Output: 20
+    return 0;
+}
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="linked-lists">Linked Lists</h4>
+<p>Dynamic stack without a size constraint.<br />
+✅ <strong>Pros:</strong> No fixed size, flexible.<br />
+❌ <strong>Cons:</strong> Extra memory for pointers, slower due to dynamic allocation.<br />
+<strong>Example</strong>:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+class MyStack {
+private:
+    struct Node {
+        int data;
+        Node* next;
+    };
+    Node* top;
+public:
+    MyStack() {
+        top = nullptr;
+    }
+    void push(int value) {
+        Node* newNode = new Node{value, top};
+        top = newNode;
+    }
+    int pop() {
+        if (!top) {
+            cout &lt;&lt; &quot;Stack Underflow\n&quot;;
+            return -1;
+        }
+        Node* temp = top;
+        int value = temp-&gt;data;
+        top = top-&gt;next;
+        delete temp;
+        return value;
+    }
+    int peek() {
+        return top ? top-&gt;data : -1;
+    }
+    bool isEmpty() {
+        return top == nullptr;
+    }
+    ~MyStack() {
+        while (top) pop();
+    }
+};
+// Example Usage
+int main() {
+    MyStack s;
+    s.push(30);
+    s.push(40);
+    cout &lt;&lt; &quot;Top element: &quot; &lt;&lt; s.peek() &lt;&lt; endl; // Output: 40
+    cout &lt;&lt; &quot;Popped: &quot; &lt;&lt; s.pop() &lt;&lt; endl;       // Output: 40
+    return 0;
+}
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="comparison">Comparison</h4>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Array Stack</th>
+<th>Linked List Stack</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Memory Usage</strong></td>
+<td>Fixed, no extra pointers</td>
+<td>Extra memory for pointers</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Faster (O(1) push/pop)</td>
+<td>Slightly slower due to allocation</td>
+</tr>
+<tr>
+<td><strong>Size Limit</strong></td>
+<td>Fixed (predefined)</td>
+<td>Dynamic (grows as needed)</td>
+</tr>
+<tr>
+<td><strong>Implementation</strong></td>
+<td>Simple, easy to use</td>
+<td>Requires additional memory management</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="operations">Operations</h3>
+<p><strong>A stack supports the following primary operations</strong>:</p>
+<div class="header-block h4">
+<h4 id="push-x">Push(X)</h4>
+<p>Adds element <code>X</code> to the top of the stack.</p>
+<ul>
+<li>If the stack is <strong>full</strong> (in array implementation), an <strong>overflow</strong> occurs.</li>
+<li>If using a <strong>linked list</strong>, no fixed limit exists.
+<strong>Example with Array Implementation</strong></li>
+</ul>
+<pre><code class="language-cpp">void push(int stack[], int &amp;top, int X, int maxSize) {
+    if (top == maxSize - 1) {
+        cout &lt;&lt; &quot;Stack Overflow\n&quot;;
+        return;
+    }
+    stack[++top] = X;
+}
+</code></pre>
+<p><strong>Example with Linked List Implementation</strong></p>
+<pre><code class="language-cpp">struct Node {
+    int data;
+    Node* next;
+};
+void push(Node*&amp; top, int X) {
+    Node* newNode = new Node{X, top};
+    top = newNode;
+}
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="pop">Pop()</h4>
+<p>Removes and returns the top element of the stack.</p>
+<ul>
+<li>If the stack is <strong>empty</strong>, an <strong>underflow</strong> occurs.
+<strong>Example with Array Implementation</strong></li>
+</ul>
+<pre><code class="language-cpp">int pop(int stack[], int &amp;top) {
+    if (top == -1) {
+        cout &lt;&lt; &quot;Stack Underflow\n&quot;;
+        return -1;
+    }
+    return stack[top--];
+}
+</code></pre>
+<p><strong>Example with Linked List Implementation</strong></p>
+<pre><code class="language-cpp">int pop(Node*&amp; top) {
+    if (!top) {
+        cout &lt;&lt; &quot;Stack Underflow\n&quot;;
+        return -1;
+    }
+    Node* temp = top;
+    int value = temp-&gt;data;
+    top = top-&gt;next;
+    delete temp;
+    return value;
+}
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="peek">Peek()</h4>
+<p><strong>Peek()</strong> or <strong>Top()</strong> returns the top element without removing it.<br />
+<strong>Example with Array Implementation</strong></p>
+<pre><code class="language-cpp">int peek(int stack[], int top) {
+    if (top == -1) {
+        cout &lt;&lt; &quot;Stack is empty\n&quot;;
+        return -1;
+    }
+    return stack[top];
+}
+</code></pre>
+<p><strong>Example with Linked List Implementation</strong></p>
+<pre><code class="language-cpp">int peek(Node* top) {
+    if (!top) {
+        cout &lt;&lt; &quot;Stack is empty\n&quot;;
+        return -1;
+    }
+    return top-&gt;data;
+}
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="isempty">IsEmpty()</h4>
+<p>Checks if the stack is empty.<br />
+<strong>Example with Array Implementation</strong></p>
+<pre><code class="language-cpp">bool isEmpty(int top) {
+    return top == -1;
+}
+</code></pre>
+<p><strong>Example with Linked List Implementation</strong></p>
+<pre><code class="language-cpp">bool isEmpty(Node* top) {
+    return top == nullptr;
+}
+</code></pre>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="applications">Applications</h3>
+<ul>
+<li>Function call management (recursion, backtracking).</li>
+<li>Undo/Redo functionality in text editors.</li>
+<li>Expression evaluation (infix to postfix conversion, balancing parentheses).</li>
+<li>Depth-First Search (DFS) in graph algorithms.</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#stack">Stack</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-points">Key Points</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#implementation">Implementation</a></li>
+<ul>
+<li class="toc-level-4"><a href="#arrays">Arrays</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#linked-lists">Linked Lists</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#comparison">Comparison</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#operations">Operations</a></li>
+<ul>
+<li class="toc-level-4"><a href="#push-x">Push(X)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#pop">Pop()</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#peek">Peek()</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#isempty">IsEmpty()</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#applications">Applications</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

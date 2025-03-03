@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signed Integer (Programming)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a> &gt; <a href="/Content/Identifier-(Programming)/">Identifier</a> &gt; <a href="/Content/Data-Type-(Programming)/">Type</a> &gt; <a href="/Content/Integer-(Programming)/">Integer</a></p>
+<div class="header-block h1">
+<h1 id="signed-integer">Signed Integer</h1>
+<p>A <strong>signed integer</strong> is a numeric data type that can represent both <strong>positive and negative whole numbers</strong>.<br />
+It typically uses <strong>two’s complement representation</strong> in modern computing, allowing efficient arithmetic operations.<br />
+The sign is indicated by the <strong>most significant bit (MSB)</strong>, where <code>0</code> represents positive numbers and <code>1</code> represents negative numbers.</p>
+<ul>
+<li><strong>Key Concepts</strong>
+<ul>
+<li>Can hold both <strong>positive and negative</strong> values.</li>
+<li>Stored in <strong>two’s complement</strong> format in most programming languages.</li>
+<li>Has a fixed range based on the number of bits (e.g., <strong>8-bit signed integer: -128 to 127</strong>).</li>
+<li>Overflow occurs when a value exceeds the defined bit range.</li>
+<li>Can be mathematically represented as a limited <a href="/Content/Integer-Number-Set/">Integer Number Set</a></li>
+</ul>
+</li>
+</ul>
+<div class="header-block h3">
+<h3 id="value-range">Value Range</h3>
+<ul>
+<li><strong>Signed Integer Value Range</strong>:<br />
+One bit is reserved for the sign, reducing the maximum value range by half:  $$2^{n-1}-1$$
+Explicitly:  $$\{-2^{n-1},\ldots,-1,1,0\ldots,2^{n-1}-1\}$$
+where:
+<ul>
+<li>$n\quad$  is the total number of bits in the integer.</li>
+</ul>
+</li>
+</ul>
+<div class="header-block h4">
+<h4 id="common-sizes">Common Sizes</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>Bit Width</strong></th>
+<th style="text-align:right"><strong>Minimum Value</strong></th>
+<th><strong>Maximum Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">8-bit</td>
+<td style="text-align:right">-128</td>
+<td>127</td>
+</tr>
+<tr>
+<td style="text-align:center">16-bit</td>
+<td style="text-align:right">-32,768</td>
+<td>32,767</td>
+</tr>
+<tr>
+<td style="text-align:center">32-bit</td>
+<td style="text-align:right">-2,147,483,648</td>
+<td>2,147,483,647</td>
+</tr>
+<tr>
+<td style="text-align:center">64-bit</td>
+<td style="text-align:right">-9,223,372,036,854,775,808</td>
+<td>9,223,372,036,854,775,807</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="special-cases">Special Cases</h3>
+<p>Some programming languages do <strong>not</strong> support integers explicitly:</p>
+<ul>
+<li><strong>Python</strong>:<br />
+Due to it's dynamical-type nature, python don't handle data types directly.</li>
+<li><strong>JavaScript</strong>:<br />
+Uses <strong>floating-point (<code>Number</code> type)</strong> for all numbers, including integers. Introduces <strong><code>BigInt</code></strong> for true integer arithmetic.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="syntax">Syntax</h3>
+<pre><code class="language-c">int myInt = 42; // In C the size depends on the platform
+long myLong = 123456789L; // at least 32-bit, often 64-bit on 64-bit systems
+short myShort = 32000;  // typically 16-bit integer
+char myByte = 127; // 1-byte(8-bit) integer
+</code></pre>
+<pre><code class="language-cpp">int myInt = 42;  // In C++ the size depends on the platform
+long myLong = 123456789L; // at least 32-bit, often 64-bit on 64-bit systems
+short myShort = 32000;  // typically 16-bit integer
+int8_t myByte = 127; // 8-bit (C/C++ specific, from stdint.h).
+</code></pre>
+<pre><code class="language-cs">int myInt = 42;  // fixed size 32-bit in C# unlike in C/C++
+long myLong = 123456789L; // fixed size 64-bit
+short myShort = 32000; // fixed size 16-bit
+byte myByte = 255; // 8-bit
+</code></pre>
+<pre><code class="language-java">int myInt = 42;
+long myLong = 123456789L;
+short myShort = 32000;
+byte myByte = 127;
+</code></pre>
+<pre><code class="language-python"># Python matches the integer based on the value; the size is dynamic.
+myInt = 42  
+a_bigger_integer = 100000
+notInt = 1.1
+</code></pre>
+<pre><code class="language-javascript">// JavaScript has only one number type (double-precision float)
+let myInt = 42; 
+</code></pre>
+<pre><code class="language-go">var myInt int = 42
+var myLong int64 = 123456789
+var myShort int16 = 32000
+</code></pre>
+<pre><code class="language-rust">let my_int: i32 = 42;
+let my_long: i64 = 123456789;
+let my_short: i16 = 32000;
+</code></pre>
+<pre><code class="language-swift">var myInt: Int = 42
+var myLong: Int64 = 123456789
+var myShort: Int16 = 32000
+</code></pre>
+<pre><code class="language-kotlin">val myInt: Int = 42
+val myLong: Long = 123456789L
+val myShort: Short = 32000
+</code></pre>
+<pre><code class="language-php">// PHP dynamically determines the type
+$myInt = 42; 
+```
+
+``` perl
+# Perl uses scalars, which auto-convert types
+my $myInt = 42;  
+</code></pre>
+<pre><code class="language-ruby"># Integer type, automatically assigned
+my_int = 42  
+</code></pre>
+<pre><code class="language-Lua">-- Lua automatically treats numbers as floating-point unless explicitly converted
+myInt = 42  
+
+</code></pre>
+<pre><code class="language-fortran">integer :: myInt = 42
+</code></pre>
+<pre><code class="language-sh">awk 'BEGIN { myInt = 42; print myInt }'
+</code></pre>
+</div>
+<div class="header-block h3">
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a href="/Content/Unsigned-Integer-(Programming)/">Unsigned Integer (Programming)</a></li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#signed-integer">Signed Integer</a></li>
+<ul>
+<li class="toc-level-3"><a href="#value-range">Value Range</a></li>
+<ul>
+<li class="toc-level-4"><a href="#common-sizes">Common Sizes</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#special-cases">Special Cases</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#syntax">Syntax</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#see-also">See Also</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

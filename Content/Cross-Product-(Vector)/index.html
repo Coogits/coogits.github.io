@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cross Product (Vector)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Algebra/">Algebra</a> &gt; <a href="/Content/Linear-Algebra/">Linear Algebra</a> &gt; <a href="/Content/Vector-(Math)/">Vector (Math)</a> &gt;</p>
+<div class="header-block h1">
+<h1 id="cross-product--vector">Cross Product (Vector)</h1>
+<p>The <strong>cross product</strong> (also known as the <strong>vector product</strong>) of two vectors $\overrightarrow{v}$ and $\overrightarrow{u}$ is a vector that is perpendicular to both $\overrightarrow{v}$ and $\overrightarrow{u}$. The magnitude of the cross product is given by:</p>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$\overrightarrow w\quad$ <strong>Cross Product</strong></li>
+<li>$\alpha\quad$ <strong>Angle</strong> between the vectors $\overrightarrow{v}$ and $\overrightarrow{u}$</li>
+<li>$\sin\alpha\quad$ <a href="/Content/Sine-(Trigonometry)/">Sine (Trigonometry)</a> Function.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="formulas">Formulas</h3>
+<div class="header-block h4">
+<h4 id="definition">Definition</h4>
+<ul>
+<li><strong>Cross Product (Vector Form)</strong><br />
+Given two vectors the cross product is: $$\vec w=\vec{v} \times \vec{u} = (v_y u_z - v_z u_y) \hat{i} + (v_z u_x - v_x u_z) \hat{j} + (v_x u_y - v_y u_x) \hat{k}$$</li>
+<li><strong>Cross Product (Magnitude)</strong>:<br />
+the magnitude is given by the product between the vector's magnitudes and the <strong>Sine</strong> of the angle between the vectors: $$\lvert\vec w\rvert=\lvert\vec v\times\vec u\rvert=\lvert\vec v\rvert\cdot\lvert\vec u\rvert\sin\alpha$$</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="properties">Properties</h4>
+<ul>
+<li><strong>Not commutative</strong><br />
+Is <strong>not</strong> commutative: $$\overrightarrow{v} \times \overrightarrow{u}=-(\overrightarrow{u} \times \overrightarrow{v})$$</li>
+<li><strong>Distributive</strong><br />
+Is Distributive $$\overrightarrow{v_3}\times(\overrightarrow{v_1}+\overrightarrow{v_2})=\overrightarrow{v_3}\times\overrightarrow{v_1}+\overrightarrow{v_3}\times\overrightarrow{v_2}$$</li>
+<li><strong>Parallel Vectors</strong><br />
+The cross product of two <strong>parallel vectors</strong> is zero: $$\overrightarrow{v} \times \overrightarrow{u}=0\qquad\text{if }\overrightarrow{v}\parallel\overrightarrow{u}$$</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="geometrical-interpretation">Geometrical Interpretation:</h3>
+<ul>
+<li>The magnitude of the cross product represents the area of the parallelogram formed by $\overrightarrow{v}$ and $\overrightarrow{u}$</li>
+<li>The direction of the cross product vector is perpendicular to the plane containing $\overrightarrow{v}$ and $\overrightarrow{u}$.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a href="/Content/Dot-Product-(Vector)/">Dot Product (Vector)</a></li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#cross-product--vector">Cross Product (Vector)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#formulas">Formulas</a></li>
+<ul>
+<li class="toc-level-4"><a href="#definition">Definition</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#properties">Properties</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#geometrical-interpretation">Geometrical Interpretation:</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#see-also">See Also</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

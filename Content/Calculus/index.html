@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculus</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Analysis-1/">Analysis 1</a></p>
+<div class="header-block h1">
+<h1 id="calculus">Calculus</h1>
+<p><strong>Calculus</strong> is a branch of mathematics that studies continuous change, focusing on two main operations: <strong>differentiation</strong> and <strong>integration</strong>. It provides powerful tools for understanding and modeling how quantities change over time, space, or other variables.</p>
+<div class="header-block h3">
+<h3 id="fundamental-theorem">Fundamental Theorem</h3>
+<ul>
+<li><strong>Statement</strong>:<br />
+The fundamental theorem of calculus establishes the inverse relationship between differentiation and integration:  $$F&#x27;(x)=f(x)$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="foundations">Foundations</h3>
+<div class="header-block h4">
+<h4 id="function--mathematics"><a href="/Content/Function-(Mathematics)/">Function (Mathematics)</a></h4>
+<ul>
+<li><a href="/Content/Limit-(Mathematics)/">Limit (Mathematics)</a></li>
+<li><a href="/Content/Continuity/">Continuity</a></li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="subfields">Subfields</h3>
+<div class="header-block h4">
+<h4 id="differential-calculus"><a href="/Content/Differential-Calculus/">Differential Calculus</a></h4>
+<p>Examines how functions change at an instant, using derivatives.</p>
+<ul>
+<li><a href="/Content/Derivative/">Derivative</a></li>
+<li><a href="/Content/Antiderivative-(Indefinite-Integral-&amp;-Primitive)/">Antiderivative</a></li>
+<li><a href="/Content/Partial-Derivative/">Partial Derivative</a></li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="integral-calculus"><a href="/Content/Integral-Calculus/">Integral Calculus</a></h4>
+<p>Explores the accumulation of quantities and areas, using integrals.</p>
+<ul>
+<li><a href="/Content/Integral/">Integral</a></li>
+<li><a href="/Content/Antiderivative-(Indefinite-Integral-&amp;-Primitive)/">Indefinite Integral</a></li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="multivariable-calculus">Multivariable Calculus</h4>
+<p>Extends calculus to functions of multiple variables, involving partial derivatives and multiple integrals.</p>
+</div>
+<div class="header-block h4">
+<h4 id="vector-calculus">Vector Calculus</h4>
+<p>Deals with vector fields and operations like gradient, divergence, and curl.</p>
+</div>
+<div class="header-block h4">
+<h4 id="calculus-of-variations">Calculus of Variations</h4>
+<p>Studies optimization problems where the goal is to find a function that minimizes or maximizes a functional.</p>
+</div>
+<div class="header-block h4">
+<h4 id="complex-analysis">Complex Analysis</h4>
+<p>Extends calculus to functions of complex numbers, including contour integration and holomorphic functions.</p>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="history-and-development">History and Development</h3>
+<p>Calculus was independently developed by <strong>Isaac Newton</strong> and <strong>Gottfried Wilhelm Leibniz</strong> in the late 17th century. Newton applied calculus to physics, formulating his laws of motion and gravitation, while Leibniz contributed to its formal notation, much of which is still used today.</p>
+</div>
+<div class="header-block h3">
+<h3 id="applications-of-calculus">Applications of Calculus</h3>
+<ul>
+<li><strong>Physics</strong> – Describes motion, forces, and energy (e.g., Newtonian mechanics, electromagnetism).</li>
+<li><strong>Engineering</strong> – Used in designing structures, electrical circuits, and control systems.</li>
+<li><strong>Economics</strong> – Models optimization problems, cost functions, and marginal analysis.</li>
+<li><strong>Biology</strong> – Analyzes population growth, rates of biochemical reactions, and medical imaging.</li>
+<li><strong>Computer Science</strong> – Helps in algorithms, graphics, machine learning, and simulations</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#calculus">Calculus</a></li>
+<ul>
+<li class="toc-level-3"><a href="#fundamental-theorem">Fundamental Theorem</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#foundations">Foundations</a></li>
+<ul>
+<li class="toc-level-4"><a href="#function--mathematics">Function (Mathematics)</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#subfields">Subfields</a></li>
+<ul>
+<li class="toc-level-4"><a href="#differential-calculus">Differential Calculus</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#integral-calculus">Integral Calculus</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#multivariable-calculus">Multivariable Calculus</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#vector-calculus">Vector Calculus</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#calculus-of-variations">Calculus of Variations</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#complex-analysis">Complex Analysis</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#history-and-development">History and Development</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#applications-of-calculus">Applications of Calculus</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

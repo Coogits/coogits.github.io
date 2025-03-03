@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Von Neumann Architecture</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Hardware/">Hardware</a> &gt; <a href="/Content/Computer-Architecture/">Computer Architecture</a></p>
+<div class="header-block h1">
+<h1 id="von-neumann-architecture">Von Neumann Architecture</h1>
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Von_Neumann_Architecture.svg" style="width: 350px; float: right; margin-left: 10px;" />  
+<p><strong>Von Neumann Architecture</strong> is a computer design model in which a single memory space is used to store both program instructions and data. This architecture forms the foundation for most modern general-purpose computers.
+<br clear="both" /></p>
+<div class="header-block h3">
+<h3 id="key-characteristics">Key Characteristics</h3>
+<ul>
+<li>
+<p><strong>Unified Memory:</strong><br />
+Both data and instructions reside in the same memory, accessed via a common bus. This simplifies the design but can lead to performance limitations, commonly known as the <strong>Von Neumann bottleneck</strong>.</p>
+</li>
+<li>
+<p><strong>Sequential Execution:</strong><br />
+The processor fetches, decodes, and executes one instruction at a time in a sequential manner, unless altered by control flow instructions (e.g., jumps or branches).</p>
+</li>
+<li>
+<p><strong>Central Processing Unit (CPU):</strong><br />
+A single processing unit performs arithmetic and logical operations and manages control flow, working in tandem with the memory system.</p>
+</li>
+<li>
+<p><strong>Simplicity and Flexibility:</strong><br />
+The unified design simplifies programming and hardware implementation, making it easier to develop and maintain computer systems.</p>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="strong-most-common-uses-of-von-neumann-architecture--strong"><strong>Most Common Uses of Von Neumann Architecture</strong></h3>
+<p>Von Neumann Architecture is the <strong>dominant model</strong> for general-purpose computing due to its <strong>flexibility and simplicity</strong>. It is widely used in:</p>
+<ul>
+<li><strong>General-Purpose Computers (Desktops, Laptops, Servers)</strong>
+<ul>
+<li><strong>Why?</strong> Unified memory simplifies hardware and software design, making it cost-effective and versatile.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li>Personal computers (PCs, macOS, Linux-based systems)</li>
+<li>Enterprise servers and data centers</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Mobile Devices &amp; Embedded Systems</strong>
+<ul>
+<li><strong>Why?</strong> Many modern microprocessors follow Von Neumann principles for ease of software development.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li>Smartphones, tablets, and smartwatches (e.g., ARM-based processors)</li>
+<li>Consumer electronics (e.g., Smart TVs, game consoles)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Operating Systems &amp; Software Development</strong>
+<ul>
+<li><strong>Why?</strong> Unified memory allows dynamic program execution and flexible software models.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li>Windows, Linux, macOS</li>
+<li>Application software, compilers, and virtual machines</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Scientific Computing &amp; AI Workloads (Modified Von Neumann)</strong>
+<ul>
+<li><strong>Why?</strong> Although GPUs and AI accelerators optimize memory access, CPUs managing these workloads still follow Von Neumann principles.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li>High-performance computing (HPC) clusters</li>
+<li>AI/ML workloads running on CPU-driven architectures</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Cloud Computing &amp; Virtualization</strong>
+<ul>
+<li><strong>Why?</strong> Virtual machines and cloud environments are built on traditional Von Neumann-based CPU architectures.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li>AWS, Microsoft Azure, Google Cloud</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="historical-context">Historical Context</h3>
+<ul>
+<li>
+<p><strong>Origin:</strong><br />
+Named after mathematician and early computer scientist John von Neumann, who described the architecture in the mid-20th century.</p>
+</li>
+<li>
+<p><strong>Impact:</strong><br />
+This model has significantly influenced computer design, even as modern systems incorporate enhancements like caching, pipelining, and parallel processing to overcome its limitations.</p>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a href="/Content/Harvard-Architecture/">Harvard Architecture</a></li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="diagram">Diagram</h3>
+<div class="mermaid">
+%%{init: {"flowchart": { "rankSpacing": 20,"nodeSpacing": 20, "nodePadding": 1 }}}%%
+flowchart LR
+  subgraph TOP[ ]
+    direction TB
+    subgraph B1[CPU]
+        direction RL
+        CU[CU]
+        ALU[ALU]
+        Reg
+    end
+    subgraph B2[Main Memory]
+        direction RL
+        RAM[RAM]
+        Cache[Cache]
+    end
+  end
+  Input[Input Devices] --> TOP --> Output[Output Devices]
+  B1 --> B2
+  B2 --> B1
+</div>
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#von-neumann-architecture">Von Neumann Architecture</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-characteristics">Key Characteristics</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#strong-most-common-uses-of-von-neumann-architecture--strong"><strong>Most Common Uses of Von Neumann Architecture</strong></a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#historical-context">Historical Context</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#see-also">See Also</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#diagram">Diagram</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

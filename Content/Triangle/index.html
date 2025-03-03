@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Triangle</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Geometry/">Geometry</a> &gt; <a href="/Content/Euclidean-Geometry/">Euclidean Geometry</a> &gt;  <a href="/Content/Plane-Geometry/">Plane Geometry</a></p>
+<div class="header-block h1">
+<h1 id="triangle">Triangle</h1>
+<p>A <strong>triangle</strong> is a three-sided polygon defined by three vertices $A,B,C$ three sides $a,b,c$ and three internal angles $\alpha,\beta,\gamma$. It is the simplest polygon and is defined by the sum of its internal angles, which always equals <strong>$180^\circ$</strong>.</p>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$A,B,C\quad$ <strong>Vertices</strong> (points in coordinate form, e.g., $A=(x,y)$)</li>
+<li>$a,b,c\quad$ <strong>Sides</strong> of the triangle (segments)</li>
+<li>$\alpha,\beta,\gamma\quad$ <a href="/Content/Angle-(Trigonometry)/">Angles</a>, opposite to their respective sides</li>
+<li>$\mathcal{A}\quad$ <a href="/Content/Area-(Plane-Geometry)/">Area (Plane Geometry)</a></li>
+<li>$2p\quad$ <a href="/Content/Perimeter-(Geometry)/">Perimeter (Geometry)</a></li>
+<li>$p\quad$ <a href="/Content/Perimeter-(Geometry)/">Semi-perimeter</a> $(p=\frac{2p}{2})$</li>
+<li>$R\quad$ <strong>Circumradius</strong></li>
+<li>$r\quad$ <strong>Inradius</strong></li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="formulas">Formulas</h3>
+<ul>
+<li><strong>Perimeter</strong>: $$2p=a+b+c$$</li>
+<li><strong>Area</strong>:<br />
+Generic Area:  $$\mathcal{A}=\frac{1}{2}\times\text{base}\times\text{height}$$
+<strong>Heron's Formula</strong> (when all sides are known): $$\mathcal{A}=\sqrt{p(p-a)(p-b)(p-c)}$$</li>
+</ul>
+<div class="header-block h4">
+<h4 id="special-circles">Special Circles</h4>
+<ul>
+<li><strong>Circumradius</strong>:<br />
+The radius of the <strong>circumcircle</strong>, which is the unique circle that passes through all three vertices of the triangle.  $$R=\cfrac{abc}{4\mathcal{A}}$$</li>
+<li><strong>Inradius</strong>:<br />
+The radius of the <strong>incircle</strong>, which is the largest circle that fits inside the triangle and is tangent to all three sides.  $$r=\cfrac{\mathcal{A}}{p}$$</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="special-points">Special Points</h4>
+<ul>
+<li><strong>Median Point</strong><br />
+Segment's median point:  $$M_a=\cfrac{B+C}{2}$$</li>
+<li><strong>Centroid</strong>:<br />
+The intersection of the <strong>three medians</strong>, dividing each median in a <strong>2:1 ratio</strong>:  $$G=\cfrac{ A+B+C}{3}$$</li>
+<li><strong>Orthocenter</strong>:<br />
+Intersection of <strong>altitudes</strong> (not necessarily inside the triangle).</li>
+<li><strong>Circumcenter</strong>:<br />
+The intersection of the <strong>perpendicular bisectors</strong>, acting as the center of the <strong>circumcircle</strong>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="special-segments">Special Segments</h4>
+<ul>
+<li><strong>Medians</strong>:<br />
+Line segments from a <strong>vertex</strong> to the <strong>midpoint</strong> of the opposite side:  $$\overline{AM_a}$$</li>
+<li><strong>Altitudes</strong>:<br />
+Perpendicular segments from a <strong>vertex</strong> to the <strong>opposite side</strong> (or its extension), meeting at the <strong>orthocenter</strong>.</li>
+<li><strong>Angle Bisectors</strong>:<br />
+Segments dividing an <strong>angle</strong> into two equal parts, meeting the opposite side at the <strong>incenter</strong>.</li>
+<li><strong>Perpendicular Bisectors</strong>:<br />
+Lines perpendicular to a <strong>side's midpoint</strong>, meeting at the <strong>circumcenter</strong>. $$\overline{ M_a O} \quad\text{such that}\quad \overline{ M_a O}\perp \overline{BC}$$</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="trigonometric-relations">Trigonometric Relations</h4>
+<ul>
+<li><strong>Law of Sines</strong>:<br />
+Trigonometric relation using the <a href="/Content/Law-of-Sines/">Law of Sines</a>:  $$2R=\dfrac{a}{\sin\alpha}=\dfrac{b}{\sin\beta}=\dfrac{c}{\sin\gamma}$$</li>
+<li><strong>Law of Cosines</strong>:<br />
+Trigonometric relation using the <a href="/Content/Law-of-Cosines/">Law of Cosines</a>:  $$c^2=a^2+b^2-2ab\cos\gamma$$</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="types-by-angles">Types by angles</h3>
+<p><strong>Types of Triangles (by angles)</strong>:</p>
+<div class="header-block h4">
+<h4 id="right-triangle"><a href="/Content/Right-Triangle/">Right Triangle</a></h4>
+<p>One angle is exactly <strong>90°</strong>.</p>
+</div>
+<div class="header-block h4">
+<h4 id="acute">Acute</h4>
+<p>All angles are less than <strong>90°</strong>.</p>
+</div>
+<div class="header-block h4">
+<h4 id="obtuse">Obtuse:</h4>
+<p>One angle is greater than <strong>90°</strong>.</p>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="types-by-sides">Types by sides</h3>
+<p><strong>Types of Triangles (by sides)</strong>:</p>
+<ul>
+<li><strong>Equilateral</strong>:<br />
+All three sides are equal.</li>
+<li><strong>Isosceles</strong>:<br />
+Two sides are equal.</li>
+<li><strong>Scalene</strong>:<br />
+All three sides have different lengths.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="properties">Properties</h3>
+<ul>
+<li><strong>Sum of the Angles</strong>:<br />
+The sum of the internal angles is $180^\circ$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a href="/Content/Formulary-(Plane-Geometry)/#triangle--generic"> Triangle Formulary</a></li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#triangle">Triangle</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#formulas">Formulas</a></li>
+<ul>
+<li class="toc-level-4"><a href="#special-circles">Special Circles</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#special-points">Special Points</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#special-segments">Special Segments</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#trigonometric-relations">Trigonometric Relations</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#types-by-angles">Types by angles</a></li>
+<ul>
+<li class="toc-level-4"><a href="#right-triangle">Right Triangle</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#acute">Acute</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#obtuse">Obtuse:</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#types-by-sides">Types by sides</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#properties">Properties</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#see-also">See Also</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

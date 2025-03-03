@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Summation (Arithmetic)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Arithmetic/">Arithmetic</a> &gt; <a href="/Content/Arithmetic-Operator/">Arithmetic Operator</a></p>
+<div class="header-block h1">
+<h1 id="summation">Summation</h1>
+<p>A <strong>summation</strong> is the process of adding a sequence of numbers or quantities together to find their total or sum. It is a fundamental operation in mathematics and is represented symbolically using the <strong>plus sign (+)</strong> or the <strong>summation symbol ($\sum$)</strong>.</p>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$\sum\quad$ <strong>Summation Symbol</strong></li>
+<li>$a_i\quad$ Is the element of the serie identified by the index $i$.</li>
+<li>$b_j\quad$ Is the element of the serie identified by the index $j$.</li>
+<li>$i,j\quad$ Is the index of the element in the serie.</li>
+<li>$m\quad$ The index of the first element. It is often set to $m=1$, and sometimes omitted when the summation starts naturally from 1.</li>
+<li>$n\quad$ The index of the last element in the series, sometimes omitted if the upper limit is clear from context.</li>
+<li>$a_{tot}\quad$ is the sum of all the elements ( $a_{tot}=a_m+a_{m+1}+\ldots+a_{n-1}+a_n$ )</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="notation">Notation</h3>
+<ul>
+<li><strong>Summation Notation</strong>:<br />
+In mathematics, summation is often expressed using the Greek capital letter <strong>sigma</strong>: $$a_{tot}=\displaystyle\sum_{i=m}^na_i$$</li>
+<li><strong>Summation Meaning</strong>:<br />
+The meaning of summation notation explicitly written out:  $$\displaystyle\sum_{i=m}^na_i=a_m+a_{m+1}+\ldots+a_{n-1}+a_n$$</li>
+<li><strong>Summation with multiple index</strong>:<br />
+This notation signifies summation over all <strong>distinct pairs</strong> $i,j$ where <strong>$i$ is less than $j$</strong>. This ensures that each unique pair is considered only once, preventing redundant calculations.: $$\sum_{i&lt;j}(a_i,b_j)$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="programming">Programming</h3>
+<p>In <a href="/Content/Programming-Language/">Programming Language</a>, a summation can be represented as the accumulation of array elements (or values) over a specified range.</p>
+<pre><code class="language-cpp">const int m = 0; // Start index of the summation range
+int a[] = {0, 1, 2, 3}; // Array of values to sum
+const int n = sizeof(a)/sizeof(a[0]); // Number of elements in the array
+int summation = 0; // Initialize the summation variable
+
+// Iterate through the array from index m to n-1
+for(int i = m; i&lt;n; i++){
+	summation += a[i]; // Add each element of the array to the summation variable
+}
+</code></pre>
+<p>In the code above the summation can be expressed as:</p>
+<ul>
+<li>$\displaystyle\sum_{i=m}^na_i\qquad \text{where}\begin{cases}m=0\\ n=4\\ a_i=i\end{cases}$</li>
+<li>$\displaystyle\sum_{i=0}^4i=0+1+2+3=6$</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#summation">Summation</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#notation">Notation</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#programming">Programming</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

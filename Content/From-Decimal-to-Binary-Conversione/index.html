@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>From Decimal to Binary Conversione</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <div class="header-block h1">
+<h1 id="from-decimal-to-binary-conversione">From Decimal to Binary Conversione</h1>
+<p>The <a href="/Content/Numeral-System-Conversion/">conversion</a> from  <a href="/Content/Decimal-System-(Numeral-System)/">Decimal</a> (base 10) to <a href="/Content/Binary-System-(Numeral-System)/">Binary</a> (base 2) can be represented using the following method, expressed as a series of divisions by 2 (which is the base of the binary system) and recording the remainders.</p>
+<div class="header-block h3">
+<h3 id="division-remainder-algorithm--or-repeated-division-method">division-remainder algorithm (or repeated division method):</h3>
+<ol>
+<li><strong>While</strong>: while the decimal number $N_i$ is not zero:
+<ul>
+<li>The remainder of $N_i$ by 2 will be the digit position and the index $i$ it's positional weight.</li>
+<li>Reiterate using a new decimal <strong>integer</strong> number dividing the current one by two $N_i=\cfrac{N_i}{2}$</li>
+</ul>
+</li>
+<li><strong>Result</strong>: We got the <a href="/Content/Expanded-Form-(Numeral-System)/">Expanded Form (Numeral System)</a> of the equivalent binary number.</li>
+</ol>
+<hr />
+<p>$$
+\begin{align}
+&amp;\textbf{Math Pseudocode} \\
+&amp;\text{Initialize:} \quad i \leftarrow 0 \\
+&amp;\textbf{while: } N_{10}&gt;0 \\
+&amp;\qquad a_i\leftarrow\mbox{mod}(N_{10},2) \\
+&amp;\qquad N_{10} \leftarrow \left\lfloor \cfrac{N_{10}}{2} \right\rfloor \\
+&amp;\qquad i\leftarrow i+1 \\
+&amp;n\leftarrow i+1 \\
+&amp;N_2=\displaystyle\sum_{i=0}^{n}a_i\cdot 2^i
+\end{align}
+$$</p>
+<ul>
+<li>Symbols
+<ul>
+<li>$N_{10}\quad$ The <strong>base 10 number</strong>.</li>
+<li>$N_2\quad$ The <strong>base 2 number</strong>.</li>
+<li>$a_i\quad$ The base 2 <strong>digit</strong> at positional weight $i$</li>
+<li>$i\quad$ The base 2 digit's <strong>positional weight</strong>.</li>
+<li>$n\quad$ The <strong>count</strong> of the binary digits.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<body>
+</div>
+<div class="header-block h2">
+<h2 id="decimal-to-base-conversion">Decimal to Base Conversion</h2>
+    <label for="decimalInput">Enter a Decimal Number: </label>
+    <input type="number" id="decimalInput" value="15" />
+    <button onclick="startConversion()">Start Conversion</button>
+    <br>
+    <label for="baseOut">Base Out (b): </label>
+    <input type="number" id="baseOut" value="16" min="2" max="36" />
+    <div id="steps"></div>
+    <script>
+        function startConversion() {
+            // Clear any previous steps
+            document.getElementById('steps').innerHTML = '';
+            // Get the decimal number
+            const decimalNumber = parseInt(document.getElementById('decimalInput').value);
+            const b = parseInt(document.getElementById('baseOut').value);
+            // Input validation
+            if (isNaN(decimalNumber) || decimalNumber < 0) {
+                alert("Please enter a valid non-negative decimal number.");
+                return;
+            }
+            if (isNaN(b) || b < 2 || b > 36) {
+                alert("Please enter a valid base (between 2 and 36).");
+                return;
+            }
+            let stepsHTML = '';
+            let number = decimalNumber;
+            let baseDigits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";  // For bases > 10
+            let resultArray = [];
+            let stepCount = 0;
+            // Handle the edge case where the number is 0
+            if (number === 0) {
+                resultArray.push("0");
+            }
+            // Loop through the division process
+            while (number > 0) {
+                let remainder = number % b;   // Remainder
+                resultArray.push(baseDigits[remainder]);  // Store the corresponding base digit
+                stepsHTML += '<div class="step">Step ' + (++stepCount) + ': ' + number + ' ÷ ' + b + ' = ' + Math.floor(number / b) + ' with remainder ' + remainder + '</div>';
+                number = Math.floor(number / b);  // Update number for next division
+            }
+            // Show the steps and the final result
+            console.log(stepsHTML);
+            stepsHTML += `<div class="step">Final result (reversed): ${resultArray.reverse().join('')}</div>`;
+            document.getElementById('steps').innerHTML = stepsHTML;
+        }
+    </script>
+</body>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#from-decimal-to-binary-conversione">From Decimal to Binary Conversione</a></li>
+<ul>
+<li class="toc-level-3"><a href="#division-remainder-algorithm--or-repeated-division-method">division-remainder algorithm (or repeated division method):</a></li>
+</ul>
+<ul>
+<li class="toc-level-2"><a href="#decimal-to-base-conversion">Decimal to Base Conversion</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

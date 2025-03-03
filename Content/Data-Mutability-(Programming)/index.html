@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Mutability (Programming)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Software/">Software</a> &gt; <a href="/Content/Programming/">Programming</a>  &gt; <a href="/Content/Data-(Programming)/">Data</a></p>
+<div class="header-block h1">
+<h1 id="data-mutability">Data Mutability</h1>
+<p><strong>Mutability</strong> refers to whether a data value can be modified after it has been created.<br />
+It classifies data into two main types:</p>
+<ul>
+<li><strong>Mutable (Variable)</strong></li>
+<li><strong>Immutable (Constant)</strong></li>
+</ul>
+<div class="header-block h3">
+<h3 id="mutable">Mutable</h3>
+<p><strong>Mutable</strong> (or <strong>Variable</strong>) Data can be modified after its creation.</p>
+<div class="header-block h4">
+<h4 id="mutable-concepts">Mutable Concepts</h4>
+<ul>
+<li>Can be reassigned or modified after initialization.</li>
+<li>Stored in <strong>read-write</strong> memory.</li>
+<li>Used for variables, objects, collections, and data structures requiring updates.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="mutable-examples">Mutable Examples</h4>
+<ul>
+<li>Standard variables (e.g., integers, floats, object references in most languages).</li>
+<li>Lists and dictionaries in Python.</li>
+<li>Arrays in Java, C++, and JavaScript.</li>
+</ul>
+<pre><code class="language-cpp">// --- Example (C++) ---
+#include &lt;iostream&gt;
+int main() {
+	float a = 1.23f; // Declare and initialize a mutable variable
+    a = 2.71f;  // Allowed: 'a' is mutable
+    std::cout &lt;&lt; &quot;Mutable variable a: &quot; &lt;&lt; a &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="immutable">Immutable</h3>
+<p><strong>Immutable</strong> (or <strong>constant</strong>) data <strong>cannot</strong> be changed after it is defined.</p>
+<div class="header-block h4">
+<h4 id="immutable-concepts">Immutable Concepts</h4>
+<ul>
+<li>Once assigned, the value remains <strong>unchangeable</strong>.</li>
+<li>Often stored in <strong>read-only</strong> memory.</li>
+<li>Useful for defining constants, preventing accidental modifications, and ensuring data integrity.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="immutable-types">Immutable Types</h4>
+<p>Immutable data can be subdivided into:</p>
+<ul>
+<li><strong>Read-Only Variables:</strong><br />
+(Stored in memory but cannot be modified at runtime)
+<ul>
+<li>Constants (e.g., <code>const</code> in C, <code>final</code> in Java).</li>
+<li>Strings in some languages (e.g., Python, Java).</li>
+</ul>
+</li>
+<li><strong>Compile-Time Constants:</strong><br />
+(Replaced by the compiler or preprocessor, may not exist in memory)
+<ul>
+<li><strong>Preprocessor macros</strong> (e.g., <code>#define PI 3.14159</code> in C, replaced before compilation).</li>
+<li><strong>Literal constants</strong> (e.g., <code>42</code>, <code>&quot;hello&quot;</code>, directly embedded in machine code).</li>
+<li><strong>Constant expressions</strong> (e.g., <code>constexpr</code> in C++, allowing compile-time evaluation).</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-cpp">// --- Example (C++) ---
+#include &lt;iostream&gt;
+#define PI 3.14159  // Preprocessor macro (replaced at compile-time)
+int main() {
+    const float b = 3.14f; // Immutable constant stored in memory
+    constexpr int c = 10;  // Compile-time constant (evaluated at compile-time)
+    // b = 2.71f;  // Error: 'b' is read-only
+    // PI = 2.71f; // Error: 'PI' is not a variable
+    // c = 20;     // Error: 'c' is evaluated at compile-time and is immutable
+    std::cout &lt;&lt; &quot;Memory-stored constant b: &quot; &lt;&lt; b &lt;&lt; std::endl;
+    std::cout &lt;&lt; &quot;Preprocessor macro PI: &quot; &lt;&lt; PI &lt;&lt; std::endl;
+    std::cout &lt;&lt; &quot;Compile-time constant c: &quot; &lt;&lt; c &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="in-oop">In OOP</h3>
+<p>In Object-Oriented Programming, mutability extends to objects and class properties:</p>
+<ul>
+<li>
+<p><strong>Mutable Objects:</strong><br />
+Objects whose fields can be modified after instantiation.</p>
+</li>
+<li>
+<p><strong>Immutable Objects:</strong><br />
+Objects whose state cannot change after they are created (e.g., <code>String</code> in Java, <code>tuple</code> in Python).</p>
+</li>
+</ul>
+<pre><code class="language-python"># --- Immutable Object Example (Python) ---
+class ImmutablePoint:
+    def __init__(self, x, y):
+        self._x = x
+        self._y = y
+    @property
+    def x(self):
+        return self._x
+    @property
+    def y(self):
+        return self._y
+p = ImmutablePoint(3, 4)
+# p.x = 5  # Error: Attribute cannot be modified
+print(p.x, p.y)  # Output: 3 4
+</code></pre>
+</div>
+<div class="header-block h3">
+<h3 id="differences">Differences</h3>
+<p>How to choosing Between Mutable and Immutable:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Mutable</th>
+<th>Immutable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modification</td>
+<td>Allowed</td>
+<td>Not Allowed</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>Stored in read-write memory</td>
+<td>Stored in read-only memory</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Can be modified, may require locking in concurrency</td>
+<td>Safer in concurrent programming</td>
+</tr>
+<tr>
+<td>Use Cases</td>
+<td>Variables, collections, configurations</td>
+<td>Constants, fixed keys, security-sensitive data</td>
+</tr>
+</tbody>
+</table>
+<p>Using immutability improves safety, while mutability allows flexibility. Choose based on your</p>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#data-mutability">Data Mutability</a></li>
+<ul>
+<li class="toc-level-3"><a href="#mutable">Mutable</a></li>
+<ul>
+<li class="toc-level-4"><a href="#mutable-concepts">Mutable Concepts</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#mutable-examples">Mutable Examples</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#immutable">Immutable</a></li>
+<ul>
+<li class="toc-level-4"><a href="#immutable-concepts">Immutable Concepts</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#immutable-types">Immutable Types</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#in-oop">In OOP</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#differences">Differences</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

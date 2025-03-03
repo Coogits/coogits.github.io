@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Electrostatic Force</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Physical-Quantity/">Physical Quantity</a> &gt; <a href="/Content/Force-(Physics)/">Force (Physics)</a> &gt;<br />
+<a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Classical-Physics/">Classical Physics</a> &gt; <a href="/Content/Electromagnetism/">Electromagnetism</a> &gt; <a href="/Content/Electronics/">Electronics</a> &gt;</p>
+<div class="header-block h1">
+<h1 id="electrostatic-force">Electrostatic Force</h1>
+<p>The <strong>Electrostatic Force</strong> (or <strong>Coulomb Force</strong>) is the force exerted between two charged particles due to their electric charges. It is described by <strong>Coulomb's Law</strong>, which states that the magnitude of the force between two point charges is <strong>directly proportional</strong> to the product of their charges and <strong>inversely proportional</strong> to the square of the distance between them.</p>
+<hr />
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$F\quad$ <strong>Magnitude</strong> of the <strong>electrostatic force</strong> (unit: Newton (N))</li>
+<li>$k=\cfrac{k_e}{\epsilon_r}\quad$ <strong>Electrostatic constant</strong> for a dielectric medium; in vacuum, $k=k_e$</li>
+<li>$k_e\quad$ <a href="/Content/Coulomb's-Constant/">Coulomb's Constant</a> in a vacuum ( $k_e=\cfrac{1}{4\pi \epsilon_0}\simeq8.99\times10^9\;\cfrac{N\cdot{m^2}}{C^2}$)</li>
+<li>$\epsilon_0\quad$ <a href="/Content/Permittivity/">vacuum permittivity</a> ($\epsilon_0\simeq8,854\cdot10^{-12}\;\frac{C^2}{N\cdot m^2}$)</li>
+<li>$\epsilon_r\quad$ <a href="/Content/Permittivity/">relative permittivity</a> in a dielectric ($\epsilon_r=\cfrac{F_0}{F_m}$, dimensionless )</li>
+<li>$\lvert q_1\rvert\lvert q_2\rvert\quad$ <strong>Magnitudes</strong> of the two <a href="/Content/Electric-Charge/">Electric Charge</a> ( unit: Coulomb (C) )</li>
+<li>$r\quad$ <strong>Distance</strong> between the charges ( unit: meters (m) )</li>
+<li>$\vec F\quad$ <strong>Electrostatic Force</strong> vector form  ( unit: Newton (N) )</li>
+<li>$\vec{s_2}-\vec{s_1}\quad$ <strong>Position vector difference</strong>, displacement between charges.</li>
+<li>$\hat r\quad$ is the <strong>Unit vector</strong> pointing from charge $q_1$ to the charge $q_2$, indicating the force direction</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="formulas">Formulas</h3>
+<ul>
+<li><strong>Coulomb's Law (scalar form)</strong>: $$F=k\cfrac{\lvert q_1\rvert\lvert q_2\rvert}{r^2}$$</li>
+<li><strong>Coulomb's Law (vector form)</strong>: $$\vec{F}=k\cfrac{q_1q_2}{r^2}\hat{r}=kq_1q_2\cfrac{\vec{s_2}-\vec{s_1}}{\rvert\vec{s_2}-\vec{s_1}\lvert^3}$$</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="unit">Unit</h3>
+<ul>
+<li><strong>SI Unit</strong>: Since the Coulomb force is a type of force, its SI unit is the Newton (N): $$F=\left(\cfrac{N\cdot{m^2}}{C^2}\right)\cdot\left(\cfrac{C^2}{m^2}\right)=N$$</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="properties">Properties</h3>
+<ul>
+<li>
+<p><a href="/Content/Conservative-Force/">Conservative Force</a>:<br />
+The Coulomb force is a <strong>conservative force</strong>, meaning that the work done by this force in moving a charge between two points is independent of the path taken and depends only on the initial and final positions.</p>
+</li>
+<li>
+<p><a href="/Content/Superposition-Principle/">Superposition Principle</a>:<br />
+When multiple charges are present, the total force on a given charge is the <strong>vector sum</strong> of the individual forces exerted by each charge. Mathematically: $$\vec F_{tot}=\displaystyle\sum_{i=1}\vec{F_i}$$</p>
+</li>
+<li>
+<p><strong>Inverse-Square Law Interpretation</strong>:<br />
+Coulombs law follows an <strong>inverse-square dependence</strong> on the distance between charges. This means that <strong>doubling the distance</strong> between two charges reduces the force to <strong>one-fourth</strong> of its original value: $$F\propto r^{-2}$$</p>
+</li>
+</ul>
+<hr />
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#electrostatic-force">Electrostatic Force</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#formulas">Formulas</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#unit">Unit</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#properties">Properties</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

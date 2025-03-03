@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Microarchitecture</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Hardware/">Hardware</a> &gt; <a href="/Content/Computer-Architecture/">Computer Architecture</a></p>
+<div class="header-block h1">
+<h1 id="microarchitecture">Microarchitecture</h1>
+<p><strong>Microarchitecture</strong> is the detailed design and organization of a processor’s internal components that implement the Instruction Set Architecture (ISA). It defines how the hardware components, such as the Arithmetic Logic Unit (ALU), Control Unit (CU), registers, caches, and pipelines, are structured and interact to execute instructions efficiently.</p>
+<div class="header-block h3">
+<h3 id="key-points">Key Points</h3>
+<ul>
+<li>
+<p><strong>Implementation Detail:</strong></p>
+<ul>
+<li>Microarchitecture bridges the gap between the abstract ISA and the physical hardware, dictating how the processor’s logic is realized using digital circuits.</li>
+</ul>
+</li>
+<li>
+<p><strong>Core Components:</strong></p>
+<ul>
+<li><strong>Arithmetic Logic Unit (ALU):</strong> Performs arithmetic and logical operations.</li>
+<li><strong>Control Unit (CU):</strong> Directs operations, managing the sequence of instruction execution.</li>
+<li><strong>Registers &amp; Cache:</strong> Temporary storage elements that hold data and instructions for quick access.</li>
+</ul>
+</li>
+<li>
+<p><strong>Performance Enhancements:</strong></p>
+<ul>
+<li>Techniques such as pipelining, superscalar execution, branch prediction, and out-of-order execution are integral to modern microarchitectures to improve performance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Design Goals:</strong></p>
+<ul>
+<li>Balancing speed, power efficiency, and cost while ensuring compatibility with the ISA.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="strong-x86-x86-64--cisc--microarchitectures--strong"><strong>x86/x86-64 (CISC) Microarchitectures</strong></h3>
+<p>Used in <strong>PCs, laptops, and servers</strong>, primarily by <strong>Intel and AMD</strong>.</p>
+<ul>
+<li>
+<p><strong>Intel Microarchitectures:</strong></p>
+<ul>
+<li><strong>Core (2006–present)</strong>: Found in <strong>Core i3, i5, i7, i9</strong> processors.</li>
+<li><strong>Nehalem (2008)</strong>: Introduced <strong>Hyper-Threading improvements</strong>.</li>
+<li><strong>Sandy Bridge (2011)</strong>: Improved <strong>integrated graphics and power efficiency</strong>.</li>
+<li><strong>Ivy Bridge, Haswell, Skylake (2012–2015)</strong>: Major optimizations in <strong>power consumption</strong>.</li>
+<li><strong>Alder Lake (2021)</strong>: Hybrid <strong>big.LITTLE design</strong> with <strong>P-cores and E-cores</strong>.</li>
+<li><strong>Meteor Lake (2024)</strong>: First <strong>chiplet-based architecture</strong> for Intel's consumer CPUs.</li>
+</ul>
+</li>
+<li>
+<p><strong>AMD Microarchitectures:</strong></p>
+<ul>
+<li><strong>Zen (2017–present)</strong>: Used in <strong>Ryzen and EPYC processors</strong>.</li>
+<li><strong>Zen 2 (2019)</strong>: First <strong>7nm</strong> consumer CPU architecture.</li>
+<li><strong>Zen 3 (2020)</strong>: Higher <strong>IPC (Instructions Per Cycle)</strong> performance boost.</li>
+<li><strong>Zen 4 (2022)</strong>: Introduced <strong>DDR5 and PCIe 5.0 support</strong>.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="strong-arm--risc--microarchitectures--strong"><strong>ARM (RISC) Microarchitectures</strong></h3>
+<p>Dominates <strong>smartphones, tablets, and embedded systems</strong> due to its power efficiency.</p>
+<ul>
+<li><strong>Common ARM-Based Microarchitectures:</strong>
+<ul>
+<li><strong>ARM Cortex-A series</strong>: Found in <strong>smartphones and tablets</strong> (e.g., Cortex-A78, Cortex-X3).</li>
+<li><strong>Apple Silicon (A-series, M-series)</strong>: Custom ARM-based CPUs used in &quot;Apple devices&quot;.</li>
+<li><strong>Snapdragon (Qualcomm)</strong>: ARM-based chips powering Android devices.</li>
+<li><strong>Exynos (Samsung) &amp; MediaTek Dimensity</strong>: Competing ARM-based mobile processors.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#microarchitecture">Microarchitecture</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-points">Key Points</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#strong-x86-x86-64--cisc--microarchitectures--strong"><strong>x86/x86-64 (CISC) Microarchitectures</strong></a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#strong-arm--risc--microarchitectures--strong"><strong>ARM (RISC) Microarchitectures</strong></a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

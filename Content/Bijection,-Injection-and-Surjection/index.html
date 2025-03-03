@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bijection, Injection and Surjection</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Analysis-1/">Analysis 1</a> &gt; <a href="/Content/Function-(Mathematics)/">Function (Mathematics)</a> &gt;</p>
+<div class="header-block h1">
+<h1 id="injective--surjective--and-bijective-functions">Injective, Surjective, and Bijective Functions</h1>
+<p>A function $f: X \to Y$ describes a mapping from a set <strong>$X$</strong> (domain) to a set <strong>$Y$</strong> (codomain). Depending on how elements in $X$ are assigned to elements in $Y$, a function can be classified as <strong>injective, surjective, or bijective</strong>.</p>
+<hr />
+<div class="header-block h2">
+<h2 id="injective-function--one-to-one">Injective Function (One-to-One)</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Injection.svg" style="width: 250px; float: right; margin-left: 10px;" />
+<ul>
+<li>
+<p><strong>Definition</strong><br />
+A function $f: X \to Y$ is <strong>injective</strong> (or <strong>one-to-one</strong>) if <strong>different inputs map to different outputs</strong>. That is: $$f(x_1)=f(x2)\implies x_1=x_2$$</p>
+</li>
+<li>
+<p><strong>Graphically:</strong><br />
+The function passes the <strong>horizontal line test</strong>, no horizontal line intersects the function more than once.</p>
+</li>
+<li>
+<p><strong>Image Description</strong>:<br />
+A <strong>Injective</strong> (non-Surjective) Function
+<br clear="both" /></p>
+</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h2">
+<h2 id="surjective-function--onto">Surjective Function (Onto)</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Surjection.svg" style="width: 250px; float: right; margin-left: 10px;" />
+<ul>
+<li>
+<p><strong>Definition</strong>:<br />
+A function $f: X \to Y$ is <strong>surjective</strong> if its <strong>image</strong> (range) is equal to its <strong>codomain</strong>: $$Im(f)=Y$$</p>
+</li>
+<li>
+<p><strong>Graphically:</strong><br />
+The function's range must be equal to its codomain.</p>
+</li>
+<li>
+<p><strong>Image Description</strong>:<br />
+A <strong>Surjective</strong> (non-Injective) Function
+<br clear="both" /></p>
+</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h2">
+<h2 id="bijective-function--one-to-one--amp--onto">Bijective Function (One-to-One &amp; Onto)</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Bijection.svg" style="width: 250px; float: right; margin-left: 10px;" />
+<ul>
+<li><strong>Definition</strong>:<br />
+A function $f: X \to Y$ is <strong>bijective</strong> if it is both <strong>injective and surjective</strong>.<br />
+This means:
+<ol>
+<li><strong>Injective:</strong> Different inputs map to different outputs.</li>
+<li><strong>Surjective:</strong> Every element in the codomain has at least one preimage.</li>
+</ol>
+</li>
+<li><strong>Graphically:</strong><br />
+The function passes both the <strong>horizontal</strong> and <strong>vertical</strong> line tests.</li>
+<li><strong>Properties</strong>:<br />
+A bijective function has a unique inverse:  $$f^{-1}(x)$$</li>
+<li><strong>Image Description</strong>:<br />
+A <strong>Bijective</strong> (Injective and Surjective) Function
+<br clear="both" /></li>
+</ul>
+<hr />
+</div>
+<div class="header-block h2">
+<h2 id="non-injective--amp--non-surjective-function">Non-Injective &amp; Non-Surjective Function</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Not-Injection-Surjection.svg" style="width: 250px; float: right; margin-left: 10px;" />
+<ul>
+<li><strong>Definition</strong><br />
+A function  $f: X \to Y$  is <strong>neither injective nor surjective</strong> if:
+<ol>
+<li><strong>It is not injective</strong>: Some distinct elements in the domain map to the same element in the codomain.</li>
+<li><strong>It is not surjective</strong>: Some elements in the codomain are never mapped by any element in the domain.</li>
+</ol>
+</li>
+<li><strong>Graphically:</strong>
+<ul>
+<li>The function <strong>fails the horizontal line test</strong>: Not injective.</li>
+<li>The function <strong>does not cover the entire codomain</strong>: Not surjective.</li>
+</ul>
+</li>
+<li><strong>Image Description</strong>:<br />
+A function that is <strong>neither injective nor surjective</strong>.
+<br clear="both" /></li>
+</ul>
+<hr />
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#injective--surjective--and-bijective-functions">Injective, Surjective, and Bijective Functions</a></li>
+<ul>
+<li class="toc-level-2"><a href="#injective-function--one-to-one">Injective Function (One-to-One)</a></li>
+</ul>
+<ul>
+<li class="toc-level-2"><a href="#surjective-function--onto">Surjective Function (Onto)</a></li>
+</ul>
+<ul>
+<li class="toc-level-2"><a href="#bijective-function--one-to-one--amp--onto">Bijective Function (One-to-One &amp; Onto)</a></li>
+</ul>
+<ul>
+<li class="toc-level-2"><a href="#non-injective--amp--non-surjective-function">Non-Injective &amp; Non-Surjective Function</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

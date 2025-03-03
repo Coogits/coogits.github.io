@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function (Programming)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a></p>
+<div class="header-block h1">
+<h1 id="function--programming">Function (Programming)</h1>
+<p>A <strong>function</strong> is a self-contained block of code that performs a specific task and can be reused throughout a program. Functions help organize code, improve readability, and promote reusability by allowing a piece of logic to be executed multiple times without repetition.</p>
+<div class="header-block h3">
+<h3 id="concepts">Concepts</h3>
+<ul>
+<li>
+<p><strong><a href="/Content/Identifier-(Programming)/#function-identifier">Identifier</a></strong>:<br />
+A function typically has a name that identifies it.</p>
+</li>
+<li>
+<p><strong>Parameters (Inputs)</strong>:<br />
+Functions may accept input values (arguments) to modify their behavior.</p>
+</li>
+<li>
+<p><strong>Return Value (Output)</strong>:<br />
+A function may return a value after execution.</p>
+</li>
+<li>
+<p><strong>Encapsulation</strong>:<br />
+Functions encapsulate logic, preventing interference with other parts of the program.</p>
+</li>
+<li>
+<p><strong>Reusability</strong>:<br />
+Functions can be called multiple times, reducing code duplication.</p>
+</li>
+<li>
+<p><strong>Modularity</strong>:<br />
+Functions help break down complex programs into smaller, manageable pieces.</p>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="structure">Structure</h3>
+<p>Most programming languages define functions with:</p>
+<ol>
+<li><strong>declaration</strong> (optional in some languages).</li>
+<li><strong>definition</strong> containing the function body.</li>
+<li><strong>return type</strong> (or void if no return value is needed).</li>
+<li><strong>Parameters</strong> (optional).</li>
+<li><strong><a href="/Content/Control-Flow/#subroutine">Control flow with subroutine</a></strong> to execute it.</li>
+</ol>
+</div>
+<div class="header-block h3">
+<h3 id="examples">Examples</h3>
+<pre><code class="language-c">// Declaration (&quot;add&quot; is identifier; &quot;a,b&quot; are parameters; &quot;int&quot; the return type)
+int add(int a, int b);
+// 
+int main() {
+    int result = add(5, 3);  // Function call
+    return 0;
+}
+// Definition
+int add(int a, int b) { // encapsulation done via brackets {}
+    return a + b;
+}
+</code></pre>
+<pre><code class="language-python">def add(a, b):
+    return a + b
+result = add(5, 3)  # Calling the function
+</code></pre>
+<pre><code class="language-javascript">function add(a, b) {
+    return a + b;
+}
+let result = add(5, 3);  // Calling the function
+</code></pre>
+</div>
+<div class="header-block h3">
+<h3 id="parameter">Parameter</h3>
+<p>A <strong>parameter</strong> is a variable listed in a function's declaration or definition that receives a value (known as an <strong>argument</strong>) when the function is called. Parameters allow functions to accept inputs and operate on them dynamically.</p>
+<ul>
+<li><strong>Formal Parameters</strong>:<br />
+Defined in the function signature and act as placeholders.</li>
+<li><strong>Actual Arguments</strong><br />
+Values passed to the function during a call.</li>
+<li><strong>Pass by Value</strong>:<br />
+The function gets a copy of the argument.</li>
+<li><strong>Pass by Reference</strong>:<br />
+The function gets a reference to the original variable.</li>
+<li><strong>Default Parameters</strong>:<br />
+Parameters that have a default value if no argument is provided.</li>
+<li><strong>Variadic Parameters</strong>:<br />
+Allow functions to accept a variable number of arguments.</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#function--programming">Function (Programming)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#concepts">Concepts</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#structure">Structure</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#examples">Examples</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#parameter">Parameter</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

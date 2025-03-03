@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exponential Equation</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Algebra/">Algebra</a> &gt; <a href="/Content/Elementary-Algebra/">Elementary Algebra</a> &gt; <a href="/Content/Equation/">Equation</a></p>
+<div class="header-block h1">
+<h1 id="exponential-equation">Exponential Equation</h1>
+<p>An <strong>exponential equation</strong> is an equation in which the variable appears in the exponent.</p>
+<ul>
+<li><strong>Key Concept</strong>
+<ul>
+<li><strong>Equation involving <a href="/Content/Exponentiation-(Arithmetic)/">Exponentiation</a></strong></li>
+<li><strong>Variable as Exponent</strong></li>
+</ul>
+</li>
+</ul>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$a,b\quad$ <strong>Bases</strong></li>
+<li>$x\quad$ <strong>Variable</strong> as exponent in exponential equations</li>
+<li>$f(x),g(x)\quad$ The exponent can be expressed as a function of $x$ (e.g. $f(x)=x+1$)</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="formulas">Formulas</h3>
+<ul>
+<li><strong>General Form</strong><br />
+The general form of an exponential equation is: $$a^{f(x)}=b^{g(x)}$$</li>
+<li><strong>Standard Form</strong><br />
+This can be solved using logarithms if a and b are not easily related.  $$a^x=b$$</li>
+<li><strong>Equations with the Same Base</strong>:<br />
+Given and equation:  $$a^{f(x)}=b^{g(x)}$$
+If the bases are equal and $a&gt;0$, then by the property of exponential functions:  $$f(x)=g(x)$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="solution-methods">Solution Methods</h3>
+<div class="header-block h4">
+<h4 id="equal-bases">Equal Bases</h4>
+<p>If possible, express both sides as powers of the same base and equate the exponents.</p>
+<ol>
+<li><strong>Example</strong>:<br />
+Solve the exponential equation: $$2^{x+1}=8$$</li>
+<li><strong>Solution</strong>:<br />
+Since $8=2^3$, rewriting the equation with the same base:  $$2^{x+1}=2^3$$</li>
+<li><strong>Solving</strong><br />
+By equating the exponents  $$x+1=3\Rightarrow x=2$$</li>
+</ol>
+</div>
+<div class="header-block h4">
+<h4 id="logarithms">Logarithms</h4>
+<p>When the equation cannot be rewritten with the same base, apply logarithms to both sides.</p>
+<ol>
+<li><strong>Example</strong>:<br />
+Solve the equation  $$3^x=7$$</li>
+<li><strong>Solution</strong><br />
+Apply the Logarithm to both side:    $$\log(3^x)=\log7$$
+Using logarithm properties:  $$x\log3=\log7$$</li>
+<li><strong>Solving</strong><br />
+Solving for x:  $$x=\cfrac{\log7}{\log3}\simeq1.77$$</li>
+</ol>
+</div>
+<div class="header-block h4">
+<h4 id="natural-logarithm">Natural Logarithm</h4>
+<p>If the base is <strong>Euler’s number $e$</strong>, the natural logarithm ($\ln$) is used.</p>
+<ol>
+<li><strong>Example</strong>:<br />
+Solve the equation $$e^{2x}=10$$</li>
+<li><strong>Solution</strong><br />
+Using the Natural Logarithm:  $$\ln(e^{2x})=\ln10$$</li>
+<li><strong>Solving</strong><br />
+Solving for x:  $$\begin{align}2x=\ln10\\x=\cfrac{\ln10}{2}\end{align}$$</li>
+</ol>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="properties">Properties</h3>
+<ul>
+<li><strong>One-to-One Property</strong><br />
+if $$a^x=a^y\quad\text{where }a&gt;0;a\neq1$$
+then  $$x=y$$</li>
+<li><strong>Exponential Growth</strong><br />
+$a^x$ represents exponential growth if:  $$a&gt;0$$</li>
+<li><strong>Exponential Decay</strong><br />
+$a^x$ represents exponential Decay if: $$0&lt;a&lt;1$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="quadratic-equation">Quadratic Equation</h3>
+<p>Some exponential equations can be rewritten as quadratic equations using substitution.</p>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#exponential-equation">Exponential Equation</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#formulas">Formulas</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#solution-methods">Solution Methods</a></li>
+<ul>
+<li class="toc-level-4"><a href="#equal-bases">Equal Bases</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#logarithms">Logarithms</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#natural-logarithm">Natural Logarithm</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#properties">Properties</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#quadratic-equation">Quadratic Equation</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

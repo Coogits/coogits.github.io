@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conservative Force</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Physical-Quantity/">Physical Quantity</a> &gt; <a href="/Content/Force-(Physics)/">Force (Physics)</a>
+<a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Classical-Mechanics/">Classical Mechanics</a> &gt; <a href="/Content/Dynamics/">Dynamics</a></p>
+<div class="header-block h1">
+<h1 id="conservative-force">Conservative Force</h1>
+<p>A conservative <a href="/Content/Force-(Physics)/">force</a> is one where the work done over a closed path is zero, meaning the force depends only on the initial and final positions, not the path taken. This implies that energy is conserved, with no loss or gain over a round trip. Conservative forces are linked to potential energy, which depends on the object's position. The work done by such a force can be expressed as the change in potential energy, ensuring that energy is conserved in the system.</p>
+<ol>
+<li><strong>Work is zero</strong>:<br />
+The work done by a conservative force $\vec{F}$ over a closed path $\gamma$ is zero. This means that the line integral of the force over any closed loop results in zero: $$\displaystyle\oint_{\gamma}\vec{F}\cdot\vec{s}=0$$</li>
+<li><strong>Path independence</strong>:<br />
+The work done by a conservative force is independent of the path taken between two points. This means the line integral of the force from point $A$ to point $B$ yields the same result, whether the path is path 1 or path 2: $$\overbrace{\displaystyle\int_A^B\vec{F}\cdot\vec{s}}^{path1}=\overbrace{\displaystyle\int_A^B\vec{F}\cdot\vec{s}}^{path2}$$</li>
+<li><strong>Potential energy exists</strong>:<br />
+A conservative force can be associated with a potential energy function, where the work done by the force is related to the change in potential energy. The potential energy function $U$ allows us to define the work done as the negative change in potential energy: $$W=-\Delta U$$</li>
+</ol>
+<hr />
+<div class="header-block h3">
+<h3 id="examples-of-conservative-forces">Examples of Conservative Forces</h3>
+<ul>
+<li><a href="/Content/Weight-(Force)/">Weight (Force)</a></li>
+</ul>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="examples-of-non-conservative-forces">Examples of Non-Conservative Forces</h3>
+<ul>
+<li><a href="/Content/Friction-(Force)/">Friction (Force)</a></li>
+</ul>
+<hr />
+<hr />
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#conservative-force">Conservative Force</a></li>
+<ul>
+<li class="toc-level-3"><a href="#examples-of-conservative-forces">Examples of Conservative Forces</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#examples-of-non-conservative-forces">Examples of Non-Conservative Forces</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

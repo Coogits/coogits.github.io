@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Operating System</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Software/">Software</a></p>
+<div class="header-block h1">
+<h1 id="operating-system">Operating System</h1>
+<p>An <strong>Operating System (OS)</strong> is low-level system software that serves as an abstraction layer between hardware and user applications, providing essential functionality for resource management, process execution, and system security. It facilitates interaction with hardware components, optimizes performance, and ensures concurrency, isolation, and security in a multi-user, multi-tasking environment.</p>
+<div class="header-block h3">
+<h3 id="common-os">Common OS</h3>
+<div class="header-block h4">
+<h4 id="general-purpose-os">General-Purpose OS</h4>
+<p>A <strong>General-Purpose Operating System</strong> is designed for a wide range of applications, from personal computing to enterprise use. It provides a graphical user interface (GUI), multitasking, and support for various software applications.</p>
+<ul>
+<li><strong>Windows</strong> – A proprietary OS developed by Microsoft, known for its widespread adoption in personal and enterprise computing.</li>
+<li><strong>Linux</strong> – An open-source OS based on the Unix architecture, used in both desktop and server environments.</li>
+<li><strong>macOS</strong> – A Unix-based OS developed by Apple, optimized for Apple hardware with a strong focus on user experience and security.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="mobile-os">Mobile OS</h4>
+<p>A <strong>Mobile Operating System</strong> is optimized for smartphones, tablets, and other portable devices. It prioritizes touch interfaces, power efficiency, and app ecosystems.</p>
+<ul>
+<li><strong>Android</strong> – An open-source OS developed by Google, based on the Linux kernel, widely used across various smartphone brands.</li>
+<li><strong>iOS</strong> – A proprietary OS developed by Apple, used exclusively on iPhones and iPads, known for its tight hardware-software integration.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="embedded-os">Embedded OS</h4>
+<p>An <strong>Embedded Operating System</strong> is designed for specialized devices with dedicated functions, often optimized for low power consumption and real-time performance.</p>
+<ul>
+<li><strong>FreeRTOS</strong> – A lightweight, real-time OS widely used in embedded systems like IoT devices and microcontrollers.</li>
+<li><strong>RTEMS (Real-Time Executive for Multiprocessor Systems)</strong> – A real-time OS designed for aerospace, industrial, and automotive applications.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="server-os">Server OS</h4>
+<p>A <strong>Server Operating System</strong> is optimized for handling network requests, managing resources, and running enterprise applications with high reliability and security.</p>
+<ul>
+<li><strong>Windows Server</strong> – A Microsoft OS designed for enterprise environments, supporting Active Directory, virtualization, and cloud integration.</li>
+<li><strong>Red Hat Enterprise Linux (RHEL)</strong> – A commercially supported Linux distribution tailored for enterprise servers and cloud environments.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="os-core-functions">OS Core Functions</h3>
+<ul>
+<li><strong>Process Management</strong>
+<ul>
+<li>Handles process creation (<code>fork</code>, <code>exec</code> in Unix-like systems) and termination.</li>
+<li>Implements scheduling algorithms (FIFO, Round Robin, Priority Scheduling) to optimize CPU utilization.</li>
+<li>Supports inter-process communication (IPC) through shared memory, message passing, or semaphores.</li>
+</ul>
+</li>
+<li><strong>Memory Management</strong>
+<ul>
+<li>Manages physical and virtual memory via paging and segmentation.</li>
+<li>Uses algorithms like <strong>First-Fit</strong>, <strong>Best-Fit</strong>, or <strong>Worst-Fit</strong> for memory allocation.</li>
+<li>Employs techniques like demand paging, swapping, and memory protection mechanisms (MMU).</li>
+</ul>
+</li>
+<li><strong>File System Management</strong>
+<ul>
+<li>Provides file abstraction through hierarchical structures (FAT32, NTFS, ext4).</li>
+<li>Controls file permissions, access control lists (ACLs), and journaling mechanisms.</li>
+<li>Implements I/O buffering, caching, and disk scheduling (C-SCAN, SSTF).</li>
+</ul>
+</li>
+<li><strong>Device Management</strong>
+<ul>
+<li>Abstracts hardware devices via drivers and the kernel’s I/O subsystem.</li>
+<li>Manages interrupts via <strong>Interrupt Request Lines (IRQ)</strong> and <strong>Direct Memory Access (DMA)</strong>.</li>
+<li>Implements polling, interrupt-driven I/O, and asynchronous I/O.</li>
+</ul>
+</li>
+<li><strong>Security &amp; Protection</strong>
+<ul>
+<li>Enforces user authentication and process isolation.</li>
+<li>Implements privilege levels (Ring 0 for kernel mode, Ring 3 for user mode).</li>
+<li>Uses system calls (e.g., <code>chmod</code>, <code>chroot</code>) for access control and sandboxing.</li>
+</ul>
+</li>
+<li><strong>Concurrency &amp; Synchronization</strong>
+<ul>
+<li>Provides thread management (user-space vs. kernel-space threads).</li>
+<li>Implements synchronization primitives like mutexes, spinlocks, semaphores, and condition variables.</li>
+<li>Prevents deadlocks using algorithms like Banker's Algorithm or priority inheritance.</li>
+</ul>
+</li>
+<li><strong>Networking &amp; Communication</strong>
+<ul>
+<li>Implements TCP/IP stack for network communication.</li>
+<li>Manages socket programming for IPC and distributed computing.</li>
+<li>Supports network protocols (HTTP, FTP, SSH) via system services.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="os-types">OS Types</h3>
+<ul>
+<li><strong>Real-Time OS (RTOS)</strong>:<br />
+Guarantees deterministic execution (FreeRTOS, VxWorks).</li>
+<li><strong>Distributed OS</strong>:<br />
+Coordinates multiple networked computers (Amoeba, MOSIX).</li>
+<li><strong>Virtualized OS</strong>:<br />
+Runs on hypervisors (VMware ESXi, KVM).</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="kernel">Kernel</h3>
+<p>A <strong>kernel</strong> is the core component of an operating system that directly interacts with hardware and provides essential services for system processes and applications. It operates in <strong>privileged mode</strong> (kernel mode) and manages system resources such as CPU, memory, storage, and I/O devices.</p>
+<div class="header-block h4">
+<h4 id="kernel-functions">Kernel Functions</h4>
+<ul>
+<li><strong>Process Management</strong>
+<ul>
+<li>Schedules and executes processes using algorithms like <strong>Round Robin, Shortest Job Next (SJN), or Priority Scheduling</strong>.</li>
+<li>Manages process creation (<code>fork()</code>, <code>exec()</code>) and termination.</li>
+<li>Handles context switching between processes and threads.</li>
+</ul>
+</li>
+<li><strong>Memory Management</strong>
+<ul>
+<li>Allocates and deallocates memory to processes.</li>
+<li>Implements <strong>paging, segmentation, and virtual memory</strong> mechanisms.</li>
+<li>Uses memory protection techniques to prevent unauthorized access.</li>
+</ul>
+</li>
+<li><strong>File System Management</strong>
+<ul>
+<li>Manages file access, creation, and deletion.</li>
+<li>Implements file system structures like <strong>FAT, NTFS, ext4, XFS</strong>.</li>
+<li>Provides system calls (<code>open()</code>, <code>read()</code>, <code>write()</code>, <code>close()</code>).</li>
+</ul>
+</li>
+<li><strong>Device Management</strong>
+<ul>
+<li>Interfaces with hardware through <strong>device drivers</strong>.</li>
+<li>Uses <strong>interrupt handling</strong> to process I/O operations efficiently.</li>
+<li>Supports buffering, caching, and direct memory access (DMA).</li>
+</ul>
+</li>
+<li><strong>Inter-process Communication (IPC)</strong>
+<ul>
+<li>Enables processes to communicate using <strong>pipes, message queues, shared memory, semaphores</strong>.</li>
+<li>Implements synchronization mechanisms to prevent race conditions.</li>
+</ul>
+</li>
+<li><strong>Security &amp; Protection</strong>
+<ul>
+<li>Enforces <strong>privilege levels</strong> (User Mode vs. Kernel Mode).</li>
+<li>Implements access control lists (ACLs) and system call restrictions.</li>
+<li>Provides authentication and encryption for secure operations.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="kernel-types">Kernel Types</h4>
+<ul>
+<li><strong>Monolithic Kernel</strong>
+<ul>
+<li>All essential OS services (memory management, scheduling, file system, drivers) run in <strong>kernel space</strong>.</li>
+<li><strong>Fast but large</strong> due to direct communication within the kernel.</li>
+<li>Example: <strong>Linux, Unix, Windows NT (early versions)</strong>.</li>
+</ul>
+</li>
+<li><strong>Microkernel</strong>
+<ul>
+<li>Minimal kernel in <strong>kernel space</strong>, while system services (drivers, file systems) run in <strong>user space</strong>.</li>
+<li><strong>More secure and modular</strong>, but slower due to message passing overhead.</li>
+<li>Example: <strong>QNX, Minix, L4, macOS XNU (hybrid)</strong>.</li>
+</ul>
+</li>
+<li><strong>Hybrid Kernel</strong>
+<ul>
+<li>Combines <strong>monolithic speed</strong> with <strong>microkernel modularity</strong>.</li>
+<li>Example: <strong>Windows NT, macOS (XNU), BeOS</strong>.</li>
+</ul>
+</li>
+<li><strong>Exokernel</strong>
+<ul>
+<li>Minimalist kernel that exposes hardware to applications.</li>
+<li>Used for research and performance-critical systems.</li>
+<li>Example: <strong>ExOS, Nemesis</strong>.</li>
+</ul>
+</li>
+<li><strong>Nanokernel</strong>
+<ul>
+<li>Even smaller than a microkernel, offloading most tasks to external processes.</li>
+<li>Example: <strong>Eros, K42</strong>.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#operating-system">Operating System</a></li>
+<ul>
+<li class="toc-level-3"><a href="#common-os">Common OS</a></li>
+<ul>
+<li class="toc-level-4"><a href="#general-purpose-os">General-Purpose OS</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#mobile-os">Mobile OS</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#embedded-os">Embedded OS</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#server-os">Server OS</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#os-core-functions">OS Core Functions</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#os-types">OS Types</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#kernel">Kernel</a></li>
+<ul>
+<li class="toc-level-4"><a href="#kernel-functions">Kernel Functions</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#kernel-types">Kernel Types</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Integer (Programming)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a> &gt; <a href="/Content/Data-Type-(Programming)/">Type</a> &gt; <a href="/Content/Primitive-Type/">Primitive Type</a></p>
+<div class="header-block h1">
+<h1 id="integer--programming">Integer (Programming)</h1>
+<p>An <strong>integer</strong> is a numeric data type that represents whole numbers, including zero, without any fractional or decimal component. It can be <strong>signed</strong> (allowing negative values) or <strong>unsigned</strong> (only non-negative values).</p>
+<ul>
+<li><strong>Whole Numbers only</strong>:<br />
+No fractional or decimal values.</li>
+<li><strong>Signed vs. Unsigned</strong>:<br />
+Can represent negative and positive values or only non-negative values.
+<ul>
+<li><strong><a href="/Content/Signed-Integer-(Programming)/">Signed Integer (Programming)</a></strong></li>
+<li><strong><a href="/Content/Unsigned-Integer-(Programming)/">Unsigned Integer (Programming)</a></strong></li>
+</ul>
+</li>
+<li><strong>Binary Representation</strong>:<br />
+The <a href="/Content/Integer-Binary-Representation/">Integer Binary Representation</a> follows a positional system, with the most significant bit acting as the sign bit for signed integers.</li>
+<li><strong>Fixed or Arbitrary Size</strong>:<br />
+Some languages use fixed-size integers, while others allow arbitrary precision.</li>
+</ul>
+<pre><code class="language-c">// Example in C
+int myInt = 42; // Signed integer (negative and positive)
+unsigned int myUnsignedInt = 42; // Unsigned (positive value only)
+long myLong = 123456789L; // Bigger signed integer
+</code></pre>
+<div class="header-block h3">
+<h3 id="standard-integer-types">Standard Integer Types</h3>
+<p>In most Languages the default <code>int</code> assumed to be <strong>unsigned integer</strong> unless explicitly stated.</p>
+<ul>
+<li><strong>Platform-Specific Size</strong>
+<ul>
+<li><strong>C/C++</strong>: <code>int</code> is <strong>at least 16 bits</strong> (per C standard), but most modern compilers implement it as <strong>32-bit</strong>.</li>
+</ul>
+</li>
+<li><strong>Fixed Size</strong>
+<ul>
+<li><strong>Java, C#</strong>: <code>int</code> is always <strong>32-bit</strong>.</li>
+<li><strong>Rust</strong>: Uses <code>i32</code> as the default integer type instead of <code>int</code>.</li>
+</ul>
+</li>
+<li><strong>Arbitrary Size</strong>
+<ul>
+<li><strong>Python</strong>: Uses <strong>arbitrary-precision integers</strong>, meaning it expands dynamically as needed.</li>
+</ul>
+</li>
+<li><strong>Floating-Point Representation</strong>
+<ul>
+<li><strong>JavaScript</strong>: Uses <strong>floating-point (<code>Number</code> type)</strong> for all numbers, including integers. Introduces <strong><code>BigInt</code></strong> for true integer arithmetic.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="overflow--amp--underflow">Overflow &amp; Underflow</h3>
+<ul>
+<li><strong>Fixed-size Limits</strong>:<br />
+Fixed-size integers (e.g., <code>int</code>, <code>int16</code>, <code>int32</code>) have a limited range, and exceeding this range leads to <strong>overflow</strong> (wrapping around) or <strong>underflow</strong> (going below the minimum value).</li>
+<li><strong>Safeguards</strong>:<br />
+Some languages provide <strong>safeguards</strong> to handle overflow, such as <strong>arbitrary-precision</strong> integers in Python or <strong>checked arithmetic</strong> in Rust.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="performance-considerations">Performance Considerations</h3>
+<ul>
+<li><strong>Floating Point Comparison</strong>:<br />
+Integer operations are generally <strong>faster</strong> than floating-point operations in most CPUs.</li>
+<li><strong>Bit Size</strong>:<br />
+Choosing smaller integers (e.g., <code>int16</code> vs. <code>int32</code>) saves memory, but at the cost of a smaller range.</li>
+<li><strong>Signed vs. Unsigned</strong>:<br />
+Since for signed integers one bit is reserved for the sign, unsigned integers can represent double the range value respect it's unsigned counterpart<br />
+for <strong>Signed Integers</strong> the range value is give by:  $$2^{n-1}-1$$
+For <strong>Unsigned Integers</strong> the range value is give by:  $$2^{n}-1$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="integer-division">Integer Division</h3>
+<ul>
+<li><strong>Truncation</strong>:<br />
+In some languages (e.g., C, Java), dividing two integers <strong>truncates</strong> the result instead of returning a decimal.
+<ul>
+<li>example: <code>5 / 2</code> $\to$ <code>2</code> instead of <code>2.5</code> in some languages.</li>
+<li>example with at least one floating-point:  (<code>5 / 2.0</code> $\to$ <code>2.5</code>).</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-c">// truncation example
+int result = 5 / 2; // Output: 2 (integer division, truncates decimal part)
+float f = 5 / 2;    // Still 2, because both are int
+float f2 = 5 / 2.0; // Output: 2.5 (float division)
+</code></pre>
+</div>
+<div class="header-block h3">
+<h3 id="common-uses">Common Uses</h3>
+<ul>
+<li>Counting and indexing in loops</li>
+<li>Representing discrete values such as IDs, flags, and enumerations</li>
+<li>Mathematical calculations where only whole numbers are needed</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#integer--programming">Integer (Programming)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#standard-integer-types">Standard Integer Types</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#overflow--amp--underflow">Overflow &amp; Underflow</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#performance-considerations">Performance Considerations</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#integer-division">Integer Division</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#common-uses">Common Uses</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Operator (Programming)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a></p>
+<div class="header-block h1">
+<h1 id="operator--programming">Operator (Programming)</h1>
+<p>A <strong>programming operator</strong> is a symbol or function that performs a specific operation on one or more operands (values or variables) in a program. Operators are fundamental components of programming languages and are used to manipulate data, perform calculations, and control program flow.</p>
+<div class="header-block h3">
+<h3 id="operator-types">Operator Types</h3>
+<p><strong>Programming operator types</strong>:</p>
+<div class="header-block h4">
+<h4 id="unary-operator">Unary Operator</h4>
+<p>A <strong>unary operator</strong> is an operator that operates on <strong>a single operand</strong> to perform an operation.<br />
+Unary operators are useful for manipulating variables efficiently and are commonly used in loops, conditions, and memory operations.</p>
+<ul>
+<li>Increment/Decrement Operators:<br />
+Modify a value by 1:
+<ul>
+<li><code>++</code> (Increment)</li>
+<li><code>--</code> (Decrement)</li>
+</ul>
+</li>
+<li>Negation Operators
+<ul>
+<li>Arithmetic negation: <code>-x</code> (Changes the sign of a number)</li>
+<li>Logical negation: <code>!x</code> (Flips Boolean values)</li>
+</ul>
+</li>
+<li>Type Operators
+(Language-Specific) Used for type checking and conversion:
+<ul>
+<li><code>typeof</code> (JavaScript)</li>
+<li><code>instanceof</code> (JavaScript, Java)</li>
+<li><code>as</code> (TypeScript, C#)</li>
+</ul>
+</li>
+<li>Pointer Operators (C, C++)
+Work with memory addresses:
+<ul>
+<li><code>*</code> (Dereference)</li>
+<li><code>&amp;</code> (Address-of)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="binary-operator">Binary Operator</h4>
+<p>A <strong>binary operator</strong> is an operator that requires <strong>two operands</strong> to perform an operation.<br />
+It takes one operand on the left and another on the right.<br />
+Binary operators are fundamental in programming and are used for computations, comparisons, and logical operations.</p>
+<ul>
+<li>Arithmetic Operators<br />
+Perform mathematical calculations:
+<ul>
+<li><code>+</code> (Addition)</li>
+<li><code>-</code> (Subtraction)</li>
+<li><code>*</code> (Multiplication)</li>
+<li><code>/</code> (Division)</li>
+<li><code>%</code> (Modulus - Remainder of division)</li>
+</ul>
+</li>
+<li>Relational (Comparison) Operators<br />
+Compare values and return a Boolean result:
+<ul>
+<li><code>==</code> (Equal to)</li>
+<li><code>!=</code> (Not equal to)</li>
+<li><code>&gt;</code> (Greater than)</li>
+<li><code>&lt;</code> (Less than)</li>
+<li><code>&gt;=</code> (Greater than or equal to)</li>
+<li><code>&lt;=</code> (Less than or equal to)</li>
+</ul>
+</li>
+<li>Logical Operators<br />
+Perform Boolean logic:
+<ul>
+<li><code>&amp;&amp;</code> (Logical AND)</li>
+<li><code>||</code> (Logical OR)</li>
+<li><code>!</code> (Logical NOT, technically unary)</li>
+</ul>
+</li>
+<li><a href="/Content/Bitwise-Operator-(Programming)/">Bitwise Operator</a><br />
+Operate at the binary level:
+<ul>
+<li><code>&amp;</code> (Bitwise AND)</li>
+<li><code>|</code> (Bitwise OR)</li>
+<li><code>^</code> (Bitwise XOR)</li>
+<li><code>~</code> (Bitwise NOT, technically unary)</li>
+<li><code>&lt;&lt;</code> (Left shift)</li>
+<li><code>&gt;&gt;</code> (Right shift)</li>
+</ul>
+</li>
+<li>Assignment Operators<br />
+Assign or update values efficiently:
+<ul>
+<li><code>=</code> (Assignment)</li>
+<li><code>+=</code> (Addition assignment)</li>
+<li><code>-=</code> (Subtraction assignment)</li>
+<li><code>*=</code> (Multiplication assignment)</li>
+<li><code>/=</code> (Division assignment)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="ternary-operator">Ternary Operator</h4>
+<p>Shorthand for conditional expressions</p>
+<ul>
+<li><code>condition ? true_value : false_value</code> (C/C++)</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="operator-overloading">Operator Overloading</h3>
+<p>Some programming languages, like C++ and Python, allow <strong>operator overloading</strong>, where operators can be redefined to perform different operations based on the types of operands involved.<br />
+This allows operators to be used with user-defined types, such as classes or structs, in a way that mimics built-in types.</p>
+<p><strong>Assignment Operator</strong><br />
+An operator used to assign a value to a variable, such as the assignment (<code>=</code>) operator. It can also include compound assignment operators like <code>+=</code>, <code>-=</code>, <code>*=</code>, etc.</p>
+<p><strong>Logical and Relational Operators</strong><br />
+These include operators for comparison and logical operations, such as <code>&amp;&amp;</code> (AND), <code>||</code> (OR), <code>&gt;</code> (greater than), <code>&lt;=</code> (less than or equal to), etc.</p>
+<p><strong>Bitwise Operators</strong><br />
+Operators that perform bit-level operations on integer values, such as AND (<code>&amp;</code>), OR (<code>|</code>), XOR (<code>^</code>), and shift operators (<code>&lt;&lt;</code>, <code>&gt;&gt;</code>).</p>
+<p><strong>Precedence and Associativity</strong><br />
+Operators also have precedence (the order in which operations are performed) and associativity (whether operations are performed left-to-right or right-to-left), which dictate how expressions are evaluated.</p>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#operator--programming">Operator (Programming)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#operator-types">Operator Types</a></li>
+<ul>
+<li class="toc-level-4"><a href="#unary-operator">Unary Operator</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#binary-operator">Binary Operator</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#ternary-operator">Ternary Operator</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#operator-overloading">Operator Overloading</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

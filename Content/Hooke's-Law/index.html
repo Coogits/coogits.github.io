@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hooke's Law</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Physical-Quantity/">Physical Quantity</a> &gt; <a href="/Content/Force-(Physics)/">Force (Physics)</a>
+<a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Classical-Mechanics/">Classical Mechanics</a> &gt; <a href="/Content/Dynamics/">Dynamics</a></p>
+<div class="header-block h1">
+<h1 id="hooke-s-law">Hooke's Law</h1>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Hooke%27s_Law_wikipedia.png" style="width: 250px; float: right; margin-left: 10px;" />Hooke's Law is a principle in physics that states that the force needed to extend or compress a spring (or any elastic object) is directly proportional to the displacement from its equilibrium position, as long as the elastic limit of the material is not exceeded.</p>
+<br clear="both" />
+<hr />
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$\vec F_e\quad$ <strong>Elastic force</strong> (unit: Newton ($N = \cfrac{kg \cdot m}{s^2}$))</li>
+<li>$k\quad$ <strong>Spring constant</strong> measures the stiffness of the spring (unit: Newton per meter ($\cfrac{N}{m}$))</li>
+<li>$\vec x\quad$ <strong>Displacement from the equilibrium position</strong> represent the distance the spring is stretched or compressed (unit: meter ($m$))</li>
+<li>$\vec L\quad$ The current length of the object after it has been stretched or compressed (unit: meter ($m$))</li>
+<li>$\vec L_0\quad$ The original or natural length of the object when it is at equilibrium (i.e., when no external forces are acting on it) (unit: meter ($m$))</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="formulas">Formulas</h3>
+<ul>
+<li><strong>Elastic Force</strong>:<br />
+Restoring force exerted by an elastic object, proportional to displacement:  $$\vec F_e=-k\vec{x}$$</li>
+<li><strong>Displacement</strong>:<br />
+the displacement $x$ of an elastic object (such as a spring) from its equilibrium or natural length. $$\vec x=\vec L-\vec L_0$$</li>
+</ul>
+<hr />
+<p><strong>Key Points:</strong></p>
+<ul>
+<li><strong>Proportionality</strong>:<br />
+The law holds true as long as the deformation (stretching or compression) is within the elastic limit of the material. Beyond this limit, the material may deform permanently, and Hooke's Law no longer applies.</li>
+<li><strong>Elasticity</strong>:<br />
+It is fundamental to understanding the behavior of springs and other elastic materials in mechanical systems.</li>
+<li><strong>Applications</strong>:<br />
+Hooke's Law is used in various fields, including mechanical engineering, materials science, and physics, to design and analyze systems involving springs, oscillations, and other elastic components.</li>
+</ul>
+<hr />
+<hr />
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#hooke-s-law">Hooke's Law</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#formulas">Formulas</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

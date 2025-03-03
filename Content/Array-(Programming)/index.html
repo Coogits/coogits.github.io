@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array (Programming)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a> &gt; <a href="/Content/Data-(Programming)/">Data</a> &gt; <a href="/Content/Data-Structure/">Data Structure</a><br />
+<a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a> &gt; <a href="/Content/Data-Type-(Programming)/">Type</a> &gt; <a href="/Content/Composite-Type/">Composite Type</a></p>
+<div class="header-block h1">
+<h1 id="array--programming">Array (Programming)</h1>
+<p>An <strong>array</strong> is a data structure that stores a fixed-size, ordered collection of elements of the same type in contiguous memory locations. Each element in an array is identified by an index, allowing efficient random access.</p>
+<div class="header-block h3">
+<h3 id="key-characteristics">Key Characteristics:</h3>
+<ul>
+<li><strong>Fixed Size</strong>:<br />
+The size of an array is typically defined at creation and cannot change dynamically (except in dynamic arrays).</li>
+<li><strong>Contiguous Memory</strong>:<br />
+Elements are stored in adjacent memory locations, enabling fast access.</li>
+<li><strong>Index-Based Access</strong>:<br />
+Elements can be accessed in constant time O(1)<sup id="cite_ref-1" class="footnote-container"><a href="#footnote-1" class="footnote-reference">[1]</a><span class="footnote-tooltip">O(1) - <a href="/Content/Time-Complexity/#o-1----constant-time">Constant Time Complexity</a></span></sup> using their index.</li>
+<li><strong>Homogeneous Elements</strong>:<br />
+All elements in an array must be of the same data type.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="types-of-arrays">Types of Arrays</h3>
+<div class="header-block h4">
+<h4 id="one-dimensional">One-Dimensional</h4>
+<p>A <strong>one-dimensional array</strong> (1D array) is the simplest type of array, where elements are stored in a single row (or linearly in memory). Each element is accessed using a single index.</p>
+<pre><code class="language-c">int numbers[5] = {1, 2, 3, 4, 5};
+printf(&quot;%d&quot;, numbers[2]);  // Output: 3
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="multi-dimensional">Multi-Dimensional</h4>
+<p>A <strong>multi-dimensional array</strong> extends the concept of 1D arrays by adding additional dimensions. The most common type is a <strong>two-dimensional array (2D array)</strong>, often used to represent matrices or tables.</p>
+<pre><code class="language-c">int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
+printf(&quot;%d&quot;, matrix[1][2]);  // Output: 6
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="dynamic-arrays">Dynamic Arrays</h4>
+<p>A <strong>dynamic array</strong> is a resizable array that can grow or shrink as needed, unlike static arrays that have a fixed size. Dynamic arrays manage memory allocation automatically.
+<strong>C++ (Vector - Standard Library Dynamic Array)</strong>:</p>
+<pre><code class="language-cpp">#include &lt;vector&gt;
+std::vector&lt;int&gt; numbers = {1, 2, 3};
+numbers.push_back(4);  // Adds element
+numbers.pop_back();    // Removes last element
+</code></pre>
+<p><strong>Python (List - Built-in Dynamic Array)</strong>:</p>
+<pre><code class="language-python">numbers = [1, 2, 3]
+numbers.append(4)  # Adds element
+numbers.pop()      # Removes last element
+print(numbers)  # Output: [1, 2, 3]
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="comparison-table">Comparison Table</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Memory Allocation</th>
+<th>Size Flexibility</th>
+<th>Access Time</th>
+<th>Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One-Dimensional</td>
+<td>Contiguous</td>
+<td>Fixed</td>
+<td>O(1)<sup id="cite_ref-1" class="footnote-container"><a href="#footnote-1" class="footnote-reference">[1]</a><span class="footnote-tooltip">O(1) - <a href="/Content/Time-Complexity/#o-1----constant-time--td---td-constant-time-complexity">Time Complexity</a></span></sup></td>
+</tr>
+<tr>
+<td>Multi-Dimensional</td>
+<td>Contiguous</td>
+<td>Fixed</td>
+<td>O(1)</td>
+<td>Matrices, tables, images</td>
+</tr>
+<tr>
+<td>Dynamic Array</td>
+<td>Heap-based</td>
+<td>Resizable</td>
+<td>O(1) (amortized)</td>
+<td>Variable-length data</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="performance">Performance</h3>
+<p>Lists<sup id="cite_ref-3" class="footnote-container"><a href="#footnote-3" class="footnote-reference">[3]</a><span class="footnote-tooltip"><a href="/Content/Linked-List/">Linked List</a> are similar data structure, more versatile but require more resources</span></sup> and arrays are similar data structures but differ in terms of performance:</p>
+<ul>
+<li>Array:<br />
+Pro: Faster, take less memory
+Cons: Fixed memory, less versatile</li>
+<li>Lists:<br />
+Pro: Dynamic size, more versatile
+Cons: Slower, uses more memory</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="operations">Operations</h3>
+<ul>
+<li><strong>Access</strong>: Retrieve an element using its index O(1)<sup id="cite_ref-1" class="footnote-container"><a href="#footnote-1" class="footnote-reference">[1]</a><span class="footnote-tooltip">O(1) - <a href="/Content/Time-Complexity/#o-1----constant-time">Constant Time Complexity</a></span></sup>.</li>
+<li><strong>Update</strong>: Modify an element at a specific index O(1).</li>
+<li><strong>Insertion</strong>: Adding a new element (costly in static arrays, O(n)<sup id="cite_ref-2" class="footnote-container"><a href="#footnote-2" class="footnote-reference">[2]</a><span class="footnote-tooltip">O(n) - <a href="/Content/Time-Complexity/#o-n----linear-time">Linear Time Complexity</a></span></sup> for shifting).</li>
+<li><strong>Deletion</strong>: Removing an element and shifting remaining elements O(n).</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="references">References</h3><ul><li id="footnote-1" class="footnote-item" data-footnote-id="1"><strong>1</strong>. O(1) - <a href="/Content/Time-Complexity/#o-1----constant-time">Constant Time Complexity</a></li><li id="footnote-2" class="footnote-item" data-footnote-id="2"><strong>2</strong>. O(n) - <a href="/Content/Time-Complexity/#o-n----linear-time">Linear Time Complexity</a></li><li id="footnote-3" class="footnote-item" data-footnote-id="3"><strong>3</strong>. <a href="/Content/Linked-List/">Linked List</a> are similar data structure, more versatile but require more resources</li></ul>
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#array--programming">Array (Programming)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-characteristics">Key Characteristics:</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#types-of-arrays">Types of Arrays</a></li>
+<ul>
+<li class="toc-level-4"><a href="#one-dimensional">One-Dimensional</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#multi-dimensional">Multi-Dimensional</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#dynamic-arrays">Dynamic Arrays</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#comparison-table">Comparison Table</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#performance">Performance</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#operations">Operations</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#references">References</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

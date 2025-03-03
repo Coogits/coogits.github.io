@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Programming</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Software/">Software</a></p>
+<div class="header-block h1">
+<h1 id="programming">Programming</h1>
+<p><strong>Programming</strong> is the process of creating software (or a program) by writing, testing, and maintaining a set of instructions that a computer can execute to perform specific tasks. It involves designing algorithms, structuring data, and utilizing programming languages to translate human ideas and problem-solving strategies into a form that a computer can understand and act upon. Through programming, developers bring ideas to life, creating applications, tools, websites, and systems that fulfill a variety of functions and solve real-world problems.</p>
+<div class="header-block h3">
+<h3 id="map">Map</h3>
+<div class="mermaid">
+mindmap
+	(Programming)
+		Programming Language
+		:::internal-link
+			Compiled
+			Interpreted
+			Scripting
+			Markup
+		General
+			Identifier
+			:::link:/Content/Identifier-(Programming)/
+			Data
+			:::link:/Content/Data-(Programming)/
+				Type
+				:::link:/Content/Data-Type-(Programming)/
+				Structure
+				:::link:/Content/Data-Structure/
+			Operator
+			:::link:/Content/Operator-(Programming)/
+			Function
+			:::link:/Content/Function-(Programming)/
+			Statement
+			:::link:/Content/Statement-(Programming)/
+			Paradigm
+			:::link:/Content/Paradigm-(Programming)/
+		Software
+		:::internal-link
+			Computer Science
+			:::internal-link
+				((Home))
+				:::internal-link
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="subfields">Subfields</h3>
+<div class="header-block h4">
+<h4 id="general-programming">General Programming</h4>
+<p><strong>General Programming</strong> refers to the fundamental principles, concepts, and constructs that form the basis of writing and structuring code, regardless of the specific programming language. It includes the core elements necessary to design, develop, and maintain software solutions.</p>
+<div class="header-block h5">
+<h5 id="identifier--programming--identifier"><a href="/Content/Identifier-(Programming)/">Identifier</a></h5>
+<p>Names used to reference data and functions in a program.</p>
+<ul>
+<li><a href="/Content/Namespace-(Programing)/">Namespace</a></li>
+<li><a href="/Content/Scope-(Programming)/">Scope</a></li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="data--programming--data"><a href="/Content/Data-(Programming)/">Data</a></h5>
+<ul>
+<li><a href="/Content/Data-Mutability-(Programming)/">Data Mutability</a></li>
+<li>Lifetime</li>
+<li>Memory</li>
+<li><a href="/Content/Data-Type-(Programming)/">Data Type</a></li>
+<li><a href="/Content/Data-Structure/">Data Structure</a></li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="operator--programming--operator"><a href="/Content/Operator-(Programming)/">Operator</a></h5>
+<p>Symbols that perform computations or manipulations on variables and values.</p>
+<ul>
+<li><a href="/Content/Operator-(Programming)/#operator--programming--unary-operator">Unary Operator</a></li>
+<li><a href="/Content/Operator-(Programming)/#binary-operator">Binary Operator</a></li>
+<li><a href="/Content/Operator-(Programming)/#ternary-operator">Ternary Operator</a></li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="function--programming--function"><a href="/Content/Function-(Programming)/">Function</a></h5>
+<p>A reusable block of code that performs a specific task.</p>
+<ul>
+<li>Parameter</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="statement--programming--statement"><a href="/Content/Statement-(Programming)/">Statement</a></h5>
+<p>Basic units of execution in a program.</p>
+<ul>
+<li>Expression Statements:</li>
+<li>Declaration Statements:</li>
+<li><a href="/Content/Control-Flow/">Control Flow</a></li>
+<li>Compound Statements:</li>
+<li>Exception Handling Statements:</li>
+<li>Type-Casting Statements:</li>
+<li>Comment Statements:</li>
+<li>Preprocessor Statements:</li>
+<li>Synchronization Statements:</li>
+<li>Assertion Statements:</li>
+<li>Synchronization Statements:</li>
+<li>Asynchronous Control Statements:</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="paradigm--programming--paradigm"><a href="/Content/Paradigm-(Programming)/">Paradigm</a></h5>
+<p>Different styles and approaches to structuring and designing programs.</p>
+<ul>
+<li>Modular Programming</li>
+<li>Procedural Programming</li>
+<li>Object-Oriented Programming (OOP)</li>
+<li>duck typing (specific to dynamically typed languages)</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="algorithm--programming--algorithm"><a href="/Content/Algorithm-(Programming)/">Algorithm</a></h5>
+<ul>
+<li>Flowchart</li>
+<li>Pseudocode</li>
+<li><a href="/Content/Time-Complexity/">Time Complexity</a></li>
+</ul>
+</div>
+</div>
+<div class="header-block h4">
+<h4 id="programming-language"><a href="/Content/Programming-Language/">Programming Language</a></h4>
+<p>This section delves deeper into specific programming languages:</p>
+<ul>
+<li><a href="/Content/Programming-Language/#compiled-language">Compiled Language</a></li>
+<li><a href="/Content/Programming-Language/#interpreted-language">Interpreted Language</a></li>
+<li><a href="/Content/Programming-Language/#scripting-language">Scripting Language</a></li>
+<li><a href="/Content/Programming-Language/#markup-language">Markup Language</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#programming">Programming</a></li>
+<ul>
+<li class="toc-level-3"><a href="#map">Map</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#subfields">Subfields</a></li>
+<ul>
+<li class="toc-level-4"><a href="#general-programming">General Programming</a></li>
+<ul>
+<li class="toc-level-5"><a href="#identifier--programming--identifier">Identifier</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#data--programming--data">Data</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#operator--programming--operator">Operator</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#function--programming--function">Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#statement--programming--statement">Statement</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#paradigm--programming--paradigm">Paradigm</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#algorithm--programming--algorithm">Algorithm</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#programming-language">Programming Language</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

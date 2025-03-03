@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Linear Algebra</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Algebra/">Algebra</a></p>
+<div class="header-block h1">
+<h1 id="linear-algebra">Linear Algebra</h1>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Linear_subspaces_with_shading.svg" style="width: 250px; float: right; margin-left: 10px;" /><strong>Linear Algebra</strong> is a branch of mathematics  that deals with vector spaces and linear mappings between these spaces. It is concerned with the study of vectors, vector spaces, linear transformations, systems of linear equations, matrices, and determinants. Linear algebra provides tools to solve problems in various areas of mathematics, physics, computer science, and engineering.</p>
+<br clear="both" />
+<div class="header-block h3">
+<h3 id="subcategory">Subcategory</h3>
+<div class="header-block h4">
+<h4 id="system-of-linear-equations"><a href="/Content/System-of-Linear-Equations/">System of Linear Equations</a></h4>
+<ul>
+<li><a href="/Content/2x2-System-of-Linear-Equations/">2x2 System of Linear Equations</a></li>
+<li><a href="/Content/3x3-System-of-Linear-Equations/">3x3 System of Linear Equations</a></li>
+<li><a href="/Content/Substitution-Method-(System-or-Linear-Equations)/">Substitution Method (System or Linear Equations)</a></li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="vector--math--vector"><a href="/Content/Vector-(Math)/">Vector</a></h4>
+<ul>
+<li><a href="/Content/Dot-Product-(Vector)/">Dot Product (Vector)</a></li>
+<li><a href="/Content/Cross-Product-(Vector)/">Cross Product (Vector)</a></li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="matrices">Matrices</h4>
+<p>Rectangular arrays of numbers that represent linear transformations or systems of linear equations.</p>
+</div>
+<div class="header-block h4">
+<h4 id="vector-spaces">Vector Spaces</h4>
+<p>Collections of vectors that can be added together and multiplied by scalars, satisfying specific properties.</p>
+</div>
+<div class="header-block h4">
+<h4 id="linear-transformations">Linear Transformations</h4>
+<p>Functions that map vectors to other vectors while preserving the operations of vector addition and scalar multiplication.</p>
+</div>
+<div class="header-block h4">
+<h4 id="eigenvalues-and-eigenvectors">Eigenvalues and Eigenvectors</h4>
+<p>Scalar values and corresponding vectors that describe how a linear transformation stretches or shrinks vectors.</p>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="applications">Applications</h3>
+<ul>
+<li><strong>Solving systems of linear equations</strong> (e.g., using matrix inversion or Gaussian elimination).</li>
+<li><strong>Modeling linear transformations</strong> (e.g., rotations, reflections, scaling).</li>
+<li><strong>Data science and machine learning</strong> (e.g., Principal Component Analysis, least squares fitting).</li>
+<li><strong>Physics and engineering</strong> (e.g., quantum mechanics, electrical circuits, mechanical systems).</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#linear-algebra">Linear Algebra</a></li>
+<ul>
+<li class="toc-level-3"><a href="#subcategory">Subcategory</a></li>
+<ul>
+<li class="toc-level-4"><a href="#system-of-linear-equations">System of Linear Equations</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#vector--math--vector">Vector</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#matrices">Matrices</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#vector-spaces">Vector Spaces</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#linear-transformations">Linear Transformations</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#eigenvalues-and-eigenvectors">Eigenvalues and Eigenvectors</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#applications">Applications</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

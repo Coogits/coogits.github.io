@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function (Mathematics)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Algebra/">Algebra</a><br />
+<a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Analysis-1/">Analysis 1</a> &gt; <a href="/Content/Calculus/">Calculus</a></p>
+<div class="header-block h1">
+<h1 id="function--mathematics">Function (Mathematics)</h1>
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Injection_keine_Injektion_2a.svg" style="width: 250px; float: right; margin-left: 10px;" />  
+<p>A <strong>function</strong> is a mathematical relation that associates each element of a set (called the <strong>domain</strong>) to exactly one element of another set (called the <strong>codomain</strong> or <strong>range</strong>). In simple terms, a function defines a rule that assigns a unique output to each input.</p>
+<p><strong>In the Image</strong>:<br />
+Graphic representation of a function
+<br clear="both" /></p>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$f()\quad$ <strong>Function</strong> notation.</li>
+<li>$X\quad$ <strong>Domain</strong>, the set in input.</li>
+<li>$Y\quad$ <strong>Codomain</strong>, the set in output.</li>
+<li>$x\quad$ <strong>Element</strong> from the Domain $A$.</li>
+<li>$y\quad$ <strong>Element</strong> from the Codomain $B$.</li>
+<li>$Im(f)\quad$ <strong>Range</strong> of the function</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="definition">Definition</h3>
+<div class="styled-section"></div>
+<ul>
+<li><strong>Definition</strong>:<br />
+For each $x$ in a set $X$ (Domain) exist only one $y$ in a set $Y$ (Codomain) such that $y$ is equal to $f(x)$:$$\forall x \in X\;\exists!\;y\in Y :\quad y=f(x)$$</li>
+<li><strong>Formal Definition</strong>:<br />
+A function $f$ from a set $X$ (the domain) to a set $Y$ (the codomain) is denoted as: $$f:X\to Y$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="key-concepts">Key Concepts</h3>
+<ul>
+<li><strong>Domain $(X)$</strong>:<br />
+The set of all possible inputs (values of $x$) that the function can accept.</li>
+<li><strong>Codomain $(Y)$</strong>:<br />
+The set of all possible outputs that the function can produce (not necessarily the actual outputs).</li>
+<li><strong>Range $(Im(f))$</strong>:<br />
+The set of all actual outputs that the function produces from the domain.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="types-of-functions">Types of Functions</h3>
+<p>See <strong><a href="/Content/Bijection,-Injection-and-Surjection/">Bijection, Injection and Surjection</a></strong> for formal definitions.</p>
+<ul>
+<li><strong>Injective (One-to-One)</strong>:<br />
+A function where each element in the domain maps to a unique element in the codomain, and no two different elements in the domain map to the same element in the codomain.</li>
+<li><strong>Surjective (Onto)</strong>:<br />
+A function where the <strong>image set</strong> (range) is equal to the <strong>codomain</strong>, meaning every element in the codomain has at least one corresponding element in the domain.</li>
+<li><strong>Bijective</strong>:<br />
+A function that is both injective and surjective. Every element in the domain corresponds to exactly one unique element in the codomain, and every element in the codomain has exactly one element in the domain.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="elementary-function"><a href="/Content/Elementary-Function/">Elementary Function</a></h3>
+<p>An <strong>elementary function</strong> is a Function composed of basic functions that can be expressed using a finite number of standard operations, such as addition, subtraction, multiplication, division, and composition.<br />
+Some of the most common elementary functions include:</p>
+<ul>
+<li><a href="/Content/Constant-Function/">Constant Function</a></li>
+<li><a href="/Content/Identity-Function/">Identity Function</a></li>
+<li><a href="/Content/Linear-Function/">Linear Function</a></li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="calculus">Calculus</h3>
+<p>In <a href="/Content/Calculus/">Calculus</a>, a function describes how quantities change and interact. Two fundamental concepts in calculus are <strong>limits</strong> and <strong>continuity</strong>, which establish the basis for differentiation and integration.</p>
+<div class="header-block h4">
+<h4 id="limit--mathematics"><a href="/Content/Limit-(Mathematics)/">Limit (Mathematics)</a></h4>
+<p>Limits form the foundation of calculus, defining how functions behave as inputs approach specific values. They help define derivatives and integrals rigorously.</p>
+</div>
+<div class="header-block h4">
+<h4 id="continuity"><a href="/Content/Continuity/">Continuity</a></h4>
+<p>Continuity ensures that functions behave smoothly without jumps, breaks, or holes. A function is continuous if its limit at a given point equals its function value, meaning it can be drawn without lifting a pencil.</p>
+
+</div>
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#function--mathematics">Function (Mathematics)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#definition">Definition</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#key-concepts">Key Concepts</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#types-of-functions">Types of Functions</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#elementary-function">Elementary Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#calculus">Calculus</a></li>
+<ul>
+<li class="toc-level-4"><a href="#limit--mathematics">Limit (Mathematics)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#continuity">Continuity</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

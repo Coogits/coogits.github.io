@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Linked List</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a> &gt; <a href="/Content/Data-(Programming)/">Data</a> &gt; <a href="/Content/Data-Structure/">Data Structure</a></p>
+<div class="header-block h1">
+<h1 id="linked-list">Linked List</h1>
+<p>A <strong>linked list</strong> is a linear data structure in which elements (called <strong>nodes</strong>) are stored in separate memory locations and connected through <strong>pointers</strong>. Unlike arrays, linked lists do not require contiguous memory allocation, making dynamic memory management more efficient.</p>
+<div class="header-block h3">
+<h3 id="key-concepts">Key Concepts</h3>
+<ul>
+<li><strong>Nodes</strong>:<br />
+Each node contains:
+<ul>
+<li><strong>Data</strong>: The actual value stored in the node.</li>
+<li><strong>Pointer</strong>: A reference (or link) to the next node in the sequence.</li>
+</ul>
+</li>
+<li><strong>Head</strong>:<br />
+The first node in the list.</li>
+<li><strong>Tail</strong>:<br />
+The last node, which typically points to <code>null</code> (or <code>nullptr</code> in C++).</li>
+<li><strong>Dynamic Size</strong>:<br />
+Can grow or shrink in size without reallocating memory.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="types">Types</h3>
+<p><strong>Types of Linked List</strong>:</p>
+<div class="header-block h4">
+<h4 id="singly-linked-list--sll">Singly Linked List (SLL)</h4>
+<p>A <strong>Singly Linked List</strong> is a linear data structure where each node points to the next node in the sequence, and the last node points to <code>NULL</code>.</p>
+<ul>
+<li>Each node has a pointer to the next node.</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-rust">[Data | Next] → [Data | Next] → [Data | NULL]
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="doubly-linked-list--dll">Doubly Linked List (DLL)</h4>
+<p>A <strong>Doubly Linked List</strong> is similar to a singly linked list but allows traversal in both directions since each node has an additional pointer to the previous node.</p>
+<ul>
+<li>Each node has pointers to both the next and previous nodes.</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-rust">[NULL | Data | Next] ⇄ [Prev | Data | Next] ⇄ [Prev | Data | NULL]
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="singly-circular-linked-list--scll">Singly Circular Linked List (SCLL)</h4>
+<p>A <strong>Singly Circular Linked List</strong> or simply <strong>Circular Linked List</strong> is a variation of the linked list where the last node is linked back to the first node, forming a circular structure.</p>
+<ul>
+<li>The last node links back to the first node, forming a loop.</li>
+<li>Example:</li>
+</ul>
+<pre><code class="language-rust">[Data | Next] → [Data | Next] → [Data | Next] → 
+↑                                             ↓
+(Head) ←--------------------------------← (Tail)
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="doubly-circular-linked-list--dcll">Doubly Circular Linked List (DCLL)</h4>
+<p><strong>Doubly Circular Linked List</strong> is a circular linked list where each node has both <code>prev</code> and <code>next</code> pointers.</p>
+<ul>
+<li>Example</li>
+</ul>
+<pre><code class="language-rust">⇄ [Prev|Data|Next] ⇄ [Prev|Data|Next] ⇄ [Prev|Data|Next] ⇄
+⇅                                                         ⇅
+(Head) ⇄-------------------------------------------⇄ (Tail)
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="comparison">Comparison</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Memory Overhead</th>
+<th>Traversal</th>
+<th>Insertion/Deletion</th>
+<th>Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Singly Linked List (SLL)</td>
+<td>Low</td>
+<td>Forward only</td>
+<td>O(1)<sup id="cite_ref-1" class="footnote-container"><a href="#footnote-1" class="footnote-reference">[1]</a><span class="footnote-tooltip"><a href="/Content/Time-Complexity/#o-1----constant-time--td---td-constant-time-complexity">Time Complexity</a>  O(1)</span></sup> at head, O(n)<sup id="cite_ref-2" class="footnote-container"><a href="#footnote-2" class="footnote-reference">[2]</a><span class="footnote-tooltip">[[Time Complexity#O(n) - Linear Time</td>
+</tr>
+<tr>
+<td>Doubly Linked List (DLL)</td>
+<td>Moderate</td>
+<td>Forward &amp; Backward</td>
+<td>O(1) at head/tail, O(n) at middle</td>
+<td>Undo/Redo, LRU caches</td>
+</tr>
+<tr>
+<td>Circular Linked List (CLL)</td>
+<td>Low (SLL), Moderate (DLL)</td>
+<td>Continuous traversal</td>
+<td>O(1) at head, O(n) at middle</td>
+<td>Round Robin scheduling, cyclic buffers</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="implementation">Implementation</h3>
+<p>A simple implementation of a <strong>singly linked list</strong> in C++ with basic operations:</p>
+<p><strong>Features</strong>:</p>
+<ul>
+<li>Insert at the beginning (<code>pushFront</code>)</li>
+<li>Insert at the end (<code>pushBack</code>)</li>
+<li>Delete a node (<code>deleteNode</code>)</li>
+<li>Search for a value (<code>search</code>)</li>
+<li>Display the list (<code>display</code>)</li>
+</ul>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+class LinkedList {
+private:
+    struct Node {
+        int data;
+        Node* next;
+        Node(int value) : data(value), next(nullptr) {}
+    };
+    Node* head;
+public:
+    LinkedList() : head(nullptr) {}
+    // Insert at the beginning
+    void pushFront(int value) {
+        Node* newNode = new Node(value);
+        newNode-&gt;next = head;
+        head = newNode;
+    }
+    // Insert at the end
+    void pushBack(int value) {
+        Node* newNode = new Node(value);
+        if (!head) {
+            head = newNode;
+            return;
+        }
+        Node* temp = head;
+        while (temp-&gt;next) {
+            temp = temp-&gt;next;
+        }
+        temp-&gt;next = newNode;
+    }
+    // Delete a node
+    void deleteNode(int value) {
+        if (!head) 
+	        return;
+        if (head-&gt;data == value) {
+            Node* temp = head;
+            head = head-&gt;next;
+            delete temp;
+            return;
+        }
+        Node* temp = head;
+        while (temp-&gt;next &amp;&amp; temp-&gt;next-&gt;data != value) {
+            temp = temp-&gt;next;
+        }
+        if (temp-&gt;next) {
+            Node* nodeToDelete = temp-&gt;next;
+            temp-&gt;next = temp-&gt;next-&gt;next;
+            delete nodeToDelete;
+        }
+    }
+    // Search for a value
+    bool search(int value) {
+        Node* temp = head;
+        while (temp) {
+            if (temp-&gt;data == value)
+                return true;
+            temp = temp-&gt;next;
+        }
+        return false;
+    }
+    // Display the list
+    void display() {
+        Node* temp = head;
+        while (temp) {
+            std::cout &lt;&lt; temp-&gt;data &lt;&lt; &quot; -&gt; &quot;;
+            temp = temp-&gt;next;
+        }
+        std::cout &lt;&lt; &quot;NULL\n&quot;;
+    }
+    ~LinkedList() {
+        while (head) {
+            Node* temp = head;
+            head = head-&gt;next;
+            delete temp;
+        }
+    }
+};
+// Example usage
+int main() {
+    LinkedList list;
+    list.pushBack(1);
+    list.pushBack(2);
+    list.pushBack(3);
+    list.display();  // Output: 1 -&gt; 2 -&gt; 3 -&gt; NULL
+    list.pushFront(0);
+    list.display();  // Output: 0 -&gt; 1 -&gt; 2 -&gt; 3 -&gt; NULL
+    list.deleteNode(2);
+    list.display();  // Output: 0 -&gt; 1 -&gt; 3 -&gt; NULL
+    std::cout &lt;&lt; &quot;Search 3: &quot; &lt;&lt; (list.search(3) ? &quot;Found&quot; : &quot;Not Found&quot;) &lt;&lt; &quot;\n&quot;;
+    std::cout &lt;&lt; &quot;Search 5: &quot; &lt;&lt; (list.search(5) ? &quot;Found&quot; : &quot;Not Found&quot;) &lt;&lt; &quot;\n&quot;;
+    return 0;
+}
+</code></pre>
+</div>
+<div class="header-block h3">
+<h3 id="advantages">Advantages</h3>
+<ul>
+<li><strong>Efficient Insertions/Deletions</strong>:<br />
+O(1) complexity at the beginning/middle without shifting elements.</li>
+<li><strong>Flexible Memory Allocation</strong>:<br />
+Does not require pre-allocation like arrays<sup id="cite_ref-3" class="footnote-container"><a href="#footnote-3" class="footnote-reference">[3]</a><span class="footnote-tooltip"><a href="/Content/Array-(Programming)/">Arrays</a> are faster and require less memory but are less flexible.</span></sup>.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="disadvantages">Disadvantages</h3>
+<ul>
+<li><strong>Higher Memory Overhead</strong>:<br />
+Each node requires extra space for pointers.</li>
+<li><strong>Slower Element Access</strong>:<br />
+O(n)<sup id="cite_ref-2" class="footnote-container"><a href="#footnote-2" class="footnote-reference">[2]</a><span class="footnote-tooltip"><a href="/Content/Time-Complexity/#o-n----linear-time">Linear Time Complexity</a>  O(n)</span></sup> time complexity for searching, compared to O(1)<sup id="cite_ref-1" class="footnote-container"><a href="#footnote-1" class="footnote-reference">[1]</a><span class="footnote-tooltip"><a href="/Content/Time-Complexity/#o-1----constant-time">Constant Time Complexity</a>  O(1)</span></sup> for arrays<sup id="cite_ref-3" class="footnote-container"><a href="#footnote-3" class="footnote-reference">[3]</a><span class="footnote-tooltip"><a href="/Content/Array-(Programming)/">Arrays</a> are faster and require less memory but are less flexible.</span></sup>.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="references">References</h3><ul><li id="footnote-1" class="footnote-item" data-footnote-id="1"><strong>1</strong>. <a href="/Content/Time-Complexity/#o-1----constant-time">Constant Time Complexity</a>  O(1)</li><li id="footnote-2" class="footnote-item" data-footnote-id="2"><strong>2</strong>. <a href="/Content/Time-Complexity/#o-n----linear-time">Linear Time Complexity</a>  O(n)</li><li id="footnote-3" class="footnote-item" data-footnote-id="3"><strong>3</strong>. <a href="/Content/Array-(Programming)/">Arrays</a> are faster and require less memory but are less flexible.</li></ul>
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#linked-list">Linked List</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-concepts">Key Concepts</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#types">Types</a></li>
+<ul>
+<li class="toc-level-4"><a href="#singly-linked-list--sll">Singly Linked List (SLL)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#doubly-linked-list--dll">Doubly Linked List (DLL)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#singly-circular-linked-list--scll">Singly Circular Linked List (SCLL)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#doubly-circular-linked-list--dcll">Doubly Circular Linked List (DCLL)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#comparison">Comparison</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#implementation">Implementation</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#advantages">Advantages</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#disadvantages">Disadvantages</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#references">References</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

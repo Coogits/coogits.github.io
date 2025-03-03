@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Elementary Function</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Analysis-1/">Analysis 1</a> &gt; <a href="/Content/Function-(Mathematics)/">Function (Mathematics)</a></p>
+<div class="header-block h1">
+<h1 id="elementary-function">Elementary Function</h1>
+<p>An <strong>elementary function</strong> is a Function composed of basic functions that can be expressed using a finite number of standard operations, such as addition, subtraction, multiplication, division, and composition. These functions include polynomial, rational, exponential, logarithmic, trigonometric, and their inverses. They are fundamental to calculus and other branches of mathematics because they can describe a wide range of phenomena and are well-understood in terms of limits, derivatives, and integrals.</p>
+<div class="header-block h3">
+<h3 id="most-common-functions">Most Common Functions</h3>
+<div class="header-block h4">
+<h4 id="constant-function"><a href="/Content/Constant-Function/">Constant Function</a></h4>
+<p>A function that always returns the same value, regardless of <strong>x</strong>:
+$$f(x)=k$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="linear-function"><a href="/Content/Linear-Function/">Linear Function</a></h4>
+<p>Represents a straight-line relationship with a constant rate of change (slope).
+$$f(x)=ax+b$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="identity-function"><a href="/Content/Identity-Function/">Identity Function</a></h4>
+<p>A special case of the linear function where the output equals the input.
+$$f(x)=x$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="absolute-value-function">Absolute Value Function</h4>
+<p>Measures the distance of xxx from zero, creating a V-shaped graph.
+$$f(x)=\lvert x \rvert$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="polynomial-function">Polynomial Function</h4>
+<p>A function composed of terms with non-negative integer exponents, forming curves of varying degrees.
+$$f(x)=a_nx^{n}+a_{n-1}x^{n-1}+\ldots+a_{2}x^{2}+a_{1}x^{1}+a_{0}$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="reciprocal-function">Reciprocal Function</h4>
+<p>A rational function where the <strong>numerator is 1</strong> and the <strong>denominator is a linear monomial</strong>:  $$f(x)=\cfrac{1}{x}$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="rational-function"><a href="/Content/Rational-Function/">Rational Function</a></h4>
+<p>A ratio of two polynomials, potentially introducing asymptotes.
+$$f(x)=\dfrac{P(x)}{Q(x)}$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="power-function">Power Function</h4>
+<p>A function where the variable xxx is raised to a fixed real exponent.
+$$f(x)=x^n \quad n\in\mathbb{R}\text{ constant}$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="exponential-function">Exponential Function</h4>
+<p>Models rapid growth or decay, where the variable appears as an exponent.
+$$f(x)=a^x\qquad a&gt;0\land a\neq0$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="logarithmic-function">Logarithmic Function</h4>
+<p>The inverse of the exponential function, used for solving exponential equations.
+$$f(x)=\log_a x\qquad a,x&gt;0;a\neq1$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="root-function">Root Function</h4>
+<p>Represents the inverse of a power function, defining roots of a number.
+$$f(x)=\sqrt[n]{a} \qquad n\in\mathbb{N}\backslash\{0\}, a\in\mathbb{R}$$</p>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="trigonometric-functions">Trigonometric Functions</h3>
+<div class="header-block h4">
+<h4 id="sine-function">Sine Function</h4>
+<p>Describes periodic wave behavior.
+$$f(x)=\sin⁡ x$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="cosine-function">Cosine Function</h4>
+<p>Similar to sine but phase-shifted by π2\frac{\pi}{2}2π​.
+$$f(x)=\cos⁡x$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="tangent-function">Tangent Function</h4>
+<p>Represents the ratio of sine to cosine.  $$f(x)=\tan ⁡x=\cfrac{\sin x}{\cos x}$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="cotangent-function">Cotangent Function</h4>
+<p>The reciprocal of the tangent function.  $$f(x)=\cot ⁡x=\cfrac{\cos x}{\sin x}$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="secant-function">Secant Function</h4>
+<p>The reciprocal of the cosine function.
+$$f(x)=\sec ⁡x=\cfrac{1 x}{\cos x}$$</p>
+</div>
+<div class="header-block h4">
+<h4 id="cosecant-function">Cosecant Function</h4>
+<p>The reciprocal of the sine function.  $$f(x)=\csc ⁡x=\cfrac{1 x}{\sin x}$$</p>
+
+</div>
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#elementary-function">Elementary Function</a></li>
+<ul>
+<li class="toc-level-3"><a href="#most-common-functions">Most Common Functions</a></li>
+<ul>
+<li class="toc-level-4"><a href="#constant-function">Constant Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#linear-function">Linear Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#identity-function">Identity Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#absolute-value-function">Absolute Value Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#polynomial-function">Polynomial Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#reciprocal-function">Reciprocal Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#rational-function">Rational Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#power-function">Power Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#exponential-function">Exponential Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#logarithmic-function">Logarithmic Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#root-function">Root Function</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#trigonometric-functions">Trigonometric Functions</a></li>
+<ul>
+<li class="toc-level-4"><a href="#sine-function">Sine Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#cosine-function">Cosine Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#tangent-function">Tangent Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#cotangent-function">Cotangent Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#secant-function">Secant Function</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#cosecant-function">Cosecant Function</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Logic</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Discrete-Mathematics/">Discrete Mathematics</a></p>
+<div class="header-block h1">
+<h1 id="logic">Logic</h1>
+<p>Logic is the formal study of principles governing <strong>valid reasoning, inference, and truth-preserving transformations</strong>.<br />
+It provides a structured framework for evaluating the correctness of arguments and is foundational in <strong>mathematics, computer science, philosophy, and artificial intelligence</strong>.<br />
+Logic deals with the principles of <strong>correct reasoning</strong> and the structure of <strong>statements</strong> and <strong>arguments</strong>.</p>
+<div class="header-block h3">
+<h3 id="core">Core</h3>
+<div class="header-block h4">
+<h4 id="binary-digit--bit--propositions"><a href="/Content/Binary-Digit-(Bit)/">Propositions</a></h4>
+<p>A <strong>proposition</strong> is a declarative statement that is either <strong>true (1)</strong> or <strong>false (0)</strong>—but not both. This binary nature aligns directly with <strong>bits</strong>, which also have two possible states.</p>
+<ul>
+<li>Example: <em>&quot;The sky is blue.&quot;</em>
+<ul>
+<li>This is a <strong>proposition</strong> because it can be evaluated as either <strong>true (1)</strong> or <strong>false (0)</strong>.</li>
+<li>Similarly, a <strong>bit</strong> stores a value of <strong>1 (true)</strong> or <strong>0 (false)</strong> in digital systems.
+Thus, <strong>propositions</strong> in <strong>logic</strong> and <strong>bits</strong> in <strong>computing</strong> share the same fundamental concept of binary states, forming the basis for <strong>Boolean algebra, logical reasoning, and digital computation</strong>.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="boolean-algebra"><a href="/Content/Boolean-Algebra/">Boolean Algebra</a></h4>
+<p>Boolean algebra is the foundation of <strong>logic circuits</strong> and <strong>binary computation</strong>, using a set of logical operations on binary values (0 and 1).</p>
+<ul>
+<li><strong>Operators</strong>: <code>AND</code>, <code>OR</code>, <code>XOR</code>, <code>XAND</code>, <code>NAND</code>, <code>NOR</code>, <code>NOT</code></li>
+<li><strong>Fundamental Laws:</strong> Identity, Domination, Idempotent, Complement, and De Morgan’s Laws</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="connectives">Connectives</h4>
+<p>Logical operators define how propositions combine and interact. In Boolean Algebra, these operators are used to manipulate <strong>binary values (0 and 1)</strong>, forming the foundation of <strong>logical reasoning</strong> and <strong>digital logic design</strong>.</p>
+<ul>
+<li><strong>IMPLIES (→)</strong>: True unless the first proposition is true and the second is false.</li>
+<li><strong>IF AND ONLY IF (↔)</strong>: True if both propositions have the same truth value.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="truth-tables">Truth Tables</h4>
+<p>A table that shows all possible truth values of a compound proposition based on the truth values of its components.</p>
+<ul>
+<li>Example: Truth table for $A\land B$: $$\begin{array}{|c|c|c|}\hline A&amp;B&amp;A\land B\\\hline 0&amp;0&amp;0 \\\hline 0&amp;1&amp;0 \\\hline 1&amp;0&amp;0 \\\hline 1&amp;1&amp;1\\\hline \end{array}$$</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="logical-equivalence">Logical Equivalence</h4>
+<p>Two propositions are <strong>logically equivalent</strong> if they have the same truth value in all possible scenarios.</p>
+<ul>
+<li>Example: $P\to Q$ is logically equivalent to $\neg (P\lor Q)$.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="tautology--contradiction">Tautology, Contradiction</h4>
+<ul>
+<li>A <strong>tautology</strong> is a proposition that is always true (e.g., $P\lor\neg P$).</li>
+<li>A <strong>contradiction</strong> is a proposition that is always false (e.g., $P\land\neg P$).</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="quantifiers">Quantifiers</h4>
+<p>Used in <strong>predicate logic</strong> to express statements about &quot;all&quot; or &quot;some&quot; elements in a domain.</p>
+<ul>
+<li><strong>Universal Quantifier (∀)</strong>: &quot;For all&quot; or &quot;For every.&quot;</li>
+<li><strong>Existential Quantifier (∃)</strong>: &quot;There exists&quot; or &quot;For some.&quot;</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="arguments-and-validity">Arguments and Validity</h4>
+<ul>
+<li>An <strong>argument</strong> consists of premises and a conclusion.</li>
+<li>An argument is <strong>valid</strong> if the conclusion logically follows from the premises.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<p>Extended list <strong>of mathematical symbols</strong> including <strong>modal logic</strong>, <strong>set-theoretic logic</strong>, <strong>lambda calculus</strong>, and other commonly used logical symbols:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Concept</th>
+<th style="text-align:center">Symbol</th>
+<th>Description</th>
+<th>LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Boolean Algebra</strong></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">AND</td>
+<td style="text-align:center">$\land$</td>
+<td>Logical conjunction</td>
+<td><code>\land</code></td>
+</tr>
+<tr>
+<td style="text-align:center">OR</td>
+<td style="text-align:center">$\lor$</td>
+<td>Logical disjunction</td>
+<td><code>\lor</code></td>
+</tr>
+<tr>
+<td style="text-align:center">XOR</td>
+<td style="text-align:center">$\oplus$</td>
+<td>Exclusive OR</td>
+<td><code>\oplus</code></td>
+</tr>
+<tr>
+<td style="text-align:center">XAND</td>
+<td style="text-align:center">$\odot$</td>
+<td>Exclusive AND (XNOR)</td>
+<td><code>\odot</code></td>
+</tr>
+<tr>
+<td style="text-align:center">NAND</td>
+<td style="text-align:center">$\uparrow$</td>
+<td>Negated AND</td>
+<td><code>\uparrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">NOR</td>
+<td style="text-align:center">$\downarrow$</td>
+<td>Negated OR</td>
+<td><code>\downarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center">NOT</td>
+<td style="text-align:center">$\neg$</td>
+<td>Logical negation</td>
+<td><code>\neg</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Propositional Logic</strong></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">Implies</td>
+<td style="text-align:center">$\implies$</td>
+<td>&quot;If A, then B&quot;; false only if A is true and B is false</td>
+<td><code>\implies</code></td>
+</tr>
+<tr>
+<td style="text-align:center">IF</td>
+<td style="text-align:center">$\iff$</td>
+<td>&quot;A if and only if B&quot;; true when A and B have the same value</td>
+<td><code>\iff</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Predicate Logic</strong></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">Universal Quantifier</td>
+<td style="text-align:center">$\forall$</td>
+<td>&quot;For all&quot;</td>
+<td><code>\forall</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Existential Quantifier</td>
+<td style="text-align:center">$\exists$</td>
+<td>&quot;There exists&quot;</td>
+<td><code>\exists</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Non-Existence</td>
+<td style="text-align:center">$\nexists$</td>
+<td>&quot;There does not exist&quot;</td>
+<td><code>\nexists</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Unique Existence</td>
+<td style="text-align:center">$\exists!$</td>
+<td>&quot;There exists exactly one&quot;</td>
+<td><code>\exists!</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Proof Theory</strong></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">Syntactic Provability</td>
+<td style="text-align:center">$\vdash$</td>
+<td>&quot;Is provable from axioms&quot;</td>
+<td><code>\vdash</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Semantic Entailment</td>
+<td style="text-align:center">$\vDash$</td>
+<td>&quot;A model satisfies this statement&quot;</td>
+<td><code>\vDash</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Double Turnstile</td>
+<td style="text-align:center">$\models$</td>
+<td>Logical consequence / semantic entailment</td>
+<td><code>\models</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Not Provable</td>
+<td style="text-align:center">$\nvdash$</td>
+<td>&quot;Not provable from axioms&quot;</td>
+<td><code>\nvdash</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Set Theory</strong></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">Subset</td>
+<td style="text-align:center">$\subseteq$</td>
+<td>&quot;A is a subset of B&quot;</td>
+<td><code>\subseteq</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Superset</td>
+<td style="text-align:center">$\supseteq$</td>
+<td>&quot;A is a superset of B&quot;</td>
+<td><code>\supseteq</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Union</td>
+<td style="text-align:center">$\cup$</td>
+<td>&quot;A OR B&quot; (set union)</td>
+<td><code>\cup</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Intersection</td>
+<td style="text-align:center">$\cap$</td>
+<td>&quot;A AND B&quot; (set intersection)</td>
+<td><code>\cap</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Element of</td>
+<td style="text-align:center">$\in$</td>
+<td>&quot;x is an element of A&quot;</td>
+<td><code>\in</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Not an Element of</td>
+<td style="text-align:center">$\notin$</td>
+<td>&quot;x is not an element of A&quot;</td>
+<td><code>\notin</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Modal Logic</strong></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">Necessity</td>
+<td style="text-align:center">$\Box$</td>
+<td>&quot;Necessarily true&quot;</td>
+<td><code>\Box</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Possibility</td>
+<td style="text-align:center">$\Diamond$</td>
+<td>&quot;Possibly true&quot;</td>
+<td><code>\Diamond</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Lambda Calculus</strong></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">Lambda Abstraction</td>
+<td style="text-align:center">$\lambda$</td>
+<td>Function definition</td>
+<td><code>\lambda</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Function Logic</strong></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">Function Type</td>
+<td style="text-align:center">$\rightarrow$</td>
+<td>Maps input to output</td>
+<td><code>\rightarrow</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Miscelaneous</strong></td>
+<td style="text-align:center"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">Composition</td>
+<td style="text-align:center">$\circ$</td>
+<td>Function composition</td>
+<td><code>\circ</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Definition</td>
+<td style="text-align:center">$\equiv$</td>
+<td>&quot;Is defined as&quot;</td>
+<td><code>\equiv</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="header-block h3">
+<h3 id="types-of-logic">Types of Logic</h3>
+<ul>
+<li><strong>Propositional Logic</strong>:
+<ul>
+<li>Deals with simple propositions and their combinations using logical connectives.</li>
+</ul>
+</li>
+<li><strong>Predicate Logic (First-Order Logic)</strong>:<br />
+Extends propositional logic by introducing quantifiers, predicates, and variables.</li>
+<li><strong>Modal Logic</strong>:<br />
+Extends classical logic to include modalities like &quot;necessarily&quot; and &quot;possibly.&quot;</li>
+<li><strong>Fuzzy Logic</strong>:<br />
+Allows for truth values between 0 and 1 (useful for dealing with uncertainty).</li>
+<li><strong>Temporal Logic</strong>:<br />
+Deals with propositions qualified in terms of time (e.g., &quot;always,&quot; &quot;eventually&quot;).</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#logic">Logic</a></li>
+<ul>
+<li class="toc-level-3"><a href="#core">Core</a></li>
+<ul>
+<li class="toc-level-4"><a href="#binary-digit--bit--propositions">Propositions</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#boolean-algebra">Boolean Algebra</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#connectives">Connectives</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#truth-tables">Truth Tables</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#logical-equivalence">Logical Equivalence</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#tautology--contradiction">Tautology, Contradiction</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#quantifiers">Quantifiers</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#arguments-and-validity">Arguments and Validity</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#types-of-logic">Types of Logic</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

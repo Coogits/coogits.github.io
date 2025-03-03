@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Equilibrium Temperature</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Classical-Physics/">Classical Physics</a> &gt; <a href="/Content/Thermodynamics/">Thermodynamics</a> &gt;</p>
+<div class="header-block h1">
+<h1 id="equilibrium-temperature">Equilibrium Temperature</h1>
+<p><strong>Equilibrium Temperature</strong> is the temperature at which two or more bodies in an isolated system reach the same temperature, so that there is no net exchange of heat between them. In other words, when the system is isolated, energy conservation requires that the heat lost by one part of the system equals the heat gained by another.</p>
+<div class="header-block h3">
+<h3 id="formulas">Formulas</h3>
+<ul>
+<li><strong>Equilibrium Temperature Between Two or More Bodies</strong>: This formula represents the weighted average of the initial temperatures, where the weights are the products of mass and specific heat capacity for each body: $$T_e=\cfrac{m_1c_1T_1+m_2c_2T_2+\ldots}{m_1c_1+m_2c_2+\ldots}$$</li>
+<li><strong>Equilibrium Temperature with a Phase Change</strong>: This equation accounts for a phase change (such as melting) in one of the substances. It includes the latent heat ($L_f$) and considers that the specific heat capacity may change after the phase transition (from $c_2$ to $c_2&#x27;$): $$T_e=\cfrac{T_{fus}m_2(c_2-c_2&#x27;)-m_1c_1T_1-m_2c_2T_2+m_2L_f}{m_1c_1+m_2c_2&#x27;}$$</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$T_e\quad$ <strong>Equilibrium Temperature</strong> (in Kelvin)</li>
+<li>$m_1,m_2\quad$ <a href="/Content/Mass/">Mass</a> of the objects (in chilogrammi)</li>
+<li>$T_1,T_2\quad$ <a href="/Content/Temperature/">Temperature</a> of the objects (in Kelvin)</li>
+<li>$c_1,c_2\quad$ <a href="/Content/Specific-Heat/">Specific Heat</a> of the objects</li>
+<li>$T_{fus}\quad$ <strong>Temperature during the Phase Change</strong> (e.g., the melting point in Kelvin)</li>
+<li>$c_2&#x27;\quad$  <strong>Specific Heat</strong> of the substance <strong>after the Phase Change</strong> ( unit: $\cfrac{J}{kg\cdot K}$ )</li>
+<li>$L_f\quad$ <a href="/Content/Latent-Heat/">Latent Heat</a> of fusion (in J/kg)</li>
+</ul>
+<hr />
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#equilibrium-temperature">Equilibrium Temperature</a></li>
+<ul>
+<li class="toc-level-3"><a href="#formulas">Formulas</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

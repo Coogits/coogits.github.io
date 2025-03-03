@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Set Theory</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a></p>
+<div class="header-block h1">
+<h1 id="set-theory">Set Theory</h1>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Venn_A_subset_B.svg" style="width: 250px; float: right; margin-left: 10px;" /><strong>Set Theory</strong> is the branch of mathematical logic that studies sets, which are collections of objects. It provides a foundational framework for modern mathematics by formalizing concepts such as membership, subsets, unions, intersections, and complements. Set theory is not only concerned with finite collections but also with infinite sets, leading to important ideas about cardinality (the notion of the &quot;size&quot; of a set) and ordinals. It underpins virtually all mathematical disciplines by offering a common language and a set of basic principles from which more complex mathematical structures can be built.</p>
+<br clear="both" />
+<div class="header-block h3">
+<h3 id="arguments">Arguments</h3>
+<div class="header-block h4">
+<h4 id="concepts">Concepts</h4>
+<ul>
+<li>
+<p><strong><a href="/Content/Set-(math)/">Set</a></strong>:<br />
+A collection of distinct objects called elements.</p>
+</li>
+<li>
+<p><strong>Element</strong>:<br />
+An object that belongs to a set.</p>
+</li>
+<li>
+<p><strong><a href="/Content/Sets-of-Numbers/">Sets of Numbers</a></strong>:<br />
+Main sets of numbers.</p>
+</li>
+<li>
+<p><strong><a href="/Content/Cardinality-(Set-Theory)/">Cardinality</a></strong>:<br />
+$\lvert A\rvert$ The cardinality of a set $A$ is a measure of its size, specifically the number of elements it contains.</p>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="operators">Operators</h4>
+<ul>
+<li>
+<p><strong><a href="/Content/Union-(Set-Theory)/">Union</a></strong>:<br />
+($A\cup B$) Is the set of all elements that are in $A,\;B$, or both.</p>
+</li>
+<li>
+<p><strong><a href="/Content/Intersection-(Set-Theory)/">Intersection</a></strong>:<br />
+($A\cap B$) Is the set of all elements that are in both $A$ and $B$.</p>
+</li>
+<li>
+<p><strong><a href="/Content/Complement-(Set-Theory)/">Complement</a></strong>:<br />
+($A^\complement$) Is the set of all elements in the universal set $U$ that are not in $A$.</p>
+</li>
+<li>
+<p><strong><a href="/Content/Relative-Complement/">Relative Complement</a></strong>:<br />
+($A\setminus B$)  is the set of all elements that are members of $A$ but not members of $B$.</p>
+</li>
+<li>
+<p><strong><a href="/Content/Symmetric-Difference/">Symmetric Difference</a></strong>:<br />
+($A\triangle B$) Is the set of elements that belong to either $A$ or $B$, but not to both.</p>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="properties">Properties</h4>
+<ul>
+<li>
+<p><strong>De Morgan's laws</strong>:<br />
+First law: $(A\cap B)^\complement=A^\complement\cup B^\complement$. Second law $(A\cup B)^\complement=A^\complement\cap B^\complement$.</p>
+</li>
+<li>
+<p><strong>Venn Diagram</strong>:<br />
+Is a visual representation that uses overlapping circles or other shapes to show the logical relationships between two or more sets of items.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<table>
+<thead>
+<tr>
+<th>Symbols</th>
+<th>Name</th>
+<th>Description</th>
+<th>Latex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\cup$</td>
+<td><a href="/Content/Union-(Set-Theory)/">Union</a></td>
+<td></td>
+<td>\cup</td>
+</tr>
+<tr>
+<td>$\cap$</td>
+<td><a href="/Content/Intersection-(Set-Theory)/">Intersection</a></td>
+<td></td>
+<td>\cap</td>
+</tr>
+<tr>
+<td>$\setminus$</td>
+<td><a href="/Content/Relative-Complement/">Relative Complement</a></td>
+<td></td>
+<td>\setminus</td>
+</tr>
+<tr>
+<td>$A^\complement$</td>
+<td><a href="/Content/Complement-(Set-Theory)/">Complement</a></td>
+<td></td>
+<td>\complement</td>
+</tr>
+<tr>
+<td>$\triangle,\ominus,\oplus$</td>
+<td><a href="/Content/Symmetric-Difference/">Symmetric Difference</a></td>
+<td></td>
+<td>\triangle, \ominus, \oplus</td>
+</tr>
+<tr>
+<td>$\lvert A\rvert;\;n(A)$</td>
+<td><a href="/Content/Cardinality-(Set-Theory)/">Cardinality</a></td>
+<td></td>
+<td>\lvert \rvert; n(A)</td>
+</tr>
+<tr>
+<td>$\subset$</td>
+<td>Subset</td>
+<td></td>
+<td>\subset</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="header-block h3">
+<h3 id="application">Application</h3>
+<ul>
+<li><a href="/Content/Discrete-Mathematics/">Discrete Mathematics</a></li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#set-theory">Set Theory</a></li>
+<ul>
+<li class="toc-level-3"><a href="#arguments">Arguments</a></li>
+<ul>
+<li class="toc-level-4"><a href="#concepts">Concepts</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#operators">Operators</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#properties">Properties</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#application">Application</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

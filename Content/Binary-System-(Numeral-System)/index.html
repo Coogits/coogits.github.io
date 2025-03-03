@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Binary System (Numeral System)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Arithmetic/">Arithmetic</a> &gt; <a href="/Content/Numeral-System/">Numeral System</a> &gt;</p>
+<div class="header-block h1">
+<h1 id="binary-system--base-2-numeral-system">Binary System (Base 2 Numeral System)</h1>
+<p><strong>Binary System</strong> is a <a href="/Content/Numeral-System/">Numeral System</a> uses only two digits (0 and 1).</p>
+<hr />
+<div class="header-block h3">
+<h3 id="symbols">Symbols</h3>
+<ul>
+<li>$N\quad$ Is the <strong>positional notation</strong> of a <strong>binary number</strong> (e.g. <code>10110</code>)</li>
+<li>$a_i\quad$ <a href="/Content/Binary-Digit-(Bit)/">Binary Digit (Bit)</a>, each digit can be <code>0</code> or <code>1</code> ($0\leq a_i&lt;1$)</li>
+<li>$n\quad$ Number of non-fractional digits</li>
+<li>$m\quad$ Number of fractional digits</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="notation">Notation</h3>
+<ul>
+<li><strong>Base Notation</strong>:<br />
+A binary number can be represented with the number ($N$) followed by the pedice $_2$:  $$N_2$$</li>
+<li><a href="/Content/Expanded-Form-(Numeral-System)/">Expanded Form (Numeral System)</a>:<br />
+Can be also represented as a polynomial:  $$N_2=\displaystyle\sum_{i=-m}^na_i\cdot 2^i\qquad 0\leq a_i&lt;2$$</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="properties">Properties</h3>
+<ul>
+<li><strong>Least significative digit</strong>:<br />
+If the least significative bit is $0$ the number is a even number
+<ul>
+<li>$101\underline0\quad$ Even.</li>
+<li>$010\underline1\quad$ Odd.</li>
+</ul>
+</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="numeral-system-conversion">Numeral System Conversion</h3>
+<p class="breadcrumb"><a href="/Content/Numeral-System-Conversion/">Numeral System Conversion</a></p>
+<ul>
+<li><a href="/Content/From-Binary-to-Decimal-Conversion/">From Binary to Decimal Conversion</a></li>
+<li><a href="/Content/From-Decimal-to-Binary-Conversione/">From Decimal to Binary Conversione</a></li>
+</ul>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="numbers">Numbers</h3>
+<table>
+<thead>
+<tr>
+<th><a href="/Content/Scientific-Notation/">S.Not.</a></th>
+<th style="text-align:right">base 2</th>
+<th>base 10</th>
+<th>base 8</th>
+<th>base 16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$1\cdot2^{-3}$</td>
+<td style="text-align:right">$0,001_2$</td>
+<td>$0,125_{10}$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$1\cdot2^{-2}$</td>
+<td style="text-align:right">$0,01_2$</td>
+<td>$0,25_{10}$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$1\cdot2^{-1}$</td>
+<td style="text-align:right">$0,1_2$</td>
+<td>$0,5_{10}$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$1\cdot2^0$</td>
+<td style="text-align:right">$1_2$</td>
+<td>$1_{10}$</td>
+<td>$1_{8}$</td>
+<td>$1_{16}$</td>
+</tr>
+<tr>
+<td>$1\cdot2^1$</td>
+<td style="text-align:right">$10_2$</td>
+<td>$2_{10}$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$1\cdot2^2$</td>
+<td style="text-align:right">$100_2$</td>
+<td>$4_{10}$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$1\cdot2^3$</td>
+<td style="text-align:right">$1000_2$</td>
+<td>$8_{10}$</td>
+<td>$8_8\;(1\,000_2)$</td>
+<td></td>
+</tr>
+<tr>
+<td>$1\cdot2^4$</td>
+<td style="text-align:right">$1\,0000_2$</td>
+<td>$16_{10}$</td>
+<td></td>
+<td>$16_{16}$</td>
+</tr>
+<tr>
+<td>$1\cdot2^5$</td>
+<td style="text-align:right">$10\,0000_2$</td>
+<td>$32_{10}$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$1\cdot2^6$</td>
+<td style="text-align:right">$100\,0000_2$</td>
+<td>$64_{10}$</td>
+<td>$18_8\;(1\,000\,000_2)$</td>
+<td></td>
+</tr>
+<tr>
+<td>$1\cdot2^7$</td>
+<td style="text-align:right">$1000\,0000_2$</td>
+<td>$128_{10}$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$1\cdot2^8$</td>
+<td style="text-align:right">$1\,0000\,0000_2$</td>
+<td>$256_{10}$</td>
+<td></td>
+<td>$16_{26}$</td>
+</tr>
+<tr>
+<td>$1\cdot2^9$</td>
+<td style="text-align:right">$10\,0000\,0000_2$</td>
+<td>$512_{10}$</td>
+<td>$28_8\;(1\,000\,000\,000_2)$</td>
+<td></td>
+</tr>
+<tr>
+<td>$1\cdot2^{10}$</td>
+<td style="text-align:right">$100\,0000\,0000_2$</td>
+<td>$1024_{10}$</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>base 10</th>
+<th>base 8</th>
+<th>base 16</th>
+<th style="text-align:right">base 2</th>
+<th style="text-align:right">base 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td style="text-align:right">01</td>
+<td style="text-align:right">01</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">10</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td style="text-align:right">11</td>
+<td style="text-align:right">11</td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td style="text-align:right">100</td>
+<td style="text-align:right">100</td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td style="text-align:right">101</td>
+<td style="text-align:right">101</td>
+</tr>
+<tr>
+<td></td>
+<td>6</td>
+<td>6</td>
+<td>6</td>
+<td style="text-align:right">110</td>
+<td style="text-align:right">110</td>
+</tr>
+<tr>
+<td></td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+<td style="text-align:right">111</td>
+<td style="text-align:right">111</td>
+</tr>
+<tr>
+<td></td>
+<td>8</td>
+<td>10</td>
+<td>8</td>
+<td style="text-align:right">1.000</td>
+<td style="text-align:right">1000</td>
+</tr>
+<tr>
+<td></td>
+<td>9</td>
+<td>11</td>
+<td>9</td>
+<td style="text-align:right">1.001</td>
+<td style="text-align:right">1001</td>
+</tr>
+<tr>
+<td></td>
+<td>10</td>
+<td>12</td>
+<td>A</td>
+<td style="text-align:right">1.010</td>
+<td style="text-align:right">1010</td>
+</tr>
+<tr>
+<td></td>
+<td>11</td>
+<td>13</td>
+<td>B</td>
+<td style="text-align:right">1.011</td>
+<td style="text-align:right">1011</td>
+</tr>
+<tr>
+<td></td>
+<td>12</td>
+<td>14</td>
+<td>C</td>
+<td style="text-align:right">1.100</td>
+<td style="text-align:right">1100</td>
+</tr>
+<tr>
+<td></td>
+<td>16</td>
+<td>15</td>
+<td>D</td>
+<td style="text-align:right">1.101</td>
+<td style="text-align:right">1101</td>
+</tr>
+<tr>
+<td></td>
+<td>14</td>
+<td>16</td>
+<td>E</td>
+<td style="text-align:right">1.110</td>
+<td style="text-align:right">1110</td>
+</tr>
+<tr>
+<td></td>
+<td>15</td>
+<td>17</td>
+<td>F</td>
+<td style="text-align:right">1.111</td>
+<td style="text-align:right">1111</td>
+</tr>
+<tr>
+<td></td>
+<td>16</td>
+<td>20</td>
+<td>10</td>
+<td style="text-align:right">10.000</td>
+<td style="text-align:right">1.0000</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>11</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.0001</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>12</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.0010</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>13</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.0011</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>14</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.0100</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>15</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.0101</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>16</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.0110</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>17</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.0111</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>18</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.1000</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>19</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.1001</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>2A</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.1010</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>2B</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.1011</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>2C</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.1100</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>2D</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.1101</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>2E</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.1110</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>2F</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1.1111</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td style="text-align:right"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>FF</td>
+<td style="text-align:right"></td>
+<td style="text-align:right">1111.1111</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#binary-system--base-2-numeral-system">Binary System (Base 2 Numeral System)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#notation">Notation</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#properties">Properties</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#numeral-system-conversion">Numeral System Conversion</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#numbers">Numbers</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

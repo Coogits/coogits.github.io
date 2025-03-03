@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Identifier (Programming)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a></p>
+<div class="header-block h1">
+<h1 id="identifier">Identifier</h1>
+<p>An <strong>identifier</strong> is the name assigned to variables, functions, classes, and other entities in a program. It serves as a unique label that allows programmers to reference and manipulate data or functionality within a codebase.</p>
+<pre><code class="language-c">// Identifier example in C
+int identifier = 0;
+// the identifier's type is 'int' and it's value is 0
+</code></pre>
+<div class="header-block h3">
+<h3 id="characteristics">Characteristics</h3>
+<ul>
+<li>
+<p><strong>Start without number</strong>:<br />
+Many languages disallow identifiers starting with a digit (e.g., <code>1variable</code> is invalid)</p>
+</li>
+<li>
+<p><strong>Limited special characters</strong>:<br />
+Typically, only <code>_</code> is allowed; other symbols (<code>@, $, %</code>) are restricted.</p>
+</li>
+<li>
+<p><strong>Case-sensitive</strong>:<br />
+In most languages, <code>variable</code> and <code>Variable</code> are distinct (e.g., C, Java, Python).</p>
+</li>
+<li>
+<p><strong>Descriptive</strong>:<br />
+Clear names improve code readability and maintainability.</p>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="namespace--programing--namespace"><a href="/Content/Namespace-(Programing)/">Namespace</a></h3>
+<p>A <strong>namespace</strong> is a declarative region that provides a scope to group <strong>identifiers</strong> (such as variables, functions, classes, or modules) to prevent naming conflicts and organize code efficiently.</p>
+<p><strong>Key concepts</strong>:</p>
+<ul>
+<li><strong>Encapsulation of Identifiers</strong>:<br />
+Avoids name clashes by grouping related identifiers.</li>
+<li><strong>Hierarchical Organization</strong>:<br />
+Supports nesting to structure large programs.</li>
+<li><strong>Language-Specific Implementations</strong>:<br />
+Namespaces appear in different forms across languages.</li>
+<li><strong>Explicit Access Using Scope Operators</strong>:<br />
+Access elements using <code>::</code> (C++), <code>.</code> (Python, Java), etc.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="scope--programming--scope"><a href="/Content/Scope-(Programming)/">Scope</a></h3>
+<p><strong>Scope</strong> refers to the <strong>visibility and lifetime</strong> of an identifier (such as variables, functions, or objects) within a program. It defines where an identifier can be accessed or modified in the code.</p>
+<p><strong>Key concepts</strong>:</p>
+<ul>
+<li><strong>Defines Accessibility</strong>:<br />
+Determines where an identifier can be referenced.</li>
+<li><strong>Affects Lifetime</strong>:<br />
+Controls how long an identifier exists in memory.</li>
+<li><strong>Varies by Language</strong>:<br />
+Scope rules differ across programming languages.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="examples">Examples</h3>
+<div class="header-block h4">
+<h4 id="variable-identifier">Variable Identifier</h4>
+<p>A <strong>variable identifier</strong> is the name assigned to a variable, representing a memory location storing a value.</p>
+<pre><code class="language-c">// Variable identifier
+int varIdentifier = 0;
+</code></pre>
+<ul>
+<li><code>varIdentifier</code> is the <strong>variable identifier</strong> for an integer (<code>int</code>).</li>
+<li>Stores the value <code>0</code> in memory.</li>
+<li>Can be modified later in the program:</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="constant-identifier">Constant Identifier</h4>
+<p>A <strong>constant identifier</strong> refers to a named constant whose value cannot be changed after initialization.</p>
+<pre><code class="language-c">// constant(immutable) identifier
+const int constIdentifier = 0;
+// constant(preprocessor) identifier
+#define PI 3.14
+</code></pre>
+<ul>
+<li><code>constIdentifier</code> is the identifier for a <strong>constant integer</strong>.</li>
+<li>The <code>const</code> keyword ensures the value remains <strong>unchangeable</strong>.</li>
+<li>Trying to modify <code>constIdentifier</code> later in the code will result in a <strong>compilation error</strong>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="function-identifier">Function Identifier</h4>
+<p>A <strong>function identifier</strong> is the name assigned to a <a href="/Content/Function-(Programming)/">Function</a>, used to define and call it. In the example:</p>
+<pre><code class="language-c">// function identifier
+void fooIdentifier (void);
+</code></pre>
+<ul>
+<li><code>fooIdentifier</code> is the function identifier.</li>
+<li>It represents a function that <strong>takes no arguments</strong> (<code>void</code>) and <strong>returns nothing</strong> (<code>void</code>).</li>
+<li>It is a <strong>declaration</strong> (not a definition), meaning the function's implementation is provided elsewhere.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="struct-identifier">Struct Identifier</h4>
+<p>A <strong>struct identifier</strong> names a structure type, allowing the creation of structured data with multiple members.</p>
+<pre><code class="language-c">// struct identifier
+struct MyStruct { int member; };
+</code></pre>
+<ul>
+<li><code>MyStruct</code> is a <strong>struct identifier</strong>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="typedef-identifier">Typedef Identifier</h4>
+<pre><code class="language-c">// Variable identifier
+int varIdentifier = 0;
+// constant identifier
+const int constIdentifier = 0;
+// function identifier
+void fooIdentifier (void);
+// struct identifier
+struct MyStruct { int member; };
+// typedef identifier
+typedef unsigned int uint;
+// enum identifier
+enum Color { RED, GREEN, BLUE };
+</code></pre>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="see-also">See Also</h3>
+<ul>
+<li></li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#identifier">Identifier</a></li>
+<ul>
+<li class="toc-level-3"><a href="#characteristics">Characteristics</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#namespace--programing--namespace">Namespace</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#scope--programming--scope">Scope</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#examples">Examples</a></li>
+<ul>
+<li class="toc-level-4"><a href="#variable-identifier">Variable Identifier</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#constant-identifier">Constant Identifier</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#function-identifier">Function Identifier</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#struct-identifier">Struct Identifier</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#typedef-identifier">Typedef Identifier</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#see-also">See Also</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

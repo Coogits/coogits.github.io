@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ASCII</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Information-Theory/">Information Theory</a> &gt; <a href="/Content/Encoding/">Encoding</a></p>
+<div class="header-block h1">
+<h1 id="ascii">ASCII</h1>
+<p><strong>ASCII</strong> (<strong>American Standard Code for Information Interchange</strong>) is a character encoding standard that represents text using <strong>7-bit binary numbers</strong>. It was developed in the <strong>1960s</strong> to standardize character representation across computers and communication devices.</p>
+<div class="header-block h4">
+<h4 id="strong-key-features--strong"><strong>Key Features</strong></h4>
+<ul>
+<li><strong>7-bit encoding</strong>:<br />
+Supports <strong>128 characters</strong> (0–127).</li>
+<li><strong>Compatibility</strong>:<br />
+Extended versions like <strong>ISO-8859</strong> and <strong>UTF-8</strong> preserve ASCII for backward compatibility.</li>
+<li><strong>Character in Programming</strong>:<br />
+<strong><a href="/Content/Character-(Programming)/">Character (Programming)</a></strong> widely use ASCII format.</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="structure-overview">Structure Overview</h3>
+<ul>
+<li><strong>Control characters (0–31, 127)</strong>:<br />
+Non-printable, used for text control (e.g., newline, backspace).
+<ul>
+<li><strong>Space (32, 0x20)</strong>:<br />
+Important in formatting text and used in whitespace-sensitive languages.</li>
+</ul>
+</li>
+<li><strong>Printable characters (32–126)</strong>:<br />
+Letters, digits, punctuation, and symbols.</li>
+<li><strong>Digits (48–57)</strong>:<br />
+The numbers <code>0-9</code>.</li>
+<li><strong>Uppercase Letters (65–90)</strong>:<br />
+Or 97-32 (Lowecase-32); The English alphabet <code>A-Z</code>.</li>
+<li><strong>Lowercase Letters (97–122)</strong>:<br />
+Or 65+32 (Uppercase+32); The English alphabet <code>a-z</code>.</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="compact-table">Compact Table</h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/USASCII_code_chart.svg" 
+     style="width: 550px; margin-left: 10px; background-color: white; filter: invert(0%) brightness(100%);" /></p>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="strong-ascii-table--printable--amp--control-characters---strong"><strong>ASCII Table (Printable &amp; Control Characters)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Dec</th>
+<th>Hex</th>
+<th>Char</th>
+<th>Dec</th>
+<th>Hex</th>
+<th>Char</th>
+<th>Dec</th>
+<th>Hex</th>
+<th>Char</th>
+<th>Dec</th>
+<th>Hex</th>
+<th>Char</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0x00</td>
+<td><code>NUL</code></td>
+<td>1</td>
+<td>0x01</td>
+<td><code>SOH</code></td>
+<td>2</td>
+<td>0x02</td>
+<td><code>STX</code></td>
+<td>3</td>
+<td>0x03</td>
+<td><code>ETX</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>0x04</td>
+<td><code>EOT</code></td>
+<td>5</td>
+<td>0x05</td>
+<td><code>ENQ</code></td>
+<td>6</td>
+<td>0x06</td>
+<td><code>ACK</code></td>
+<td>7</td>
+<td>0x07</td>
+<td><code>BEL</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td>0x08</td>
+<td><code>BS</code></td>
+<td>9</td>
+<td>0x09</td>
+<td><code>TAB</code></td>
+<td>10</td>
+<td>0x0A</td>
+<td><code>LF</code></td>
+<td>11</td>
+<td>0x0B</td>
+<td><code>VT</code></td>
+</tr>
+<tr>
+<td>12</td>
+<td>0x0C</td>
+<td><code>FF</code></td>
+<td>13</td>
+<td>0x0D</td>
+<td><code>CR</code></td>
+<td>14</td>
+<td>0x0E</td>
+<td><code>SO</code></td>
+<td>15</td>
+<td>0x0F</td>
+<td><code>SI</code></td>
+</tr>
+<tr>
+<td>16</td>
+<td>0x10</td>
+<td><code>DLE</code></td>
+<td>17</td>
+<td>0x11</td>
+<td><code>DC1</code></td>
+<td>18</td>
+<td>0x12</td>
+<td><code>DC2</code></td>
+<td>19</td>
+<td>0x13</td>
+<td><code>DC3</code></td>
+</tr>
+<tr>
+<td>20</td>
+<td>0x14</td>
+<td><code>DC4</code></td>
+<td>21</td>
+<td>0x15</td>
+<td><code>NAK</code></td>
+<td>22</td>
+<td>0x16</td>
+<td><code>SYN</code></td>
+<td>23</td>
+<td>0x17</td>
+<td><code>ETB</code></td>
+</tr>
+<tr>
+<td>24</td>
+<td>0x18</td>
+<td><code>CAN</code></td>
+<td>25</td>
+<td>0x19</td>
+<td><code>EM</code></td>
+<td>26</td>
+<td>0x1A</td>
+<td><code>SUB</code></td>
+<td>27</td>
+<td>0x1B</td>
+<td><code>ESC</code></td>
+</tr>
+<tr>
+<td>28</td>
+<td>0x1C</td>
+<td><code>FS</code></td>
+<td>29</td>
+<td>0x1D</td>
+<td><code>GS</code></td>
+<td>30</td>
+<td>0x1E</td>
+<td><code>RS</code></td>
+<td>31</td>
+<td>0x1F</td>
+<td><code>US</code></td>
+</tr>
+<tr>
+<td>32</td>
+<td>0x20</td>
+<td><strong>Space</strong></td>
+<td>33</td>
+<td>0x21</td>
+<td><code>!</code></td>
+<td>34</td>
+<td>0x22</td>
+<td><code>&quot;</code></td>
+<td>35</td>
+<td>0x23</td>
+<td><code>#</code></td>
+</tr>
+<tr>
+<td>36</td>
+<td>0x24</td>
+<td><code>$</code></td>
+<td>37</td>
+<td>0x25</td>
+<td><code>%</code></td>
+<td>38</td>
+<td>0x26</td>
+<td><code>&amp;</code></td>
+<td>39</td>
+<td>0x27</td>
+<td><code>'</code></td>
+</tr>
+<tr>
+<td>40</td>
+<td>0x28</td>
+<td><code>(</code></td>
+<td>41</td>
+<td>0x29</td>
+<td><code>)</code></td>
+<td>42</td>
+<td>0x2A</td>
+<td><code>*</code></td>
+<td>43</td>
+<td>0x2B</td>
+<td><code>+</code></td>
+</tr>
+<tr>
+<td>44</td>
+<td>0x2C</td>
+<td><code>,</code></td>
+<td>45</td>
+<td>0x2D</td>
+<td><code>-</code></td>
+<td>46</td>
+<td>0x2E</td>
+<td><code>.</code></td>
+<td>47</td>
+<td>0x2F</td>
+<td><code>/</code></td>
+</tr>
+<tr>
+<td>48</td>
+<td>0x30</td>
+<td><code>0</code></td>
+<td>49</td>
+<td>0x31</td>
+<td><code>1</code></td>
+<td>50</td>
+<td>0x32</td>
+<td><code>2</code></td>
+<td>51</td>
+<td>0x33</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td>52</td>
+<td>0x34</td>
+<td><code>4</code></td>
+<td>53</td>
+<td>0x35</td>
+<td><code>5</code></td>
+<td>54</td>
+<td>0x36</td>
+<td><code>6</code></td>
+<td>55</td>
+<td>0x37</td>
+<td><code>7</code></td>
+</tr>
+<tr>
+<td>56</td>
+<td>0x38</td>
+<td><code>8</code></td>
+<td>57</td>
+<td>0x39</td>
+<td><code>9</code></td>
+<td>58</td>
+<td>0x3A</td>
+<td><code>:</code></td>
+<td>59</td>
+<td>0x3B</td>
+<td><code>;</code></td>
+</tr>
+<tr>
+<td>60</td>
+<td>0x3C</td>
+<td><code>&lt;</code></td>
+<td>61</td>
+<td>0x3D</td>
+<td><code>=</code></td>
+<td>62</td>
+<td>0x3E</td>
+<td><code>&gt;</code></td>
+<td>63</td>
+<td>0x3F</td>
+<td><code>?</code></td>
+</tr>
+<tr>
+<td>64</td>
+<td>0x40</td>
+<td><code>@</code></td>
+<td>65</td>
+<td>0x41</td>
+<td><code>A</code></td>
+<td>66</td>
+<td>0x42</td>
+<td><code>B</code></td>
+<td>67</td>
+<td>0x43</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>68</td>
+<td>0x44</td>
+<td><code>D</code></td>
+<td>69</td>
+<td>0x45</td>
+<td><code>E</code></td>
+<td>70</td>
+<td>0x46</td>
+<td><code>F</code></td>
+<td>71</td>
+<td>0x47</td>
+<td><code>G</code></td>
+</tr>
+<tr>
+<td>72</td>
+<td>0x48</td>
+<td><code>H</code></td>
+<td>73</td>
+<td>0x49</td>
+<td><code>I</code></td>
+<td>74</td>
+<td>0x4A</td>
+<td><code>J</code></td>
+<td>75</td>
+<td>0x4B</td>
+<td><code>K</code></td>
+</tr>
+<tr>
+<td>76</td>
+<td>0x4C</td>
+<td><code>L</code></td>
+<td>77</td>
+<td>0x4D</td>
+<td><code>M</code></td>
+<td>78</td>
+<td>0x4E</td>
+<td><code>N</code></td>
+<td>79</td>
+<td>0x4F</td>
+<td><code>O</code></td>
+</tr>
+<tr>
+<td>80</td>
+<td>0x50</td>
+<td><code>P</code></td>
+<td>81</td>
+<td>0x51</td>
+<td><code>Q</code></td>
+<td>82</td>
+<td>0x52</td>
+<td><code>R</code></td>
+<td>83</td>
+<td>0x53</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>84</td>
+<td>0x54</td>
+<td><code>T</code></td>
+<td>85</td>
+<td>0x55</td>
+<td><code>U</code></td>
+<td>86</td>
+<td>0x56</td>
+<td><code>V</code></td>
+<td>87</td>
+<td>0x57</td>
+<td><code>W</code></td>
+</tr>
+<tr>
+<td>88</td>
+<td>0x58</td>
+<td><code>X</code></td>
+<td>89</td>
+<td>0x59</td>
+<td><code>Y</code></td>
+<td>90</td>
+<td>0x5A</td>
+<td><code>Z</code></td>
+<td>91</td>
+<td>0x5B</td>
+<td><code>[</code></td>
+</tr>
+<tr>
+<td>92</td>
+<td>0x5C</td>
+<td><code>\</code></td>
+<td>93</td>
+<td>0x5D</td>
+<td><code>]</code></td>
+<td>94</td>
+<td>0x5E</td>
+<td><code>^</code></td>
+<td>95</td>
+<td>0x5F</td>
+<td><code>_</code></td>
+</tr>
+<tr>
+<td>96</td>
+<td>0x60</td>
+<td><code>`</code></td>
+<td>97</td>
+<td>0x61</td>
+<td><code>a</code></td>
+<td>98</td>
+<td>0x62</td>
+<td><code>b</code></td>
+<td>99</td>
+<td>0x63</td>
+<td><code>c</code></td>
+</tr>
+<tr>
+<td>100</td>
+<td>0x64</td>
+<td><code>d</code></td>
+<td>101</td>
+<td>0x65</td>
+<td><code>e</code></td>
+<td>102</td>
+<td>0x66</td>
+<td><code>f</code></td>
+<td>103</td>
+<td>0x67</td>
+<td><code>g</code></td>
+</tr>
+<tr>
+<td>104</td>
+<td>0x68</td>
+<td><code>h</code></td>
+<td>105</td>
+<td>0x69</td>
+<td><code>i</code></td>
+<td>106</td>
+<td>0x6A</td>
+<td><code>j</code></td>
+<td>107</td>
+<td>0x6B</td>
+<td><code>k</code></td>
+</tr>
+<tr>
+<td>108</td>
+<td>0x6C</td>
+<td><code>l</code></td>
+<td>109</td>
+<td>0x6D</td>
+<td><code>m</code></td>
+<td>110</td>
+<td>0x6E</td>
+<td><code>n</code></td>
+<td>111</td>
+<td>0x6F</td>
+<td><code>o</code></td>
+</tr>
+<tr>
+<td>112</td>
+<td>0x70</td>
+<td><code>p</code></td>
+<td>113</td>
+<td>0x71</td>
+<td><code>q</code></td>
+<td>114</td>
+<td>0x72</td>
+<td><code>r</code></td>
+<td>115</td>
+<td>0x73</td>
+<td><code>s</code></td>
+</tr>
+<tr>
+<td>116</td>
+<td>0x74</td>
+<td><code>t</code></td>
+<td>117</td>
+<td>0x75</td>
+<td><code>u</code></td>
+<td>118</td>
+<td>0x76</td>
+<td><code>v</code></td>
+<td>119</td>
+<td>0x77</td>
+<td><code>w</code></td>
+</tr>
+<tr>
+<td>120</td>
+<td>0x78</td>
+<td><code>x</code></td>
+<td>121</td>
+<td>0x79</td>
+<td><code>y</code></td>
+<td>122</td>
+<td>0x7A</td>
+<td><code>z</code></td>
+<td>123</td>
+<td>0x7B</td>
+<td><code>{</code></td>
+</tr>
+<tr>
+<td>124</td>
+<td>0x7C</td>
+<td>`</td>
+<td>`</td>
+<td>125</td>
+<td>0x7D</td>
+<td><code>}</code></td>
+<td>126</td>
+<td>0x7E</td>
+<td><code>~</code></td>
+<td>127</td>
+<td>0x7F</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<br clear="both" />
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#ascii">ASCII</a></li>
+<ul>
+<li class="toc-level-4"><a href="#strong-key-features--strong"><strong>Key Features</strong></a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#structure-overview">Structure Overview</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#compact-table">Compact Table</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#strong-ascii-table--printable--amp--control-characters---strong"><strong>ASCII Table (Printable &amp; Control Characters)</strong></a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

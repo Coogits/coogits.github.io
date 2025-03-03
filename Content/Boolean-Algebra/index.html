@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Boolean Algebra</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Algebra/">Algebra</a><br />
+<a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Discrete-Mathematics/">Discrete Mathematics</a> &gt; <a href="/Content/Logic/">Logic</a><br />
+<a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Hardware/">Hardware</a> &gt; <a href="/Content/Digital-Logic-Design/">Digital Logic Design</a></p>
+<div class="header-block h1">
+<h1 id="boolean-algebra">Boolean Algebra</h1>
+<p><strong>Boolean Algebra</strong> is a branch of algebra that deals with <strong>binary variables</strong> and <strong>logical operations</strong>. It is the foundation of <strong>digital logic design</strong> and is widely used in <strong>computer science, electronics, and mathematical logic</strong>.</p>
+<div class="header-block h3">
+<h3 id="binary-digit--bit"><a href="/Content/Binary-Digit-(Bit)/">Binary Digit (Bit)</a></h3>
+<p>Boolean Algebra operates exclusively on <strong>binary values</strong>, which can take only two possible states:</p>
+<ul>
+<li><strong><code>1</code> (True)</strong></li>
+<li><strong><code>0</code> (False)</strong></li>
+</ul>
+<p>These values correspond to <strong>high and low voltage levels</strong> in digital electronics and <strong>true/false logic</strong> in computation.</p>
+</div>
+<div class="header-block h3">
+<h3 id="logical-operator">Logical Operator</h3>
+<p>A <strong>logical operator</strong> is a symbol or function that combines one or more Boolean values (true or false) to produce another Boolean value. These operators are fundamental in logic, mathematics, computer science, and digital circuits, where they are used to construct and evaluate logical expressions.</p>
+<p><strong>Common logical operators include</strong>:</p>
+<div class="header-block h4">
+<h4 id="and--boolean-algebra--and"><a href="/Content/AND-(Boolean-Algebra)/">AND</a></h4>
+<ul>
+<li><strong>Symbols</strong>: ( $\cdot$ or $\land$ )</li>
+<li>Condition:  $A\land B$ is <strong>True</strong> if both <code>A</code> and <code>B</code> are <code>1</code>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="or--boolean-algebra--or"><a href="/Content/OR-(Boolean-Algebra)/">OR</a></h4>
+<ul>
+<li><strong>Symbols</strong>: ( $+$ or $\lor$ )</li>
+<li>Condition: $A\lor B$ is <strong>True</strong> if at least one of <code>A</code> or <code>B</code> is <code>1</code>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="xor">XOR</h4>
+<ul>
+<li><strong>Symbols</strong>: <strong>(<code>⊕</code>, <code>^</code>)</strong></li>
+<li><strong>Condition</strong>: $A ⊕ B$ is <strong>True</strong> if <code>A</code> and <code>B</code> are different (<code>1 ⊕ 0 = 1</code>, <code>0 ⊕ 1 = 1</code>), otherwise <strong>False</strong>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="xand">XAND</h4>
+<ul>
+<li>Symbols: (<code>⊙</code>, <code>≡</code>, <code>↔</code> )</li>
+<li><strong>Condition</strong>: $A\odot B$ is <strong>True</strong> if <code>A</code> and <code>B</code> are the same (<code>1 ⊙ 1 = 1</code>, <code>0 ⊙ 0 = 1</code>), otherwise <strong>False</strong>.</li>
+<li><strong>XNOR</strong>: Equivalent to <code>NOT (A XOR B)</code>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="nand">NAND</h4>
+<ul>
+<li>Symbols: (<code>↑</code>)</li>
+<li><strong>Condition</strong>: $A \uparrow B$ is <strong>True</strong> unless both <code>A</code> and <code>B</code> are <code>1</code>.</li>
+<li><strong>Not AND</strong>: Equivalent to <code>NOT (A AND B)</code>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="nor">NOR</h4>
+<ul>
+<li><strong>Symbols</strong>: <strong>(<code>↓</code>)</strong></li>
+<li><strong>Condition</strong>: $A \downarrow B$ is <strong>True</strong> only if both <code>A</code> and <code>B</code> are <code>0</code>.</li>
+<li><strong>Not OR</strong>: Equivalent to <code>NOT (A OR B)</code>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="not">NOT</h4>
+<ul>
+<li><strong>Symbols: ( $\neg$ or $\sim$ )</strong></li>
+<li><strong>Condition</strong>: $\neg A$ inverts the value (<code>1</code> becomes <code>0</code>, and vice versa).</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="truth-tables">Truth Tables</h4>
+<table>
+<thead>
+<tr>
+<th>$A$</th>
+<th>$B$</th>
+<th></th>
+<th>$A\land B$</th>
+<th>$A\lor B$</th>
+<th>$A⊕B$</th>
+<th>$A\odot B$</th>
+<th>$A↑B$</th>
+<th>$A↓B$</th>
+<th>$¬A$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="header-block h4">
+<h4 id="properties">Properties</h4>
+<ul>
+<li><strong>Binary Operators</strong><br />
+Most Logical operators(<strong>AND, OR, XOR, XNOR, NAND, NOR</strong>) are binary operators, meaning they require two operands, The only exception is <strong>NOT</strong>, which is unary.</li>
+<li><strong>Commutative</strong><br />
+Most Logical operators (<strong>AND, OR, XOR, XNOR, NAND, NOR</strong>) are commutative, meaning the order of operands does not change the result:  $$A*B=B*A$$</li>
+<li><strong>NOT is Unary and Non-Commutative</strong><br />
+<code>NOT</code> (<code>¬A</code>) is a <strong>unary operator</strong>, meaning it only takes <strong>one operand</strong>, so commutativity <strong>does not apply</strong>.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="boolean-theorems">Boolean Theorems</h3>
+<div class="header-block h4">
+<h4 id="fundamental-laws">Fundamental Laws</h4>
+<p>Boolean algebra follows a set of fundamental laws:</p>
+<ul>
+<li><strong>Identity Laws:</strong>
+<ul>
+<li>$A \lor 0 = A$</li>
+<li>$A \land 1 = A$</li>
+</ul>
+</li>
+<li><strong>Domination Laws:</strong>
+<ul>
+<li>$A \lor 1 = 1$</li>
+<li>$A \land 0 = 0$</li>
+</ul>
+</li>
+<li><strong>Idempotent Laws:</strong>
+<ul>
+<li>$A \lor A = A$</li>
+<li>$A \land A = A$</li>
+</ul>
+</li>
+<li><strong>Complement Laws:</strong>
+<ul>
+<li>$A \lor \neg A = 1$</li>
+<li>$A \land \neg A = 0$</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="de-morgan-s-theorems">De Morgan's Theorems</h4>
+<p>De Morgan’s Laws define how NOT distributes over AND and OR operations:</p>
+<ul>
+<li>
+<p><strong>First Law:</strong><br />
+$\neg(A\land B)=\neg A\lor\neg B$</p>
+</li>
+<li>
+<p><strong>Second Law:</strong><br />
+$\neg(A\lor B)=\neg A\land\neg B$</p>
+</li>
+</ul>
+<p>These theorems are essential for simplifying logic circuits and Boolean expressions.</p>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="applications">Applications</h3>
+<ul>
+<li><strong><a href="/Content/Logic-Gate/">Logic Gate</a></strong>:<br />
+Boolean Algebra in the key concept of <strong>Logic Gates</strong>.</li>
+<li><a href="/Content/Boolean-Type-(Programming)/">Boolean Type (Programming)</a></li>
+<li><a href="/Content/Bitwise-Operator-(Programming)/">Bitwise Operator (Programming)</a></li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#boolean-algebra">Boolean Algebra</a></li>
+<ul>
+<li class="toc-level-3"><a href="#binary-digit--bit">Binary Digit (Bit)</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#logical-operator">Logical Operator</a></li>
+<ul>
+<li class="toc-level-4"><a href="#and--boolean-algebra--and">AND</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#or--boolean-algebra--or">OR</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#xor">XOR</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#xand">XAND</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#nand">NAND</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#nor">NOR</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#not">NOT</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#truth-tables">Truth Tables</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#properties">Properties</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#boolean-theorems">Boolean Theorems</a></li>
+<ul>
+<li class="toc-level-4"><a href="#fundamental-laws">Fundamental Laws</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#de-morgan-s-theorems">De Morgan's Theorems</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#applications">Applications</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

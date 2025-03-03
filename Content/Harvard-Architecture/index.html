@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Harvard Architecture</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Hardware/">Hardware</a> &gt; <a href="/Content/Computer-Architecture/">Computer Architecture</a> &gt;</p>
+<div class="header-block h1">
+<h1 id="harvard-architecture">Harvard Architecture</h1>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Harvard_architecture.svg" style="width: 300px; float: right; margin-left: 10px;" /> 
+<p><strong>Harvard Architecture</strong> is a computer design model that separates the storage and handling of instructions (program code) from data. This segregation allows for simultaneous, independent access to both instruction and data memories, which can enhance processing speed and overall system efficiency.
+<br clear="both" /></p>
+<div class="header-block h3">
+<h3 id="key-characteristics">Key Characteristics</h3>
+<ul>
+<li>
+<p><strong>Separate Memory Systems:</strong></p>
+<ul>
+<li><strong>Instruction Memory:</strong> Dedicated memory used exclusively to store the program's instructions.</li>
+<li><strong>Data Memory:</strong> Independent memory allocated for storing data values during execution.</li>
+</ul>
+</li>
+<li>
+<p><strong>Concurrent Access:</strong><br />
+The separation enables the CPU to fetch instructions and read or write data at the same time, potentially increasing throughput and reducing bottlenecks.</p>
+</li>
+<li>
+<p><strong>Optimized for Performance:</strong><br />
+Particularly beneficial in systems where predictable performance and speed are critical, such as embedded systems, digital signal processors (DSPs), and real-time applications.</p>
+</li>
+<li>
+<p><strong>Design Simplicity for Specific Applications:</strong><br />
+While more complex than a unified memory approach in some respects, Harvard Architecture simplifies the design for applications where instruction and data access patterns differ significantly.</p>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="strong-where-is-harvard-architecture-mostly-used---strong"><strong>Where Is Harvard Architecture Mostly Used?</strong></h3>
+<p>Harvard Architecture is primarily used in systems that require <strong>high-speed processing and predictable performance</strong>, particularly in:</p>
+<ul>
+<li><strong>Microcontrollers &amp; Embedded Systems</strong>
+<ul>
+<li><strong>Why?</strong> Separate memory for instructions and data allows <strong>fast, deterministic execution</strong> with minimal delays.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li><strong>AVR microcontrollers</strong> (e.g., Arduino)</li>
+<li><strong>PIC microcontrollers</strong> (used in industrial automation, medical devices)</li>
+<li><strong>ARM Cortex-M series</strong> (widely used in IoT and real-time systems)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Digital Signal Processors (DSPs)</strong>
+<ul>
+<li><strong>Why?</strong> DSPs require high-throughput data processing for audio, video, and communication systems.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li><strong>Texas Instruments TMS320</strong> (audio processing, radar, wireless communication)</li>
+<li><strong>Analog Devices SHARC DSPs</strong> (used in professional audio equipment)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>GPUs &amp; AI Accelerators (Modified Harvard Architecture)</strong>
+<ul>
+<li><strong>Why?</strong> Separating instruction and data access helps optimize memory bandwidth for parallel processing.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li><strong>NVIDIA CUDA cores &amp; AMD RDNA architectures</strong></li>
+<li><strong>AI chips like Google TPU &amp; Apple Neural Engine</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>High-Performance &amp; Real-Time Systems</strong>
+<ul>
+<li><strong>Why?</strong> Systems requiring low-latency and high-speed computations benefit from Harvard's architecture.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li><strong>Flight control systems</strong></li>
+<li><strong>Medical imaging &amp; MRI processing</strong></li>
+<li><strong>Automotive ECUs (Engine Control Units)</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="historical-and-practical-context">Historical and Practical Context</h3>
+<ul>
+<li>
+<p><strong>Origins:</strong><br />
+Initially developed to address the limitations of the Von Neumann model, especially the bottleneck caused by shared memory access.</p>
+</li>
+<li>
+<p><strong>Modern Usage:</strong><br />
+Widely employed in microcontrollers and DSPs, where the benefits of simultaneous instruction and data access translate into significant performance improvements.</p>
+</li>
+<li>
+<p><strong>Hybrid Systems:</strong><br />
+Many modern processors incorporate elements of both Harvard and Von Neumann architectures (often referred to as a modified or hybrid Harvard architecture) to balance performance with design flexibility.</p>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a href="/Content/Von-Neumann-Architecture/">Von Neumann Architecture</a></li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#harvard-architecture">Harvard Architecture</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-characteristics">Key Characteristics</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#strong-where-is-harvard-architecture-mostly-used---strong"><strong>Where Is Harvard Architecture Mostly Used?</strong></a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#historical-and-practical-context">Historical and Practical Context</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#see-also">See Also</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

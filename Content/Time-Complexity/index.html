@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Time Complexity</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Software/">Software</a> &gt;<a href="/Content/Programming/">Programming</a> &gt; <a href="/Content/Algorithm-(Programming)/">Algorithm</a></p>
+<div class="header-block h1">
+<h1 id="time-complexity">Time Complexity</h1>
+<p>Time complexity describes how the runtime of an algorithm grows as the input size increases. Here are the most common time complexities</p>
+<div class="header-block h3">
+<h3 id="common-types">Common Types</h3>
+<div class="header-block h4">
+<h4 id="o-1----constant-time">O(1) - Constant Time</h4>
+<ul>
+<li>The execution time <strong>does not change</strong> with input size.</li>
+<li>Example: <strong>Accessing an array element by index</strong></li>
+</ul>
+<pre><code class="language-c">int arr[5] = {10, 20, 30, 40, 50};
+printf(&quot;%d&quot;, arr[2]);  // Always takes the same time
+</code></pre>
+<ul>
+<li><strong>Amortized O(1)</strong>:
+<ul>
+<li>Some operations may take more time occasionally, but their <strong>average time</strong> remains O(1).</li>
+<li>Example:<br />
+<strong>Dynamic array resizing</strong> (e.g., <code>std::vector</code> in C++ or Python <code>list</code>).
+<ul>
+<li>When the array is full, resizing takes O(n)O(n)O(n) (copying elements).</li>
+<li>However, most insertions take O(1)O(1)O(1), so the <strong>average (amortized) time</strong> per operation is O(1)O(1)O(1).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="o-log-n----logarithmic-time">O(log n) - Logarithmic Time</h4>
+<ul>
+<li>The runtime <strong>grows slowly</strong> as input size increases.</li>
+<li><strong>Common in divide-and-conquer algorithms</strong> and <strong>binary search</strong>.</li>
+<li>Example: <strong>Binary Search on a sorted array</strong></li>
+</ul>
+<pre><code class="language-cpp">int binarySearch(int arr[], int left, int right, int x) {
+    while (left &lt;= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == x) return mid;
+        else if (arr[mid] &lt; x) left = mid + 1;
+        else right = mid - 1;
+    }
+    return -1;
+}
+</code></pre>
+<ul>
+<li><strong>Use Cases</strong>:
+<ul>
+<li><strong>Binary search</strong></li>
+<li><strong>Balanced trees (e.g., AVL, Red-Black Tree)</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="o-n----linear-time">O(n) - Linear Time</h4>
+<ul>
+<li>The runtime <strong>grows proportionally</strong> with input size.</li>
+<li>Example: <strong>Iterating through an array</strong></li>
+</ul>
+<pre><code class="language-python">def find_element(arr, target):
+   for element in arr:
+       if element == target:
+           return True
+   return False
+</code></pre>
+<ul>
+<li><strong>Use Cases</strong>:
+<ul>
+<li><strong>Looping through an array</strong></li>
+<li><strong>Finding an element in an unsorted list</strong></li>
+<li><strong>Copying an array</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="o-n-log-n----linearithmic-time">O(n log n) - Linearithmic Time</h4>
+<ul>
+<li><strong>Common in efficient sorting algorithms</strong>.</li>
+<li>Example: <strong>Merge Sort</strong></li>
+</ul>
+<pre><code class="language-cpp">void mergeSort(int arr[], int left, int right) {
+    if (left &lt; right) {
+        int mid = left + (right - left) / 2;
+        mergeSort(arr, left, mid);
+        mergeSort(arr, mid + 1, right);
+        merge(arr, left, mid, right);  // Merging step (O(n))
+    }
+}
+</code></pre>
+<ul>
+<li><strong>Use Cases</strong>:
+<ul>
+<li><strong>Merge Sort, Quick-Sort (average case)</strong></li>
+<li><strong>Efficient sorting algorithms</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="o-n2----quadratic-time">O(n2) - Quadratic Time</h4>
+<ul>
+<li><strong>Runtime grows rapidly with input size</strong>.</li>
+<li>Example: <strong>Bubble Sort (Nested Loops)</strong></li>
+</ul>
+<pre><code class="language-cpp">void bubbleSort(int arr[], int n) {
+    for (int i = 0; i &lt; n - 1; i++) {
+        for (int j = 0; j &lt; n - i - 1; j++) {
+            if (arr[j] &gt; arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
+}
+</code></pre>
+<ul>
+<li><strong>Use Cases</strong>:
+<ul>
+<li><strong>Brute-force algorithms</strong></li>
+<li><strong>Nested loops over all pairs of elements</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="o-2n----exponential-time">O(2n) - Exponential Time</h4>
+<ul>
+<li><strong>Runtime doubles with each additional input size</strong>.</li>
+<li>Example: <strong>Recursive Fibonacci</strong></li>
+</ul>
+<pre><code class="language-cpp">int fibonacci(int n) {
+    if (n &lt;= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+</code></pre>
+<ul>
+<li><strong>Use Cases</strong>:
+<ul>
+<li><strong>Brute-force recursive algorithms</strong> (e.g., Towers of Hanoi)</li>
+<li><strong>Unoptimized recursive problems</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="o-n-----factorial-time">O(n!) - Factorial Time</h4>
+<ul>
+<li><strong>The slowest-growing time complexity.</strong></li>
+<li>Example: <strong>Generating all permutations</strong></li>
+</ul>
+<pre><code class="language-cpp">void permute(string str, int l, int r) {
+    if (l == r) cout &lt;&lt; str &lt;&lt; endl;
+    else {
+        for (int i = l; i &lt;= r; i++) {
+            swap(str[l], str[i]);
+            permute(str, l + 1, r);
+            swap(str[l], str[i]);  // Backtrack
+        }
+    }
+}
+</code></pre>
+<ul>
+<li><strong>Use Cases</strong>:
+<ul>
+<li><strong>Brute-force permutations/combinations</strong></li>
+<li><strong>NP-hard problems (e.g., Traveling Salesman Problem, Sudoku Solver)</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="summary">Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Complexity</th>
+<th>Name</th>
+<th>Example Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O(1)</td>
+<td>Constant</td>
+<td>Array access, hash table lookup</td>
+</tr>
+<tr>
+<td>O(log⁡n)</td>
+<td>Logarithmic</td>
+<td>Binary search, balanced trees</td>
+</tr>
+<tr>
+<td>O(n)</td>
+<td>Linear</td>
+<td>Looping through an array</td>
+</tr>
+<tr>
+<td>O(n log⁡ n)</td>
+<td>Linearithmic</td>
+<td>Efficient sorting (Merge Sort)</td>
+</tr>
+<tr>
+<td>O(n2)</td>
+<td>Quadratic</td>
+<td>Bubble Sort, nested loops</td>
+</tr>
+<tr>
+<td>O(2n)</td>
+<td>Exponential</td>
+<td>Fibonacci recursion</td>
+</tr>
+<tr>
+<td>O(n!)</td>
+<td>Factorial</td>
+<td>Permutations, brute-force TSP</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#time-complexity">Time Complexity</a></li>
+<ul>
+<li class="toc-level-3"><a href="#common-types">Common Types</a></li>
+<ul>
+<li class="toc-level-4"><a href="#o-1----constant-time">O(1) - Constant Time</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#o-log-n----logarithmic-time">O(log n) - Logarithmic Time</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#o-n----linear-time">O(n) - Linear Time</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#o-n-log-n----linearithmic-time">O(n log n) - Linearithmic Time</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#o-n2----quadratic-time">O(n2) - Quadratic Time</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#o-2n----exponential-time">O(2n) - Exponential Time</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#o-n-----factorial-time">O(n!) - Factorial Time</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#summary">Summary</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

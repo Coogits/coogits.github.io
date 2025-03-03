@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Encoding</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Information-Theory/">Information Theory</a></p>
+<div class="header-block h1">
+<h1 id="encoding">Encoding</h1>
+<p><strong>Encoding</strong> is the process of converting data from one form or format into another, often for the purposes of standardization, efficiency, or security. In computer science and telecommunications, encoding typically refers to the transformation of information (such as text, audio, or images) into a specific code or format that can be easily stored, transmitted, or processed by machines.</p>
+<hr />
+<div class="header-block h3">
+<h3 id="types-of-encoding">Types of Encoding</h3>
+<ul>
+<li>
+<p><strong>Character Encoding</strong><br />
+Converts <a href="/Content/Character-(Programming)/">characters</a> (letters, numbers, symbols) into digital representations, allowing text to be stored and processed by computers. Example:</p>
+<ul>
+<li><a href="/Content/ASCII/">ASCII</a></li>
+<li><a href="/Content/Unicode/">Unicode</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Data Encoding</strong><br />
+Transforms data into a structured format for transmission, storage, or compression. Example:</p>
+<ul>
+<li>Base64 (used in emails and images),</li>
+<li>URL encoding</li>
+</ul>
+</li>
+<li>
+<p><strong>Media Encoding</strong><br />
+Converts media files (audio, video, images) into compressed formats for efficient storage and streaming. Example:</p>
+<ul>
+<li>MP3 (audio)</li>
+<li>JPEG (image)</li>
+<li>H.264 (video)</li>
+</ul>
+</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="common-encoding-types">Common Encoding Types</h3>
+<ul>
+<li>
+<p><strong><a href="/Content/ASCII/">ASCII</a></strong> (American Standard Code for Information Interchange)<br />
+Represents English characters using 7-bit or 8-bit binary values.</p>
+</li>
+<li>
+<p><strong><a href="/Content/Unicode/">Unicode</a></strong><br />
+A universal character set supporting multiple languages and symbols.
+Includes UTF-8, UTF-16, and UTF-32 formats.</p>
+</li>
+<li>
+<p><strong>Base64 Encoding</strong><br />
+Converts binary data into a text-friendly format, commonly used for email attachments and web data transmission.</p>
+</li>
+<li>
+<p><strong>URL Encoding</strong><br />
+Replaces special characters in URLs with <code>%</code>-based encoding (e.g., space = <code>%20</code>).</p>
+</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h3">
+<h3 id="purpose-of-encoding">Purpose of Encoding:</h3>
+<ul>
+<li>
+<p><strong>Standardization</strong><br />
+Ensures data is interpreted consistently across different platforms and systems (e.g., Unicode enables multilingual text representation).</p>
+</li>
+<li>
+<p><strong>Compression</strong><br />
+Reduces file size for efficient storage or transmission (e.g., ZIP files, JPEG images, MP3 audio).</p>
+</li>
+<li>
+<p><strong>Security &amp; Privacy</strong><br />
+Encodes data to prevent unauthorized access (e.g., encryption, Base64 encoding).</p>
+</li>
+<li>
+<p><strong>Error Detection &amp; Correction</strong><br />
+Helps in detecting and fixing transmission errors (e.g., parity bits, checksums).</p>
+</li>
+</ul>
+<hr />
+<hr />
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#encoding">Encoding</a></li>
+<ul>
+<li class="toc-level-3"><a href="#types-of-encoding">Types of Encoding</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#common-encoding-types">Common Encoding Types</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#purpose-of-encoding">Purpose of Encoding:</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

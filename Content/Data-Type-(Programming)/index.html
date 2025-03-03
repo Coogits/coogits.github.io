@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Type (Programming)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a> &gt; <a href="/Content/Data-(Programming)/">Data</a></p>
+<div class="header-block h1">
+<h1 id="data-type--programming">Data Type (Programming)</h1>
+<p>A <strong>Type</strong> in programming defines the kind of data a variable, constant, or expression can hold. It determines the possible values, memory allocation, and operations that can be performed on the data.</p>
+<p>It determines:</p>
+<ul>
+<li>The possible values a variable can take.</li>
+<li>The memory allocation required.</li>
+<li>The operations that can be performed on the data.</li>
+<li>Type safety and compatibility within a program.</li>
+</ul>
+<pre><code class="language-cpp">// --- Examples of Data Type in C++ ---
+// Primitive Type
+int number = 42;                     
+// Composite Type (Array)
+int numbers[3] = {1, 2, 3};  
+// Abstract Type (Generic)
+template &lt;typename T&gt; class GenericType {}; // Generic 
+// User-Defined Type (Enum) 
+enum Color { RED, GREEN, BLUE };
+</code></pre>
+<div class="header-block h3">
+<h3 id="map">Map</h3>
+<div class="mermaid">
+mindmap
+	(Type)
+		Primitive Type
+		:::internal-link
+			Integer
+			:::link:/Content/Integer_(Programming)/
+			Float
+			:::link:/Content/Floating-Point_(Programming)/
+			Character
+			:::link:/Content/Character_(Programming)/
+			Boolean
+			:::link:/Content/Boolean_(Programming)/
+		Composite Type
+		:::internal-link
+			Array
+			Structure
+			List
+			Object
+		Abstract
+			Generic
+			Interface
+			Trait
+		User-Defined
+			Class
+			Struct
+			Enum
+		Data
+		:::link:/Content/Data_(Programming)/
+			Programming
+			:::internal-link
+				Computer Science
+				:::internal-link
+					((Home))
+					:::internal-link
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="common-types">Common Types</h3>
+<div class="header-block h4">
+<h4 id="primitive-type"><a href="/Content/Primitive-Type/">Primitive Type</a></h4>
+<p>Basic data types like:</p>
+<ul>
+<li><a href="/Content/Integer-(Programming)/">Integer (Programming)</a></li>
+<li><a href="/Content/Floating-Point-(Programming)/">Floating-Point (Programming)</a></li>
+<li><a href="/Content/Character-(Programming)/">Character (Programming)</a></li>
+<li><a href="/Content/Boolean-Type-(Programming)/">Boolean Type (Programming)</a></li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="composite-type"><a href="/Content/Composite-Type/">Composite Type</a></h4>
+<p>Collections of values, such as:</p>
+<ul>
+<li><a href="/Content/Array-(Programming)/">Array</a></li>
+<li>structures</li>
+<li>Lists</li>
+<li>object:  An instance of a class, identified by a unique name in object-oriented programming.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="abstract-types">Abstract Types</h4>
+<p>Define behavior without specifying implementation, such as:</p>
+<ul>
+<li>Interfaces</li>
+<li>Generics</li>
+<li>Traits</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="user-defined-types">User-Defined Types</h4>
+<p>Custom types created by the programmer using:</p>
+<ul>
+<li>Classes</li>
+<li>Structs</li>
+<li>Enums</li>
+<li>Type Aliases</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="type-systems">Type Systems</h3>
+<p>Programming languages enforce different rules for type safety and conversions.</p>
+<ul>
+<li>
+<p><strong>Static Typing</strong>:<br />
+Types are checked at compile time (e.g., C, Java, Rust).</p>
+</li>
+<li>
+<p><strong>Dynamic Typing</strong>:<br />
+Types are determined at runtime (e.g., Python, JavaScript).</p>
+</li>
+<li>
+<p><strong>Strong Typing</strong>:<br />
+Strict rules prevent type mismatches (e.g., Rust, Haskell).</p>
+</li>
+<li>
+<p><strong>Weak Typing</strong>:<br />
+Allows implicit conversions between types (e.g., JavaScript, PHP).</p>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="type-conversion">Type Conversion</h3>
+<ul>
+<li>
+<p><strong>Implicit Conversion (Type Promotion)</strong>:<br />
+Automatically converting one type to another (e.g., <code>int</code> to <code>float</code>).</p>
+</li>
+<li>
+<p><strong>Explicit Conversion (Casting)</strong>:<br />
+Manually specifying type conversion (<code>(int) 3.14</code> in C++).</p>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="exceptions-in-type">Exceptions in Type</h3>
+<p>Some <strong>dynamically typed languages</strong>, like <strong>Python</strong>, handle types at runtime and may raise exceptions when encountering type mismatches:</p>
+<ul>
+<li>
+<p><strong>Type Error</strong>:<br />
+Raised when an operation is performed on an inappropriate type.</p>
+</li>
+<li>
+<p><strong>Value-Error</strong>:<br />
+Raised when an operation receives an argument of the right type but inappropriate value.</p>
+</li>
+</ul>
+<pre><code class="language-python"># --- Examples ---
+# TypeError: unsupported operand type(s) for -: 'str' and 'int'
+print(&quot;Hello&quot; - 5)  
+# ValueError: invalid literal for int() with base 10 
+int(&quot;abc&quot;)
+</code></pre>
+<p>Statically typed languages like <strong>C++</strong> or <strong>Java</strong> may prevent such issues at compile time, but they also provide exception handling mechanisms for runtime errors.</p>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#data-type--programming">Data Type (Programming)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#map">Map</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#common-types">Common Types</a></li>
+<ul>
+<li class="toc-level-4"><a href="#primitive-type">Primitive Type</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#composite-type">Composite Type</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#abstract-types">Abstract Types</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#user-defined-types">User-Defined Types</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#type-systems">Type Systems</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#type-conversion">Type Conversion</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#exceptions-in-type">Exceptions in Type</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

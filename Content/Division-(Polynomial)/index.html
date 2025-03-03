@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Division (Polynomial)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Algebra/">Algebra</a> &gt; <a href="/Content/Elementary-Algebra/">Elementary Algebra</a> &gt; <a href="/Content/Polynomial/">Polynomial</a> &gt; <a href="/Content/Operator-(Polynomial)/">Operator</a></p>
+<div class="header-block h1">
+<h1 id="division--polynomial">Division (Polynomial)</h1>
+<p><strong>Polynomial division</strong> is a operation of dividing one polynomial (the <strong>dividend</strong>) by another polynomial (the <strong>divisor</strong>) to obtain a <strong>quotient</strong> and possibly a <strong>remainder</strong>. It is analogous to the long division of numbers.</p>
+<ul>
+<li><strong>Notations</strong>:
+<ul>
+<li>$P(x)\div Q(x)=O(x)$</li>
+<li>$\cfrac{P(x)}{Q(x)}=O(x)$</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Symbols
+<ul>
+<li>$P(x)\quad$ <strong>Dividend polynomial</strong>: It can be any generic polynomial.</li>
+<li>$Q(x)\quad$ <strong>Divisor polynomial</strong>: It can be any generic polynomial.</li>
+<li>$O(x)\quad$ <strong>Quotient polynomial</strong>: It can be any generic polynomial.</li>
+</ul>
+</li>
+</ul>
+<div class="header-block h3">
+<h3 id="long-division-method">Long Division Method</h3>
+<div class="header-block h4">
+<h4 id="algorithm">Algorithm</h4>
+<ol>
+<li><strong>Standard Form</strong>:
+<ul>
+<li>Write the Division in Standard Form arranging both the dividend $P(x)$ and divisor $Q(x)$ in decreasing order of powers.</li>
+<li><strong>Important</strong>: If $P(x)$ is not completed fill the empty place with a zero.</li>
+</ul>
+</li>
+<li><strong>Divide the Leading Terms</strong>:
+<ul>
+<li><a href="/Content/Division-(Monomial)/">Divide (monomials)</a> the leading term (the term with the highest degree) of the dividend $P(x)$ by the leading term of the divisor $Q(x)$.</li>
+<li>The result becomes the next term of the <strong>quotient</strong>, which is <strong>added</strong> to the <strong>overall quotient</strong>.</li>
+</ul>
+</li>
+<li><strong>Multiply and Subtract</strong>:
+<ul>
+<li>Multiply the entire divisor $Q(x)$ by the term obtained in step 2.</li>
+</ul>
+</li>
+<li><strong>Subtract and bring down</strong>
+<ul>
+<li>Subtract the result just obtained from the appropriate term of the original dividend, then bring down the next term from the dividend</li>
+</ul>
+</li>
+<li><strong>Repeat</strong>:
+<ul>
+<li>Repeat the process with the new dividend (the remainder from the subtraction) until the degree of the remainder is less than the degree of the divisor.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="header-block h4">
+<h4 id="long-division-method--example">Long Division Method: Example.</h4>
+<table>
+<thead>
+<tr>
+<th>Steps</th>
+<th>Example 1</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>$P(x)=3x^2+2x^3-2-x$<br>$Q(x)=x+1$</td>
+<td>$P(x)=x^3-2x^2+4$<br>$Q(x)=x-3$</td>
+</tr>
+<tr>
+<td>1. <strong>Standard Form</strong>:</td>
+<td>$\cfrac{2x^3+3x^2-x-2}{x+1}$</td>
+<td>$\cfrac{x^3-2x^2+0x+4}{x-3}$</td>
+</tr>
+<tr>
+<td>2. <strong>Divide</strong>:</td>
+<td>$\cfrac{2x^3}{x}=2x^2$</td>
+<td>$\begin{array}{rcl} &amp; x^2 \\ \hline x-3)\quad x^3 &amp;- 2x^2 &amp;+ 0x &amp;+ 4 \end{array}$</td>
+</tr>
+<tr>
+<td>3. <strong>Multiply</strong>:</td>
+<td>$2x^2\cdot(x+1)=2x^3+2x^2$<br></td>
+<td><br>$\begin{array}{rcl} &amp; x^2 \\ \hline x-3)\quad x^3 &amp;- 2x^2 &amp;+ 0x &amp;+ 4 \\ x^3 &amp; -3x^2 \\ \end{array}$</td>
+</tr>
+<tr>
+<td>4. <strong>Subtract</strong></td>
+<td>$(2x^3+3x^2-x-2)-(2x^3+2x^2)=x^2-x-2$</td>
+<td>$\begin{array}{rcl} &amp; x^2 \\ \hline x-3)\quad x^3 &amp;- 2x^2 &amp;+ 0x &amp;+ 4 \\ x^3 &amp; -3x^2 \\ \hline &amp;+x^2 &amp;+0x\\\end{array}$</td>
+</tr>
+<tr>
+<td>4. <strong>Repeat</strong>:</td>
+<td>$\cfrac{x^2}{x}=x$<br>$x\cdot(x+1)=x^2+x$<br>$(x^2-x-2)-(x^2+x)=-2x-2$</td>
+<td>$\begin{array}{rcl} &amp; x^2 &amp;+x \\ \hline x-3)\quad x^3 &amp;- 2x^2 &amp;+ 0x &amp;+ 4 \\ x^3 &amp; -3x^2 \\ \hline &amp;+x^2 &amp;+0x \\ &amp;+x^2 &amp;-3x \\ \hline &amp; &amp;+3x &amp;-4x\end{array}$</td>
+</tr>
+<tr>
+<td>5. <strong>Repeat</strong>:</td>
+<td>$\cfrac{-2x}{x}=-2$<br>$-2\cdot(x+1)=-2x-2$<br>$(-2x-2)-(-2x-2)=0$</td>
+<td>$\begin{array}{rcl} &amp; x^2 &amp;+x &amp;+3 \\ \hline x-3)\quad x^3 &amp;- 2x^2 &amp;+ 0x &amp;+ 4 \\ x^3 &amp; -3x^2 \\ \hline &amp;+x^2 &amp;+0x \\ &amp;+x^2 &amp;-3x \\ \hline &amp; &amp;+3x &amp;-4x \\ &amp; &amp;+3x &amp;-9x \\ \hline &amp; &amp; &amp;+5x \end{array}$</td>
+</tr>
+<tr>
+<td></td>
+<td>$\cfrac{2x^3+3x^2-x-2}{x+1}=2x^2+x-2$</td>
+<td>$\cfrac{x^3-2x^2+0x+4}{x-3}=x^2+x+3$</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="strong-divisor--latex_block_33--as-monomial-in-the-division--strong"><strong>Divisor $Q(x)$ as Monomial in the Division</strong></h3>
+<ul>
+<li>If $Q(x)$ is a monomial, the division can often be simplified by dividing each term of $P(x)$ individually by $Q(x)$.</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#division--polynomial">Division (Polynomial)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#long-division-method">Long Division Method</a></li>
+<ul>
+<li class="toc-level-4"><a href="#algorithm">Algorithm</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#long-division-method--example">Long Division Method: Example.</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#strong-divisor--latex_block_33--as-monomial-in-the-division--strong"><strong>Divisor {latex_block_33} as Monomial in the Division</strong></a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

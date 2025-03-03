@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Partial Derivative</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Calculus/">Calculus</a> &gt; <a href="/Content/Differential-Calculus/">Differential Calculus</a> &gt; <a href="/Content/Derivative/">Derivative</a></p>
+<div class="header-block h1">
+<h1 id="partial-derivative">Partial Derivative</h1>
+<p>A <strong>partial derivative</strong> measures how a function changes as one of its variables changes while all other variables are held constant. It is used for functions of several variables.</p>
+<div class="header-block h3">
+<h3 id="formulas">Formulas</h3>
+<ul>
+<li><strong>Formal Definition</strong>:<br />
+Let $f(x_1,\ldots,x_n)$ be a function of <strong>n</strong> variables. The partial derivative of <strong>f</strong> with respect to the variable $x_i$, provided this limit exist is defined as: $$\cfrac{\partial f}{\partial x_i}(x_1,\ldots,x_n)=\displaystyle\lim_{h\to0}\cfrac{f(x_i,\ldots,x_n+h,\ldots,x_n)-f(x_i,\ldots,x_n)}{h}$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="intuitive-explanation">Intuitive Explanation</h3>
+<ul>
+<li><strong>Holding Other Variables Constant:</strong><br />
+When calculating $\cfrac{\partial f}{\partial x_i}$, all variables other than $x_i$ are treated as constants. This isolates the effect of changing $x_i$ on the value of <strong>f</strong>.</li>
+<li><strong>Local Linear Approximation:</strong><br />
+The partial derivative at a point gives the slope of the tangent line to the function in the direction of the $x_i$-axis, similar to how a total derivative gives the slope for single-variable functions.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="example">Example</h3>
+<p>For a function $f(x,y)$ of two variables, the partial derivative with respect to <strong>x</strong> is: $$\cfrac{\partial f}{\partial x_i}(x,y)=\displaystyle\lim_{h\to0}\cfrac{f(x+h,y)-f(x,y)}{h}$$
+Similarly, the partial derivative with respect to <strong>y</strong> is: $$\cfrac{\partial f}{\partial x_i}(x,y)=\displaystyle\lim_{h\to0}\cfrac{f(x,y+h)-f(x,y)}{h}$$</p>
+</div>
+<div class="header-block h3">
+<h3 id="summary">Summary</h3>
+<ul>
+<li><strong>Purpose:</strong><br />
+Quantifies the rate of change of <strong>f</strong> with respect to one variable while keeping the others fixed.</li>
+<li><strong>Notation:</strong><br />
+The symbol $\partial$ indicates a partial derivative, distinguishing it from the total derivative <strong>d</strong> used in single-variable calculus.</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#partial-derivative">Partial Derivative</a></li>
+<ul>
+<li class="toc-level-3"><a href="#formulas">Formulas</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#intuitive-explanation">Intuitive Explanation</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#example">Example</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#summary">Summary</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

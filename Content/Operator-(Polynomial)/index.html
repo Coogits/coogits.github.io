@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Operator (Polynomial)</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Algebra/">Algebra</a> &gt; <a href="/Content/Elementary-Algebra/">Elementary Algebra</a> &gt; <a href="/Content/Polynomial/">Polynomial</a></p>
+<div class="header-block h1">
+<h1 id="operator--polynomial">Operator (Polynomial)</h1>
+<p><strong>Polynomials</strong>, like numbers, can undergo several operations.</p>
+<div class="header-block h3">
+<h3 id="polynomial-operations">Polynomial Operations</h3>
+<div class="header-block h4">
+<h4 id="basic-operations">Basic Operations</h4>
+<ul>
+<li><strong><a href="/Content/Addition-(Polynomial)/">Addition (Polynomial)</a></strong></li>
+<li><strong><a href="/Content/Subtraction-(Polynomial)/">Subtraction (Polynomial)</a></strong></li>
+<li><strong><a href="/Content/Multiplication-(Polynomial)/">Multiplication (Polynomial)</a></strong></li>
+<li><strong><a href="/Content/Division-(Polynomial)/">Division (Polynomial)</a></strong></li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="gcd-and-lcm">GCD and LCM</h4>
+<ul>
+<li><strong><a href="/Content/Greatest-Common-Divisor-(Polynomial)/">Greatest Common Divisor (Polynomial)</a></strong></li>
+<li><strong><a href="/Content/Least-Common-Multiple-(Polynomial)/">Least Common Multiple (Polynomial)</a></strong></li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="addition-and-subtraction-similitude">Addition and Subtraction Similitude</h3>
+<p>The processes are nearly identical, with subtraction requiring an additional step to compute the <strong>additive inverse</strong> of the <strong>subtrahend</strong> polynomial $Q(x)$.</p>
+<div class="header-block h4">
+<h4 id="steps-for-addition-and-subtraction">Steps for addition and subtraction</h4>
+<ol>
+<li><strong>Prepare the polynomials</strong>:<br />
+Arrange the polynomials in line, using the <strong>inverse</strong> of $Q$ for <strong>subtraction</strong>.</li>
+<li><strong>Identify like terms</strong>:<br />
+Look for terms with the same degree.</li>
+<li><strong>Combine coefficients</strong>:<br />
+Add or subtract the coefficients of the like terms.</li>
+<li><strong>Simplify</strong>:<br />
+Write the resulting terms as a single polynomial.</li>
+</ol>
+</div>
+<div class="header-block h4">
+<h4 id="examples">Examples</h4>
+<table>
+<thead>
+<tr>
+<th>Steps</th>
+<th>ex.1 <a href="/Content/Addition-(Polynomial)/">Addition</a></th>
+<th>ex.2 <a href="/Content/Subtraction-(Polynomial)/">Subtraction</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>$P(x,y)=7x-9y+4$<br>$Q(x,y)=-12x+15xy-12-x$<br>$P(x,y)+Q(x,y)$</td>
+<td>$P(x,y)=2x+y$<br>$Q(x,y)=x-7y$<br>$P(x,y)-Q(x,y)$</td>
+</tr>
+<tr>
+<td>1. <strong>Prepare the polynomials</strong>:</td>
+<td>$7x-9y+4-12x+(15xy-12-x)$</td>
+<td>$-(x-7y)={\color{red}-x+7y}$<br>$2x+y{\color{red}-x+7y}$</td>
+</tr>
+<tr>
+<td>2. <strong>Identify like terms</strong>:</td>
+<td>$\underline{7x}-9y+\underline{\underline{4}}-\underline{12x}+15xy-\underline{\underline{12}}-\underline{x}$</td>
+<td>$\underline{2x}+\underline{\underline{y}}-\underline{x}+\underline{\underline{7y}}$</td>
+</tr>
+<tr>
+<td>3. <strong>Combine coefficients</strong>:</td>
+<td>$(7-12-1)x-9y-15xy-(4-12)$</td>
+<td>$(2-1)x+(1+7)y$</td>
+</tr>
+<tr>
+<td>4. <strong>Simplify</strong>:</td>
+<td>$-6x-9y+15xy-8$</td>
+<td>$x+8y$</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#operator--polynomial">Operator (Polynomial)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#polynomial-operations">Polynomial Operations</a></li>
+<ul>
+<li class="toc-level-4"><a href="#basic-operations">Basic Operations</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#gcd-and-lcm">GCD and LCM</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#addition-and-subtraction-similitude">Addition and Subtraction Similitude</a></li>
+<ul>
+<li class="toc-level-4"><a href="#steps-for-addition-and-subtraction">Steps for addition and subtraction</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#examples">Examples</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>
