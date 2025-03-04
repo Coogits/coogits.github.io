@@ -6,7 +6,7 @@
     },
     {
       "url": "/Content/index/",
-      "title": "Home"
+      "title": "Coogits"
     },
     {
       "url": "/Content/Computer-Science/",
@@ -169,20 +169,28 @@
       "title": "Data (Programming)"
     },
     {
-      "url": "/Content/Linked-List/",
-      "title": "Linked List"
-    },
-    {
-      "url": "/Content/Stack/",
-      "title": "Stack"
-    },
-    {
       "url": "/Content/Array-(Programming)/",
       "title": "Array (Programming)"
     },
     {
       "url": "/Content/Data-Structure/",
       "title": "Data Structure"
+    },
+    {
+      "url": "/Content/Linear-Queue/",
+      "title": "Linear Queue"
+    },
+    {
+      "url": "/Content/Linked-List/",
+      "title": "Linked List"
+    },
+    {
+      "url": "/Content/Queue/",
+      "title": "Queue"
+    },
+    {
+      "url": "/Content/Stack/",
+      "title": "Stack"
     },
     {
       "url": "/Content/Boolean-Type-(Programming)/",

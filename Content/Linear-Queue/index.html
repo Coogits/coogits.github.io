@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Linear Queue</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a> &gt; <a href="/Content/Data-(Programming)/">Data</a> &gt; <a href="/Content/Data-Structure/">Data Structure</a> &gt; <a href="/Content/Queue/">Queue</a></p>
+<div class="header-block h1">
+<h1 id="linear-queue">Linear Queue</h1>
+<p>A <strong>linear queue</strong> is a type of queue that follows the <strong>First-In, First-Out (FIFO)</strong> principle, where elements are inserted at the <strong>rear</strong> and removed from the <strong>front</strong> in a sequential manner. It is called <strong>linear</strong> because it maintains a simple, one-directional structure where the front and rear move forward.</p>
+<div class="header-block h3">
+<h3 id="implementation">Implementation</h3>
+<div class="header-block h4">
+<h4 id="array">Array</h4>
+<p>Array implementation have pro and cons ove the linked list implementation
+✔️ Pro:</p>
+<ul>
+<li><strong>Fast access</strong>: Direct indexing allows <strong>O(1)</strong> time complexity for enqueue and dequeue (if no shifting is needed).</li>
+<li><strong>Cache-friendly</strong>: Elements are stored <strong>contiguously in memory</strong>, improving CPU cache efficiency.</li>
+<li><strong>Simple implementation</strong>: Easier to implement compared to linked lists.
+❌ Cons:</li>
+<li><strong>Fixed size</strong>: Requires predefined memory allocation, leading to either <strong>wasted space</strong> (if underutilized) or <strong>overflow</strong> (if full).</li>
+<li><strong>Inefficient when dequeuing</strong>: In a basic implementation, dequeuing moves the front pointer forward, leaving unused space that cannot be reused without shifting elements.</li>
+<li><strong>Shifting overhead</strong>: If resizing is needed, shifting all elements (O(n) complexity) makes operations slower.
+<strong>C++ Implementation Example</strong></li>
+</ul>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#define SIZE 5
+
+class Queue {
+    int items[SIZE], front, rear;
+public:
+    Queue() { 
+	    front = -1; 
+	    rear = -1; 
+	}
+    bool isFull() { return rear == SIZE - 1; }
+    bool isEmpty() { return front == -1 || front &gt; rear; }
+    void enqueue(int value) {
+        if (isFull()) {
+            std::cout &lt;&lt; &quot;Queue is full\n&quot;;
+            return;
+        }
+        if (front == -1) front = 0;
+        items[++rear] = value;
+    }
+    void dequeue() {
+        if (isEmpty()) {
+            std::cout &lt;&lt; &quot;Queue is empty\n&quot;;
+            return;
+        }
+        front++;
+    }
+    void display() {
+        if (isEmpty()) {
+            std::cout &lt;&lt; &quot;Queue is empty\n&quot;;
+            return;
+        }
+        for (int i = front; i &lt;= rear; i++)
+            std::cout &lt;&lt; items[i] &lt;&lt; &quot; &quot;;
+        std::cout &lt;&lt; &quot;\n&quot;;
+    }
+};
+
+int main() {
+    Queue q;
+    q.enqueue(10);
+    q.enqueue(20);
+    q.enqueue(30);
+    q.display();
+    q.dequeue();
+    q.display();
+}
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="linked-list">Linked List</h4>
+<p>Linked list implementation have pro and cons ove the array implementation
+✅ <strong>Pros</strong>:</p>
+<ul>
+<li><strong>Dynamic size</strong>: No need to predefine a size; memory is allocated as needed.</li>
+<li><strong>Efficient insertions &amp; deletions</strong>: Enqueue and dequeue operations work in <strong>O(1)</strong> time since pointers are updated without shifting elements.
+❌ <strong>Cons</strong>:</li>
+<li><strong>Extra memory usage</strong>: Each element requires additional storage for a <strong>pointer</strong>, leading to overhead.</li>
+<li><strong>Not cache-friendly</strong>: Since elements are scattered in memory, access times may be slower compared to arrays.</li>
+<li><strong>Slightly more complex</strong>: Requires pointer management, which can introduce bugs if not handled correctly.
+<strong>C++ implementation example</strong></li>
+</ul>
+<pre><code class="language-cpp">class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+class Queue:
+    def __init__(self):
+        self.front = self.rear = None
+    def isEmpty(self):
+        return self.front is None
+    def enqueue(self, item):
+        new_node = Node(item)
+        if self.rear is None:
+            self.front = self.rear = new_node
+            return
+        self.rear.next = new_node
+        self.rear = new_node
+    def dequeue(self):
+        if self.isEmpty():
+            print(&quot;Queue is empty&quot;)
+            return
+        self.front = self.front.next
+        if self.front is None:
+            self.rear = None
+    def display(self):
+        temp = self.front
+        while temp:
+            print(temp.data, end=&quot; &quot;)
+            temp = temp.next
+        print()
+
+q = Queue()
+q.enqueue(10)
+q.enqueue(20)
+q.enqueue(30)
+q.display()
+q.dequeue()
+q.display()
+</code></pre>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="circular-queue-vs--linear-queue">Circular Queue vs. Linear Queue</h3>
+<p>For better efficiency, a <strong>circular queue</strong> is preferred over a <strong>linear queue</strong> in most cases.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><strong>Linear Queue</strong></th>
+<th><strong>Circular Queue</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Memory Usage</strong></td>
+<td>Inefficient (wastes space)</td>
+<td>Efficient (reuses space)</td>
+</tr>
+<tr>
+<td><strong>Overflow Handling</strong></td>
+<td>Can reach full even with empty spaces</td>
+<td>Uses space efficiently</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Slower in arrays (due to shifting)</td>
+<td>Faster (no shifting needed)</td>
+</tr>
+<tr>
+<td><strong>Implementation</strong></td>
+<td>Simple</td>
+<td>Slightly complex</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="header-block h3">
+<h3 id="conclusion">Conclusion</h3>
+<p>A <strong>linear queue</strong> is the simplest type of queue, but it suffers from inefficiency when implemented using arrays. If you need dynamic memory management, <strong>linked lists</strong> work better. However, <strong>circular queues</strong> are often preferred to optimize space usage.</p>
+</div>
+<div class="header-block h3">
+<h3 id="see-also">See Also</h3>
+<ul>
+<li><a href="/Content/Array-(Programming)/">Array (Programming)</a></li>
+<li><a href="/Content/Linked-List/">Linked List</a></li>
+<li><a href="/Content/Time-Complexity/">Time Complexity</a> for the meaning of $O(1)$ , $O(n)$.</li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#linear-queue">Linear Queue</a></li>
+<ul>
+<li class="toc-level-3"><a href="#implementation">Implementation</a></li>
+<ul>
+<li class="toc-level-4"><a href="#array">Array</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#linked-list">Linked List</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#circular-queue-vs--linear-queue">Circular Queue vs. Linear Queue</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#conclusion">Conclusion</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#see-also">See Also</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>

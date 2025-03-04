@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Queue</title>
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Math
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Mathematics/">Mathematics</a>
+                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                    <a href="/Content/Arithmetic/">Arithmetic</a>
+                    <a href="/Content/Algebra/">Algebra</a>
+                    <a href="/Content/Geometry/">Geometry</a>
+                    <a href="/Content/Analysis-1/">Analysis 1</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Physics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Physics/">Physics</a>
+                    <a href="/Content/Classical-Physics/">Classical Physics</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatics
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Content/Computer-Science/">Computer Science</a>
+                    <a href="/Content/Hardware/">Hardware</a>
+                    <a href="/Content/Software/">Software</a>
+                    <a href="/Content/Programming/">Programming</a>
+                </div>
+            </div>
+            <a href="/Content/About/">About</a>
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Programming/">Programming</a> &gt; <a href="/Content/Data-(Programming)/">Data</a> &gt; <a href="/Content/Data-Structure/">Data Structure</a></p>
+<div class="header-block h1">
+<h1 id="queue">Queue</h1>
+<p>A <strong>queue</strong> is a linear <strong>abstract data type (ADT)</strong> that follows the <strong>First-In, First-Out (FIFO)</strong> principle. This means that elements are inserted at one end (rear) and removed from the other end (front), similar to a real-world queue (e.g., a line at a ticket counter).</p>
+<div class="header-block h3">
+<h3 id="operators">Operators</h3>
+<ul>
+<li><strong>Enqueue()</strong>:<br />
+Inserts element xxx at the <strong>rear</strong> of the queue.</li>
+<li><strong>Dequeue()</strong>:<br />
+Removes and returns the element from the <strong>front</strong> of the queue.</li>
+<li><strong>Front()</strong>:<br />
+Returns the element at the front without removing it.</li>
+<li><strong>Rear()</strong>:<br />
+Returns the element at the rear without removing it.</li>
+<li><strong>isEmpty()</strong>:<br />
+Checks if the queue is empty.</li>
+<li><strong>isFull()</strong>:<br />
+Checks if the queue is full (for fixed-size implementations).</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="types-of-queues">Types of Queues</h3>
+<div class="header-block h4">
+<h4 id="linear-queue"><a href="/Content/Linear-Queue/">Linear Queue</a></h4>
+<ul>
+<li>Basic <strong>FIFO</strong> structure.</li>
+<li>Insertions happen at the <strong>rear</strong>, removals happen at the <strong>front</strong>.</li>
+<li>Example: <strong>Task scheduling in an operating system</strong>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="circular-queue">Circular Queue</h4>
+<ul>
+<li>The rear <strong>wraps around</strong> when it reaches the end of the queue (circular indexing).</li>
+<li>More efficient in memory usage compared to a simple queue.</li>
+<li>Example: <strong>Ring buffer in real-time systems</strong>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="priority-queue">Priority Queue</h4>
+<ul>
+<li>Elements are dequeued based on <strong>priority</strong>, not the order of insertion.</li>
+<li>Implemented using a <strong>heap</strong> or a <strong>sorted list</strong>.</li>
+<li>Example: <strong>Dijkstra’s algorithm, CPU process scheduling</strong>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="double-ended-queue">Double Ended Queue</h4>
+<ul>
+<li>Insertions and deletions can happen at <strong>both ends</strong> (front and rear).</li>
+<li>Special types: <strong>Input-Restricted Deque</strong> (insertion at one end only), <strong>Output-Restricted Deque</strong> (deletion at one end only).</li>
+<li>Example: <strong>Sliding window problems in algorithms</strong>.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="implementation">Implementation</h3>
+<div class="header-block h4">
+<h4 id="using-arrays">Using Arrays</h4>
+<ul>
+<li>Fixed-size implementation.</li>
+<li>Requires shifting elements after <code>dequeue()</code> (inefficient).</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="using-linked-lists">Using Linked Lists</h4>
+<ul>
+<li>More dynamic (size can grow).</li>
+<li>Each node contains <code>data</code> and a <code>next</code> pointer.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<h4 id="using-stacks">Using Stacks</h4>
+<ul>
+<li>A queue can be implemented using two stacks (one for enqueue, one for dequeue).</li>
+<li>Example: <strong>Queue using two stacks</strong> in coding interviews.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="complexity">Complexity</h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Array Implementation</th>
+<th>Linked List Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enqueue</strong></td>
+<td>$O(1)$ (best case), $O(n)$ (worst case due to shifting)</td>
+<td>$O(1)$</td>
+</tr>
+<tr>
+<td><strong>Dequeue</strong></td>
+<td>$O(1)$</td>
+<td>$O(1)$</td>
+</tr>
+<tr>
+<td><strong>Front() / Rear()</strong></td>
+<td>$O(1)$</td>
+<td>$O(1)$</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>See <a href="/Content/Time-Complexity/">Time Complexity</a> for $O(1)$, $O(n)$ meaning</li>
+</ul>
+</div>
+<div class="header-block h3">
+<h3 id="code-examples">Code Examples</h3>
+<div class="header-block h4">
+<h4 id="c">C++</h4>
+<p>C++ Implementation Using STL Queue</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;queue&gt;
+
+int main() {
+    std::queue&lt;int&gt; q;
+    q.push(10); // Enqueue
+    q.push(20);
+    q.push(30);
+
+    std::cout &lt;&lt; &quot;Front: &quot; &lt;&lt; q.front() &lt;&lt; &quot;\n&quot;;
+    q.pop(); // Dequeue
+    std::cout &lt;&lt; &quot;New Front: &quot; &lt;&lt; q.front() &lt;&lt; &quot;\n&quot;;
+
+    return 0;
+}
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="python">Python</h4>
+<p>Python Implementation Using <code>collections.deque</code></p>
+<pre><code class="language-python">from collections import deque
+
+q = deque()
+q.append(10)  # Enqueue
+q.append(20)
+q.append(30)
+
+print(&quot;Front:&quot;, q[0])
+q.popleft()  # Dequeue
+print(&quot;New Front:&quot;, q[0])
+</code></pre>
+</div>
+<div class="header-block h4">
+<h4 id="java">Java</h4>
+<p>Java Implementation Using <code>Queue</code> Interface</p>
+<pre><code class="language-java">import java.util.LinkedList;
+import java.util.Queue;
+
+public class Main {
+    public static void main(String[] args) {
+        Queue&lt;Integer&gt; q = new LinkedList&lt;&gt;();
+        q.add(10); // Enqueue
+        q.add(20);
+        q.add(30);
+
+        System.out.println(&quot;Front: &quot; + q.peek());
+        q.remove(); // Dequeue
+        System.out.println(&quot;New Front: &quot; + q.peek());
+    }
+}
+</code></pre>
+</div>
+</div>
+<div class="header-block h3">
+<h3 id="applications-of-queues">Applications of Queues</h3>
+<p><strong>Process Scheduling</strong> – CPU task scheduling (round robin).<br />
+<strong>Graph Algorithms</strong> – BFS traversal uses a queue.<br />
+<strong>Web Servers</strong> – Managing incoming client requests.<br />
+<strong>I/O Buffers</strong> – Keyboard and printer buffers use queues.<br />
+<strong>Cache Management</strong> – LRU (Least Recently Used) page replacement policy.</p>
+</div>
+<div class="header-block h3">
+<h3 id="strong-real-world-applications--strong"><strong>Real-World Applications</strong></h3>
+<p><strong>Call Centers</strong> – Customers are served in order.<br />
+<strong>Ticket Queues</strong> – First person in line gets served first.<br />
+<strong>Printing Queue</strong> – Print jobs are processed in order.</p>
+
+</div>
+</div>
+        </div>
+        <nav class="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#queue">Queue</a></li>
+<ul>
+<li class="toc-level-3"><a href="#operators">Operators</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#types-of-queues">Types of Queues</a></li>
+<ul>
+<li class="toc-level-4"><a href="#linear-queue">Linear Queue</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#circular-queue">Circular Queue</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#priority-queue">Priority Queue</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#double-ended-queue">Double Ended Queue</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#implementation">Implementation</a></li>
+<ul>
+<li class="toc-level-4"><a href="#using-arrays">Using Arrays</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#using-linked-lists">Using Linked Lists</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#using-stacks">Using Stacks</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#complexity">Complexity</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#code-examples">Code Examples</a></li>
+<ul>
+<li class="toc-level-4"><a href="#c">C++</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#python">Python</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#java">Java</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#applications-of-queues">Applications of Queues</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#strong-real-world-applications--strong"><strong>Real-World Applications</strong></a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="puccio:hege@example.com">puccio@example.com</a></span>
+        </footer>
+    </body>
+</html>
