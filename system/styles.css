@@ -443,3 +443,19 @@ th:empty, td:empty {
 .header-block.h4 p {
   font-size: 14px; /* Font size for paragraph inside h1 block */
 }
+
+.warning-message {
+	background-color: #FFEB3B; /* Bright yellow background for visibility */
+	color: #000; /* Black text color */
+	font-size: 18px;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	font-weight: bold;
+}
+@media (max-width: 768px) {
+  .warning-message {
+      font-size: 16px; /* Adjust font size for smaller screens */
+      padding: 15px;
+  }
+}
