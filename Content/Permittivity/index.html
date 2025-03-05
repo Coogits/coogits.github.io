@@ -17,6 +17,7 @@
         <script type="module" src="/system/mermaid-setup.js"></script>
         
         <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
 
         <link rel="stylesheet" href="/system/pygments.css">
         <link rel="stylesheet" href="/system/styles.css"> 
@@ -31,42 +32,46 @@
         <img src="/system/Logo.png" alt="Logo" height="100" class="center">
 
         <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <a href="/Content/About/">About</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
             
-            <a href="/">Home</a>
-            <div class="dropdown">
-                <button class="dropbtn">Math
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="/Content/Mathematics/">Mathematics</a>
-                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
-                    <a href="/Content/Arithmetic/">Arithmetic</a>
-                    <a href="/Content/Algebra/">Algebra</a>
-                    <a href="/Content/Geometry/">Geometry</a>
-                    <a href="/Content/Analysis-1/">Analysis 1</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Physics
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="/Content/Physics/">Physics</a>
-                    <a href="/Content/Classical-Physics/">Classical Physics</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Informatics
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="/Content/Computer-Science/">Computer Science</a>
-                    <a href="/Content/Hardware/">Hardware</a>
-                    <a href="/Content/Software/">Software</a>
-                    <a href="/Content/Programming/">Programming</a>
-                </div>
-            </div>
-            <a href="/Content/About/">About</a>
             <!-- Your navbar content here -->
             <div class="search-container">
                 <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
@@ -74,14 +79,14 @@
         </div>
         <ul id="searchResults"></ul>
         <div class="mdBody">
-        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Physical-Quantity/">Physical Quantity</a> &gt; <a href="/Content/Physical-Constant/">Physical Constant</a> &gt;<br />
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Physical-Quantity/">Physical Quantity</a> &gt; <a href="/Content/Physical-Constant/">Physical Constant</a> &gt;<br />
 <a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Classical-Physics/">Classical Physics</a> &gt; <a href="/Content/Electromagnetism/">Electromagnetism</a> &gt; <a href="/Content/Electronics/">Electronics</a> &gt;</p>
 <div class="header-block h1">
 <h1 id="permittivity">Permittivity</h1>
 <p><strong>Permittivity</strong> ($\epsilon$) is a fundamental property of materials that quantifies their ability to permit the formation of an electric field within them. It describes how an electric field interacts with a medium, influencing the amount of electric flux generated per unit charge.</p>
 <p><strong>Vacuum Permittivity</strong>($\epsilon_0$), also known as the <strong>electric constant</strong>, is a fundamental physical constant that characterizes the ability of free space to support an electric field. It plays a crucial role in <strong>Coulomb's Law</strong>, <strong>Gauss's Law</strong>, and <strong>Maxwell's equations</strong>, establishing the relationship between electric charge and the resulting electric field in a vacuum.</p>
 <hr />
-<div class="header-block h3">
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
 <h3 id="symbols">Symbols</h3>
 <ul>
 <li>$F_0\quad$ <a href="/Content/Electrostatic-Force/">Electrostatic Force</a> in a vacuum</li>
@@ -115,7 +120,7 @@ The permittivity of a dielectric medium is given by the product of vacuum permit
 </div>
 </div>
         </div>
-        <nav class="table-of-contents">
+<nav class="table-of-contents" id="table-of-contents">
 <ul>
 <li class="toc-level-1"><a href="#permittivity">Permittivity</a></li>
 <ul>

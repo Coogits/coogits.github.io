@@ -17,6 +17,7 @@
         <script type="module" src="/system/mermaid-setup.js"></script>
         
         <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
 
         <link rel="stylesheet" href="/system/pygments.css">
         <link rel="stylesheet" href="/system/styles.css"> 
@@ -31,42 +32,46 @@
         <img src="/system/Logo.png" alt="Logo" height="100" class="center">
 
         <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <a href="/Content/About/">About</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
             
-            <a href="/">Home</a>
-            <div class="dropdown">
-                <button class="dropbtn">Math
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="/Content/Mathematics/">Mathematics</a>
-                    <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
-                    <a href="/Content/Arithmetic/">Arithmetic</a>
-                    <a href="/Content/Algebra/">Algebra</a>
-                    <a href="/Content/Geometry/">Geometry</a>
-                    <a href="/Content/Analysis-1/">Analysis 1</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Physics
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="/Content/Physics/">Physics</a>
-                    <a href="/Content/Classical-Physics/">Classical Physics</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn">Informatics
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="/Content/Computer-Science/">Computer Science</a>
-                    <a href="/Content/Hardware/">Hardware</a>
-                    <a href="/Content/Software/">Software</a>
-                    <a href="/Content/Programming/">Programming</a>
-                </div>
-            </div>
-            <a href="/Content/About/">About</a>
             <!-- Your navbar content here -->
             <div class="search-container">
                 <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
@@ -74,11 +79,11 @@
         </div>
         <ul id="searchResults"></ul>
         <div class="mdBody">
-        <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Algebra/">Algebra</a> &gt; <a href="/Content/Elementary-Algebra/">Elementary Algebra</a> &gt; <a href="/Content/Polynomial/">Polynomial</a> &gt; <a href="/Content/Monomial/">Monomial</a></p>
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Algebra/">Algebra</a> &gt; <a href="/Content/Elementary-Algebra/">Elementary Algebra</a> &gt; <a href="/Content/Polynomial/">Polynomial</a> &gt; <a href="/Content/Monomial/">Monomial</a></p>
 <div class="header-block h1">
 <h1 id="greatest-common-divisor--monomials">Greatest Common Divisor (Monomials)</h1>
 <p>The <strong>Greatest Common Divisor (GCD)</strong> of two or more monomials is the largest monomial that divides each of the given monomials without leaving a remainder.</p>
-<div class="header-block h3">
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
 <h3 id="symbols-and-notation">Symbols and Notation</h3>
 <ul>
 <li>$m_1\quad$ Generic monomials $m_1=c_1x^{a_1}y^{b_1}z^{d_1}$</li>
@@ -151,7 +156,7 @@ Multiply the GCD of the coefficients by the variables raised to their respective
 </div>
 </div>
         </div>
-        <nav class="table-of-contents">
+<nav class="table-of-contents" id="table-of-contents">
 <ul>
 <li class="toc-level-1"><a href="#greatest-common-divisor--monomials">Greatest Common Divisor (Monomials)</a></li>
 <ul>

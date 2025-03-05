@@ -32,11 +32,27 @@
     text-decoration: underline;
 }
 
-/* Hide when there isn't enough space */
+.toc-toggle {
+    display: none;  /* Hide by default */
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom:2rem; /* Margin based on root font size (scalable across devices) */
+}
+
+/* On smaller screens, show the TOC toggle button and hide the TOC */
 @media (max-width: 1200px) {
     .table-of-contents {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
+        display: none;  /* Keep the TOC hidden on smaller screens */
+        transform:none;
+        position: absolute;
+    }
+    .toc-toggle {
+        display: flex;  /* Show the TOC toggle button */
     }
 }
+
+
+
+.table-of-contents.show {
+    display: flex; /* Show the links when toggled */
+  }

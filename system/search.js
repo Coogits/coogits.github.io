@@ -1,4 +1,4 @@
- 
+
 /* 
 jsonData syntax:
 {
@@ -19,7 +19,7 @@ jsonData syntax:
 let jsonData = {};
 
 // Load the JSON data from the file when the page loads
-window.onload = function() {
+window.onload = function () {
     fetch('/system/search.json')
         .then(response => response.json())
         .then(data => {
@@ -44,7 +44,7 @@ function searchContent() {
     // If the query is not empty, perform the search
     if (query) {
         // Filter the pages based on the title matching the query
-        const results = jsonData.pages.filter(page => 
+        const results = jsonData.pages.filter(page =>
             page.title.toLowerCase().includes(query)
         );
 
@@ -74,7 +74,7 @@ function searchContent() {
 function positionResultsContainer() {
     const searchInput = document.getElementById('searchQuery');
     const resultsContainer = document.getElementById('searchResults');
-    
+
     const rect = searchInput.getBoundingClientRect();  // Get the position of the input field
     const inputBottom = rect.bottom + window.scrollY; // Get the bottom position of the input
 
