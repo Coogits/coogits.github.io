@@ -43,21 +43,32 @@ h2 {
 
 h3 {
   margin-top: 0%;
-  font-size: 2.0rem;
+  font-size: 1.8rem;
 }
 
 h4 {
   margin-top: 0%;
   margin-bottom: 0%;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 h5 {
   margin-top: 0%;
   margin-bottom: 0%;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
-
+/*
+h3 a,
+h5 a,
+h4 a {
+  text-decoration: none;
+  color: black;
+}
+h5 a::after,
+h4 a::after {
+  content: ' 🔗';
+}
+*/
 /* --------------------------------------------------------------- */
 
 .header-block.h2 {
@@ -129,7 +140,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.2; /* Relative to the font size */
   font-family: 'Times New Roman', serif;
   font-weight: lighter;
@@ -157,6 +168,9 @@ body {
   justify-content: flex-start; /* Align items horizontally in a row */
   align-items: center;         /* Center items vertically */
   padding: 10px 20px;
+  border-left: 0px;
+  border-right: 0px;
+  border-style: ridge;
 }
 
 /* Hide navbar links initially */
