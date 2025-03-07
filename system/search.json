@@ -1403,6 +1403,14 @@
     {
       "url": "/Content/Superposition-Principle/",
       "title": "Superposition Principle"
+    },
+    {
+      "url": "/Content/Projects/",
+      "title": "Projects"
+    },
+    {
+      "url": "/Content/Fifteen-Puzzle/",
+      "title": "Fifteen Puzzle"
     }
   ]
 }

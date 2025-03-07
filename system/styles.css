@@ -2,6 +2,7 @@
   --navbar-background-color: rgb(204, 204, 204);
   --navbar-text-color: black;
   --body-background-color: rgba(233, 233, 233, 0.562);
+  --font-size: 1.1rem;
 }
 
 .center {
@@ -140,7 +141,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-  font-size: 1.1rem;
+  font-size: var(--font-size);
   line-height: 1.2; /* Relative to the font size */
   font-family: 'Times New Roman', serif;
   font-weight: lighter;
@@ -266,7 +267,7 @@ footer {
   align-items: center;
   /* Vertically center the content */
   background-color: var(--navbar-background-color);
-  color: white;
+  color: var(--navbar-text-color);
   padding: 10px 30px;
   /* Add space inside the footer */
   position: relative;
