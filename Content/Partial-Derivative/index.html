@@ -35,7 +35,7 @@
         <div class="navbar">
             <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
             <div class="navbar-contents" id="navbar-contents">
-                <a href="/">Home</a>
+                <a href="/">&#x2302; Home</a>
                 <div class="dropdown">
                     <button class="dropbtn">Math
                         <i class="fa fa-caret-down"></i>
@@ -86,14 +86,14 @@
 <h1 id="partial-derivative">Partial Derivative</h1>
 <p>A <strong>partial derivative</strong> measures how a function changes as one of its variables changes while all other variables are held constant. It is used for functions of several variables.</p>
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
-<h3 id="formulas">Formulas</h3>
+<div class="header-h3"><h3 id="formulas">Formulas</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Formal Definition</strong>:<br />
 Let $f(x_1,\ldots,x_n)$ be a function of <strong>n</strong> variables. The partial derivative of <strong>f</strong> with respect to the variable $x_i$, provided this limit exist is defined as: $$\cfrac{\partial f}{\partial x_i}(x_1,\ldots,x_n)=\displaystyle\lim_{h\to0}\cfrac{f(x_i,\ldots,x_n+h,\ldots,x_n)-f(x_i,\ldots,x_n)}{h}$$</li>
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="intuitive-explanation">Intuitive Explanation</h3>
+<div class="header-h3"><h3 id="intuitive-explanation">Intuitive Explanation</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Holding Other Variables Constant:</strong><br />
 When calculating $\cfrac{\partial f}{\partial x_i}$, all variables other than $x_i$ are treated as constants. This isolates the effect of changing $x_i$ on the value of <strong>f</strong>.</li>
@@ -102,12 +102,12 @@ The partial derivative at a point gives the slope of the tangent line to the fun
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="example">Example</h3>
+<div class="header-h3"><h3 id="example">Example</h3><div class="header-button"></div></div>
 <p>For a function $f(x,y)$ of two variables, the partial derivative with respect to <strong>x</strong> is: $$\cfrac{\partial f}{\partial x_i}(x,y)=\displaystyle\lim_{h\to0}\cfrac{f(x+h,y)-f(x,y)}{h}$$
 Similarly, the partial derivative with respect to <strong>y</strong> is: $$\cfrac{\partial f}{\partial x_i}(x,y)=\displaystyle\lim_{h\to0}\cfrac{f(x,y+h)-f(x,y)}{h}$$</p>
 </div>
 <div class="header-block h3">
-<h3 id="summary">Summary</h3>
+<div class="header-h3"><h3 id="summary">Summary</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Purpose:</strong><br />
 Quantifies the rate of change of <strong>f</strong> with respect to one variable while keeping the others fixed.</li>

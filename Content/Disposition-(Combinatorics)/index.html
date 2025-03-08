@@ -35,7 +35,7 @@
         <div class="navbar">
             <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
             <div class="navbar-contents" id="navbar-contents">
-                <a href="/">Home</a>
+                <a href="/">&#x2302; Home</a>
                 <div class="dropdown">
                     <button class="dropbtn">Math
                         <i class="fa fa-caret-down"></i>
@@ -86,7 +86,7 @@
 <h1 id="disposition--combinatorics">Disposition (Combinatorics)</h1>
 <p>A <strong>disposition</strong> (also known as an <strong>arrangement</strong>) refers to a selection of $k$ elements from a set of $n$ elements, where the <strong>order of the elements matters</strong>. Dispositions can be classified as:</p>
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
-<h3 id="symbols">Symbols</h3>
+<div class="header-h3"><h3 id="symbols">Symbols</h3><div class="header-button"></div></div>
 <ul>
 <li>$n\quad$ Total number of elements in the set.</li>
 <li>$k\quad$ Number of elements being chosen.</li>
@@ -95,7 +95,7 @@
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="formulas">Formulas</h3>
+<div class="header-h3"><h3 id="formulas">Formulas</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Simple Disposition (Without Repetition):</strong><br />
 Elements are selected without repetition: $$D_{n,k}=\cfrac{n!}{(n-k)!}\qquad k\geq n$$</li>
@@ -104,7 +104,7 @@ Each element can be selected more than once, with repetition allowed up to $k$ t
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="examples">Examples</h3>
+<div class="header-h3"><h3 id="examples">Examples</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Simple Disposition</strong>: $D_{4,2}$  : $$\{a,b,c,d\}\begin{cases} \begin{cases}a \begin{cases}b\to ab \\ c\to ac \\ d\to ad \end{cases}  \end{cases} \\ \begin{cases}b \begin{cases}a\to ab \\ c\to bc \\ d\to bd \end{cases} \end{cases} \\ \begin{cases}c \begin{cases}a\to ac \\ b\to bc \\ d\to cd \end{cases}\end{cases} \\ \begin{cases}d \begin{cases}a\to ad \\ b\to bd \\ c\to cd \end{cases}\end{cases} \end{cases}=12$$</li>
 <li><strong>Disposition with Repetition</strong>: $D&#x27;_{4,2}$: $$\{a,b,c,d\}\begin{cases} \begin{cases}a \begin{cases}a\to aa \\ b\to ab \\ c\to ac \\ d\to ad \end{cases}  \end{cases} \\ \begin{cases}b \begin{cases}a\to ab \\ b\to bb \\ c\to bc \\ d\to bd \end{cases} \end{cases} \\ \begin{cases}c \begin{cases}a\to ac \\ b\to bc \\ c\to cc \\ d\to cd \end{cases}\end{cases} \\ \begin{cases}d \begin{cases}a\to ad \\ b\to bd \\ c\to cd \\ d\to dd \end{cases}\end{cases} \end{cases}=16$$</li>

@@ -3,6 +3,7 @@
   --navbar-text-color: black;
   --body-background-color: rgba(233, 233, 233, 0.562);
   --font-size: 1.1rem;
+  --content-menu-width: 12.5rem;
 }
 
 .center {
@@ -73,7 +74,6 @@ h4 a::after {
 /* --------------------------------------------------------------- */
 
 .header-block.h2 {
-  /* border: 2px solid blue; */
   margin-left: 1px;
 }
 
@@ -163,7 +163,8 @@ body {
 
 /* Navbar container */
 .navbar {
-  overflow: hidden;
+  position: relative;
+  overflow: visible;
   background-color: var(--navbar-background-color);
   display: flex;
   justify-content: flex-start; /* Align items horizontally in a row */
@@ -174,22 +175,30 @@ body {
   border-style: ridge;
 }
 
-/* Hide navbar links initially */
 .navbar .navbar-contents {
   position: absolute;
-  display: none;  /* Hidden by default */
-  flex-direction: column;  /* Make the menu stack vertically when visible */
-  align-items: flex-start;  /* Align links to the left */
-  background-color: var(--navbar-background-color);
+  top: 100%; /* Initially position it at the top of the screen */
+  left: calc(-1 * var(--content-menu-width)); /* Initially off-screen */
+  width: var(--content-menu-width);
+  height: auto;
+  display: flex; /* Display the menu vertically */
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
   z-index: 999;
-  top:100%;
-  left: 0%;
+  opacity: 0; /* Initially invisible */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation for both transform and opacity */
+  pointer-events: none; /* Prevent interaction when hidden */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
-/* Show the navbar links vertically when toggled */
+/* Show the navbar contents when toggled */
 .navbar .navbar-contents.show {
-  display: flex; /* Show the links when toggled */
+  transform: translateX(var(--content-menu-width)); /* Slide in from left to right */
+  opacity: 1; /* Make the menu visible */
+  pointer-events: auto; /* Enable interaction when visible */
 }
+
 
 /* The dropdown container */
 .dropdown {
@@ -199,7 +208,7 @@ body {
 }
 
 /* Dropdown button */
-.navbar-contents a,
+.navbar .navbar-contents a,
 .dropdown .dropbtn {
   border: none;
   outline: none;
@@ -542,5 +551,117 @@ td:empty {
     font-size: 16px;
     /* Adjust font size for smaller screens */
     padding: 15px;
+  }
+}
+
+/* --------------------------------------------------------------- */
+/* Initially hide all content inside the header-block except the <h3> */
+
+.header-block.h3 > *:not(.header-h3) {
+  display: block;
+}
+.header-block.h4 > *:not(.header-h4) {
+  display: block;
+}
+
+.header-block.h3.toggle > *:not(.header-h3) {
+  display: none;
+}
+
+.header-block.h4.toggle > *:not(.header-h4) {
+  display: none;
+}
+
+/* Default button icon (minus sign) for both h3 and h4 blocks */
+.header-block.h3 .header-button::after,
+.header-block.h4 .header-button::after {
+  content: "⮝"; /* Up arrow by default */
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* When the block is open, change the icon to down arrow */
+.header-block.h3.toggle .header-button::after,
+.header-block.h4.toggle .header-button::after {
+  content: "⮟"; /* Down arrow when the section is open */
+}
+
+/* Media query for responsive behavior (max-width: 768px) */
+@media (max-width: 768px) {
+  /* By default, hide content in .header-block.h4 */
+  .header-block.h4 > *:not(.header-h4) {
+    display: none;
+  }
+
+  /* When .header-block.h4 has the .open class, display the content */
+  .header-block.h4.toggle > *:not(.header-h4) {
+    display: block;
+  }
+
+  /* Default icon when section is closed */
+  .header-block.h4 .header-button::after {
+    content: "⮟"; /* Up arrow when section is closed */
+  }
+
+  /* Change icon to down arrow when section is open */
+  .header-block.h4.toggle .header-button::after {
+    content: "⮝"; /* Down arrow when section is open */
+  }
+}
+
+
+.header-h4,
+.header-h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-button {
+  display: inline-block; /* or block */
+  cursor: pointer; /* Ensure the pointer cursor */
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  margin-left: auto;
+  margin-bottom: auto;
+}
+
+
+#map::before {
+  content: '🌏';
+}
+
+/* Basic styling for the anchor inside the <h4> */
+h5 a,
+h4 a {
+  color: black;  /* default color (not like a standard link) */
+  text-decoration: none;
+}
+
+/* Append text (or icon) after the <a> link */
+h5 a::after,
+h4 a::after {
+  content: ' link 🔗';  /* You can replace 'link' with a 🔗 symbol */
+  color: #0000EE;  /* Same blue color as the link */
+  text-decoration: underline;
+  font-size: 1rem;  /* Slightly smaller size than the link text */
+  margin-left: 5px;  /* Space between the link and the appended text */
+  animation: pulse 1s infinite ease-in-out;  /* Pulse the appended icon as well */
+  display: inline-block;  /* Ensure the element is inline-block to apply transform */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);  /* Initial size */
+    opacity: 1;  /* Fully visible */
+  }
+  50% {
+    transform: scale(0.9);  /* Grow slightly */
+    opacity: 0.8;  /* Slightly transparent */
+  }
+  100% {
+    transform: scale(1);  /* Return to original size */
+    opacity: 1;  /* Fully visible again */
   }
 }

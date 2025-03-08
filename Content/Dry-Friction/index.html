@@ -35,7 +35,7 @@
         <div class="navbar">
             <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
             <div class="navbar-contents" id="navbar-contents">
-                <a href="/">Home</a>
+                <a href="/">&#x2302; Home</a>
                 <div class="dropdown">
                     <button class="dropbtn">Math
                         <i class="fa fa-caret-down"></i>
@@ -86,7 +86,7 @@
 <h1 id="dry-friction">Dry Friction</h1>
 <p><strong>Dry Friction</strong> is the force that opposes the relative motion between two solid surfaces in contact, caused by the microscopic roughness of the surfaces. It can be divided into two types: static friction, which prevents the initiation of motion, and kinetic friction, which resists motion once it has started. The magnitude of dry friction is generally proportional to the normal force between the surfaces.</p>
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
-<h3 id="symbols">Symbols</h3>
+<div class="header-h3"><h3 id="symbols">Symbols</h3><div class="header-button"></div></div>
 <ul>
 <li>$\overrightarrow{F}_{fs}\quad$ <strong>Static Friction</strong>, is the force that resists the start of relative motion between two objects.</li>
 <li>$\overrightarrow{F}_{fd}\quad$ <strong>Kinematic Friction</strong>, is the force that opposes the motion of an object already in motion.</li>
@@ -108,7 +108,7 @@
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="formulas">Formulas</h3>
+<div class="header-h3"><h3 id="formulas">Formulas</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Static Friction</strong>:<br />
 The frictional force that resists the initiation of motion between two objects in contact: $$\overrightarrow{F}_{fs}=-\mu_s\;|\overrightarrow{F}_{\perp}|\hat{F} \qquad \text{with } |\overrightarrow{F}_{fs}|\leq|\overrightarrow{F}|$$</li>
@@ -117,7 +117,7 @@ or dynamic friction, is the frictional force that opposes the motion of an objec
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="properties">Properties</h3>
+<div class="header-h3"><h3 id="properties">Properties</h3><div class="header-button"></div></div>
 <ul>
 <li>vector quantity</li>
 <li>resistive force</li>
@@ -125,7 +125,7 @@ or dynamic friction, is the frictional force that opposes the motion of an objec
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="programming-language-implementation">Programming Language Implementation</h3>
+<div class="header-h3"><h3 id="programming-language-implementation">Programming Language Implementation</h3><div class="header-button"></div></div>
 <pre><code class="language-cs">// --- Compute the total forces ---
 if (actualVelocity.x * horizontalInput &lt; maxVelocity)
 	totalForces += characterMass * walkAcceleration * horizontalInput * Vector2.Dot(Vector2.right, groundVersor) * groundVersor;

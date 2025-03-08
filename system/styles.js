@@ -7,22 +7,13 @@ function navbar_hamburger() {
     // Toggle visibility of the dropdown menu
     contents_menu.classList.toggle("show");
 
-    // Calculate and position the dropdown menu below the hamburger icon
-    if (contents_menu.classList.contains("show")) {
-        var iconRect = navbar.getBoundingClientRect();  // Get position of the hamburger icon
-        
-        // Set the dropdown position dynamically
-        contents_menu.style.top = (iconRect.bottom + window.scrollY) + 'px';  // Position it below the icon
-        contents_menu.style.left = (iconRect.left + window.scrollX) + 'px';  // Align it with the left of the icon
-
-        // Close the menu when clicking outside
-        document.addEventListener("click", function closeMenuOnClickOutside(event) {
-            if (!contents_menu.contains(event.target) && !hamburger_icon.contains(event.target)) {
-                contents_menu.classList.remove("show");
-                contents_menu.removeEventListener("click", closeMenuOnClickOutside);  // Remove the event listener after it has run
-            }
-        });
-    }
+    // Close the menu when clicking outside
+    document.addEventListener("click", function closeMenuOnClickOutside(event) {
+        if (!contents_menu.contains(event.target) && !hamburger_icon.contains(event.target)) {
+            contents_menu.classList.remove("show");
+            contents_menu.removeEventListener("click", closeMenuOnClickOutside);  // Remove the event listener after it has run
+        }
+    });
 }
 
 function toggleTOC() {
@@ -49,7 +40,7 @@ function toggleTOC() {
         document.addEventListener("click", closeMenuOnClickOutside);
 
         // Hide the TOC when clicking directly on it
-        toc.addEventListener("click", function() {
+        toc.addEventListener("click", function () {
             toc.classList.remove("show");
             document.removeEventListener("click", closeMenuOnClickOutside);  // Remove the outside click listener when TOC is clicked
         });
@@ -59,5 +50,24 @@ function toggleTOC() {
     }
 }
 
+// Function to bind click events
+function collapsible() {
+    // Add a click event listener to both <h3> and <h4> elements inside .header-block containers
+    document.querySelectorAll('.header-button').forEach(function (header) {
+        header.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default behavior (important for <button> elements)
 
-  
+            // Get the parent block of the clicked header/button
+            var block = header.closest('.header-block');  // Look for any .header-block parent
+            
+            // Toggle the 'open' class on the parent block to show or hide the content
+            block.classList.toggle('toggle');
+        });
+    });
+}
+
+
+
+// Call collapsible() when the DOM is ready
+document.addEventListener('DOMContentLoaded', collapsible);
+

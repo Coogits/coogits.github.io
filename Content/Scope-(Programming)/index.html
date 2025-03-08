@@ -35,7 +35,7 @@
         <div class="navbar">
             <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
             <div class="navbar-contents" id="navbar-contents">
-                <a href="/">Home</a>
+                <a href="/">&#x2302; Home</a>
                 <div class="dropdown">
                     <button class="dropbtn">Math
                         <i class="fa fa-caret-down"></i>
@@ -86,7 +86,7 @@
 <h1 id="scope">Scope</h1>
 <p><strong>Scope</strong> refers to the <strong>visibility and lifetime</strong> of an identifier (such as variables, functions, or objects) within a program. It defines where an identifier can be accessed or modified in the code.</p>
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
-<h3 id="key-concept">Key Concept</h3>
+<div class="header-h3"><h3 id="key-concept">Key Concept</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Defines Accessibility</strong>:<br />
 Determines where an identifier can be referenced.</li>
@@ -97,9 +97,9 @@ Scope rules differ across programming languages.</li>
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="types">Types</h3>
+<div class="header-h3"><h3 id="types">Types</h3><div class="header-button"></div></div>
 <div class="header-block h4">
-<h4 id="local-scope">Local Scope</h4>
+<div class="header-h4"><h4 id="local-scope">Local Scope</h4><div class="header-button"></div></div>
 <p><strong>Local Scope</strong> (Block Scope) are identifiers declared within a block (<code>{}</code> or function) are <strong>only accessible within that block</strong>.<br />
 Exists only inside the function/block</p>
 <pre><code class="language-cpp">void example() {
@@ -113,7 +113,7 @@ print(x)  # Error: x is undefined outside the function
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="global-scope">Global Scope</h4>
+<div class="header-h4"><h4 id="global-scope">Global Scope</h4><div class="header-button"></div></div>
 <p>Identifiers declared outside all functions are <strong>accessible throughout the entire program</strong>.<br />
 Accessible anywhere in the program unless shadowed</p>
 <pre><code class="language-cpp">int globalVar = 5;  // Global scope
@@ -128,7 +128,7 @@ example()
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="function-scope">Function Scope</h4>
+<div class="header-h4"><h4 id="function-scope">Function Scope</h4><div class="header-button"></div></div>
 <p>Identifiers declared inside a function <strong>only exist within that function</strong> and are destroyed when the function ends.<br />
 Similar to <strong>Local Scope</strong> but specific to functions.</p>
 <pre><code class="language-javascript">function example() {
@@ -140,7 +140,7 @@ console.log(x);  // Error: x is not defined outside
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="namespace-scope">Namespace Scope</h4>
+<div class="header-h4"><h4 id="namespace-scope">Namespace Scope</h4><div class="header-button"></div></div>
 <p>In object-oriented languages, identifiers defined within a <strong>class</strong> or <strong>namespace</strong> are accessible within that scope.<br />
 Used in <strong>Encapsulation</strong> to restrict access to internal members.</p>
 <pre><code class="language-cpp">class Example {
@@ -149,7 +149,7 @@ Used in <strong>Encapsulation</strong> to restrict access to internal members.</
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="static-scope">Static Scope</h4>
+<div class="header-h4"><h4 id="static-scope">Static Scope</h4><div class="header-button"></div></div>
 <p><strong>Static Scope</strong> or <strong>Lexical Scope</strong> is <strong>determined at compile-time</strong>, meaning inner blocks <strong>inherit variables from outer blocks</strong>.<br />
 <strong>Nested functions</strong> can access outer variables.</p>
 <pre><code class="language-javascript">function outer() {

@@ -35,7 +35,7 @@
         <div class="navbar">
             <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
             <div class="navbar-contents" id="navbar-contents">
-                <a href="/">Home</a>
+                <a href="/">&#x2302; Home</a>
                 <div class="dropdown">
                     <button class="dropbtn">Math
                         <i class="fa fa-caret-down"></i>
@@ -86,7 +86,7 @@
 <h1 id="namespace">Namespace</h1>
 <p>A <strong>namespace</strong> is a declarative region that provides a scope to group <strong>identifiers</strong> (such as variables, functions, classes, or modules) to prevent naming conflicts and organize code efficiently.</p>
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
-<h3 id="key-concepts">Key Concepts</h3>
+<div class="header-h3"><h3 id="key-concepts">Key Concepts</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Encapsulation of Identifiers</strong>:<br />
 Avoids name clashes by grouping related identifiers.</li>
@@ -99,9 +99,9 @@ Access elements using <code>::</code> (C++), <code>.</code> (Python, Java), etc.
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="examples">Examples</h3>
+<div class="header-h3"><h3 id="examples">Examples</h3><div class="header-button"></div></div>
 <div class="header-block h4">
-<h4 id="c">C++</h4>
+<div class="header-h4"><h4 id="c">C++</h4><div class="header-button"></div></div>
 <p><strong><code>namespace</code> Keyword</strong>: C++ allows defining multiple namespaces to avoid naming conflicts.</p>
 <pre><code class="language-cpp">#include &lt;iostream&gt;
 namespace Math {
@@ -115,7 +115,7 @@ int main() {
 <p><strong>Prevents conflicts</strong>: If another <code>add</code> function exists elsewhere, it won’t interfere.</p>
 </div>
 <div class="header-block h4">
-<h4 id="python">Python</h4>
+<div class="header-h4"><h4 id="python">Python</h4><div class="header-button"></div></div>
 <p><strong>Modules as Namespaces</strong>: In Python, modules and packages serve as namespaces.</p>
 <pre><code class="language-python">import math  # math is a namespace
 print(math.sqrt(25))  # Accessing sqrt function inside math namespace
@@ -123,7 +123,7 @@ print(math.sqrt(25))  # Accessing sqrt function inside math namespace
 <p><strong>Modules prevent conflicts</strong>: <code>sqrt</code> in <code>math</code> won’t clash with a different <code>sqrt</code> function.</p>
 </div>
 <div class="header-block h4">
-<h4 id="java">Java</h4>
+<div class="header-h4"><h4 id="java">Java</h4><div class="header-button"></div></div>
 <p><strong>Packages as Namespaces</strong>: Java uses <strong>packages</strong> to manage namespaces and avoid conflicts.</p>
 <pre><code class="language-java">// --- Definition ---
 package mypackage;  // Defines a namespace
@@ -144,7 +144,7 @@ public class Main {
 <p><strong>Organizes large projects</strong>: Java packages act as namespaces to structure code.</p>
 </div>
 <div class="header-block h4">
-<h4 id="javascript">JavaScript</h4>
+<div class="header-h4"><h4 id="javascript">JavaScript</h4><div class="header-button"></div></div>
 <p><strong>Objects as Namespaces</strong>: JavaScript lacks a built-in namespace feature, but objects act as namespaces.</p>
 <pre><code class="language-javascript">const MathOperations = {
     add: (a, b) =&gt; a + b
@@ -155,7 +155,7 @@ console.log(MathOperations.add(5, 3)); // Access function via namespace
 </div>
 </div>
 <div class="header-block h3">
-<h3 id="why">Why</h3>
+<div class="header-h3"><h3 id="why">Why</h3><div class="header-button"></div></div>
 <p><strong>Why Use Namespaces?</strong></p>
 <ul>
 <li><strong>Prevents Naming Conflicts</strong>:<br />

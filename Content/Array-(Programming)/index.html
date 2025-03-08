@@ -35,7 +35,7 @@
         <div class="navbar">
             <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
             <div class="navbar-contents" id="navbar-contents">
-                <a href="/">Home</a>
+                <a href="/">&#x2302; Home</a>
                 <div class="dropdown">
                     <button class="dropbtn">Math
                         <i class="fa fa-caret-down"></i>
@@ -87,7 +87,7 @@
 <h1 id="array--programming">Array (Programming)</h1>
 <p>An <strong>array</strong> is a data structure that stores a fixed-size, ordered collection of elements of the same type in contiguous memory locations. Each element in an array is identified by an index, allowing efficient random access.</p>
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
-<h3 id="key-characteristics">Key Characteristics:</h3>
+<div class="header-h3"><h3 id="key-characteristics">Key Characteristics:</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Fixed Size</strong>:<br />
 The size of an array is typically defined at creation and cannot change dynamically (except in dynamic arrays).</li>
@@ -100,23 +100,23 @@ All elements in an array must be of the same data type.</li>
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="types-of-arrays">Types of Arrays</h3>
+<div class="header-h3"><h3 id="types-of-arrays">Types of Arrays</h3><div class="header-button"></div></div>
 <div class="header-block h4">
-<h4 id="one-dimensional">One-Dimensional</h4>
+<div class="header-h4"><h4 id="one-dimensional">One-Dimensional</h4><div class="header-button"></div></div>
 <p>A <strong>one-dimensional array</strong> (1D array) is the simplest type of array, where elements are stored in a single row (or linearly in memory). Each element is accessed using a single index.</p>
 <pre><code class="language-c">int numbers[5] = {1, 2, 3, 4, 5};
 printf(&quot;%d&quot;, numbers[2]);  // Output: 3
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="multi-dimensional">Multi-Dimensional</h4>
+<div class="header-h4"><h4 id="multi-dimensional">Multi-Dimensional</h4><div class="header-button"></div></div>
 <p>A <strong>multi-dimensional array</strong> extends the concept of 1D arrays by adding additional dimensions. The most common type is a <strong>two-dimensional array (2D array)</strong>, often used to represent matrices or tables.</p>
 <pre><code class="language-c">int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
 printf(&quot;%d&quot;, matrix[1][2]);  // Output: 6
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="dynamic-arrays">Dynamic Arrays</h4>
+<div class="header-h4"><h4 id="dynamic-arrays">Dynamic Arrays</h4><div class="header-button"></div></div>
 <p>A <strong>dynamic array</strong> is a resizable array that can grow or shrink as needed, unlike static arrays that have a fixed size. Dynamic arrays manage memory allocation automatically.
 <strong>C++ (Vector - Standard Library Dynamic Array)</strong>:</p>
 <pre><code class="language-cpp">#include &lt;vector&gt;
@@ -132,7 +132,7 @@ print(numbers)  # Output: [1, 2, 3]
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="comparison-table">Comparison Table</h4>
+<div class="header-h4"><h4 id="comparison-table">Comparison Table</h4><div class="header-button"></div></div>
 <table>
 <thead>
 <tr>
@@ -169,7 +169,7 @@ print(numbers)  # Output: [1, 2, 3]
 </div>
 </div>
 <div class="header-block h3">
-<h3 id="performance">Performance</h3>
+<div class="header-h3"><h3 id="performance">Performance</h3><div class="header-button"></div></div>
 <p>Lists<sup id="cite_ref-3" class="footnote-container"><a href="#footnote-3" class="footnote-reference">[3]</a><span class="footnote-tooltip"><a href="/Content/Linked-List/">Linked List</a> are similar data structure, more versatile but require more resources</span></sup> and arrays are similar data structures but differ in terms of performance:</p>
 <ul>
 <li>Array:<br />
@@ -181,7 +181,7 @@ Cons: Slower, uses more memory</li>
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="operations">Operations</h3>
+<div class="header-h3"><h3 id="operations">Operations</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Access</strong>: Retrieve an element using its index O(1)<sup id="cite_ref-1" class="footnote-container"><a href="#footnote-1" class="footnote-reference">[1]</a><span class="footnote-tooltip">O(1) - <a href="/Content/Time-Complexity/#o-1----constant-time">Constant Time Complexity</a></span></sup>.</li>
 <li><strong>Update</strong>: Modify an element at a specific index O(1).</li>
@@ -190,7 +190,7 @@ Cons: Slower, uses more memory</li>
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="references">References</h3><ul><li id="footnote-1" class="footnote-item" data-footnote-id="1"><strong>1</strong>. O(1) - <a href="/Content/Time-Complexity/#o-1----constant-time">Constant Time Complexity</a></li><li id="footnote-2" class="footnote-item" data-footnote-id="2"><strong>2</strong>. O(n) - <a href="/Content/Time-Complexity/#o-n----linear-time">Linear Time Complexity</a></li><li id="footnote-3" class="footnote-item" data-footnote-id="3"><strong>3</strong>. <a href="/Content/Linked-List/">Linked List</a> are similar data structure, more versatile but require more resources</li></ul>
+<div class="header-h3"><h3 id="references">References</h3><div class="header-button"></div></div><ul><li id="footnote-1" class="footnote-item" data-footnote-id="1"><strong>1</strong>. O(1) - <a href="/Content/Time-Complexity/#o-1----constant-time">Constant Time Complexity</a></li><li id="footnote-2" class="footnote-item" data-footnote-id="2"><strong>2</strong>. O(n) - <a href="/Content/Time-Complexity/#o-n----linear-time">Linear Time Complexity</a></li><li id="footnote-3" class="footnote-item" data-footnote-id="3"><strong>3</strong>. <a href="/Content/Linked-List/">Linked List</a> are similar data structure, more versatile but require more resources</li></ul>
 </div>
 </div>
         </div>

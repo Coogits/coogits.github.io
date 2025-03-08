@@ -35,7 +35,7 @@
         <div class="navbar">
             <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
             <div class="navbar-contents" id="navbar-contents">
-                <a href="/">Home</a>
+                <a href="/">&#x2302; Home</a>
                 <div class="dropdown">
                     <button class="dropbtn">Math
                         <i class="fa fa-caret-down"></i>
@@ -86,7 +86,7 @@
 <h1 id="queue">Queue</h1>
 <p>A <strong>queue</strong> is a linear <strong>abstract data type (ADT)</strong> that follows the <strong>First-In, First-Out (FIFO)</strong> principle. This means that elements are inserted at one end (rear) and removed from the other end (front), similar to a real-world queue (e.g., a line at a ticket counter).</p>
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
-<h3 id="operators">Operators</h3>
+<div class="header-h3"><h3 id="operators">Operators</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Enqueue()</strong>:<br />
 Inserts element xxx at the <strong>rear</strong> of the queue.</li>
@@ -103,9 +103,9 @@ Checks if the queue is full (for fixed-size implementations).</li>
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="types-of-queues">Types of Queues</h3>
+<div class="header-h3"><h3 id="types-of-queues">Types of Queues</h3><div class="header-button"></div></div>
 <div class="header-block h4">
-<h4 id="linear-queue"><a href="/Content/Linear-Queue/">Linear Queue</a></h4>
+<div class="header-h4"><h4 id="linear-queue"><a href="/Content/Linear-Queue/">Linear Queue</a></h4><div class="header-button"></div></div>
 <ul>
 <li>Basic <strong>FIFO</strong> structure.</li>
 <li>Insertions happen at the <strong>rear</strong>, removals happen at the <strong>front</strong>.</li>
@@ -113,7 +113,7 @@ Checks if the queue is full (for fixed-size implementations).</li>
 </ul>
 </div>
 <div class="header-block h4">
-<h4 id="circular-queue">Circular Queue</h4>
+<div class="header-h4"><h4 id="circular-queue">Circular Queue</h4><div class="header-button"></div></div>
 <ul>
 <li>The rear <strong>wraps around</strong> when it reaches the end of the queue (circular indexing).</li>
 <li>More efficient in memory usage compared to a simple queue.</li>
@@ -121,7 +121,7 @@ Checks if the queue is full (for fixed-size implementations).</li>
 </ul>
 </div>
 <div class="header-block h4">
-<h4 id="priority-queue">Priority Queue</h4>
+<div class="header-h4"><h4 id="priority-queue">Priority Queue</h4><div class="header-button"></div></div>
 <ul>
 <li>Elements are dequeued based on <strong>priority</strong>, not the order of insertion.</li>
 <li>Implemented using a <strong>heap</strong> or a <strong>sorted list</strong>.</li>
@@ -129,7 +129,7 @@ Checks if the queue is full (for fixed-size implementations).</li>
 </ul>
 </div>
 <div class="header-block h4">
-<h4 id="double-ended-queue">Double Ended Queue</h4>
+<div class="header-h4"><h4 id="double-ended-queue">Double Ended Queue</h4><div class="header-button"></div></div>
 <ul>
 <li>Insertions and deletions can happen at <strong>both ends</strong> (front and rear).</li>
 <li>Special types: <strong>Input-Restricted Deque</strong> (insertion at one end only), <strong>Output-Restricted Deque</strong> (deletion at one end only).</li>
@@ -138,23 +138,23 @@ Checks if the queue is full (for fixed-size implementations).</li>
 </div>
 </div>
 <div class="header-block h3">
-<h3 id="implementation">Implementation</h3>
+<div class="header-h3"><h3 id="implementation">Implementation</h3><div class="header-button"></div></div>
 <div class="header-block h4">
-<h4 id="using-arrays">Using Arrays</h4>
+<div class="header-h4"><h4 id="using-arrays">Using Arrays</h4><div class="header-button"></div></div>
 <ul>
 <li>Fixed-size implementation.</li>
 <li>Requires shifting elements after <code>dequeue()</code> (inefficient).</li>
 </ul>
 </div>
 <div class="header-block h4">
-<h4 id="using-linked-lists">Using Linked Lists</h4>
+<div class="header-h4"><h4 id="using-linked-lists">Using Linked Lists</h4><div class="header-button"></div></div>
 <ul>
 <li>More dynamic (size can grow).</li>
 <li>Each node contains <code>data</code> and a <code>next</code> pointer.</li>
 </ul>
 </div>
 <div class="header-block h4">
-<h4 id="using-stacks">Using Stacks</h4>
+<div class="header-h4"><h4 id="using-stacks">Using Stacks</h4><div class="header-button"></div></div>
 <ul>
 <li>A queue can be implemented using two stacks (one for enqueue, one for dequeue).</li>
 <li>Example: <strong>Queue using two stacks</strong> in coding interviews.</li>
@@ -162,7 +162,7 @@ Checks if the queue is full (for fixed-size implementations).</li>
 </div>
 </div>
 <div class="header-block h3">
-<h3 id="complexity">Complexity</h3>
+<div class="header-h3"><h3 id="complexity">Complexity</h3><div class="header-button"></div></div>
 <table>
 <thead>
 <tr>
@@ -194,9 +194,9 @@ Checks if the queue is full (for fixed-size implementations).</li>
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="code-examples">Code Examples</h3>
+<div class="header-h3"><h3 id="code-examples">Code Examples</h3><div class="header-button"></div></div>
 <div class="header-block h4">
-<h4 id="c">C++</h4>
+<div class="header-h4"><h4 id="c">C++</h4><div class="header-button"></div></div>
 <p>C++ Implementation Using STL Queue</p>
 <pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;queue&gt;
@@ -216,7 +216,7 @@ int main() {
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="python">Python</h4>
+<div class="header-h4"><h4 id="python">Python</h4><div class="header-button"></div></div>
 <p>Python Implementation Using <code>collections.deque</code></p>
 <pre><code class="language-python">from collections import deque
 
@@ -231,7 +231,7 @@ print(&quot;New Front:&quot;, q[0])
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="java">Java</h4>
+<div class="header-h4"><h4 id="java">Java</h4><div class="header-button"></div></div>
 <p>Java Implementation Using <code>Queue</code> Interface</p>
 <pre><code class="language-java">import java.util.LinkedList;
 import java.util.Queue;
@@ -252,7 +252,7 @@ public class Main {
 </div>
 </div>
 <div class="header-block h3">
-<h3 id="applications-of-queues">Applications of Queues</h3>
+<div class="header-h3"><h3 id="applications-of-queues">Applications of Queues</h3><div class="header-button"></div></div>
 <p><strong>Process Scheduling</strong> – CPU task scheduling (round robin).<br />
 <strong>Graph Algorithms</strong> – BFS traversal uses a queue.<br />
 <strong>Web Servers</strong> – Managing incoming client requests.<br />
@@ -260,7 +260,7 @@ public class Main {
 <strong>Cache Management</strong> – LRU (Least Recently Used) page replacement policy.</p>
 </div>
 <div class="header-block h3">
-<h3 id="strong-real-world-applications--strong"><strong>Real-World Applications</strong></h3>
+<div class="header-h3"><h3 id="strong-real-world-applications--strong"><strong>Real-World Applications</strong></h3><div class="header-button"></div></div>
 <p><strong>Call Centers</strong> – Customers are served in order.<br />
 <strong>Ticket Queues</strong> – First person in line gets served first.<br />
 <strong>Printing Queue</strong> – Print jobs are processed in order.</p>

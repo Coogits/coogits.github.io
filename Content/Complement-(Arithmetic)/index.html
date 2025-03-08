@@ -35,7 +35,7 @@
         <div class="navbar">
             <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
             <div class="navbar-contents" id="navbar-contents">
-                <a href="/">Home</a>
+                <a href="/">&#x2302; Home</a>
                 <div class="dropdown">
                     <button class="dropbtn">Math
                         <i class="fa fa-caret-down"></i>
@@ -86,7 +86,7 @@
 <h1 id="complement--arithmetic">Complement (Arithmetic)</h1>
 <p>The <strong>Complement Method</strong> is a arithmetical operation used to simplify subtraction by transforming it into addition. This is commonly applied in computer science and mathematics, particularly in base $b$ numeral systems (e.g., binary, decimal). The complement method relies on two types of complements:</p>
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
-<h3 id="symbols">Symbols</h3>
+<div class="header-h3"><h3 id="symbols">Symbols</h3><div class="header-button"></div></div>
 <ul>
 <li>$C_{b-1}(N)\quad$ <strong>Diminished Radix Complement</strong></li>
 <li>$C_b(N)\quad$ <strong>Radix Complement</strong></li>
@@ -96,7 +96,7 @@
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="formulas">Formulas</h3>
+<div class="header-h3"><h3 id="formulas">Formulas</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Radix Complement</strong>:<br />
 The complement calculated by subtracting $N$ from $b^n$. This is the general complement used across numeral systems. $$C_b(N)=b^n-N$$</li>
@@ -109,7 +109,7 @@ the Diminished Radix Complement with base 2, is equivalent to bitwise $\mbox{NOT
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="subtraction-method">Subtraction Method</h3>
+<div class="header-h3"><h3 id="subtraction-method">Subtraction Method</h3><div class="header-button"></div></div>
 <p>To perform $A-B$, follow these steps:</p>
 <ol>
 <li><strong>Compute the complement of $B$</strong> (in this case is applied the Radix Complement, for binary number apply the Two's Complement, the Diminished Radix Complement can be applied too but the carry would be applied differently) .

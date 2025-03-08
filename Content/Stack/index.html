@@ -35,7 +35,7 @@
         <div class="navbar">
             <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
             <div class="navbar-contents" id="navbar-contents">
-                <a href="/">Home</a>
+                <a href="/">&#x2302; Home</a>
                 <div class="dropdown">
                     <button class="dropbtn">Math
                         <i class="fa fa-caret-down"></i>
@@ -86,7 +86,7 @@
 <h1 id="stack">Stack</h1>
 <p>A <strong>stack</strong> is a <strong>linear data structure</strong> that follows the <strong>Last In, First Out (LIFO)</strong> principle, meaning the last element added is the first one to be removed. It is analogous to a stack of plates where the topmost plate is removed first.</p>
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
-<h3 id="key-points">Key Points</h3>
+<div class="header-h3"><h3 id="key-points">Key Points</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>LIFO</strong>:<br />
 <strong>Last In, First Out</strong>, meaning the last element added is the first one to be removed</li>
@@ -95,10 +95,10 @@ Stack operations (<code>push</code>, <code>pop</code>, <code>peek</code>, <code>
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="implementation">Implementation</h3>
+<div class="header-h3"><h3 id="implementation">Implementation</h3><div class="header-button"></div></div>
 <p>Stacks can be implemented using:</p>
 <div class="header-block h4">
-<h4 id="arrays">Arrays</h4>
+<div class="header-h4"><h4 id="arrays">Arrays</h4><div class="header-button"></div></div>
 <p>Fixed-size stack with a predefined limit.<br />
 ✅ <strong>Pros:</strong> Fast, simple, uses contiguous memory.<br />
 ❌ <strong>Cons:</strong> Fixed size, cannot grow dynamically.<br />
@@ -157,7 +157,7 @@ int main() {
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="linked-lists">Linked Lists</h4>
+<div class="header-h4"><h4 id="linked-lists">Linked Lists</h4><div class="header-button"></div></div>
 <p>Dynamic stack without a size constraint.<br />
 ✅ <strong>Pros:</strong> No fixed size, flexible.<br />
 ❌ <strong>Cons:</strong> Extra memory for pointers, slower due to dynamic allocation.<br />
@@ -213,7 +213,7 @@ int main() {
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="comparison">Comparison</h4>
+<div class="header-h4"><h4 id="comparison">Comparison</h4><div class="header-button"></div></div>
 <table>
 <thead>
 <tr>
@@ -248,10 +248,10 @@ int main() {
 </div>
 </div>
 <div class="header-block h3">
-<h3 id="operations">Operations</h3>
+<div class="header-h3"><h3 id="operations">Operations</h3><div class="header-button"></div></div>
 <p><strong>A stack supports the following primary operations</strong>:</p>
 <div class="header-block h4">
-<h4 id="push-x">Push(X)</h4>
+<div class="header-h4"><h4 id="push-x">Push(X)</h4><div class="header-button"></div></div>
 <p>Adds element <code>X</code> to the top of the stack.</p>
 <ul>
 <li>If the stack is <strong>full</strong> (in array implementation), an <strong>overflow</strong> occurs.</li>
@@ -278,7 +278,7 @@ void push(Node*&amp; top, int X) {
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="pop">Pop()</h4>
+<div class="header-h4"><h4 id="pop">Pop()</h4><div class="header-button"></div></div>
 <p>Removes and returns the top element of the stack.</p>
 <ul>
 <li>If the stack is <strong>empty</strong>, an <strong>underflow</strong> occurs.
@@ -307,7 +307,7 @@ void push(Node*&amp; top, int X) {
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="peek">Peek()</h4>
+<div class="header-h4"><h4 id="peek">Peek()</h4><div class="header-button"></div></div>
 <p><strong>Peek()</strong> or <strong>Top()</strong> returns the top element without removing it.<br />
 <strong>Example with Array Implementation</strong></p>
 <pre><code class="language-cpp">int peek(int stack[], int top) {
@@ -329,7 +329,7 @@ void push(Node*&amp; top, int X) {
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="isempty">IsEmpty()</h4>
+<div class="header-h4"><h4 id="isempty">IsEmpty()</h4><div class="header-button"></div></div>
 <p>Checks if the stack is empty.<br />
 <strong>Example with Array Implementation</strong></p>
 <pre><code class="language-cpp">bool isEmpty(int top) {
@@ -344,7 +344,7 @@ void push(Node*&amp; top, int X) {
 </div>
 </div>
 <div class="header-block h3">
-<h3 id="applications">Applications</h3>
+<div class="header-h3"><h3 id="applications">Applications</h3><div class="header-button"></div></div>
 <ul>
 <li>Function call management (recursion, backtracking).</li>
 <li>Undo/Redo functionality in text editors.</li>

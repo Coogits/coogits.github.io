@@ -35,7 +35,7 @@
         <div class="navbar">
             <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
             <div class="navbar-contents" id="navbar-contents">
-                <a href="/">Home</a>
+                <a href="/">&#x2302; Home</a>
                 <div class="dropdown">
                     <button class="dropbtn">Math
                         <i class="fa fa-caret-down"></i>
@@ -86,7 +86,7 @@
 <h1 id="linked-list">Linked List</h1>
 <p>A <strong>linked list</strong> is a linear data structure in which elements (called <strong>nodes</strong>) are stored in separate memory locations and connected through <strong>pointers</strong>. Unlike arrays, linked lists do not require contiguous memory allocation, making dynamic memory management more efficient.</p>
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
-<h3 id="key-concepts">Key Concepts</h3>
+<div class="header-h3"><h3 id="key-concepts">Key Concepts</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Nodes</strong>:<br />
 Each node contains:
@@ -104,10 +104,10 @@ Can grow or shrink in size without reallocating memory.</li>
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="types">Types</h3>
+<div class="header-h3"><h3 id="types">Types</h3><div class="header-button"></div></div>
 <p><strong>Types of Linked List</strong>:</p>
 <div class="header-block h4">
-<h4 id="singly-linked-list--sll">Singly Linked List (SLL)</h4>
+<div class="header-h4"><h4 id="singly-linked-list--sll">Singly Linked List (SLL)</h4><div class="header-button"></div></div>
 <p>A <strong>Singly Linked List</strong> is a linear data structure where each node points to the next node in the sequence, and the last node points to <code>NULL</code>.</p>
 <ul>
 <li>Each node has a pointer to the next node.</li>
@@ -117,7 +117,7 @@ Can grow or shrink in size without reallocating memory.</li>
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="doubly-linked-list--dll">Doubly Linked List (DLL)</h4>
+<div class="header-h4"><h4 id="doubly-linked-list--dll">Doubly Linked List (DLL)</h4><div class="header-button"></div></div>
 <p>A <strong>Doubly Linked List</strong> is similar to a singly linked list but allows traversal in both directions since each node has an additional pointer to the previous node.</p>
 <ul>
 <li>Each node has pointers to both the next and previous nodes.</li>
@@ -127,7 +127,7 @@ Can grow or shrink in size without reallocating memory.</li>
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="singly-circular-linked-list--scll">Singly Circular Linked List (SCLL)</h4>
+<div class="header-h4"><h4 id="singly-circular-linked-list--scll">Singly Circular Linked List (SCLL)</h4><div class="header-button"></div></div>
 <p>A <strong>Singly Circular Linked List</strong> or simply <strong>Circular Linked List</strong> is a variation of the linked list where the last node is linked back to the first node, forming a circular structure.</p>
 <ul>
 <li>The last node links back to the first node, forming a loop.</li>
@@ -139,7 +139,7 @@ Can grow or shrink in size without reallocating memory.</li>
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="doubly-circular-linked-list--dcll">Doubly Circular Linked List (DCLL)</h4>
+<div class="header-h4"><h4 id="doubly-circular-linked-list--dcll">Doubly Circular Linked List (DCLL)</h4><div class="header-button"></div></div>
 <p><strong>Doubly Circular Linked List</strong> is a circular linked list where each node has both <code>prev</code> and <code>next</code> pointers.</p>
 <ul>
 <li>Example</li>
@@ -150,7 +150,7 @@ Can grow or shrink in size without reallocating memory.</li>
 </code></pre>
 </div>
 <div class="header-block h4">
-<h4 id="comparison">Comparison</h4>
+<div class="header-h4"><h4 id="comparison">Comparison</h4><div class="header-button"></div></div>
 <table>
 <thead>
 <tr>
@@ -187,7 +187,7 @@ Can grow or shrink in size without reallocating memory.</li>
 </div>
 </div>
 <div class="header-block h3">
-<h3 id="implementation">Implementation</h3>
+<div class="header-h3"><h3 id="implementation">Implementation</h3><div class="header-button"></div></div>
 <p>A simple implementation of a <strong>singly linked list</strong> in C++ with basic operations:</p>
 <p><strong>Features</strong>:</p>
 <ul>
@@ -293,7 +293,7 @@ int main() {
 </code></pre>
 </div>
 <div class="header-block h3">
-<h3 id="advantages">Advantages</h3>
+<div class="header-h3"><h3 id="advantages">Advantages</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Efficient Insertions/Deletions</strong>:<br />
 O(1) complexity at the beginning/middle without shifting elements.</li>
@@ -302,7 +302,7 @@ Does not require pre-allocation like arrays<sup id="cite_ref-3" class="footnote-
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="disadvantages">Disadvantages</h3>
+<div class="header-h3"><h3 id="disadvantages">Disadvantages</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>Higher Memory Overhead</strong>:<br />
 Each node requires extra space for pointers.</li>
@@ -311,7 +311,7 @@ O(n)<sup id="cite_ref-2" class="footnote-container"><a href="#footnote-2" class=
 </ul>
 </div>
 <div class="header-block h3">
-<h3 id="references">References</h3><ul><li id="footnote-1" class="footnote-item" data-footnote-id="1"><strong>1</strong>. <a href="/Content/Time-Complexity/#o-1----constant-time">Constant Time Complexity</a>  O(1)</li><li id="footnote-2" class="footnote-item" data-footnote-id="2"><strong>2</strong>. <a href="/Content/Time-Complexity/#o-n----linear-time">Linear Time Complexity</a>  O(n)</li><li id="footnote-3" class="footnote-item" data-footnote-id="3"><strong>3</strong>. <a href="/Content/Array-(Programming)/">Arrays</a> are faster and require less memory but are less flexible.</li></ul>
+<div class="header-h3"><h3 id="references">References</h3><div class="header-button"></div></div><ul><li id="footnote-1" class="footnote-item" data-footnote-id="1"><strong>1</strong>. <a href="/Content/Time-Complexity/#o-1----constant-time">Constant Time Complexity</a>  O(1)</li><li id="footnote-2" class="footnote-item" data-footnote-id="2"><strong>2</strong>. <a href="/Content/Time-Complexity/#o-n----linear-time">Linear Time Complexity</a>  O(n)</li><li id="footnote-3" class="footnote-item" data-footnote-id="3"><strong>3</strong>. <a href="/Content/Array-(Programming)/">Arrays</a> are faster and require less memory but are less flexible.</li></ul>
 </div>
 </div>
         </div>
