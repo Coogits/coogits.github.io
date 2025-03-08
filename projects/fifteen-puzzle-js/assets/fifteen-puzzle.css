@@ -82,9 +82,10 @@ button:focus-visible {
     align-items: center;
     background-color: #f0f0f0;
     border: 1px solid #ddd;
-    font-size: 24px;
+    font-size: clamp(1rem, 10vw, 3rem);
     font-weight: 700;
-    cursor: pointer
+    cursor: pointer;
+    user-select: none;
 }
 
 .tile.empty {

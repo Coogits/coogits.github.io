@@ -625,6 +625,10 @@ td:empty {
   border: 1px solid #ddd;
   margin-left: auto;
   margin-bottom: auto;
+  width: 1rem;
+  text-align: center;
+  aspect-ratio: 1;
+  border-radius: 0.5rem;
 }
 
 

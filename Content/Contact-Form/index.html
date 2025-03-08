@@ -1,9 +1,53 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Electric Flux</title>
+        <title>Untitled</title>
         <meta charset="UTF-8">
-        
+        <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Basic styling for the form */
+    .contact-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+    }
+    .contact-form label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .contact-form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+
+    .form-message {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  </style>
         <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
         <script>
             MathJax = {
@@ -82,57 +126,27 @@
         </div>
         <ul id="searchResults"></ul>
         <div class="mdBody">
-<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Classical-Physics/">Classical Physics</a> &gt; <a href="/Content/Electromagnetism/">Electromagnetism</a> &gt; <a href="/Content/Electronics/">Electronics</a> &gt;</p>
-<div class="header-block h1">
-<h1 id="electric-flux">Electric Flux</h1>
-<p><strong>Electric flux</strong> ($\Phi_E$) quantifies the total electric field passing through a given surface. It measures how much of the electric field penetrates or &quot;flows&quot; through a surface and is crucial in understanding Gauss's Law.</p>
-<hr />
-<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
-<div class="header-h3"><h3 id="symbols">Symbols</h3><div class="header-button"></div></div>
-<ul>
-<li>$\Phi_E\quad$ <strong>Electric Flux</strong>, representing the total electric field passing through a surface (unit:</li>
-<li>$\vec E\quad$ <a href="/Content/Electric-Field/">Electric Field</a>, describing the field's strength and direction</li>
-<li>$\vec A\quad$ <strong>Area Vector</strong>, whose magnitude is the surface area and direction is normal to the surface (unit: $m^2$).</li>
-<li>$Q_{enc}\quad$ <strong>Enclosed Charge</strong>, the total <a href="/Content/Electric-Charge/">Electric Charge</a> inside a closed surface (unit: Coulomb, C).</li>
-<li>$\epsilon_0\quad$ <a href="/Content/Permittivity/">vacuum permittivity</a>, a fundamental constant ($\epsilon_0\simeq8,854\cdot10^{-12}\;\frac{C^2}{N\cdot m^2}$)</li>
-</ul>
-<hr />
-</div>
-<div class="header-block h3">
-<div class="header-h3"><h3 id="formulas">Formulas</h3><div class="header-button"></div></div>
-<ul>
-<li><strong>Electric Flux in a Uniform Field</strong>:<br />
-For a uniform electric field $\vec E$ passing through a flat surface of area <strong>A</strong> , the flux is given by the <a href="/Content/Dot-Product-(Vector)/">Dot Product (Vector)</a>: $$\Phi_E=\vec{E}\cdot\vec{A}=\lvert\vec{E}\rvert\cdot\lvert\vec{A}\rvert\cos\theta$$</li>
-<li><strong>Electric Flux in a Non-Uniform Field</strong>:<br />
-When the electric field varies over the surface, the total flux is obtained by integrating over the entire surface S: $$\Phi_E=\int_s\vec E\;d\vec A$$</li>
-<li><strong>Gauss's Law</strong>:<br />
-Gauss's Law relates the total electric flux through a closed surface to the net charge enclosed within it: $$\int_s\vec E\;d\vec A=\cfrac{Q_{enc}}{\epsilon_0}$$</li>
-</ul>
-<hr />
-</div>
-<div class="header-block h3">
-<div class="header-h3"><h3 id="unit">Unit</h3><div class="header-button"></div></div>
-<ul>
-<li><strong>SI Unit</strong>: Is <strong>Newton-quare meters per Coulombs</strong>:  $$\Phi_E=\left(\cfrac{N}{C}\right)\cdot (m^2)=\cfrac{N\cdot m^2}{C}$$</li>
-</ul>
-<hr />
-<hr />
-
-</div>
+<div class="header-block h2">
+<h2 id="contact-us">Contact Us</h2>
+<p>Feel free to reach out to us by submitting your details and message below.</p>
+<form id="contactForm" class="contact-form" action="https://formsubmit.co/pccgnn89@hotmail.it" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required placeholder="Your Name">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required placeholder="Your Email">
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="4" required placeholder="Your Message"></textarea>
+  <!-- Hidden input for security (FormSubmit requires this) -->
+  <input type="hidden" name="_next" value="https://your-website.com/thank-you-page"> <!-- Optional thank you page after submission -->
+  <input type="hidden" name="_subject" value="New message from your contact form"> <!-- Subject for the email -->
+  <button type="submit">Submit</button>
+  <div id="formMessage" class="form-message"></div>
+</form>
 </div>
         </div>
 <nav class="table-of-contents" id="table-of-contents">
 <ul>
-<li class="toc-level-1"><a href="#electric-flux">Electric Flux</a></li>
-<ul>
-<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
-</ul>
-<ul>
-<li class="toc-level-3"><a href="#formulas">Formulas</a></li>
-</ul>
-<ul>
-<li class="toc-level-3"><a href="#unit">Unit</a></li>
-</ul>
+<li class="toc-level-2"><a href="#contact-us">Contact Us</a></li>
 </ul>
 </nav>
 
