@@ -575,7 +575,7 @@ td:empty {
 /* Default button icon (minus sign) for both h3 and h4 blocks */
 .header-block.h3 .header-button::after,
 .header-block.h4 .header-button::after {
-  content: "⮝"; /* Up arrow by default */
+  content: "-"; /* Up arrow by default */
   font-size: 1.8rem;
   font-weight: bold;
 }
@@ -583,7 +583,7 @@ td:empty {
 /* When the block is open, change the icon to down arrow */
 .header-block.h3.toggle .header-button::after,
 .header-block.h4.toggle .header-button::after {
-  content: "⮟"; /* Down arrow when the section is open */
+  content: "+"; /* Down arrow when the section is open */
 }
 
 /* Media query for responsive behavior (max-width: 768px) */
@@ -600,12 +600,12 @@ td:empty {
 
   /* Default icon when section is closed */
   .header-block.h4 .header-button::after {
-    content: "⮟"; /* Up arrow when section is closed */
+    content: "+"; /* Up arrow when section is closed */
   }
 
   /* Change icon to down arrow when section is open */
   .header-block.h4.toggle .header-button::after {
-    content: "⮝"; /* Down arrow when section is open */
+    content: "-"; /* Down arrow when section is open */
   }
 }
 
