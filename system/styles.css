@@ -100,19 +100,6 @@ h4 a::after {
   /* Ensure proper layout */
 }
 
-/* Style only the h4 title inside the block */
-.header-block.h4>h4 {
-  background-color: rgba(255, 255, 255, 0.5);
-  /* Light background only for title */
-  padding: 8px 12px;
-  margin: -10px -10px 10px -10px;
-  /* Extend background to full width */
-  border-radius: 6px 6px 0 0;
-  /* Rounded top corners */
-  display: block;
-}
-
-
 /* Wrapper for h4 sections */
 .header-block.h5 {
   border: 2px solid gray;
@@ -609,7 +596,7 @@ td:empty {
   }
 }
 
-
+.header-h5,
 .header-h4,
 .header-h3 {
   display: flex;
@@ -637,6 +624,7 @@ td:empty {
 }
 
 /* Basic styling for the anchor inside the <h4> */
+h3 a,
 h5 a,
 h4 a {
   color: black;  /* default color (not like a standard link) */
@@ -644,6 +632,7 @@ h4 a {
 }
 
 /* Append text (or icon) after the <a> link */
+h3 a::after,
 h5 a::after,
 h4 a::after {
   content: ' link 🔗';  /* You can replace 'link' with a 🔗 symbol */

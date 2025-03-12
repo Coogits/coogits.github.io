@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>15 Puzzle (JavaScript)</title>
+        <meta charset="UTF-8">
+        <script type="module" crossorigin src="/projects/fifteen-puzzle-JS/assets/fifteen-puzzle.js"></script>
+    <link rel="stylesheet" crossorigin href="/projects/fifteen-puzzle-JS/assets/fifteen-puzzle.css">
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Projects/">Projects</a></p>
+<div class="header-block h1">
+<h1 id="15-puzzle--javascript">15 Puzzle (JavaScript)</h1>
+<p>A classic sliding puzzle game implemented in pure JavaScript, featuring a <strong>4x4 grid</strong>, tile movement, a <strong>timer</strong>, and a <strong>move counter</strong>.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="game">Game</h3><div class="header-button"></div></div>
+<div id="root"></div>
+</div>
+<div class="header-block h2">
+<h2 id="implementation">Implementation</h2>
+<p>This project is written in pure JavaScript. Coming soon a detailed description of the code.</p>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="html-structure">HTML Structure</h3><div class="header-button"></div></div>
+<pre><code class="language-html">&lt;div class=&quot;root&quot;&gt;
+	&lt;div class=&quot;fifteen-puzzle&quot;&gt;
+		&lt;div class=&quot;info-container&quot;&gt;
+			&lt;div class=&quot;start-button&quot; onclick=&quot;generateSolvableGrid()&quot;&gt;
+				Start
+			&lt;/div&gt;
+			&lt;div class=&quot;info&quot;&gt;
+				&lt;div&gt;Moves: &lt;span id=&quot;moves&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+				&lt;div&gt;Time: &lt;span id=&quot;time&quot;&gt;0&lt;/span&gt;s&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+			&lt;div class=&quot;grid-container&quot; id=&quot;grid-container&quot;&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-1&quot; onclick=&quot;click(1)&quot;&gt;1&lt;/div&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-2&quot; onclick=&quot;click(2)&quot;&gt;2&lt;/div&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-3&quot; onclick=&quot;click(3)&quot;&gt;3&lt;/div&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-4&quot; onclick=&quot;click(4)&quot;&gt;4&lt;/div&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-5&quot; onclick=&quot;click(5)&quot;&gt;5&lt;/div&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-6&quot; onclick=&quot;click(6)&quot;&gt;6&lt;/div&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-7&quot; onclick=&quot;click(7)&quot;&gt;7&lt;/div&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-8&quot; onclick=&quot;click(8)&quot;&gt;8&lt;/div&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-9&quot; onclick=&quot;click(9)&quot;&gt;9&lt;/div&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-10&quot; onclick=&quot;click(10)&quot;&gt;10&lt;/div&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-11&quot; onclick=&quot;click(11)&quot;&gt;11&lt;/div&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-12&quot; onclick=&quot;click(12)&quot;&gt;12&lt;/div&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-13&quot; onclick=&quot;click(13)&quot;&gt;13&lt;/div&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-14&quot; onclick=&quot;click(14)&quot;&gt;14&lt;/div&gt;
+				&lt;div class=&quot;tile&quot; id=&quot;tile-15&quot; onclick=&quot;click(15)&quot;&gt;15&lt;/div&gt;
+				&lt;div class=&quot;tile empty&quot; id=&quot;tile-0&quot; onclick=&quot;click(0)&quot;&gt;&lt;/div&gt; 
+		    &lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="source-code">Source Code</h3><div class="header-button"></div></div>
+<pre><code class="language-javascript">
+// Create the root container where we will render the puzzle grid
+const rootContainer = document.getElementById('root');
+// info-container
+const infoContainer = document.createElement('div');
+infoContainer.classList.add('info-container');
+// start-button
+const startButton = document.createElement('div');
+startButton.classList.add('start-button');
+startButton.textContent = 'Start'; // Add text to the button
+// info
+const info = document.createElement('div');
+info.classList.add(&quot;info&quot;)
+// time-display
+const timeDisplay = document.createElement('div');
+timeDisplay.classList.add(&quot;time-display&quot;);
+timeDisplay.textContent = &quot;Time: 0s&quot;;
+info.appendChild(timeDisplay);
+// move-display
+const moveDisplay = document.createElement('div');
+moveDisplay.classList.add(&quot;move-display&quot;);
+moveDisplay.textContent = &quot;Moves: 0&quot;;
+info.appendChild(moveDisplay);
+// puzzle-container
+const puzzleContainer = document.createElement('div');
+puzzleContainer.classList.add('puzzle-container');
+// grid-container
+const gridContainer = document.createElement('div');
+gridContainer.id = 'grid-container'; // Same as in CSS
+// global variables
+let tiles = [];
+let timer;
+let seconds = 0;
+let moveCount = 0;
+let isRunning = false;
+// Function to create the tiles dynamically
+function createTiles() {
+    const totalTiles = 16; // 4x4 grid, so 16 tiles in total
+    for (let i = 0; i &lt; totalTiles; i++) {
+        const tile = document.createElement('div');
+        tile.classList.add('tile'); // Add the tile class
+        if (i === totalTiles - 1) {
+            // Last tile is the empty space
+            tile.id = 'tile-empty';
+            tile.classList.add('empty');
+        } else {
+            tile.textContent = i + 1; // Fill numbers for the tiles
+            tile.id = `tile-${i + 1}`;
+        }
+        // Add each tile to the puzzle container
+        gridContainer.appendChild(tile);
+        tiles.push(tile);
+    }
+}
+// Function to find the empty tile (empty space)
+function findEmptyTile() {
+    return tiles.find(tile =&gt; tile.classList.contains(&#x27;empty&#x27;));
+}
+// Function to check if two tiles are adjacent (either horizontally or vertically)
+function isAdjacent(tile1, tile2) {
+    const index1 = tiles.indexOf(tile1);
+    const index2 = tiles.indexOf(tile2);
+    // Check if they are adjacent in a 4x4 grid
+    const row1 = Math.floor(index1 / 4);
+    const col1 = index1 % 4;
+    const row2 = Math.floor(index2 / 4);
+    const col2 = index2 % 4;
+    // 
+    const diffRow = Math.abs(row1 - row2);
+    const diffCol = Math.abs(col1 - col2);
+    //
+    return (diffRow === 1 &amp;&amp; diffCol === 0) || (diffRow === 0 &amp;&amp; diffCol === 1);
+}
+// Function to move the tile
+function moveTile(clickedTile) {
+    // move only if it is running
+    if(!isRunning)
+        return;
+    const emptyTile = findEmptyTile();
+    // Check if the clicked tile is adjacent to the empty tile
+    if (isAdjacent(clickedTile, emptyTile)) {
+        // Increment the move counter on screen
+        incrementMoveCounter();
+        // Swap the positions of the clicked tile and the empty tile
+        const clickedTileText = clickedTile.textContent;
+        const emptyTileText = emptyTile.textContent;
+        // Swap the text content
+        clickedTile.textContent = emptyTileText;
+        emptyTile.textContent = clickedTileText;
+        // Swap the class to mark the empty tile
+        clickedTile.classList.add(&#x27;empty&#x27;);
+        emptyTile.classList.remove(&#x27;empty&#x27;);
+        //
+        checkIfSolved();
+    }
+}
+// function to increment movement counter
+function incrementMoveCounter() {
+    moveCount++;
+    moveDisplay.textContent = `Moves: ${moveCount}`;
+}
+// function to start the timer
+function startTimer() {
+    clearInterval(timer);
+    seconds = 0;
+    timeDisplay.textContent = &quot;Time: 0s&quot;;
+    isRunning = true;
+    timer = setInterval(() =&gt; {
+        seconds++;
+        timeDisplay.textContent = `Time: ${seconds}s`;
+    }, 1000);
+}
+// function to stop the timer
+function stopTimer() {
+    clearInterval(timer);
+    isRunning = false;
+}
+// function to generate random solvable puzzle
+function generateSolvableGrid() {
+    stopTimer();
+    startTimer();
+    let numbers = Array.from({ length: 15 }, (_, i) =&gt; i + 1); // Numbers 1-15
+    numbers.push(null); // The empty tile
+    do {
+        numbers = shuffleArray(numbers);
+    } while (!isSolvable(numbers));
+    // Assign shuffled numbers to tiles
+    tiles.forEach((tile, index) =&gt; {
+        if (numbers[index] === null) {
+            tile.textContent = &#x27;&#x27;;
+            tile.classList.add(&#x27;empty&#x27;);
+        } else {
+            tile.textContent = numbers[index];
+            tile.classList.remove(&#x27;empty&#x27;);
+        }
+    });
+}
+// Function to shuffle an array using Fisher-Yates algorithm
+function shuffleArray(array) {
+    for (let i = array.length - 1; i &gt; 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+// Function to check if the grid configuration is solvable
+function isSolvable(arr) {
+    let inversions = 0;
+    const flatArr = arr.filter(num =&gt; num !== null);
+    //
+    for (let i = 0; i &lt; flatArr.length; i++) {
+        for (let j = i + 1; j &lt; flatArr.length; j++) {
+            if (flatArr[i] &gt; flatArr[j]) inversions++;
+        }
+    }
+    const emptyIndex = arr.indexOf(null);
+    const emptyRow = Math.floor(emptyIndex / 4);
+    //
+    return (inversions % 2 === 0) === (emptyRow % 2 !== 0);
+}
+// function to check if the random puzzle is solvable
+function checkIfSolved() {
+    const currentOrder = tiles.map(tile =&gt; tile.textContent.trim());
+    const expectedOrder = [...Array(15).keys()].map(i =&gt; (i + 1).toString()).concat(&#x27;&#x27;);
+    if (JSON.stringify(currentOrder) === JSON.stringify(expectedOrder)) {
+        stopTimer();
+        alert(`Congratulations! You solved the puzzle in ${seconds} seconds and ${moveCount} moves.`);
+        isRunning = false;
+    }
+}
+// Function to render the puzzle grid inside the root container
+function renderPuzzle() {
+    // Create the tiles
+    createTiles();
+    // Build the HTML structure's hierarchy
+    infoContainer.appendChild(startButton);
+    infoContainer.appendChild(info);
+    puzzleContainer.appendChild(infoContainer);
+    puzzleContainer.appendChild(gridContainer)
+    rootContainer.appendChild(puzzleContainer);
+    // Add click event listener to each tile
+    tiles.forEach(tile =&gt; {
+        tile.addEventListener('click', function () {
+            if (!tile.classList.contains('empty')) {
+                moveTile(tile);
+            }
+        });
+    });
+    startButton.addEventListener('click', generateSolvableGrid)
+}
+// Call the render function
+renderPuzzle();
+</code></pre>
+
+</div>
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#15-puzzle--javascript">15 Puzzle (JavaScript)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#game">Game</a></li>
+</ul>
+<ul>
+<li class="toc-level-2"><a href="#implementation">Implementation</a></li>
+<ul>
+<li class="toc-level-3"><a href="#html-structure">HTML Structure</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#source-code">Source Code</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

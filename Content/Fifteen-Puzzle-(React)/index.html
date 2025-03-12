@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Projects</title>
+        <title>Fifteen Puzzle (React)</title>
         <meta charset="UTF-8">
-        
+        <script type="module" crossorigin src="/projects/fifteen-puzzle/assets/fifteen-puzzle.js"></script>
+    <link rel="stylesheet" crossorigin href="/projects/fifteen-puzzle/assets/fifteen-puzzle.css">
         <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
         <script>
             MathJax = {
@@ -86,43 +87,36 @@
         </div>
         <ul id="searchResults"></ul>
         <div class="mdBody">
-<p class="breadcrumb"><a href="/">Home</a></p>
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Projects/">Projects</a></p>
 <div class="header-block h1">
-<h1 id="projects">Projects</h1>
-<p>This section showcases a variety of projects I've worked on, primarily focusing on <strong>games</strong> with tutorials. I'll also cover other software development areas, including:</p>
+<h1 id="fifteen-puzzle--react">Fifteen Puzzle (React)</h1>
+<p>The <strong>Fifteen Puzzle</strong>, also known as the <strong>15 Puzzle</strong> or <strong>Sliding Puzzle</strong>, is a classic sliding puzzle game consisting of a 4x4 grid of 16 spaces, where 15 of the spaces are filled with numbered tiles (1-15) and the 16th space is empty.</p>
 <ul>
-<li><strong>Game Development</strong>: From <strong>Unity</strong> and <strong>Unreal Engine</strong> to <strong>web games</strong> (like the <strong>15 Puzzle</strong>), I share projects across multiple platforms.</li>
-<li><strong>Software Development</strong>: Explore projects in <strong>Python</strong>, <strong>C</strong>, <strong>C++</strong>, and more.</li>
-<li><strong>3D Graphics</strong>: Dive into <strong>Blender</strong> for modeling and <strong>Python</strong> for procedural generation.</li>
-<li><strong>Arduino Projects</strong>: Hands-on work with hardware and embedded systems.</li>
+<li><strong>Objective</strong>:<br />
+The objective of the game is to arrange the numbered tiles in numerical order, typically starting from the top-left corner and ending at the bottom-right corner, by sliding the tiles into the empty space.</li>
 </ul>
-<p>Expect tutorials, code examples, and insights into these topics, with more complex projects coming soon!</p>
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
-<div class="header-h3"><h3 id="games">Games</h3><div class="header-button"></div></div>
-<p>In this section you can find game's projects I'm worked on.</p>
-<div class="header-block h4">
-<div class="header-h4"><h4 id="fifteen-puzzle--javascript"><a href="/Content/Fifteen-Puzzle-(JavaScript)/">Fifteen Puzzle (JavaScript)</a></h4><div class="header-button"></div></div>
-<p>A classic sliding puzzle game implemented in pure JavaScript, featuring a <strong>4x4 grid</strong>, tile movement, a <strong>timer</strong>, and a <strong>move counter</strong>.</p>
+<div class="header-h3"><h3 id="game">Game</h3><div class="header-button"></div></div>
+<div id="root"></div>
 </div>
-<div class="header-block h4">
-<div class="header-h4"><h4 id="fifteen-puzzle--react"><a href="/Content/Fifteen-Puzzle-(React)/">Fifteen Puzzle (React)</a></h4><div class="header-button"></div></div>
-<p>A modern, responsive <strong>15 Puzzle</strong> game built with <strong>TypeScript</strong> and <strong>React</strong>, featuring a <strong>4x4 grid</strong>, a <strong>timer</strong>, and a <strong>move counter</strong>.</p>
+<div class="header-block h2">
+<h2 id="implementation">Implementation</h2>
+<p>This <strong>15 Puzzle</strong> game was implemented using <strong>TypeScript</strong>, <strong>HTML</strong>, <strong>CSS</strong>, and <strong>React</strong>. The application was developed in <strong>Visual Studio Code</strong> as the Integrated Development Environment (IDE).</p>
+<p>The goal was to create a responsive, interactive, and functional version of the classic 15 Puzzle game, incorporating a timer and move counter to track the player's progress.</p>
+<p>Currently, the game handles a <strong>4x4 grid</strong> layout, with plans to expand it further in the future. This makes it adaptable to larger grids, offering more challenging puzzle-solving experiences. The grid dynamically adjusts based on the grid size, maintaining the puzzle's core mechanics while being flexible for future extensions.</p>
+<p>I will be sharing the <strong>code</strong> and <strong>process in detail</strong> soon, creating a <strong>tutorial</strong> that walks through the entire implementation. This tutorial will cover all aspects of the game, from setting up the development environment to the logic behind tile movement, timer management, and responsiveness across devices. Stay tuned for the detailed guide to help you build your own 15 Puzzle game!</p>
 
-</div>
 </div>
 </div>
         </div>
 <nav class="table-of-contents" id="table-of-contents">
 <ul>
-<li class="toc-level-1"><a href="#projects">Projects</a></li>
+<li class="toc-level-1"><a href="#fifteen-puzzle--react">Fifteen Puzzle (React)</a></li>
 <ul>
-<li class="toc-level-3"><a href="#games">Games</a></li>
-<ul>
-<li class="toc-level-4"><a href="#fifteen-puzzle--javascript">Fifteen Puzzle (JavaScript)</a></li>
+<li class="toc-level-3"><a href="#game">Game</a></li>
 </ul>
 <ul>
-<li class="toc-level-4"><a href="#fifteen-puzzle--react">Fifteen Puzzle (React)</a></li>
-</ul>
+<li class="toc-level-2"><a href="#implementation">Implementation</a></li>
 </ul>
 </ul>
 </nav>

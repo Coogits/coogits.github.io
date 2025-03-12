@@ -1425,8 +1425,12 @@
       "title": "Projects"
     },
     {
-      "url": "/Content/Fifteen-Puzzle/",
-      "title": "Fifteen Puzzle"
+      "url": "/Content/Fifteen-Puzzle-(JavaScript)/",
+      "title": "15 Puzzle (JavaScript)"
+    },
+    {
+      "url": "/Content/Fifteen-Puzzle-(React)/",
+      "title": "Fifteen Puzzle (React)"
     }
   ]
 }
