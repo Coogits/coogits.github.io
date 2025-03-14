@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Local AI Chatbot</title>
+        <meta charset="UTF-8">
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <script>
+            MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="module" src="/system/mermaid-setup.js"></script>
+        
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Projects/">Projects</a></p>
+<div class="header-block h1">
+<h1 id="local-ai-chatbot">Local AI Chatbot</h1>
+<p>This guide explains how to choose, set up, and run a local AI model using <strong>Llama.cpp</strong>.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="choosing-a-model">Choosing a Model</h3><div class="header-button"></div></div>
+<p>Selecting the right model depends on your <strong>hardware</strong> and <strong>use case</strong>.<br />
+Since I’m running on a <strong>GTX 1060 (6GB VRAM)</strong>, I tested several models from <strong>Hugging Face</strong> to find one that balances <strong>performance and censorship level</strong>.</p>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="models-i-tested">Models i Tested</h4><div class="header-button"></div></div>
+<ul>
+<li>Rocinante: <a href="https://huggingface.co/TheDrummer/Rocinante-12B-v1.1">Rocinante-12B-v1.1</a>
+<ul>
+<li>Quantized Version:  <a href="https://huggingface.co/mradermacher/Rocinante-12B-v1.1-GGUF">Rocinante-12B-v1.1-GGUF</a>
+<ul>
+<li>Q4_K_M (4-bit quantized): <a href="https://huggingface.co/mradermacher/Rocinante-12B-v1.1-GGUF/resolve/main/Rocinante-12B-v1.1.Q4_K_M.gguf">download</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Stheno</strong>:  <a href="https://huggingface.co/Sao10K/L3-8B-Stheno-v3.2">L3-8B-Stheno-v3.2</a>
+<ul>
+<li>Quantized Version: <a href="https://huggingface.co/mradermacher/L3-8B-Stheno-v3.2-GGUF">L3-8B-Stheno-v3.2-GGU</a></li>
+</ul>
+</li>
+<li><strong>Mistral 7B Instruction</strong>:  <a href="https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3">mistralai/Mistral-7B-Instruct-v0.3</a>
+<ul>
+<li>Quantized version:  <a href="https://huggingface.co/MaziyarPanahi/Mistral-7B-Instruct-v0.3-GGUF">Mistral-7B-Instruct-v0.3-GGUF</a></li>
+</ul>
+</li>
+</ul>
+<p>I also considered <strong>GitHub repositories</strong>, but I couldn’t find <strong>pre-quantized</strong> models that suited my needs.</p>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="setting-up-llama-cpp">Setting Up llama.cpp</h3><div class="header-button"></div></div>
+<p>Llama.cpp is a lightweight framework to run AI models locally.</p>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="install-llama">Install Llama</h4><div class="header-button"></div></div>
+<ol>
+<li>Go to: https://github.com/ggml-org/llama.cpp/releases</li>
+<li>Choose a version based on your needs
+<ul>
+<li>CPU-only (first test approach):
+<ul>
+<li>📦 <code>Llama-bin-win-avx-x64.zip</code></li>
+</ul>
+</li>
+<li><strong>CUDA (for GPU acceleration, better performance):</strong>
+<ul>
+<li>📦 <code>Llama-bin-win-cuda-x64.zip</code></li>
+<li>⚠️ If using CUDA, also download:
+<ul>
+<li>📦 <code>cudart-llama-bin-x64.zip</code> (needed DLLs)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Extract the zip file</li>
+<li>Copy your downloaded <strong>.gguf model file</strong> into the folder.</li>
+<li><strong>Done!</strong> 🎉 Llama.cpp is ready to use.</li>
+</ol>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="running-via-prompt">Running via Prompt</h3><div class="header-button"></div></div>
+<p>First test Llama.cpp and the model via a simple prompt with the syntax</p>
+<pre><code class="language-sh">cd /your_llama_directory
+llama-run.exe Rocinante-12B-v1.1.Q4_K_M.gguf --n-gpu-layers 20 --context-size 1024 --temp 0.8 --ngl 30 --max-tokens 200 --stop &quot;User:&quot; --no-interleaving -p &quot;Hello, how are you?&quot;
+</code></pre>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="explanation-of-the-parameters">Explanation of the Parameters:</h4><div class="header-button"></div></div>
+<ul>
+<li><strong><code>llama-run.exe</code></strong> → Runs Llama.cpp.</li>
+<li><strong><code>Rocinante-12B-v1.1.Q4_K_M.gguf</code></strong> → The model file to use.</li>
+<li><strong><code>--n-gpu-layers 20</code></strong> → Offloads <strong>20 layers to GPU</strong> (reduces CPU usage).</li>
+<li><strong><code>--context-size 1024</code></strong> → Defines how much text history the model remembers (affects VRAM usage).</li>
+<li><strong><code>--temp 0.8</code></strong> → Controls randomness (higher = more creative, lower = more predictable).</li>
+<li><strong><code>--max-tokens 200</code></strong> → Limits the number of generated words/tokens.</li>
+<li><strong><code>--stop &quot;User:&quot;</code></strong> → Stops generation when &quot;User:&quot; appears (for structured chats).</li>
+<li><strong><code>--no-interleaving</code></strong> → Disables alternating text colors in interactive chat mode.</li>
+<li><strong><code>-p &quot;Hello, how are you?&quot;</code></strong> → The input prompt for the model.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="running-the-model-via-batch-script">Running the Model via Batch Script</h3><div class="header-button"></div></div>
+<p>Later i made a batch script to optimize the process</p>
+<pre><code class="language-sh">@echo off
+setlocal enabledelayedexpansion
+
+:: Set model filename
+set MODEL_FILE=Rocinante-12B-v1.1-Q4_K_M.gguf
+
+:: Configure parameters
+set CTX_SIZE=1024
+set TEMP=0.8
+set NGL=30
+set MAX_TOKENS=200
+set STOP=&quot;User:&quot;
+
+:: Load system prompt from file
+set &quot;SYSTEM_PROMPT=&quot;
+for /f &quot;delims=&quot; %%A in (system_prompt.txt) do (
+    set &quot;SYSTEM_PROMPT=!SYSTEM_PROMPT! %%A&quot;
+)
+
+:: Interactive mode loop
+:interactive
+echo.
+:loop
+set /p USER_INPUT=Enter your prompt (or type &quot;exit&quot; to quit): 
+if /I &quot;%USER_INPUT%&quot;==&quot;exit&quot; exit /b
+
+:: Prepend system prompt to user input
+set &quot;FULL_PROMPT=%USER_INPUT%&quot;
+
+:: Run the model
+llama-run.exe %MODEL_FILE% --n-gpu-layers 20 --context-size %CTX_SIZE% --temp %TEMP% --ngl %NGL% --max-tokens %MAX_TOKENS% --stop %STOP% --no-interleaving -p &quot;!FULL_PROMPT!&quot;
+goto loop
+
+</code></pre>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="future-improvements">Future Improvements</h3><div class="header-button"></div></div>
+<p>Since <strong>Rocinante (Q4_K_M)</strong> runs a bit slow on CPU, I plan to:</p>
+<ol>
+<li><strong>Switch to the CUDA version of Llama.cpp</strong></li>
+<li><strong>Check VRAM usage improvements</strong></li>
+<li><strong>Fine-tune settings for better response speed</strong></li>
+</ol>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="conclusion">Conclusion</h3><div class="header-button"></div></div>
+<p>Successfully set up <strong>Rocinante (Q4_K_M) on llama.cpp</strong> with <strong>interactive input</strong> and are optimizing its performance. Still <strong>exploring better models</strong> and <strong>considering AI-driven storytelling</strong>.</p>
+
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#local-ai-chatbot">Local AI Chatbot</a></li>
+<ul>
+<li class="toc-level-3"><a href="#choosing-a-model">Choosing a Model</a></li>
+<ul>
+<li class="toc-level-4"><a href="#models-i-tested">Models i Tested</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#setting-up-llama-cpp">Setting Up llama.cpp</a></li>
+<ul>
+<li class="toc-level-4"><a href="#install-llama">Install Llama</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#running-via-prompt">Running via Prompt</a></li>
+<ul>
+<li class="toc-level-4"><a href="#explanation-of-the-parameters">Explanation of the Parameters:</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#running-the-model-via-batch-script">Running the Model via Batch Script</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#future-improvements">Future Improvements</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#conclusion">Conclusion</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>
