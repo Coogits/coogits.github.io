@@ -12,6 +12,8 @@
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     font-size: 14px;
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 .table-of-contents ul {
