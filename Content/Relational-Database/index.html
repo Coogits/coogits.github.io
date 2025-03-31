@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Relational Database</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Database/">Database</a></p>
+<div class="header-block h1">
+<h1 id="relational-database">Relational Database</h1>
+<p>A <strong>Relational Database (RDB)</strong> is a structured collection of data organized into <strong>tables</strong> that are connected through <strong>relationships</strong> based on <strong>keys</strong>.<br />
+It follows the principles of <strong>Relational Model</strong>, introduced by <strong>Edgar F. Codd</strong> in 1970.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="concept">Concept</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="tables">Tables</h4><div class="header-button"></div></div>
+<p>Data is stored in <strong>rows</strong> (tuples) and <strong>columns</strong> (attributes). $$\begin{array}{|c|c|c|}\hline
+\rowcolor{gray}
+\text{UserID}&amp;\text{FirstName}&amp;\text{LastName}\\\hline
+\text{1}&amp;\text{Isaac}&amp;\text{Newton}\\\hline
+\text{2}&amp;\text{Galileo}&amp;\text{Galilei}\\\hline
+\end{array}$$</p>
+<ul>
+<li>A <strong>table (relation)</strong> represents a collection of related data.</li>
+<li><strong>Attributes</strong> (columns) define the properties of an entity.</li>
+<li><strong>Tuples</strong> (rows) store individual records of data.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="entity">Entity</h4><div class="header-button"></div></div>
+<p>An <strong>entity</strong> represents a real-world object or concept that is modeled in the database.</p>
+<ul>
+<li>In the <strong>relational model</strong>, an <strong>entity type</strong> corresponds to a <strong>table</strong>.</li>
+<li>Each <strong>entity</strong> has a unique <strong>identifier</strong> (such as a primary key).</li>
+<li><strong>Example:</strong> The <strong>Users</strong> table represents the <strong>User</strong> entity.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="attribute">Attribute</h4><div class="header-button"></div></div>
+<p>An <strong>attribute</strong> is a <strong>property or characteristic</strong> of an entity, represented as a <strong>column in a table</strong>.</p>
+<ul>
+<li>Attributes define the <strong>structure of a relation</strong> by specifying the type of data stored.</li>
+<li>Each <strong>attribute has a domain</strong> (a set of valid values).</li>
+<li><strong>Example:</strong> In the <strong>Users</strong> table, <code>FirstName</code> and <code>LastName</code> are attributes that store user names.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="tuple">Tuple</h4><div class="header-button"></div></div>
+<p>A <strong>tuple</strong> (Record) is a <strong>single, ordered set of values</strong> corresponding to attributes in a table.</p>
+<ul>
+<li>Each <strong>row in a table is a tuple</strong>, representing a unique data entry.</li>
+<li>A tuple consists of <strong>attribute values</strong> that describe an entity instance.</li>
+<li><strong>Example:</strong> A row in the <strong>Users</strong> table represents a specific user.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="instance">Instance</h4><div class="header-button"></div></div>
+<p>A <strong>database instance</strong> refers to the <strong>actual stored data</strong> at a specific point in time.</p>
+<ul>
+<li>The <strong>relation instance</strong> consists of <strong>all the tuples</strong> currently in a table.</li>
+<li>Each <strong>tuple represents a specific occurrence (instance) of an entity</strong> within an entity set.</li>
+<li>As data changes, the <strong>database instance evolves</strong> while the schema remains unchanged.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="keys">Keys</h4><div class="header-button"></div></div>
+<ul>
+<li>
+<p><strong>Primary Key (PK)</strong>:<br />
+Uniquely identifies each row. $$\begin{array}{|c|c|c|}\hline
+	\rowcolor{gray}
+	\text{UserID(PK)}&amp;\text{FirstName}&amp;\text{LastName}\\\hline
+	\text{1}&amp;\text{Isaac}&amp;\text{Newton}\\\hline
+	\text{2}&amp;\text{Galileo}&amp;\text{Galilei}\\\hline
+	\end{array}$$</p>
+<ul>
+<li>Cannot contain <code>NULL</code> values.</li>
+</ul>
+</li>
+<li>
+<p><strong>Foreign Key (FK)</strong>:<br />
+Establishes relationships between tables:  $$\begin{array}{|c|c|c|}\hline
+\rowcolor{gray}
+\text{OrderID(PK)}&amp;\text{OrderDate}&amp;\text{UserID(FK)}\\\hline
+\text{101}&amp;\text{10/11}&amp;\text{1}\\\hline
+\text{102}&amp;\text{11/11}&amp;\text{2}\\\hline
+\end{array}$$</p>
+<ul>
+<li>A field in one table that <strong>references</strong> the <strong>Primary Key</strong> of another table.</li>
+</ul>
+</li>
+<li>
+<p><strong>Composite Key</strong>:<br />
+A <strong>Primary Key</strong> made up of <strong>multiple columns</strong>:  $$\begin{array}{|c|c|c|}\hline
+\rowcolor{gray}
+	\text{UserID(FK)}&amp;\text{DegreeID(FK)}&amp;\text{YearErned}\\\hline
+	\text{1}&amp;\text{101}&amp;\text{2004}\\\hline
+	\text{2}&amp;\text{102}&amp;\text{2015}\\\hline
+	\end{array}$$</p>
+<ul>
+<li>Used when a single column <strong>cannot uniquely</strong> identify a row.</li>
+</ul>
+</li>
+<li>
+<p><strong>Surrogate Key</strong>:<br />
+A <strong>system-generated key</strong> that has <strong>no real-world meaning</strong>.  $$\begin{array}{|c|c|c|c|}\hline
+\rowcolor{gray}
+\text{UserID}&amp;\text{FirstName}&amp;\text{LastName}&amp;\text{ID🔑}\\\hline
+\text{}&amp;\text{Isaac}&amp;\text{Newton}&amp;\text{1}\\\hline
+\text{2}&amp;\text{Galileo}&amp;\text{Galilei}\\\hline
+\end{array}$$</p>
+<ul>
+<li>Used when a <strong>natural unique identifier</strong> does not exist or is <strong>inefficient</strong>.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="others">Others</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Data Integrity</strong>:<br />
+Ensures accuracy with <strong>constraints</strong> (e.g., UNIQUE, NOT NULL).</li>
+<li><strong>Normalization</strong>:<br />
+Reduces redundancy by organizing data efficiently.</li>
+<li><strong>Structured Query Language (SQL)</strong>:<br />
+Used to manage and manipulate data.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="relationship">Relationship</h3><div class="header-button"></div></div>
+<p>In a <strong>relational database</strong>, a <strong>relationship</strong> defines how two or more tables (entities) are <strong>logically connected</strong> based on their <strong>key attributes</strong>. Relationships establish <strong>associations</strong> between tables to ensure data integrity and meaningful connections between different entity types.</p>
+<p><strong>Types of Relationships</strong>:</p>
+<ul>
+<li><strong>One-to-One (1:1)</strong>
+<ul>
+<li>Each record in <strong>Table A</strong> is related to <strong>one and only one</strong> record in <strong>Table B</strong>, and vice versa.</li>
+<li><strong>Example</strong>: A <strong>User</strong> has <strong>one Passport</strong>.</li>
+</ul>
+</li>
+<li><strong>One-to-Many (1:M)</strong>
+<ul>
+<li>A single record in <strong>Table A</strong> can relate to <strong>multiple records</strong> in <strong>Table B</strong>, but each record in <strong>Table B</strong> relates to only <strong>one record in Table A</strong>.</li>
+<li><strong>Example</strong>: A <strong>Customer</strong> can place <strong>multiple Orders</strong>, but each <strong>Order</strong> is linked to a single <strong>Customer</strong>.</li>
+</ul>
+</li>
+<li><strong>Many-to-Many (M:N)</strong>
+<ul>
+<li>Multiple records in <strong>Table A</strong> can relate to multiple records in <strong>Table B</strong>.</li>
+<li>Requires a <strong>junction (bridge) table</strong> with foreign keys from both tables.</li>
+<li><strong>Example</strong>: <strong>Students</strong> enroll in <strong>multiple Courses</strong>, and each <strong>Course</strong> has multiple enrolled Students.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="schema">Schema</h3><div class="header-button"></div></div>
+<p>Two Examples of Relational Database Schemas
+<img src="/media/RelationalDatabaseSchema.svg" ></p>
+<ul>
+<li>The table name (e.g., <code>Customer</code>, <code>Order</code>) represents the <strong>entity</strong>.</li>
+<li>The <strong>columns</strong> represent the <strong>attributes</strong> of the entity (e.g. Name).</li>
+<li>Each <strong>row</strong> represents a <strong>tuple</strong> (record) in the entity (e.g. the row of Rebecca Philips).</li>
+<li>The <code>CustomerID</code> in the <code>Customer</code> table is a <strong>Primary Key (PK)</strong>.</li>
+<li>The <code>CustomerID</code> in the <code>Order</code> table is a <strong>Foreign Key (FK)</strong>, linking orders to customers.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="relational-database-management-systems--rdbms">Relational Database Management Systems (RDBMS)</h3><div class="header-button"></div></div>
+<p>RDBMSs use the <strong>relational model</strong>, where data is structured in <strong>tables</strong> with <strong>rows (tuples)</strong> and <strong>columns (attributes)</strong>.</p>
+<p>Some of the most widely used <strong>RDBMS</strong> include:</p>
+<ul>
+<li><strong>Oracle Database</strong></li>
+<li><strong><a href="/Content/MySQL/">MySQL</a></strong></li>
+<li><strong>PostgreSQL</strong></li>
+<li><strong>Microsoft SQL Server</strong></li>
+<li><strong>SQLite</strong></li>
+<li><strong>MariaDB</strong></li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="advantages-of-relational-databases">Advantages of Relational Databases</h3><div class="header-button"></div></div>
+<p>✔ <strong>Data Consistency &amp; Integrity</strong> (Enforces rules like primary/foreign keys)<br />
+✔ <strong>Scalability</strong> (Optimized for large datasets with indexing)<br />
+✔ <strong>Flexibility</strong> (Queries with SQL allow powerful data retrieval)</p>
+
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#relational-database">Relational Database</a></li>
+<ul>
+<li class="toc-level-3"><a href="#concept">Concept</a></li>
+<ul>
+<li class="toc-level-4"><a href="#tables">Tables</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#entity">Entity</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#attribute">Attribute</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#tuple">Tuple</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#instance">Instance</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#keys">Keys</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#others">Others</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#relationship">Relationship</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#schema">Schema</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#relational-database-management-systems--rdbms">Relational Database Management Systems (RDBMS)</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#advantages-of-relational-databases">Advantages of Relational Databases</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

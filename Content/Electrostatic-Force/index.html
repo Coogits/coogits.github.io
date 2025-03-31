@@ -2,24 +2,21 @@
 <html>
     <head>
         <title>Electrostatic Force</title>
-        <meta charset="UTF-8">
         
         <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
-        <script>
-            MathJax = {
-                tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-                }
-            };
-        </script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
         <script id="Prism-script" async src="/system/prism.js"></script>
         <link href="/system/prism.css" rel="stylesheet" />
         
-        <script type="module" src="/system/mermaid-setup.js"></script>
-        
+        <script type="text/javascript" src="/system/timeline.js"></script>
         <script src="/system/search.js"></script>
         <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
 
         <link rel="stylesheet" href="/system/pygments.css">
         <link rel="stylesheet" href="/system/styles.css"> 
@@ -86,12 +83,11 @@
         </div>
         <ul id="searchResults"></ul>
         <div class="mdBody">
-<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Physical-Quantity/">Physical Quantity</a> &gt; <a href="/Content/Force-(Physics)/">Force (Physics)</a> &gt;<br />
-<a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Classical-Physics/">Classical Physics</a> &gt; <a href="/Content/Electromagnetism/">Electromagnetism</a> &gt; <a href="/Content/Electronics/">Electronics</a> &gt;</p>
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Physical-Quantity/">Physical Quantity</a> &gt; <a href="/Content/Force-(Physics)/">Force (Physics)</a><br />
+<a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Classical-Physics/">Classical Physics</a> &gt; <a href="/Content/Electromagnetism/">Electromagnetism</a> &gt; <a href="/Content/Electronics/">Electronics</a></p>
 <div class="header-block h1">
 <h1 id="electrostatic-force">Electrostatic Force</h1>
 <p>The <strong>Electrostatic Force</strong> (or <strong>Coulomb Force</strong>) is the force exerted between two charged particles due to their electric charges. It is described by <strong>Coulomb's Law</strong>, which states that the magnitude of the force between two point charges is <strong>directly proportional</strong> to the product of their charges and <strong>inversely proportional</strong> to the square of the distance between them.</p>
-<hr />
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
 <div class="header-h3"><h3 id="symbols">Symbols</h3><div class="header-button"></div></div>
 <ul>
@@ -106,7 +102,6 @@
 <li>$\vec{s_2}-\vec{s_1}\quad$ <strong>Position vector difference</strong>, displacement between charges.</li>
 <li>$\hat r\quad$ is the <strong>Unit vector</strong> pointing from charge $q_1$ to the charge $q_2$, indicating the force direction</li>
 </ul>
-<hr />
 </div>
 <div class="header-block h3">
 <div class="header-h3"><h3 id="formulas">Formulas</h3><div class="header-button"></div></div>
@@ -114,14 +109,12 @@
 <li><strong>Coulomb's Law (scalar form)</strong>: $$F=k\cfrac{\lvert q_1\rvert\lvert q_2\rvert}{r^2}$$</li>
 <li><strong>Coulomb's Law (vector form)</strong>: $$\vec{F}=k\cfrac{q_1q_2}{r^2}\hat{r}=kq_1q_2\cfrac{\vec{s_2}-\vec{s_1}}{\rvert\vec{s_2}-\vec{s_1}\lvert^3}$$</li>
 </ul>
-<hr />
 </div>
 <div class="header-block h3">
 <div class="header-h3"><h3 id="unit">Unit</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>SI Unit</strong>: Since the Coulomb force is a type of force, its SI unit is the Newton (N): $$F=\left(\cfrac{N\cdot{m^2}}{C^2}\right)\cdot\left(\cfrac{C^2}{m^2}\right)=N$$</li>
 </ul>
-<hr />
 </div>
 <div class="header-block h3">
 <div class="header-h3"><h3 id="properties">Properties</h3><div class="header-button"></div></div>
@@ -139,7 +132,6 @@ When multiple charges are present, the total force on a given charge is the <str
 Coulombs law follows an <strong>inverse-square dependence</strong> on the distance between charges. This means that <strong>doubling the distance</strong> between two charges reduces the force to <strong>one-fourth</strong> of its original value: $$F\propto r^{-2}$$</p>
 </li>
 </ul>
-<hr />
 
 </div>
 </div>

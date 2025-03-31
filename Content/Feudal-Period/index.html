@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Fifteen Puzzle</title>
-        <meta charset="UTF-8">
-        <script type="module" crossorigin src="/projects/fifteen-puzzle/assets/fifteen-puzzle.js"></script>
-    <link rel="stylesheet" crossorigin href="/projects/fifteen-puzzle/assets/fifteen-puzzle.css">
+        <meta name="history-group" content="era-2">
+<meta name="history-start" content=""900"">
+<meta name="history-end" content=""1300"">
+<title>Feudal Period</title>
+        
         <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
-        <script>
-            MathJax = {
-                tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-                }
-            };
-        </script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
         <script id="Prism-script" async src="/system/prism.js"></script>
         <link href="/system/prism.css" rel="stylesheet" />
         
-        <script type="module" src="/system/mermaid-setup.js"></script>
-        
+        <script type="text/javascript" src="/system/timeline.js"></script>
         <script src="/system/search.js"></script>
         <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
 
         <link rel="stylesheet" href="/system/pygments.css">
         <link rel="stylesheet" href="/system/styles.css"> 
@@ -87,37 +86,74 @@
         </div>
         <ul id="searchResults"></ul>
         <div class="mdBody">
-<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Projects/">Projects</a></p>
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/History/">History</a> &gt; <a href="/Content/Medieval-Age/">Medieval Age</a> &gt; <a href="/Content/High-Middle-Ages/">High Middle Ages</a></p>
 <div class="header-block h1">
-<h1 id="fifteen-puzzle">Fifteen Puzzle</h1>
-<p>The <strong>Fifteen Puzzle</strong>, also known as the <strong>15 Puzzle</strong> or <strong>Sliding Puzzle</strong>, is a classic sliding puzzle game consisting of a 4x4 grid of 16 spaces, where 15 of the spaces are filled with numbered tiles (1-15) and the 16th space is empty.</p>
+<h1 id="feudal-period">Feudal Period</h1>
+<p>The <strong>Feudal Period</strong> (roughly 9th to 15th century) was a social, economic, and political system in medieval Europe, characterized by a hierarchy of landownership and reciprocal obligations between lords and vassals.</p>
 <ul>
-<li><strong>Objective</strong>:<br />
-The objective of the game is to arrange the numbered tiles in numerical order, typically starting from the top-left corner and ending at the bottom-right corner, by sliding the tiles into the empty space.</li>
+<li><strong>Start</strong>: c. 900 CE</li>
+<li><strong>End</strong>: c. 1300 CE</li>
 </ul>
-<br clear="both" />
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
-<div class="header-h3"><h3 id="game">Game</h3><div class="header-button"></div></div>
-<div id="root"></div>
+<div class="header-h3"><h3 id="timeline">Timeline</h3><div class="header-button"></div></div>
+<div id="timeline-container" data-start="900" data-end="1300" ></div>
 </div>
-<div class="header-block h2">
-<h2 id="implementation">Implementation</h2>
-<p>This <strong>15 Puzzle</strong> game was implemented using <strong>TypeScript</strong>, <strong>HTML</strong>, <strong>CSS</strong>, and <strong>React</strong>. The application was developed in <strong>Visual Studio Code</strong> as the Integrated Development Environment (IDE).</p>
-<p>The goal was to create a responsive, interactive, and functional version of the classic 15 Puzzle game, incorporating a timer and move counter to track the player's progress.</p>
-<p>Currently, the game handles a <strong>4x4 grid</strong> layout, with plans to expand it further in the future. This makes it adaptable to larger grids, offering more challenging puzzle-solving experiences. The grid dynamically adjusts based on the grid size, maintaining the puzzle's core mechanics while being flexible for future extensions.</p>
-<p>I will be sharing the <strong>code</strong> and <strong>process in detail</strong> soon, creating a <strong>tutorial</strong> that walks through the entire implementation. This tutorial will cover all aspects of the game, from setting up the development environment to the logic behind tile movement, timer management, and responsiveness across devices. Stay tuned for the detailed guide to help you build your own 15 Puzzle game!</p>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="social-structure">Social Structure</h3><div class="header-button"></div></div>
+<ul>
+<li>
+<p><strong>King</strong>: The highest authority who granted lands (fiefs) to lords.</p>
+</li>
+<li>
+<p><strong>Lords/Nobles</strong>: Landowners who managed estates and had vassals serving them.</p>
+</li>
+<li>
+<p><strong>Vassals</strong>: Lesser lords or knights who pledged loyalty and military service in exchange for land.</p>
+</li>
+<li>
+<p><strong>Serfs/Peasants</strong>: The lowest class, who worked the land for the lords and had little freedom.</p>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="manorial-system">Manorial System</h3><div class="header-button"></div></div>
+<p>The economic backbone of feudalism was the <strong>manorial system</strong>, where peasants worked the lord's land and produced goods in exchange for protection and basic rights.</p>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="feudal-obligations">Feudal Obligations</h3><div class="header-button"></div></div>
+<ul>
+<li>
+<p><strong>Lords and Vassals</strong>: Vassals swore loyalty to lords and provided military service, while lords offered land and protection.</p>
+</li>
+<li>
+<p><strong>Peasants and Lords</strong>: Peasants worked the land and paid rents or gave a portion of their produce in return for protection.</p>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="decline-of-feudalism">Decline of Feudalism</h3><div class="header-button"></div></div>
+<p>Feudalism gradually declined due to factors like the rise of centralized monarchies, growth of towns and trade, the Black Death, and changes in military technology, leading to the emergence of more modern systems of government.</p>
 
 </div>
 </div>
         </div>
 <nav class="table-of-contents" id="table-of-contents">
 <ul>
-<li class="toc-level-1"><a href="#fifteen-puzzle">Fifteen Puzzle</a></li>
+<li class="toc-level-1"><a href="#feudal-period">Feudal Period</a></li>
 <ul>
-<li class="toc-level-3"><a href="#game">Game</a></li>
+<li class="toc-level-3"><a href="#timeline">Timeline</a></li>
 </ul>
 <ul>
-<li class="toc-level-2"><a href="#implementation">Implementation</a></li>
+<li class="toc-level-3"><a href="#social-structure">Social Structure</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#manorial-system">Manorial System</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#feudal-obligations">Feudal Obligations</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#decline-of-feudalism">Decline of Feudalism</a></li>
 </ul>
 </ul>
 </nav>

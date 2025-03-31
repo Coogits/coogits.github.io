@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Database Model</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Database/">Database</a></p>
+<div class="header-block h1">
+<h1 id="database-model">Database Model</h1>
+<p>A <strong>database model</strong> defines how data is structured, stored, and managed in a database. There are different levels of abstraction when designing a database, primarily categorized into <strong>Conceptual</strong>, <strong>Logical</strong>, and <strong>Physical</strong> models.</p>
+<ol>
+<li><strong>Conceptual Model</strong> → High-level, focuses on business requirements.</li>
+<li><strong>Logical Model</strong> → More structured, defines attributes, keys, and relationships.</li>
+<li><strong>Physical Model</strong> → Implements the logical design using a specific DBMS.</li>
+</ol>
+<p>Below, we focus on the <strong>Conceptual and Logical models</strong> as part of the database design process.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="conceptual-model--database--conceptual-model"><a href="/Content/Conceptual-Model-(Database)/">Conceptual Model</a></h3><div class="header-button"></div></div>
+<p>Defines <strong>&quot;what&quot;</strong> the system represents.</p>
+<ul>
+<li><strong>High-level</strong> representation of data and relationships.</li>
+<li><strong>Prototypes Data</strong> (high-level representation of entities, attributes, and relationships).</li>
+<li><strong>Focuses on business requirements</strong>, not technical implementation.</li>
+<li><strong>Independent of DBMS</strong> (no tables, columns, or specific data types).</li>
+<li>Uses <strong>Entity-Relationship Diagrams (ERD)</strong> with <strong>entities, attributes, and relationships</strong>.</li>
+</ul>
+<div class="header-block h5">
+<h5 id="example--conceptual-model">Example (Conceptual Model)</h5>
+<ul>
+<li><strong>Entities</strong>: <code>Customer</code>, <code>Order</code>, <code>Product</code>.</li>
+<li><strong>Relationships</strong>:
+<ul>
+<li>A <code>Customer</code> places multiple <code>Orders</code>.</li>
+<li>An <code>Order</code> contains multiple <code>Products</code>.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="logical-model--database--logical-model"><a href="/Content/Logical-Model-(Database)/">Logical Model</a></h3><div class="header-button"></div></div>
+<p>Specifies <strong>&quot;how&quot;</strong> data is structured.</p>
+<ul>
+<li>More <strong>detailed</strong> than conceptual but still <strong>DBMS-independent</strong>.</li>
+<li><strong>Defines Data</strong> (detailed structure with primary keys, foreign keys, and normalization).</li>
+<li><strong>No physical storage details</strong> (e.g., indexing, partitions).</li>
+<li><strong>Normalization</strong> is applied to reduce redundancy.</li>
+</ul>
+<div class="header-block h5">
+<h5 id="example--logical-model">Example (Logical Model)</h5>
+<ul>
+<li><strong>Entities &amp; Attributes</strong>:
+<ul>
+<li><code>Customer (CustomerID, Name, Email)</code>.</li>
+<li><code>Order (OrderID, OrderDate, CustomerID)</code>.</li>
+<li><code>Product (ProductID, Name, Price)</code>.</li>
+<li><code>OrderDetails (OrderID, ProductID, Quantity)</code>.</li>
+</ul>
+</li>
+<li><strong>Relationships</strong>:
+<ul>
+<li><code>CustomerID</code> is a <strong>foreign key</strong> in <code>Order</code>.</li>
+<li><code>OrderID</code> &amp; <code>ProductID</code> are <strong>foreign keys</strong> in <code>OrderDetails</code>.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="physical-model">Physical Model</h3><div class="header-button"></div></div>
+<p>Details <strong>&quot;how&quot;</strong> the database is implemented.</p>
+<ul>
+<li>Defines <strong>tables, indexes, storage details, partitions</strong>, etc.</li>
+<li>Tailored to a <strong>specific database system</strong> (e.g., MySQL, PostgreSQL).</li>
+<li>Considers <strong>performance, security, and optimization</strong>.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="summary">Summary</h3><div class="header-button"></div></div>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Conceptual Model</th>
+<th>Logical Model</th>
+<th>Physical Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Abstraction</strong></td>
+<td>High (business-focused)</td>
+<td>Detailed (database-focused)</td>
+<td>Low (storage-focused)</td>
+</tr>
+<tr>
+<td><strong>Focus</strong></td>
+<td>Data concepts &amp; relationships</td>
+<td>Data structure &amp; constraints</td>
+<td>Storage, performance, and optimization</td>
+</tr>
+<tr>
+<td><strong>DBMS-Dependent?</strong></td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Level of Detail</strong></td>
+<td>High-level</td>
+<td>Medium-level</td>
+<td>Low-level (implementation details)</td>
+</tr>
+<tr>
+<td><strong>Key Components</strong></td>
+<td>Entities, Attributes, Relationships</td>
+<td>Tables, Keys, Constraints</td>
+<td>Storage, Indexing, Partitions</td>
+</tr>
+<tr>
+<td><strong>Diagram Type</strong></td>
+<td>ER Diagram</td>
+<td>Relational Schema Diagram</td>
+<td>Physical Schema</td>
+</tr>
+<tr>
+<td><strong>Normalization</strong></td>
+<td>Not applied</td>
+<td>Applied to reduce redundancy</td>
+<td>Considered for performance</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#database-model">Database Model</a></li>
+<ul>
+<li class="toc-level-3"><a href="#conceptual-model--database--conceptual-model">Conceptual Model</a></li>
+<ul>
+<li class="toc-level-5"><a href="#example--conceptual-model">Example (Conceptual Model)</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#logical-model--database--logical-model">Logical Model</a></li>
+<ul>
+<li class="toc-level-5"><a href="#example--logical-model">Example (Logical Model)</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#physical-model">Physical Model</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#summary">Summary</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

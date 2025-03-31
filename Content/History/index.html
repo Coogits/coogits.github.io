@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>History</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a></p>
+<div class="header-block h1">
+<h1 id="history">History</h1>
+<p>History is the study of past events, particularly human civilization and its development over time.<br />
+From the earliest days of humanity, through the rise and fall of empires, to modern-day advancements, history provides a framework for understanding the present and shaping the future.<br />
+This timeline offers a comprehensive overview of key historical eras, showcasing the major events, developments, and transitions that have shaped the world we live in today.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="timeline">Timeline</h3><div class="header-button"></div></div>
+<div id="timeline-container" data-start="-4000" data-end="2025" ></div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="eras">Eras</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="prehistory"><a href="/Content/Prehistory/">Prehistory</a></h4><div class="header-button"></div></div>
+<p>Prehistory refers to the period of human history before written records existed. This includes the Stone Age, Bronze Age, and Iron Age, with the key development being the emergence of early human societies and tools.</p>
+<div class="header-block h5">
+<h5 id="paleolithic"><a href="/Content/Paleolithic/">Paleolithic</a></h5>
+<ul>
+<li><strong>Start</strong>: 2.5 million years ago</li>
+<li><strong>End</strong>: 10,000 BCE</li>
+<li><strong>Key Features</strong>: Hunter-gatherer societies, development of tools, and early art.</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="mesolithic"><a href="/Content/Mesolithic/">Mesolithic</a></h5>
+<ul>
+<li><strong>Start</strong>: 10,000 BCE</li>
+<li><strong>End</strong>: 8,000 BCE</li>
+<li><strong>Key Features</strong>: Transition from nomadic to more settled lifestyles, gradual development of agriculture.</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="neolithic"><a href="/Content/Neolithic/">Neolithic</a></h5>
+<ul>
+<li><strong>Start</strong>: 8,000 BCE</li>
+<li><strong>End</strong>: 3,000 BCE</li>
+<li><strong>Key Features</strong>: Development of farming, domestication of animals, and the establishment of permanent settlements.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="ancient-history"><a href="/Content/Ancient-History/">Ancient History</a></h4><div class="header-button"></div></div>
+<p>Ancient History marks the rise of civilizations, the development of writing, and the establishment of major empires.</p>
+<div class="header-block h5">
+<h5 id="bronze-age"><a href="/Content/Bronze-Age/">Bronze Age</a></h5>
+<ul>
+<li><strong>Start</strong>: c. 3,000 BCE</li>
+<li><strong>End</strong>: 1200 BCE</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="iron-age"><a href="/Content/Iron-Age/">Iron Age</a></h5>
+<ul>
+<li><strong>Start</strong>: c. 1200 BCE</li>
+<li><strong>End</strong>: 500 BCE</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="classical-age"><a href="/Content/Classical-Age/">Classical Age</a></h5>
+<ul>
+<li><strong>Start</strong>: c. 500 BCE</li>
+<li><strong>End</strong>: 500 CE</li>
+</ul>
+</div>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="medieval-age"><a href="/Content/Medieval-Age/">Medieval Age</a></h4><div class="header-button"></div></div>
+<p>The Medieval Age follows the fall of the Roman Empire and spans the rise of feudalism, the influence of the church, and the eventual development of nation-states.</p>
+<div class="header-block h5">
+<h5 id="early-middle-ages"><a href="/Content/Early-Middle-Ages/">Early Middle Ages</a></h5>
+<ul>
+<li><strong>Start</strong>: 400 CE</li>
+<li><strong>End</strong>: 800 CE</li>
+<li><strong>Key Features</strong>: The fall of the Roman Empire, the spread of Christianity, and the rise of kingdoms in Europe.</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="high-middle-ages"><a href="/Content/High-Middle-Ages/">High Middle Ages</a></h5>
+<ul>
+<li><strong>Start</strong>: 800 CE</li>
+<li><strong>End</strong>: 1300 CE</li>
+<li><strong>Key Features</strong>: The growth of feudalism, the Crusades, and the rise of universities and gothic architecture.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="late-middle-ages"><a href="/Content/Late-Middle-Ages/">Late Middle Ages</a></h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Start</strong>: 1300 CE</li>
+<li><strong>End</strong>: 1500 CE</li>
+<li><strong>Key Features</strong>: The Black Death, the Hundred Years' War, and the early stages of the Renaissance.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="modern-history"><a href="/Content/Modern-History/">Modern History</a></h4><div class="header-button"></div></div>
+<p>The Modern Era spans the development of contemporary global society, the Industrial Revolution, the rise of democracy, and the shaping of the world as we know it today.</p>
+<div class="header-block h5">
+<h5 id="early-modern-period"><a href="/Content/Early-Modern-Period/">Early Modern Period</a></h5>
+<ul>
+<li><strong>Start</strong>: c. 1500 CE</li>
+<li><strong>End</strong>: 1750 CE</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="late-modern-period"><a href="/Content/Late-Modern-Period/">Late Modern Period</a></h5>
+<ul>
+<li><strong>Start</strong>: c. 1750 CE</li>
+<li><strong>End</strong>: 1945 CE</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="contemporary-period"><a href="/Content/Contemporary-Period/">Contemporary Period</a></h5>
+<ul>
+<li><strong>Start</strong>: 1991 CE</li>
+<li><strong>End</strong>: Present</li>
+<li><strong>Key Features</strong>: The rise of technology and the internet, globalization, and the continuing challenges of environmental, political, and social change.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="civilizations">Civilizations</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="history-of-egypt"><a href="/Content/History-of-Egypt/">History of Egypt</a></h4><div class="header-button"></div></div>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="history-of-rome"><a href="/Content/History-of-Rome/">History of Rome</a></h4><div class="header-button"></div></div>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="conclusion">Conclusion</h3><div class="header-button"></div></div>
+<p>The timeline of human history is complex and interconnected, with each era shaping the next. From the dawn of humanity in prehistory to the modern technological age, humanity has undergone transformative changes that continue to affect our world today. The timeline serves as a reminder of both our achievements and the challenges that remain as we look toward the future.</p>
+
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#history">History</a></li>
+<ul>
+<li class="toc-level-3"><a href="#timeline">Timeline</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#eras">Eras</a></li>
+<ul>
+<li class="toc-level-4"><a href="#prehistory">Prehistory</a></li>
+<ul>
+<li class="toc-level-5"><a href="#paleolithic">Paleolithic</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#mesolithic">Mesolithic</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#neolithic">Neolithic</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#ancient-history">Ancient History</a></li>
+<ul>
+<li class="toc-level-5"><a href="#bronze-age">Bronze Age</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#iron-age">Iron Age</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#classical-age">Classical Age</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#medieval-age">Medieval Age</a></li>
+<ul>
+<li class="toc-level-5"><a href="#early-middle-ages">Early Middle Ages</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#high-middle-ages">High Middle Ages</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#late-middle-ages">Late Middle Ages</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#modern-history">Modern History</a></li>
+<ul>
+<li class="toc-level-5"><a href="#early-modern-period">Early Modern Period</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#late-modern-period">Late Modern Period</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#contemporary-period">Contemporary Period</a></li>
+</ul>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#civilizations">Civilizations</a></li>
+<ul>
+<li class="toc-level-4"><a href="#history-of-egypt">History of Egypt</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#history-of-rome">History of Rome</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#conclusion">Conclusion</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

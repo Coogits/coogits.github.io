@@ -2,24 +2,21 @@
 <html>
     <head>
         <title>Electrical Resistance</title>
-        <meta charset="UTF-8">
         
         <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
-        <script>
-            MathJax = {
-                tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-                }
-            };
-        </script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
         <script id="Prism-script" async src="/system/prism.js"></script>
         <link href="/system/prism.css" rel="stylesheet" />
         
-        <script type="module" src="/system/mermaid-setup.js"></script>
-        
+        <script type="text/javascript" src="/system/timeline.js"></script>
         <script src="/system/search.js"></script>
         <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
 
         <link rel="stylesheet" href="/system/pygments.css">
         <link rel="stylesheet" href="/system/styles.css"> 
@@ -86,7 +83,7 @@
         </div>
         <ul id="searchResults"></ul>
         <div class="mdBody">
-<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Classical-Physics/">Classical Physics</a> &gt; <a href="/Content/Electromagnetism/">Electromagnetism</a> &gt; <a href="/Content/Electronics/">Electronics</a> &gt;</p>
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Classical-Physics/">Classical Physics</a> &gt; <a href="/Content/Electromagnetism/">Electromagnetism</a> &gt; <a href="/Content/Electronics/">Electronics</a></p>
 <div class="header-block h1">
 <h1 id="electrical-resistance">Electrical Resistance</h1>
 <p><strong>Electrical resistance</strong> is a measure of how much a material or an electrical component opposes the flow of electric current. It quantifies the degree to which the passage of current is hindered, causing a voltage drop across the material or component.</p>
@@ -95,23 +92,21 @@
 <ul>
 <li>$R\quad$ <strong>Electrical Resistance</strong>: (unit: Ohm ($\Omega$))</li>
 <li>$\rho\quad$ <a href="/Content/Electric-Resistivity/">Electric Resistivity</a> (unit: $\Omega\cdot m$)</li>
-<li>$J\quad$ <strong>Current Density</strong> (unit: $\cfrac{A}{m^2}$)</li>
+<li>$J\quad$ <a href="/Content/Electric-Current-Density/">Electric Current Density</a> (unit: Ampere per square meter ($\frac{A}{m^2}$))</li>
 <li>$\Delta V\quad$ <a href="/Content/Electric-Potential/">Electric Potential Difference</a> (unit: Volt (V))</li>
 <li>$I\quad$ <a href="/Content/Electric-Current/">Electric Current</a> (unit: Ampere (A))</li>
 <li>$l\quad$ <strong>Conductor Length</strong> (unit: meter (m))</li>
 <li>$A\quad$ <strong>Cross-Sectional Area</strong> (unit: $m^2$)</li>
 </ul>
-<hr />
 </div>
 <div class="header-block h3">
 <div class="header-h3"><h3 id="formulas">Formulas</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>From the Ohm's laws</strong>:<br />
-According to the <strong>first Ohm's Law</strong> ($\Delta{V}=RI$), the <strong>Resistance</strong> can be expressed as: $$R=\cfrac{\Delta{V}}{I}$$</li>
+According to the <strong>first Ohm's Law</strong><sup id="cite_ref-1" class="footnote-container"><a href="#footnote-1" class="footnote-reference">[1]</a><span class="footnote-tooltip"><a href="/Content/Ohm's-Law/">Ohm's Law</a></span></sup> ($\Delta{V}=RI$), the <strong>Resistance</strong> can be expressed as: $$R=\cfrac{\Delta{V}}{I}$$</li>
 <li><strong>Resistance of a Homogeneous Conductor:</strong><br />
 The resistance is given by: $$R=\rho\cfrac{l}{A}$$</li>
 </ul>
-<hr />
 </div>
 <div class="header-block h3">
 <div class="header-h3"><h3 id="unit-of-the-electrical-resistance">Unit of the Electrical Resistance</h3><div class="header-button"></div></div>
@@ -119,8 +114,9 @@ The resistance is given by: $$R=\rho\cfrac{l}{A}$$</li>
 <li><strong>SI Unit</strong>:<br />
 The International System's Unit of the Electric Current is the <strong>Ohm</strong>: $$R=\left(\cfrac{V}{A}\right)=\Omega$$</li>
 </ul>
-<hr />
-
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="references">References</h3><div class="header-button"></div></div><ul><li id="footnote-1" class="footnote-item" data-footnote-id="1"><strong>1</strong>. <a href="/Content/Ohm's-Law/">Ohm's Law</a></li></ul>
 </div>
 </div>
         </div>
@@ -135,6 +131,9 @@ The International System's Unit of the Electric Current is the <strong>Ohm</stro
 </ul>
 <ul>
 <li class="toc-level-3"><a href="#unit-of-the-electrical-resistance">Unit of the Electrical Resistance</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#references">References</a></li>
 </ul>
 </ul>
 </nav>

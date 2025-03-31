@@ -2,1439 +2,1755 @@
   "pages": [
     {
       "url": "/Content/About/",
-      "title": "About"
+      "title": "about"
     },
     {
       "url": "/Content/Contact-Form/",
-      "title": "Untitled"
+      "title": "untitled"
     },
     {
       "url": "/Content/index/",
-      "title": "Coogits"
+      "title": "coogits"
     },
     {
       "url": "/Content/Thank-You/",
-      "title": "Thank You for Contacting Us! "
+      "title": "thank you for contacting us "
     },
     {
       "url": "/Content/Computer-Science/",
-      "title": "Computer Science"
+      "title": "computer science"
     },
     {
       "url": "/Content/Hardware/",
-      "title": "Hardware"
+      "title": "hardware"
     },
     {
       "url": "/Content/Computer-Architecture/",
-      "title": "Computer Architecture"
+      "title": "computer architecture"
     },
     {
       "url": "/Content/Harvard-Architecture/",
-      "title": "Harvard Architecture"
+      "title": "harvard architecture"
     },
     {
       "url": "/Content/Instruction-Set-Architecture/",
-      "title": "Instruction Set Architecture (ISA)"
+      "title": "instruction set architecture isa"
     },
     {
       "url": "/Content/Microarchitecture/",
-      "title": "Microarchitecture"
+      "title": "microarchitecture"
     },
     {
       "url": "/Content/RISC-vs.-CISC-Architecture/",
-      "title": "RISC vs. CISC Architecture"
+      "title": "risc vs cisc architecture"
     },
     {
       "url": "/Content/Von-Neumann-Architecture/",
-      "title": "Von Neumann Architecture"
+      "title": "von neumann architecture"
     },
     {
       "url": "/Content/Digital-Logic-Design/",
-      "title": "Digital Logic Design"
+      "title": "digital logic design"
     },
     {
       "url": "/Content/Addition-(Binary-Arithmetic)/",
-      "title": "Binary Addition (Arithmetic Logic Design)"
+      "title": "binary addition arithmetic logic design"
     },
     {
       "url": "/Content/Binary-Arithmetic-(Digital-Logic-Design)/",
-      "title": "Binary Arithmetic (Digital Logic Design)"
+      "title": "binary arithmetic digital logic design"
     },
     {
       "url": "/Content/Floating-Point-Binary-Representation/",
-      "title": "Floating-Point Binary Representation"
+      "title": "floatingpoint binary representation"
     },
     {
       "url": "/Content/Integer-Binary-Representation/",
-      "title": "Integer Binary Representation"
+      "title": "integer binary representation"
     },
     {
       "url": "/Content/Subtraction-(Binary-Arithmetic)/",
-      "title": "Binary Subtraction"
+      "title": "binary subtraction"
     },
     {
       "url": "/Content/AND-Gate/",
-      "title": "AND Gate"
+      "title": "and gate"
     },
     {
       "url": "/Content/Logic-Gate/",
-      "title": "Logic Gate"
+      "title": "logic gate"
     },
     {
       "url": "/Content/OR-Gate/",
-      "title": "OR Gate"
+      "title": "or gate"
     },
     {
       "url": "/Content/Binary-Digit-(Bit)/",
-      "title": "Binary Digit (Bit)"
+      "title": "binary digit bit"
     },
     {
       "url": "/Content/Information-Theory/",
-      "title": "Information Theory"
+      "title": "information theory"
     },
     {
       "url": "/Content/Data-Compression/",
-      "title": "Data Compression"
+      "title": "data compression"
     },
     {
       "url": "/Content/ASCII/",
-      "title": "ASCII"
+      "title": "ascii"
     },
     {
       "url": "/Content/Encoding/",
-      "title": "Encoding"
+      "title": "encoding"
     },
     {
       "url": "/Content/Unicode/",
-      "title": "Unicode"
+      "title": "unicode"
     },
     {
       "url": "/Content/UTF-8/",
-      "title": "UTF-8"
+      "title": "utf8"
     },
     {
       "url": "/Content/Cross-Platform-Project/",
-      "title": "Untitled"
+      "title": "untitled"
     },
     {
       "url": "/Content/Operating-System/",
-      "title": "Operating System"
+      "title": "operating system"
     },
     {
       "url": "/Content/Software/",
-      "title": "Software"
+      "title": "software"
     },
     {
       "url": "/Content/Programming/",
-      "title": "Programming"
+      "title": "programming"
+    },
+    {
+      "url": "/Content/Conceptual-Model-(Database)/",
+      "title": "conceptual model database"
+    },
+    {
+      "url": "/Content/Database-Management-System-(DBMS)/",
+      "title": "database management system dbms"
+    },
+    {
+      "url": "/Content/Database-Model/",
+      "title": "database model"
+    },
+    {
+      "url": "/Content/Database/",
+      "title": "database"
+    },
+    {
+      "url": "/Content/Logical-Model-(Database)/",
+      "title": "logical model database"
+    },
+    {
+      "url": "/Content/MySQL/",
+      "title": "mysql definition"
+    },
+    {
+      "url": "/Content/Relational-Database/",
+      "title": "relational database"
     },
     {
       "url": "/Content/Bitwise-Operator-(Programming)/",
-      "title": "Bitwise Operator (Programming)"
+      "title": "bitwise operator programming"
     },
     {
       "url": "/Content/Composite-Type/",
-      "title": "Composite Type"
+      "title": "composite type"
     },
     {
       "url": "/Content/Data-Mutability-(Programming)/",
-      "title": "Data Mutability"
+      "title": "data mutability"
     },
     {
       "url": "/Content/Function-(Programming)/",
-      "title": "Function (Programming)"
+      "title": "function programming"
     },
     {
       "url": "/Content/General-Programming/",
-      "title": "General Programming"
+      "title": "general programming"
     },
     {
       "url": "/Content/Identifier-(Programming)/",
-      "title": "Identifier"
+      "title": "identifier"
     },
     {
       "url": "/Content/Namespace-(Programing)/",
-      "title": "Namespace"
+      "title": "namespace"
     },
     {
       "url": "/Content/Operator-(Programming)/",
-      "title": "Operator (Programming)"
+      "title": "operator programming"
     },
     {
       "url": "/Content/Scope-(Programming)/",
-      "title": "Scope"
+      "title": "scope"
     },
     {
       "url": "/Content/Statement-(Programming)/",
-      "title": "Statement (Programming)"
+      "title": "statement programming"
     },
     {
       "url": "/Content/Algorithm-(Programming)/",
-      "title": "Algorithm"
+      "title": "algorithm"
     },
     {
       "url": "/Content/Time-Complexity/",
-      "title": "Time Complexity"
+      "title": "time complexity"
     },
     {
       "url": "/Content/Data-(Programming)/",
-      "title": "Data (Programming)"
+      "title": "data programming"
     },
     {
       "url": "/Content/Array-(Programming)/",
-      "title": "Array (Programming)"
+      "title": "array programming"
     },
     {
       "url": "/Content/Data-Structure/",
-      "title": "Data Structure"
+      "title": "data structure"
     },
     {
       "url": "/Content/Linear-Queue/",
-      "title": "Linear Queue"
+      "title": "linear queue"
     },
     {
       "url": "/Content/Linked-List/",
-      "title": "Linked List"
+      "title": "linked list"
     },
     {
       "url": "/Content/Queue/",
-      "title": "Queue"
+      "title": "queue"
     },
     {
       "url": "/Content/Stack/",
-      "title": "Stack"
+      "title": "stack"
     },
     {
       "url": "/Content/Boolean-Type-(Programming)/",
-      "title": "Boolean Type (Programming)"
+      "title": "boolean type programming"
     },
     {
       "url": "/Content/Character-(Programming)/",
-      "title": "Character (Programming)"
+      "title": "character programming"
     },
     {
       "url": "/Content/Data-Type-(Programming)/",
-      "title": "Data Type (Programming)"
+      "title": "data type programming"
     },
     {
       "url": "/Content/Floating-Point-(Programming)/",
-      "title": "Floating-Point (Programming)"
+      "title": "floatingpoint programming"
     },
     {
       "url": "/Content/Integer-(Programming)/",
-      "title": "Integer (Programming)"
+      "title": "integer programming"
     },
     {
       "url": "/Content/Primitive-Type/",
-      "title": "Primitive Type"
+      "title": "primitive type"
     },
     {
       "url": "/Content/Signed-Integer-(Programming)/",
-      "title": "Signed Integer"
+      "title": "signed integer"
     },
     {
       "url": "/Content/Unsigned-Integer-(Programming)/",
-      "title": "Unsigned Integer (Programming)"
+      "title": "unsigned integer programming"
     },
     {
       "url": "/Content/Control-Flow/",
-      "title": "Control Flow (Programming)"
+      "title": "control flow programming"
     },
     {
       "url": "/Content/Paradigm-(Programming)/",
-      "title": "Paradigm (Programming)"
+      "title": "paradigm programming"
     },
     {
       "url": "/Content/Programming-Language/",
-      "title": "Programming Language"
+      "title": "programming language"
     },
     {
       "url": "/Content/C/",
-      "title": "C (Programming Language)"
+      "title": "c programming language"
     },
     {
       "url": "/Content/Control-Flow-(C)/",
-      "title": "Control Flow"
+      "title": "control flow"
     },
     {
       "url": "/Content/JavaScript/",
-      "title": "JavaScript"
+      "title": "javascript"
+    },
+    {
+      "url": "/Content/OSI-Model/",
+      "title": "osi model"
+    },
+    {
+      "url": "/Content/Telecommunications-Protocols/",
+      "title": "telecommunications protocols"
+    },
+    {
+      "url": "/Content/Telecommunications/",
+      "title": "telecommunications"
+    },
+    {
+      "url": "/Content/Electrotechnics/",
+      "title": "electrotechnics"
+    },
+    {
+      "url": "/Content/Voltage-Supply/",
+      "title": "voltage supply"
+    },
+    {
+      "url": "/Content/History-of-Egypt/",
+      "title": "history of egypt"
+    },
+    {
+      "url": "/Content/History-of-Rome/",
+      "title": "history of rome"
+    },
+    {
+      "url": "/Content/History/",
+      "title": "history"
+    },
+    {
+      "url": "/Content/Ancient-History/",
+      "title": "ancient history"
+    },
+    {
+      "url": "/Content/Bronze-Age/",
+      "title": "bronze age"
+    },
+    {
+      "url": "/Content/Iron-Age/",
+      "title": "iron age"
+    },
+    {
+      "url": "/Content/Persian-Civilization/",
+      "title": "persian civilization"
+    },
+    {
+      "url": "/Content/Sumer/",
+      "title": "sumer"
+    },
+    {
+      "url": "/Content/Ancient-Egypt/",
+      "title": "ancient egypt"
+    },
+    {
+      "url": "/Content/Early-Dynastic-Period-of-Egypt/",
+      "title": "early dynastic period of egypt"
+    },
+    {
+      "url": "/Content/First-Intermediate-Period-of-Egypt/",
+      "title": "first intermediate period of egypt"
+    },
+    {
+      "url": "/Content/Late-Period-of-Egypt/",
+      "title": "late period of egypt"
+    },
+    {
+      "url": "/Content/Middle-Kingdom-of-Egypt/",
+      "title": "middle kingdom of egypt"
+    },
+    {
+      "url": "/Content/New-Kingdom-of-Egypt/",
+      "title": "new kingdom of egypt"
+    },
+    {
+      "url": "/Content/Old-Kingdom-of-Egypt/",
+      "title": "old kingdom of egypt"
+    },
+    {
+      "url": "/Content/Predynastic-Period-of-Egypt/",
+      "title": "predynastic period of egypt"
+    },
+    {
+      "url": "/Content/Ptolemaic-Period-of-Egypt/",
+      "title": "ptolemaic period of egypt"
+    },
+    {
+      "url": "/Content/Roman-and-Byzantine-Egypt/",
+      "title": "roman and byzantine egypt"
+    },
+    {
+      "url": "/Content/Second-Intermediate-Period-of-Egypt/",
+      "title": "second intermediate period of egypt"
+    },
+    {
+      "url": "/Content/Third-Intermediate-Period-of-Egypt/",
+      "title": "third intermediate period of egypt"
+    },
+    {
+      "url": "/Content/Ancient-Greece/",
+      "title": "ancient greece"
+    },
+    {
+      "url": "/Content/Greek-Archaic-Period/",
+      "title": "greek archaic period"
+    },
+    {
+      "url": "/Content/Greek-Bronze-Age/",
+      "title": "greek bronze age"
+    },
+    {
+      "url": "/Content/Greek-Classical-Period/",
+      "title": "greek classical period"
+    },
+    {
+      "url": "/Content/Greek-Dark-Ages/",
+      "title": "greek dark ages"
+    },
+    {
+      "url": "/Content/Greek-Hellenistic-Period/",
+      "title": "greek hellenistic period"
+    },
+    {
+      "url": "/Content/Minoan-Civilization/",
+      "title": "minoan civilization"
+    },
+    {
+      "url": "/Content/Mycenaean-Civilization/",
+      "title": "mycenaean civilization"
+    },
+    {
+      "url": "/Content/Akkadian/",
+      "title": "akkadian"
+    },
+    {
+      "url": "/Content/Assyrian/",
+      "title": "assyrian"
+    },
+    {
+      "url": "/Content/Mesopotamian-Civilization/",
+      "title": "mesopotamian"
+    },
+    {
+      "url": "/Content/Babylonia/",
+      "title": "babylonian"
+    },
+    {
+      "url": "/Content/Old-Babylonian-Period/",
+      "title": "old babylonian period"
+    },
+    {
+      "url": "/Content/Ancient-Rome/",
+      "title": "ancient rome"
+    },
+    {
+      "url": "/Content/Eastern-Roman-Empire-(Byzantine-Empire)/",
+      "title": "eastern roman empire byzantine empire "
+    },
+    {
+      "url": "/Content/Roman-Empire/",
+      "title": "roman empire"
+    },
+    {
+      "url": "/Content/Roman-Kingdom/",
+      "title": "roman kingdom"
+    },
+    {
+      "url": "/Content/Roman-Republic/",
+      "title": "roman republic"
+    },
+    {
+      "url": "/Content/Crusades-Period/",
+      "title": "crusades"
+    },
+    {
+      "url": "/Content/Early-Middle-Ages/",
+      "title": "early middle ages"
+    },
+    {
+      "url": "/Content/Feudal-Period/",
+      "title": "feudal period"
+    },
+    {
+      "url": "/Content/High-Middle-Ages/",
+      "title": "high middle ages"
+    },
+    {
+      "url": "/Content/Late-Middle-Ages/",
+      "title": "late middle ages"
+    },
+    {
+      "url": "/Content/Medieval-Age/",
+      "title": "medieval age"
+    },
+    {
+      "url": "/Content/Age-of-Exploration/",
+      "title": "age of exploration"
+    },
+    {
+      "url": "/Content/Classical-Age/",
+      "title": "classical age"
+    },
+    {
+      "url": "/Content/Contemporary-Period/",
+      "title": "contemporary period"
+    },
+    {
+      "url": "/Content/Early-Modern-Period/",
+      "title": "early modern period"
+    },
+    {
+      "url": "/Content/French-Revolution/",
+      "title": "french revolution"
+    },
+    {
+      "url": "/Content/Industrial-Revolution/",
+      "title": "industrial revolution"
+    },
+    {
+      "url": "/Content/Late-Modern-Period/",
+      "title": "late modern period"
+    },
+    {
+      "url": "/Content/Modern-History/",
+      "title": "modern history"
+    },
+    {
+      "url": "/Content/Renaissance/",
+      "title": "renaissance"
+    },
+    {
+      "url": "/Content/Scientific-Revolution/",
+      "title": "scientific revolution"
+    },
+    {
+      "url": "/Content/World-War-I/",
+      "title": "world war i"
+    },
+    {
+      "url": "/Content/World-War-II/",
+      "title": "world war ii"
+    },
+    {
+      "url": "/Content/Mesolithic/",
+      "title": "mesolithic"
+    },
+    {
+      "url": "/Content/Neolithic/",
+      "title": "neolithic"
+    },
+    {
+      "url": "/Content/Paleolithic/",
+      "title": "paleolithic"
+    },
+    {
+      "url": "/Content/Prehistory/",
+      "title": "prehistory"
     },
     {
       "url": "/Content/Mathematics/",
-      "title": "Mathematics"
+      "title": "mathematics"
     },
     {
       "url": "/Content/Algebra/",
-      "title": "Algebra"
+      "title": "algebra"
     },
     {
       "url": "/Content/Abstract-Algebra/",
-      "title": "Abstract Algebra"
+      "title": "abstract algebra"
     },
     {
       "url": "/Content/Group-Theory/",
-      "title": "Group Theory"
+      "title": "group theory"
     },
     {
       "url": "/Content/AND-(Boolean-Algebra)/",
-      "title": "AND (Boolean Algebra)"
+      "title": "and boolean algebra"
     },
     {
       "url": "/Content/Boolean-Algebra/",
-      "title": "Boolean Algebra"
+      "title": "boolean algebra"
     },
     {
       "url": "/Content/OR-(Boolean-Algebra)/",
-      "title": "OR (Boolean Algebra)"
+      "title": "or boolean algebra"
     },
     {
       "url": "/Content/Elementary-Algebra/",
-      "title": "Elementary Algebra"
+      "title": "elementary algebra"
     },
     {
       "url": "/Content/Diophantine-Equation/",
-      "title": "Diophantine Equation"
+      "title": "diophantine equation"
     },
     {
       "url": "/Content/Equation/",
-      "title": "Equation"
+      "title": "equation"
     },
     {
       "url": "/Content/Exponential-Equation/",
-      "title": "Exponential Equation"
+      "title": "exponential equation"
     },
     {
       "url": "/Content/Irrational-Equation/",
-      "title": "Irrational Equation"
+      "title": "irrational equation"
     },
     {
       "url": "/Content/Linear-Equation/",
-      "title": "Linear Equation"
+      "title": "linear equation"
     },
     {
       "url": "/Content/Logarithmic-Equation/",
-      "title": "Logarithmic Equation"
+      "title": "logarithmic equation"
     },
     {
       "url": "/Content/Polynomial-Equation/",
-      "title": "Polynomial Equation"
+      "title": "polynomial equation"
     },
     {
       "url": "/Content/Properties-of-Equality/",
-      "title": "Properties of Equality"
+      "title": "properties of equality"
     },
     {
       "url": "/Content/Rational-Equation/",
-      "title": "Rational Equation"
+      "title": "rational equation"
     },
     {
       "url": "/Content/System-of-Equations/",
-      "title": "System of Equations"
+      "title": "system of equations"
     },
     {
       "url": "/Content/Quadratic-Equation/",
-      "title": "Quadratic Equation"
+      "title": "quadratic equation"
     },
     {
       "url": "/Content/Quadratic-Formula-(Quadratic-Equation)/",
-      "title": "Quadratic Formula (Quadratic Equation)"
+      "title": "quadratic formula quadratic equation"
     },
     {
       "url": "/Content/Standard-Form-(Quadratic-Equation)/",
-      "title": "Standard Form (Quadratic Equation)"
+      "title": "standard form quadratic equation"
     },
     {
       "url": "/Content/Polynomial/",
-      "title": "Polynomial"
+      "title": "polynomial"
     },
     {
       "url": "/Content/Standard-Form-(Algebra)/",
-      "title": "Standard Form (Algebra)"
+      "title": "standard form algebra"
     },
     {
       "url": "/Content/Complete-Factoring-(Polynomial)/",
-      "title": "Complete Factoring (Polynomial)"
+      "title": "complete factoring polynomial"
     },
     {
       "url": "/Content/Factoring-by-Grouping-(Polynomial)/",
-      "title": "Factoring by Grouping (Polynomial)"
+      "title": "factoring by grouping polynomial"
     },
     {
       "url": "/Content/Factorization-(Polynomial)/",
-      "title": "Factorization (Polynomial)"
+      "title": "factorization polynomial"
     },
     {
       "url": "/Content/Addition-(Monomial)/",
-      "title": "Addition (Monomial)"
+      "title": "addition monomial"
     },
     {
       "url": "/Content/Division-(Monomial)/",
-      "title": "Division (Monomials)"
+      "title": "division monomials"
     },
     {
       "url": "/Content/Greatest-Common-Divisor-(Monomial)/",
-      "title": "Greatest Common Divisor (Monomials)"
+      "title": "greatest common divisor monomials"
     },
     {
       "url": "/Content/Least-Common-Multiple-(Monomial)/",
-      "title": "Least Common Multiple (Monomials)"
+      "title": "least common multiple monomials"
     },
     {
       "url": "/Content/Monomial/",
-      "title": "Monomial"
+      "title": "monomial"
     },
     {
       "url": "/Content/Multiplication-(Monomial)/",
-      "title": "Multiplication (Monomial)"
+      "title": "multiplication monomial"
     },
     {
       "url": "/Content/Subtraction-(Monomial)/",
-      "title": "Subtraction (Monomial)"
+      "title": "subtraction monomial"
     },
     {
       "url": "/Content/Addition-(Polynomial)/",
-      "title": "Addition (Polynomial)"
+      "title": "addition polynomial"
     },
     {
       "url": "/Content/Division-(Polynomial)/",
-      "title": "Division (Polynomial)"
+      "title": "division polynomial"
     },
     {
       "url": "/Content/Greatest-Common-Divisor-(Polynomial)/",
-      "title": "Greatest Common Divisor (Polynomial)"
+      "title": "greatest common divisor polynomial"
     },
     {
       "url": "/Content/Least-Common-Multiple-(Polynomial)/",
-      "title": "Least Common Multiple (Polynomial)"
+      "title": "least common multiple polynomial"
     },
     {
       "url": "/Content/Multiplication-(Polynomial)/",
-      "title": "Multiplication (Polynomial)"
+      "title": "multiplication polynomial"
     },
     {
       "url": "/Content/Operator-(Polynomial)/",
-      "title": "Operator (Polynomial)"
+      "title": "operator polynomial"
     },
     {
       "url": "/Content/Subtraction-(Polynomial)/",
-      "title": "Subtraction (Polynomial)"
+      "title": "subtraction polynomial"
     },
     {
       "url": "/Content/Cube-of-Binomial-(Special-Product)/",
-      "title": "Cube of Binomial (Special Product)"
+      "title": "cube of binomial special product"
     },
     {
       "url": "/Content/Difference-of-Squares-(Special-Product)/",
-      "title": "Difference of Squares (Special Product)"
+      "title": "difference of squares special product"
     },
     {
       "url": "/Content/Special-Products/",
-      "title": "Special Products"
+      "title": "special products"
     },
     {
       "url": "/Content/Square-of-Binomial-(Special-Products)/",
-      "title": "Square of Binomial (Special Products)"
+      "title": "square of binomial special products"
     },
     {
       "url": "/Content/Proportion/",
-      "title": "Proportion"
+      "title": "proportion"
     },
     {
       "url": "/Content/Bijection,-Injection-and-Surjection/",
-      "title": "Injective, Surjective, and Bijective Functions"
+      "title": "injective surjective and bijective functions"
     },
     {
       "url": "/Content/Function-(Mathematics)/",
-      "title": "Function (Mathematics)"
+      "title": "function mathematics"
     },
     {
       "url": "/Content/Constant-Function/",
-      "title": "Constant Function"
+      "title": "constant function"
     },
     {
       "url": "/Content/Elementary-Function/",
-      "title": "Elementary Function"
+      "title": "elementary function"
     },
     {
       "url": "/Content/Identity-Function/",
-      "title": "Identity Function"
+      "title": "identity function"
     },
     {
       "url": "/Content/Linear-Function/",
-      "title": "Linear Function"
+      "title": "linear function"
     },
     {
       "url": "/Content/Rational-Function/",
-      "title": "Rational Function"
+      "title": "rational function"
     },
     {
       "url": "/Content/Linear-Algebra/",
-      "title": "Linear Algebra"
+      "title": "linear algebra"
     },
     {
       "url": "/Content/2x2-System-of-Linear-Equations/",
-      "title": "2x2 System of Linear Equations"
+      "title": "2x2 system of linear equations"
     },
     {
       "url": "/Content/3x3-System-of-Linear-Equations/",
-      "title": "3x3 System of Linear Equations"
+      "title": "3x3 system of linear equations"
     },
     {
       "url": "/Content/Substitution-Method-(System-or-Linear-Equations)/",
-      "title": "Substitution Method"
+      "title": "substitution method"
     },
     {
       "url": "/Content/System-of-Linear-Equations/",
-      "title": "System of Linear Equations"
+      "title": "system of linear equations"
     },
     {
       "url": "/Content/Cross-Product-(Vector)/",
-      "title": "Cross Product (Vector)"
+      "title": "cross product vector"
     },
     {
       "url": "/Content/Dot-Product-(Vector)/",
-      "title": "Dot Product (Vector)"
+      "title": "dot product vector"
     },
     {
       "url": "/Content/Vector-(Math)/",
-      "title": "Vector (Math)"
+      "title": "vector math"
     },
     {
       "url": "/Content/Analysis-1/",
-      "title": "Mathematical Analysis 1"
+      "title": "mathematical analysis 1"
     },
     {
       "url": "/Content/Calculus/",
-      "title": "Calculus"
+      "title": "calculus"
     },
     {
       "url": "/Content/Antiderivative-(Indefinite-Integral-&-Primitive)/",
-      "title": "Antiderivative (Indefinite Integral & Primitive)"
+      "title": "antiderivative indefinite integral  primitive"
     },
     {
       "url": "/Content/Derivative/",
-      "title": "Derivative (Calculus)"
+      "title": "derivative calculus"
     },
     {
       "url": "/Content/Differential-Calculus/",
-      "title": "Differential Calculus"
+      "title": "differential calculus"
     },
     {
       "url": "/Content/Differentiation-(Calculus)/",
-      "title": "Differentiation"
+      "title": "differentiation"
     },
     {
       "url": "/Content/Differentiation/",
-      "title": "Differentiation"
+      "title": "differentiation"
     },
     {
       "url": "/Content/Partial-Derivative/",
-      "title": "Partial Derivative"
+      "title": "partial derivative"
     },
     {
       "url": "/Content/Integral-Calculus/",
-      "title": "Integral Calculus"
+      "title": "integral calculus"
     },
     {
       "url": "/Content/Integral/",
-      "title": "Integral"
+      "title": "integral"
     },
     {
       "url": "/Content/Continuity/",
-      "title": "Continuity"
+      "title": "continuity"
     },
     {
       "url": "/Content/Limit-(Mathematics)/",
-      "title": "Limit (Mathematic)"
+      "title": "limit mathematic"
     },
     {
       "url": "/Content/Arithmetic/",
-      "title": "Arithmetic"
+      "title": "arithmetic"
     },
     {
       "url": "/Content/Divisibility-Rules/",
-      "title": "Divisibility Rules"
+      "title": "divisibility rules"
     },
     {
       "url": "/Content/Greatest-Common-Divisor/",
-      "title": "Greatest Common Divisor"
+      "title": "greatest common divisor"
     },
     {
       "url": "/Content/Least-Common-Multiple/",
-      "title": "Least Common Multiple"
+      "title": "least common multiple"
     },
     {
       "url": "/Content/Mean-Value/",
-      "title": "Mean Value"
+      "title": "mean value"
     },
     {
       "url": "/Content/Prime-Factorization/",
-      "title": "Prime Factorization"
+      "title": "prime factorization"
     },
     {
       "url": "/Content/Radical-(Arithmetic)/",
-      "title": "Radical"
+      "title": "radical"
     },
     {
       "url": "/Content/Binary-System-(Numeral-System)/",
-      "title": "Binary System"
+      "title": "binary system"
     },
     {
       "url": "/Content/Decimal-System-(Numeral-System)/",
-      "title": "Decimal System (Numeral System)"
+      "title": "decimal system numeral system"
     },
     {
       "url": "/Content/Expanded-Form-(Numeral-System)/",
-      "title": "Expanded Form (Numeral System)"
+      "title": "expanded form numeral system"
     },
     {
       "url": "/Content/Hexadecimal-System-(Numeral-System)/",
-      "title": "Hexadecimal System"
+      "title": "hexadecimal system"
     },
     {
       "url": "/Content/Numeral-System/",
-      "title": "Numeral System"
+      "title": "numeral system"
     },
     {
       "url": "/Content/Octal-System-(Numera-System)/",
-      "title": "Octal System"
+      "title": "octal system"
     },
     {
       "url": "/Content/Scientific-Notation/",
-      "title": "Scientific Notation"
+      "title": "scientific notation"
     },
     {
       "url": "/Content/From-Binary-to-Decimal-Conversion/",
-      "title": "From Binary to Decimal Conversion"
+      "title": "from binary to decimal conversion"
     },
     {
       "url": "/Content/From-Decimal-to-Binary-Conversione/",
-      "title": "From Decimal to Binary Conversione"
+      "title": "from decimal to binary conversione"
     },
     {
       "url": "/Content/Numeral-System-Conversion/",
-      "title": "Numeral System Conversion"
+      "title": "numeral system conversion"
     },
     {
       "url": "/Content/Addition-(Arithmetic)/",
-      "title": "Addition"
+      "title": "addition"
     },
     {
       "url": "/Content/Arithmetic-Operator/",
-      "title": "Arithmetic Operator"
+      "title": "arithmetic operator"
     },
     {
       "url": "/Content/Complement-(Arithmetic)/",
-      "title": "Complement (Arithmetic)"
+      "title": "complement arithmetic"
     },
     {
       "url": "/Content/Division-(Arithmetic)/",
-      "title": "Division"
+      "title": "division"
     },
     {
       "url": "/Content/Exponentiation-(Arithmetic)/",
-      "title": "Exponentiation"
+      "title": "exponentiation"
     },
     {
       "url": "/Content/Logarithm/",
-      "title": "Logarithm"
+      "title": "logarithm"
     },
     {
       "url": "/Content/Multiplication-(Arithmetic)/",
-      "title": "Multiplication"
+      "title": "multiplication"
     },
     {
       "url": "/Content/Subtraction-(Arithmetic)/",
-      "title": "Subtraction"
+      "title": "subtraction"
     },
     {
       "url": "/Content/Summation-(Arithmetic)/",
-      "title": "Summation"
+      "title": "summation"
     },
     {
       "url": "/Content/Discrete-Mathematics/",
-      "title": "Discrete Mathematics"
+      "title": "discrete mathematics"
     },
     {
       "url": "/Content/Logic/",
-      "title": "Logic"
+      "title": "logic"
     },
     {
       "url": "/Content/Complement-(Set-Theory)/",
-      "title": "Complement (Set Theory)"
+      "title": "complement set theory"
     },
     {
       "url": "/Content/Intersection-(Set-Theory)/",
-      "title": "Intersection (Set Theory)"
+      "title": "intersection set theory"
     },
     {
       "url": "/Content/Relative-Complement/",
-      "title": "Relative Complement (Set Theory)"
+      "title": "relative complement set theory"
     },
     {
       "url": "/Content/Set-(math)/",
-      "title": "Set"
+      "title": "set"
     },
     {
       "url": "/Content/Set-Theory/",
-      "title": "Set Theory"
+      "title": "set theory"
     },
     {
       "url": "/Content/Symmetric-Difference/",
-      "title": "Symmetric Difference (Set Theory)"
+      "title": "symmetric difference set theory"
     },
     {
       "url": "/Content/Union-(Set-Theory)/",
-      "title": "Union (Set Theory)"
+      "title": "union set theory"
     },
     {
       "url": "/Content/Cardinality-(Set-Theory)/",
-      "title": "Cardinality (Set Theory)"
+      "title": "cardinality set theory"
     },
     {
       "url": "/Content/Integer-Number-Set/",
-      "title": "Integer Number Set"
+      "title": "integer number set"
     },
     {
       "url": "/Content/Natural-Number-Set/",
-      "title": "Natural Number Set"
+      "title": "natural number set"
     },
     {
       "url": "/Content/Rational-Number-(Set-Theory)/",
-      "title": "Rational Number"
+      "title": "rational number"
     },
     {
       "url": "/Content/Real-Number-Set/",
-      "title": "Real Number"
+      "title": "real number"
     },
     {
       "url": "/Content/Sets-of-Numbers/",
-      "title": "Sets of Numbers"
+      "title": "sets of numbers"
     },
     {
       "url": "/Content/Whole-Number-Set/",
-      "title": "Whole Number Set"
+      "title": "whole number set"
     },
     {
       "url": "/Content/Geometry/",
-      "title": "Geometry"
+      "title": "geometry"
     },
     {
       "url": "/Content/Analytic-Geometry/",
-      "title": "Analytic Geometry"
+      "title": "analytic geometry"
     },
     {
       "url": "/Content/Coordinate-System-(Analytic-Geometry)/",
-      "title": "Coordinate System"
+      "title": "coordinate system"
     },
     {
       "url": "/Content/Point-(Analytic-Geometry)/",
-      "title": "Point (Analytic Geometry)"
+      "title": "point analytic geometry"
     },
     {
       "url": "/Content/Slope-(Analytic-Geometry)/",
-      "title": "Slope (Analytic Geometry)"
+      "title": "slope analytic geometry"
     },
     {
       "url": "/Content/Circle-(Analytic-Geometry)/",
-      "title": "Circle (Analytic Geometry)"
+      "title": "circle analytic geometry"
     },
     {
       "url": "/Content/Conic-Section/",
-      "title": "Conic Section"
+      "title": "conic section"
     },
     {
       "url": "/Content/Ellipse-(Analytic-Geometry)/",
-      "title": "Ellipse"
+      "title": "ellipse"
     },
     {
       "url": "/Content/HorizontalParabola-(Analytic-Geometry)/",
-      "title": "Horizontal Parabola"
+      "title": "horizontal parabola"
     },
     {
       "url": "/Content/Parabola-(Analytic-Geometry)/",
-      "title": "Parabola"
+      "title": "parabola"
     },
     {
       "url": "/Content/Parabola-General-Form/",
-      "title": "Parabola General Form"
+      "title": "parabola general form"
     },
     {
       "url": "/Content/Line-(Analytic-Geometry)/",
-      "title": "Line (Analytic Geometry)"
+      "title": "line analytic geometry"
     },
     {
       "url": "/Content/Point-slope-form-(Line)/",
-      "title": "point-slope form (Line)"
+      "title": "pointslope form line"
     },
     {
       "url": "/Content/Slope-intercept-form-(Line)/",
-      "title": "Slope-intercept form (Line)"
+      "title": "slopeintercept form line"
     },
     {
       "url": "/Content/Standard-Form-(Line)/",
-      "title": "Standard Form (Line)"
+      "title": "standard form line"
     },
     {
       "url": "/Content/Two-Point-Form-(Line)/",
-      "title": "Two-Point Form (Line)"
+      "title": "twopoint form line"
     },
     {
       "url": "/Content/Angle-(Euclidean-Geometry)/",
-      "title": "Angle (Euclidean Geometry)"
+      "title": "angle euclidean geometry"
     },
     {
       "url": "/Content/Euclidean-Geometry/",
-      "title": "Euclidean Geometry"
+      "title": "euclidean geometry"
     },
     {
       "url": "/Content/Line-(Euclidean-Geometry)/",
-      "title": "Line (Euclidean Geometry)"
+      "title": "line euclidean geometry"
     },
     {
       "url": "/Content/Pythagorean-Theorem/",
-      "title": "Pythagorean Theorem"
+      "title": "pythagorean theorem"
     },
     {
       "url": "/Content/Area-(Plane-Geometry)/",
-      "title": "Area (Geometry)"
+      "title": "area geometry"
     },
     {
       "url": "/Content/Circle-(Euclidean-Geometry)/",
-      "title": "Circle (Euclidean Geometry)"
+      "title": "circle euclidean geometry"
     },
     {
       "url": "/Content/Formulary-(Plane-Geometry)/",
-      "title": "Formulary (Plane Geometry)"
+      "title": "formulary plane geometry"
     },
     {
       "url": "/Content/Perimeter-(Geometry)/",
-      "title": "Perimeter (Geometry)"
+      "title": "perimeter geometry"
     },
     {
       "url": "/Content/Plane-Geometry/",
-      "title": "Plane Geometry"
+      "title": "plane geometry"
     },
     {
       "url": "/Content/Right-Triangle/",
-      "title": "Right Triangle"
+      "title": "right triangle"
     },
     {
       "url": "/Content/Surface-(Plane-Geometry)/",
-      "title": "Surface (Plane Geometry)"
+      "title": "surface plane geometry"
     },
     {
       "url": "/Content/Triangle/",
-      "title": "Triangle"
+      "title": "triangle"
     },
     {
       "url": "/Content/Solid-Geometry/",
-      "title": "Solid Geometry"
+      "title": "solid geometry"
     },
     {
       "url": "/Content/Surface-Area-(Solid-Geometry)/",
-      "title": "Surface Area (Solid Geometry)"
+      "title": "surface area solid geometry"
     },
     {
       "url": "/Content/Angle-(Trigonometry)/",
-      "title": "Angle (Trigonometry)"
+      "title": "angle trigonometry"
     },
     {
       "url": "/Content/Trigonometry/",
-      "title": "Trigonometry"
+      "title": "trigonometry"
     },
     {
       "url": "/Content/Cosine-(Trigonometry)/",
-      "title": "Cosine (Trigonometry)"
+      "title": "cosine trigonometry"
     },
     {
       "url": "/Content/Sine-(Trigonometry)/",
-      "title": "Sine (Trigonometry)"
+      "title": "sine trigonometry"
     },
     {
       "url": "/Content/Tangent-(Trigonometry)/",
-      "title": "Tangent (Trigonometry)"
+      "title": "tangent trigonometry"
     },
     {
       "url": "/Content/Trigonometric-Function/",
-      "title": "Trigonometric Function"
+      "title": "trigonometric function"
     },
     {
       "url": "/Content/Angle-Addition-and-Subtraction-Formulas/",
-      "title": "Angle Addition and Subtraction Formulas"
+      "title": "angle addition and subtraction formulas"
     },
     {
       "url": "/Content/Law-of-Cosines/",
-      "title": "Law of Cosines"
+      "title": "law of cosines"
     },
     {
       "url": "/Content/Law-of-Sines/",
-      "title": "Law of Sines"
+      "title": "law of sines"
     },
     {
       "url": "/Content/Theorems-(Trigonometry)/",
-      "title": "Theorems (Trigonometry)"
+      "title": "theorems trigonometry"
+    },
+    {
+      "url": "/Content/Pythagoras/",
+      "title": "pythagoras"
     },
     {
       "url": "/Content/Probability/",
-      "title": "Probability (Math)"
+      "title": "probability math"
     },
     {
       "url": "/Content/Binomial-Coefficient-(Combinatorics)/",
-      "title": "Binomial Coefficient"
+      "title": "binomial coefficient"
     },
     {
       "url": "/Content/Combination-(Combinatorics)/",
-      "title": "Combination (Combinatorics)"
+      "title": "combination combinatorics"
     },
     {
       "url": "/Content/Combinatorics/",
-      "title": "Combinatorics"
+      "title": "combinatorics"
     },
     {
       "url": "/Content/Disposition-(Combinatorics)/",
-      "title": "Disposition (Combinatorics)"
+      "title": "disposition combinatorics"
     },
     {
       "url": "/Content/Factorial-(Combinatorics)/",
-      "title": "Factorial (Combinatorics)"
+      "title": "factorial combinatorics"
     },
     {
       "url": "/Content/Permutation-(Combinatorics)/",
-      "title": "Permutation (Combinatorics)"
+      "title": "permutation combinatorics"
     },
     {
       "url": "/Content/Physics/",
-      "title": "Physics"
+      "title": "physics"
     },
     {
       "url": "/Content/Classical-Physics/",
-      "title": "Classical Physics"
+      "title": "classical physics"
     },
     {
       "url": "/Content/Classical-Mechanics/",
-      "title": "Classical Mechanics"
+      "title": "classical mechanics"
     },
     {
       "url": "/Content/Dynamics/",
-      "title": "Dynamics"
+      "title": "dynamics"
     },
     {
       "url": "/Content/Principles-of-Dynamics/",
-      "title": "Principles of Dynamics"
+      "title": "principles of dynamics"
     },
     {
       "url": "/Content/Fluid-Mechanics/",
-      "title": "Fluid Mechanics"
+      "title": "fluid mechanics"
     },
     {
       "url": "/Content/Fluid/",
-      "title": "Fluid"
+      "title": "fluid"
     },
     {
       "url": "/Content/Bernoulli's-Principle/",
-      "title": "Bernoulli's Principle"
+      "title": "bernoullis principle"
     },
     {
       "url": "/Content/Fluid-Dynamics/",
-      "title": "Fluid Dynamics"
+      "title": "fluid dynamics"
     },
     {
       "url": "/Content/Viscosity/",
-      "title": "Viscosity and Shear Stress "
+      "title": "viscosity and shear stress "
     },
     {
       "url": "/Content/Vortex/",
-      "title": "Vortex"
+      "title": "vortex"
     },
     {
       "url": "/Content/Archimedes'-Principle/",
-      "title": "Archimedes' Principle"
+      "title": "archimedes principle"
     },
     {
       "url": "/Content/Communicating-Vessels/",
-      "title": "Communicating Vessels"
+      "title": "communicating vessels"
     },
     {
       "url": "/Content/Fluid-Statics/",
-      "title": "Fluid Statics"
+      "title": "fluid statics"
     },
     {
       "url": "/Content/Hydrostatic-Pressure/",
-      "title": "Hydrostatics Pressure"
+      "title": "hydrostatics pressure"
     },
     {
       "url": "/Content/Pascal's-Principle/",
-      "title": "Pascal's Principle"
+      "title": "pascals principle"
     },
     {
       "url": "/Content/Acceleration/",
-      "title": "Acceleration"
+      "title": "acceleration"
     },
     {
       "url": "/Content/Angular-Acceleration/",
-      "title": "Angular Acceleration"
+      "title": "angular acceleration"
     },
     {
       "url": "/Content/Angular-Velocity/",
-      "title": "Angular Velocity"
+      "title": "angular velocity"
     },
     {
       "url": "/Content/Circular-Motion/",
-      "title": "Circular Motion"
+      "title": "circular motion"
     },
     {
       "url": "/Content/Kinematics/",
-      "title": "Kinematics"
+      "title": "kinematics"
     },
     {
       "url": "/Content/Parabolic-Motion/",
-      "title": "Parabolic Motion"
+      "title": "parabolic motion"
     },
     {
       "url": "/Content/Simple-Harmonic-Motion/",
-      "title": "Simple Harmonic Motion"
+      "title": "simple harmonic motion"
     },
     {
       "url": "/Content/Speed/",
-      "title": "Speed"
+      "title": "speed"
     },
     {
       "url": "/Content/Uniform-Circular-Motion/",
-      "title": "Uniform Circular Motion"
+      "title": "uniform circular motion"
     },
     {
       "url": "/Content/Uniform-Linear-Motion/",
-      "title": "Uniform linear motion"
+      "title": "uniform linear motion"
     },
     {
       "url": "/Content/Uniformly-Accelerated-Circular-Motion/",
-      "title": "Uniformly Accelerated Circular Motion"
+      "title": "uniformly accelerated circular motion"
     },
     {
       "url": "/Content/Uniformly-Accelerated-Linear-Motion/",
-      "title": "Uniformly Accelerated Linear Motion"
+      "title": "uniformly accelerated linear motion"
     },
     {
       "url": "/Content/Velocity/",
-      "title": "Velocity"
+      "title": "velocity"
     },
     {
       "url": "/Content/Escape-Velocity/",
-      "title": "Escape Velocity"
+      "title": "escape velocity"
     },
     {
       "url": "/Content/Gravitational-Acceleration/",
-      "title": "Gravitational Acceleration"
+      "title": "gravitational acceleration"
     },
     {
       "url": "/Content/Gravitational-Constant/",
-      "title": "Gravitational Constant"
+      "title": "gravitational constant"
     },
     {
       "url": "/Content/Gravitational-Field/",
-      "title": "Gravitational Field"
+      "title": "gravitational field"
     },
     {
       "url": "/Content/Kepler-Laws/",
-      "title": "Kepler's Laws"
+      "title": "keplers laws"
     },
     {
       "url": "/Content/Newtonian-Gravitation/",
-      "title": "Newtonian Gravitation"
+      "title": "newtonian gravitation"
     },
     {
       "url": "/Content/Universal-Gravitation-Force/",
-      "title": "Universal Gravitation Force"
+      "title": "universal gravitation force"
     },
     {
       "url": "/Content/Statics-(Physics)/",
-      "title": "Statics (Physics)"
+      "title": "statics physics"
     },
     {
       "url": "/Content/Electromagnetism/",
-      "title": "Electromagnetism"
+      "title": "electromagnetism"
     },
     {
       "url": "/Content/Capacitance/",
-      "title": "Capacitance"
+      "title": "capacitance"
     },
     {
       "url": "/Content/Charge-Density/",
-      "title": "Charge Density"
+      "title": "charge density"
     },
     {
       "url": "/Content/Electric-Charge/",
-      "title": "Electric Charge"
+      "title": "electric charge"
     },
     {
       "url": "/Content/Electric-Conductivity/",
-      "title": "Electric Conductivity"
+      "title": "electric conductivity"
     },
     {
       "url": "/Content/Electric-Current-Density/",
-      "title": "Electric Current Density"
+      "title": "electric current density"
     },
     {
       "url": "/Content/Electric-Current/",
-      "title": "Electric Current"
+      "title": "electric current"
     },
     {
       "url": "/Content/Electric-Field/",
-      "title": "Electric Field"
+      "title": "electric field"
     },
     {
       "url": "/Content/Electric-Flux/",
-      "title": "Electric Flux"
+      "title": "electric flux"
     },
     {
       "url": "/Content/Electric-Potential-Energy/",
-      "title": "Electric Potential Energy"
+      "title": "electric potential energy"
     },
     {
       "url": "/Content/Electric-Potential/",
-      "title": "Electric Potential"
+      "title": "electric potential"
     },
     {
       "url": "/Content/Electric-Resistivity/",
-      "title": "Electric Resistivity"
+      "title": "electric resistivity"
     },
     {
       "url": "/Content/Electrical-Resistance/",
-      "title": "Electrical Resistance"
+      "title": "electrical resistance"
     },
     {
       "url": "/Content/Electronics/",
-      "title": "Electronics"
+      "title": "electronics"
     },
     {
       "url": "/Content/Electrostatic-Force/",
-      "title": "Electrostatic Force"
+      "title": "electrostatic force"
+    },
+    {
+      "url": "/Content/Ohm's-Law/",
+      "title": "ohms law"
     },
     {
       "url": "/Content/Permittivity/",
-      "title": "Permittivity"
+      "title": "permittivity"
+    },
+    {
+      "url": "/Content/Voltage/",
+      "title": "voltage"
     },
     {
       "url": "/Content/Work-of-the-Electric-Force/",
-      "title": "Work of the Electric Force"
+      "title": "work of the electric force"
     },
     {
       "url": "/Content/Electric-Field-of-a-Sphere/",
-      "title": "Electric Field of a Sphere"
+      "title": "electric field of a sphere"
     },
     {
       "url": "/Content/Optics/",
-      "title": "Optics"
+      "title": "optics"
     },
     {
       "url": "/Content/Equilibrium-Temperature/",
-      "title": "Equilibrium Temperature"
+      "title": "equilibrium temperature"
     },
     {
       "url": "/Content/Heat-Capacity/",
-      "title": "Heat Capacity"
+      "title": "heat capacity"
     },
     {
       "url": "/Content/Heat/",
-      "title": "Heat"
+      "title": "heat"
     },
     {
       "url": "/Content/Latent-Heat/",
-      "title": "Latent Heat"
+      "title": "latent heat"
     },
     {
       "url": "/Content/Molar-Specific-Heat-Capacity/",
-      "title": "Molar Specific Heat Capacity"
+      "title": "molar specific heat capacity"
     },
     {
       "url": "/Content/Specific-Heat/",
-      "title": "Specific Heat"
+      "title": "specific heat"
     },
     {
       "url": "/Content/Thermal-Expansion/",
-      "title": "Thermal expansion"
+      "title": "thermal expansion"
     },
     {
       "url": "/Content/Thermodynamics/",
-      "title": "Thermodynamics"
+      "title": "thermodynamics"
     },
     {
       "url": "/Content/Gas-(Physics)/",
-      "title": "Gas (Physics)"
+      "title": "gas physics"
     },
     {
       "url": "/Content/Ideal-Gas-Law/",
-      "title": "Ideal Gas Law"
+      "title": "ideal gas law"
     },
     {
       "url": "/Content/Ideal-Gas/",
-      "title": "Ideal Gas"
+      "title": "ideal gas"
     },
     {
       "url": "/Content/Convection-(Heat-Transfer)/",
-      "title": "Convection"
+      "title": "convection"
     },
     {
       "url": "/Content/Heat-Transfer/",
-      "title": "Heat Transfer"
+      "title": "heat transfer"
     },
     {
       "url": "/Content/Thermal-Conduction/",
-      "title": "Thermal Conduction"
+      "title": "thermal conduction"
     },
     {
       "url": "/Content/Thermal-Conductivity/",
-      "title": "Thermal Conductivity"
+      "title": "thermal conductivity"
     },
     {
       "url": "/Content/Thermal-Radiation/",
-      "title": "Thermal Radiation"
+      "title": "thermal radiation"
     },
     {
       "url": "/Content/Phase-Diagram/",
-      "title": "Phase Diagram"
+      "title": "phase diagram"
     },
     {
       "url": "/Content/Phase-Transition/",
-      "title": "Phase Transition"
+      "title": "phase transition"
     },
     {
       "url": "/Content/State-of-Matter/",
-      "title": "State of Matter"
+      "title": "state of matter"
     },
     {
       "url": "/Content/Isobaric-Transformation/",
-      "title": "Isobaric Transformation"
+      "title": "isobaric transformation"
     },
     {
       "url": "/Content/Isochoric-Transformation/",
-      "title": "Isochoric Transformation"
+      "title": "isochoric transformation"
     },
     {
       "url": "/Content/Isothermal-Transformation/",
-      "title": "Isothermal Transformation"
+      "title": "isothermal transformation"
     },
     {
       "url": "/Content/Thermodynamic-Transformation/",
-      "title": "Thermodynamic Transformation"
+      "title": "thermodynamic transformation"
+    },
+    {
+      "url": "/Content/Galileo-Galilei/",
+      "title": "galileo galilei"
+    },
+    {
+      "url": "/Content/Isaac-Newton/",
+      "title": "isaac newton"
     },
     {
       "url": "/Content/Angular-Momentum/",
-      "title": "Angular Momentum"
+      "title": "angular momentum"
     },
     {
       "url": "/Content/Density-(Physics)/",
-      "title": "Density (Physics)"
+      "title": "density physics"
     },
     {
       "url": "/Content/Extensive-and-Intensive-Quantity/",
-      "title": "Extensive and Intensive Quantity"
+      "title": "extensive and intensive quantity"
     },
     {
       "url": "/Content/Impulse-(Physics)/",
-      "title": "Impulse (Physics)"
+      "title": "impulse physics"
     },
     {
       "url": "/Content/Linear-Momentum/",
-      "title": "Linear Momentum"
+      "title": "linear momentum"
     },
     {
       "url": "/Content/Moment-Of-Inertia/",
-      "title": "Moment of Inertia"
+      "title": "moment of inertia"
     },
     {
       "url": "/Content/Number-of-Mole/",
-      "title": "Number of Mole"
+      "title": "number of mole"
     },
     {
       "url": "/Content/Physical-Quantity/",
-      "title": "Physical Quantity"
+      "title": "physical quantity"
     },
     {
       "url": "/Content/Power-(Physics)/",
-      "title": "Power (Physics)"
+      "title": "power physics"
     },
     {
       "url": "/Content/Rotational-Kinetic-Energy/",
-      "title": "Rotational Kinetic Energy"
+      "title": "rotational kinetic energy"
     },
     {
       "url": "/Content/Rotational-Work/",
-      "title": "Rotational Work"
+      "title": "rotational work"
     },
     {
       "url": "/Content/Temperature/",
-      "title": "Temperature"
+      "title": "temperature"
     },
     {
       "url": "/Content/Time-(Physics)/",
-      "title": "Time (Physics)"
+      "title": "time physics"
     },
     {
       "url": "/Content/Torque-(Physics)/",
-      "title": "Torque (Physics)"
+      "title": "torque physics"
     },
     {
       "url": "/Content/Work-(Physics)/",
-      "title": "Work (Physics)"
+      "title": "work physics"
     },
     {
       "url": "/Content/Energy-(Physics)/",
-      "title": "Energy (Physics)"
+      "title": "energy physics"
     },
     {
       "url": "/Content/Kinetic-Energy/",
-      "title": "Kinetic Energy"
+      "title": "kinetic energy"
     },
     {
       "url": "/Content/Mechanical-Energy/",
-      "title": "Mechanical Energy"
+      "title": "mechanical energy"
     },
     {
       "url": "/Content/Potential-Energy/",
-      "title": "Potential Energy"
+      "title": "potential energy"
     },
     {
       "url": "/Content/Atmospheric-Pressure/",
-      "title": "Atmospheric Pressure"
+      "title": "atmospheric pressure"
     },
     {
       "url": "/Content/Central-Force/",
-      "title": "Central Force"
+      "title": "central force"
     },
     {
       "url": "/Content/Centripetal-Force/",
-      "title": "Centripetal Force"
+      "title": "centripetal force"
     },
     {
       "url": "/Content/Conservative-Force/",
-      "title": "Conservative Force"
+      "title": "conservative force"
     },
     {
       "url": "/Content/Fictitious-Force/",
-      "title": "Fictitious Force"
+      "title": "fictitious force"
     },
     {
       "url": "/Content/Force-(Physics)/",
-      "title": "Force (Physics)"
+      "title": "force physics"
     },
     {
       "url": "/Content/Hooke's-Law/",
-      "title": "Hooke's Law"
+      "title": "hookes law"
     },
     {
       "url": "/Content/Pressure/",
-      "title": "Pressure"
+      "title": "pressure"
     },
     {
       "url": "/Content/Tension-(Physics)/",
-      "title": "Tension (Physics)"
+      "title": "tension physics"
     },
     {
       "url": "/Content/Weight-(Force)/",
-      "title": "Weight (Force)"
+      "title": "weight force"
     },
     {
       "url": "/Content/Dry-Friction/",
-      "title": "Dry Friction"
+      "title": "dry friction"
     },
     {
       "url": "/Content/Friction-(Force)/",
-      "title": "Friction"
+      "title": "friction"
     },
     {
       "url": "/Content/Gravitational-Mass/",
-      "title": "Gravitational Mass"
+      "title": "gravitational mass"
     },
     {
       "url": "/Content/Inertial-Mass/",
-      "title": "Inertial Mass"
+      "title": "inertial mass"
     },
     {
       "url": "/Content/Mass/",
-      "title": "Mass (Physics)"
+      "title": "mass physics"
     },
     {
       "url": "/Content/Avogadro-Constant/",
-      "title": "Avogadro Constant"
+      "title": "avogadro constant"
     },
     {
       "url": "/Content/Boltzmann-Constant/",
-      "title": "Boltzmann constant"
+      "title": "boltzmann constant"
     },
     {
       "url": "/Content/Coulomb's-Constant/",
-      "title": "Coulomb's Constant"
+      "title": "coulombs constant"
     },
     {
       "url": "/Content/Elementary-Charge/",
-      "title": "Elementary Charge"
+      "title": "elementary charge"
     },
     {
       "url": "/Content/Physical-Constant/",
-      "title": "Physical Constant"
+      "title": "physical constant"
     },
     {
       "url": "/Content/Universal-Gas-Constant/",
-      "title": "Universal Gas Constant"
+      "title": "universal gas constant"
     },
     {
       "url": "/Content/Center-of-Mass/",
-      "title": "Center of Mass"
+      "title": "center of mass"
     },
     {
       "url": "/Content/Degree-of-Freedom-(Physical-System)/",
-      "title": "Degree of Freedom (Physical System)"
+      "title": "degree of freedom physical system"
     },
     {
       "url": "/Content/Isolated-System/",
-      "title": "Isolated System"
+      "title": "isolated system"
     },
     {
       "url": "/Content/Material-Point-(Physics)/",
-      "title": "Material Point (Physics)"
+      "title": "material point physics"
     },
     {
       "url": "/Content/Physical-System/",
-      "title": "Physical System"
+      "title": "physical system"
     },
     {
       "url": "/Content/Rigid-Body/",
-      "title": "Rigid Body"
+      "title": "rigid body"
     },
     {
       "url": "/Content/Galilean-Relativity/",
-      "title": "Galilean Relativity"
+      "title": "galilean relativity"
     },
     {
       "url": "/Content/Galilean-Transformation/",
-      "title": "Galilean Transformation"
+      "title": "galilean transformation"
     },
     {
       "url": "/Content/Velocity-Addition-in-Galilean-Relativity/",
-      "title": "Velocity Addition in Galilean Relativity"
+      "title": "velocity addition in galilean relativity"
     },
     {
       "url": "/Content/Superposition-Principle/",
-      "title": "Superposition Principle"
+      "title": "superposition principle"
+    },
+    {
+      "url": "/Content/Character-Creation/",
+      "title": "character creation"
     },
     {
       "url": "/Content/Projects/",
-      "title": "Projects"
+      "title": "projects"
+    },
+    {
+      "url": "/Content/Quiz-Builder/",
+      "title": "sqlite quiz editor"
     },
     {
       "url": "/Content/Fifteen-Puzzle-(JavaScript)/",
-      "title": "15 Puzzle (JavaScript)"
+      "title": "15 puzzle javascript"
     },
     {
       "url": "/Content/Fifteen-Puzzle-(React)/",
-      "title": "Fifteen Puzzle (React)"
+      "title": "fifteen puzzle react"
     },
     {
       "url": "/Content/Local-AI-Chatbot/",
-      "title": "Local AI Chatbot"
+      "title": "local ai chatbot"
     }
   ]
 }

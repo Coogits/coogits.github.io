@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Logical Model (Database)</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Software/">Software</a> &gt; <a href="/Content/Programming/">Programming</a> &gt; <a href="/Content/Database/">Database</a> &gt; <a href="/Content/Database-Model/">Model</a></p>
+<div class="header-block h1">
+<h1 id="logical-model--database">Logical Model (Database)</h1>
+<p>The <strong>Logical Model</strong> defines <strong>how data is structured, related, and constrained</strong> while remaining <strong>independent of a specific database management system (DBMS)</strong>. It serves as an intermediary step between the <strong>Conceptual Model</strong> and the <strong>Physical Model</strong>, ensuring that data is logically organized before being implemented in a specific system.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="key-characteristics">Key Characteristics</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="data-structure-definition">Data Structure Definition</h4><div class="header-button"></div></div>
+<ul>
+<li>Identifies <strong>entities</strong> (real-world objects/concepts).</li>
+<li>Specifies <strong>attributes</strong> (properties of entities).</li>
+<li>Assigns <strong>primary keys (PK)</strong> to uniquely identify records.</li>
+<li>Defines <strong>foreign keys (FK)</strong> to enforce relationships between entities.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="relationship-representation">Relationship Representation</h4><div class="header-button"></div></div>
+<p>Establishes relationships between entities:</p>
+<ul>
+<li><strong>One-to-One (1:1)</strong> – Each entity instance relates to a single instance of another entity.</li>
+<li><strong>One-to-Many (1:M)</strong> – A single entity instance can relate to multiple instances of another entity.</li>
+<li><strong>Many-to-Many (M:N)</strong> – Multiple instances of one entity relate to multiple instances of another entity.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="normalization">Normalization</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Removes redundancy</strong> by organizing data into separate tables.</li>
+<li><strong>Follows normalization rules</strong> (1NF, 2NF, 3NF, BCNF) to ensure data integrity.</li>
+<li>Avoids unnecessary duplication of data.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="constraints--amp--integrity-rules">Constraints &amp; Integrity Rules</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Entity Integrity</strong> – Each table must have a unique <strong>primary key</strong>.</li>
+<li><strong>Referential Integrity</strong> – Foreign keys must reference valid primary keys.</li>
+<li><strong>Domain Constraints</strong> – Attributes must contain valid values (e.g., price must be positive).</li>
+<li><strong>Business Rules</strong> – Custom constraints based on real-world logic.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="relational-schema-diagram">Relational Schema Diagram</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="plain-text">Plain Text</h4><div class="header-button"></div></div>
+<pre><code class="language-scss">CUSTOMER (CustomerID PK, Name, Email, PhoneNumber)
+ORDER (OrderID PK, OrderDate, CustomerID FK)
+PRODUCT (ProductID PK, Name, Price, Category)
+ORDER_DETAILS (OrderID FK, ProductID FK, Quantity, Subtotal)
+</code></pre>
+<p><strong>Relationships</strong>:</p>
+<ul>
+<li><code>CustomerID</code> in <strong>ORDER</strong> references <code>CustomerID</code> in <strong>CUSTOMER</strong> (1:M relationship).</li>
+<li><code>OrderID</code> in <strong>ORDER_DETAILS</strong> references <code>OrderID</code> in <strong>ORDER</strong> (M:1 relationship).</li>
+<li><code>ProductID</code> in <strong>ORDER_DETAILS</strong> references <code>ProductID</code> in <strong>PRODUCT</strong> (M:1 relationship).</li>
+<li><strong>ORDER_DETAILS</strong> serves as a junction table for the <strong>M:N</strong> relationship between <strong>ORDER</strong> and <strong>PRODUCT</strong>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="erd">ERD</h4><div class="header-button"></div></div>
+<pre><code class="language-scss">+------------+    +------------+    +-------------+    +--------------+
+|  CUSTOMER  |    |   ORDER    |    |   PRODUCT   |    | ORDER_DETAILS|
++------------+    +------------+    +-------------+    +--------------+
+| CustomerID |◄─┐ | OrderID    |    | ProductID   |    | OrderID      |
+| Name       |  └─| OrderDate  |    | Name        |    | ProductID    |
+| Email      |    | CustomerID |─┐  | Price       |    | Quantity     |
+| PhoneNumber|    +------------+ └─►| Category    |    | Subtotal     |
++------------+                      +-------------+    +--------------+
+
+</code></pre>
+
+</div>
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#logical-model--database">Logical Model (Database)</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-characteristics">Key Characteristics</a></li>
+<ul>
+<li class="toc-level-4"><a href="#data-structure-definition">Data Structure Definition</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#relationship-representation">Relationship Representation</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#normalization">Normalization</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#constraints--amp--integrity-rules">Constraints &amp; Integrity Rules</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#relational-schema-diagram">Relational Schema Diagram</a></li>
+<ul>
+<li class="toc-level-4"><a href="#plain-text">Plain Text</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#erd">ERD</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

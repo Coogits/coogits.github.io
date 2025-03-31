@@ -2,24 +2,21 @@
 <html>
     <head>
         <title>Electric Charge</title>
-        <meta charset="UTF-8">
         
         <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
-        <script>
-            MathJax = {
-                tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-                }
-            };
-        </script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
         <script id="Prism-script" async src="/system/prism.js"></script>
         <link href="/system/prism.css" rel="stylesheet" />
         
-        <script type="module" src="/system/mermaid-setup.js"></script>
-        
+        <script type="text/javascript" src="/system/timeline.js"></script>
         <script src="/system/search.js"></script>
         <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
 
         <link rel="stylesheet" href="/system/pygments.css">
         <link rel="stylesheet" href="/system/styles.css"> 
@@ -86,12 +83,11 @@
         </div>
         <ul id="searchResults"></ul>
         <div class="mdBody">
-<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Classical-Physics/">Classical Physics</a> &gt; <a href="/Content/Electromagnetism/">Electromagnetism</a> &gt; <a href="/Content/Electronics/">Electronics</a> &gt;</p>
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Classical-Physics/">Classical Physics</a> &gt; <a href="/Content/Electromagnetism/">Electromagnetism</a> &gt; <a href="/Content/Electronics/">Electronics</a></p>
 <div class="header-block h1">
 <h1 id="electric-charge">Electric Charge</h1>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/VFPt_charges_plus_minus_thumb.svg" style="width: 250px; float: right; margin-left: 10px;" /><strong>Electric Charge</strong> is a fundamental property of matter that quantifies the ability of particles to exert and experience electromagnetic forces. It is essential for understanding the behavior of charged particles and the interactions between them.
 <br clear="both" /></p>
-<hr />
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
 <div class="header-h3"><h3 id="symbols">Symbols</h3><div class="header-button"></div></div>
 <ul>
@@ -115,7 +111,6 @@
 <li>$e\quad$ <a href="/Content/Elementary-Charge/">Elementary Charge</a> (unit: Coulombs (C))</li>
 <li>$\sum\quad$ <a href="/Content/Summation-(Arithmetic)/">Summation (Arithmetic)</a>.</li>
 </ul>
-<hr />
 </div>
 <div class="header-block h3">
 <div class="header-h3"><h3 id="formulas">Formulas</h3><div class="header-button"></div></div>
@@ -125,7 +120,6 @@ indicates that the total charge transferred is the product of the current and th
 <li><strong>Elementary Charge</strong>:<br />
 The elementary charge (<strong>e</strong>) is the smallest unit of charge that exists independently and is carried by fundamental particles such as protons and electrons: $$e=1.602\,176\,634\times10^{-19}\;C$$</li>
 </ul>
-<hr />
 </div>
 <div class="header-block h3">
 <div class="header-h3"><h3 id="properties">Properties</h3><div class="header-button"></div></div>
@@ -145,8 +139,6 @@ The total electric charge is the sum of all the electric charges in the system: 
 Electric Charge is quantized, meaning that any observable charge <strong>Q</strong> is an integer multiple of the <a href="/Content/Elementary-Charge/">Elementary Charge</a>: $$Q=ne\qquad n\in\mathbb{Z}$$</p>
 </li>
 </ul>
-<hr />
-<hr />
 
 </div>
 </div>

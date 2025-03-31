@@ -2,24 +2,21 @@
 <html>
     <head>
         <title>Coogits</title>
-        <meta charset="UTF-8">
         
         <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
-        <script>
-            MathJax = {
-                tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-                }
-            };
-        </script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
         <script id="Prism-script" async src="/system/prism.js"></script>
         <link href="/system/prism.css" rel="stylesheet" />
         
-        <script type="module" src="/system/mermaid-setup.js"></script>
-        
+        <script type="text/javascript" src="/system/timeline.js"></script>
         <script src="/system/search.js"></script>
         <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
 
         <link rel="stylesheet" href="/system/pygments.css">
         <link rel="stylesheet" href="/system/styles.css"> 
@@ -156,6 +153,10 @@ mindmap
 				:::internal-link
 			Database
 			:::internal-link
+		Electrotechnics
+		:::internal-link
+		History
+		:::internal-link
 </div>
 </div>
 <div class="header-block h3">
@@ -231,8 +232,13 @@ mindmap
 <li><a href="/Content/Classical-Mechanics/">Classical Mechanics</a></li>
 <li><a href="/Content/Thermodynamics/">Thermodynamics</a></li>
 <li><a href="/Content/Newtonian-Gravitation/">Newtonian Gravitation</a></li>
+<li><a href="/Content/Electromagnetism/">Electromagnetism</a></li>
 </ul>
 </div>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="electrotechnics"><a href="/Content/Electrotechnics/">Electrotechnics</a></h4><div class="header-button"></div></div>
+<p>The study of electrical and electronic systems, circuits, and devices.</p>
 </div>
 <div class="header-block h4">
 <div class="header-h4"><h4 id="computer-science"><a href="/Content/Computer-Science/">Computer Science</a></h4><div class="header-button"></div></div>
@@ -248,11 +254,26 @@ mindmap
 <div class="header-block h5">
 <h5 id="software"><a href="/Content/Software/">Software</a></h5>
 <p>Learn about programming and operating systems.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+// main function
+int main() {
+    std::cout &lt;&lt; &quot;Hello, World!&quot; &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
 <ul>
 <li><a href="/Content/Programming/">Programming</a></li>
 <li><a href="/Content/Operating-System/">Operating System</a></li>
 </ul>
 </div>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="history"><a href="/Content/History/">History</a></h3><div class="header-button"></div></div>
+<p>The study of past events, civilizations, and technological progress.</p>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="timeline">Timeline</h4><div class="header-button"></div></div>
+<div id="timeline-container" data-start="-4000" data-end="2025" ></div>
 </div>
 </div>
 <div class="header-block h3">
@@ -313,6 +334,9 @@ mindmap
 </ul>
 </ul>
 <ul>
+<li class="toc-level-4"><a href="#electrotechnics">Electrotechnics</a></li>
+</ul>
+<ul>
 <li class="toc-level-4"><a href="#computer-science">Computer Science</a></li>
 <ul>
 <li class="toc-level-5"><a href="#hardware">Hardware</a></li>
@@ -320,6 +344,12 @@ mindmap
 <ul>
 <li class="toc-level-5"><a href="#software">Software</a></li>
 </ul>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#history">History</a></li>
+<ul>
+<li class="toc-level-4"><a href="#timeline">Timeline</a></li>
 </ul>
 </ul>
 <ul>

@@ -1,0 +1,476 @@
+{
+  "history": [
+    {
+      "url": "/Content/Ancient-History/",
+      "id": "Ancient History",
+      "title": "Ancient History",
+      "group": "era-0",
+      "start": -3000,
+      "end": 476
+    },
+    {
+      "url": "/Content/Bronze-Age/",
+      "id": "Bronze Age",
+      "title": "Bronze Age",
+      "group": "era-1",
+      "start": -3000,
+      "end": -1200
+    },
+    {
+      "url": "/Content/Iron-Age/",
+      "id": "Iron Age",
+      "title": "Iron Age",
+      "group": "era-1",
+      "start": -1200,
+      "end": -500
+    },
+    {
+      "url": "/Content/Persian-Civilization/",
+      "id": "Persian Civilization",
+      "title": "Persian Civilization",
+      "group": "Mesopotamia",
+      "start": -550,
+      "end": -331
+    },
+    {
+      "url": "/Content/Sumer/",
+      "id": "Sumer",
+      "title": "Sumer",
+      "group": "Mesopotamia",
+      "start": -3350,
+      "end": -1800
+    },
+    {
+      "url": "/Content/Ancient-Egypt/",
+      "id": "Ancient Egypt",
+      "title": "Ancient Egypt",
+      "group": "\"null\"",
+      "start": -5500,
+      "end": 641
+    },
+    {
+      "url": "/Content/Early-Dynastic-Period-of-Egypt/",
+      "id": "Early Dynastic Period of Egypt",
+      "title": "Early Dynastic Period of Egypt",
+      "group": "Ancient Egypt",
+      "start": -3100,
+      "end": -2686
+    },
+    {
+      "url": "/Content/First-Intermediate-Period-of-Egypt/",
+      "id": "First Intermediate Period of Egypt",
+      "title": "First Intermediate Period of Egypt",
+      "group": "Ancient Egypt",
+      "start": -2181,
+      "end": -2055
+    },
+    {
+      "url": "/Content/Late-Period-of-Egypt/",
+      "id": "Late Period of Egypt",
+      "title": "Late Period of Egypt",
+      "group": "Ancient Egypt",
+      "start": -664,
+      "end": -332
+    },
+    {
+      "url": "/Content/Middle-Kingdom-of-Egypt/",
+      "id": "Middle Kingdom of Egypt",
+      "title": "Middle Kingdom of Egypt",
+      "group": "Ancient Egypt",
+      "start": -2055,
+      "end": -1650
+    },
+    {
+      "url": "/Content/New-Kingdom-of-Egypt/",
+      "id": "New Kingdom of Egypt",
+      "title": "New Kingdom of Egypt",
+      "group": "Ancient Egypt",
+      "start": -1550,
+      "end": -1070
+    },
+    {
+      "url": "/Content/Old-Kingdom-of-Egypt/",
+      "id": "Old Kingdom of Egypt",
+      "title": "Old Kingdom of Egypt",
+      "group": "Ancient Egypt",
+      "start": -2686,
+      "end": -2181
+    },
+    {
+      "url": "/Content/Predynastic-Period-of-Egypt/",
+      "id": "Predynastic Period of Egypt",
+      "title": "Predynastic Period of Egypt",
+      "group": "Ancient Egypt",
+      "start": -5500,
+      "end": -3100
+    },
+    {
+      "url": "/Content/Ptolemaic-Period-of-Egypt/",
+      "id": "Ptolemaic Period of Egypt",
+      "title": "Ptolemaic Period of Egypt",
+      "group": "Ancient Egypt",
+      "start": -332,
+      "end": -30
+    },
+    {
+      "url": "/Content/Roman-and-Byzantine-Egypt/",
+      "id": "Roman and Byzantine Egypt",
+      "title": "Roman and Byzantine Egypt",
+      "group": "Ancient Egypt",
+      "start": -30,
+      "end": 642
+    },
+    {
+      "url": "/Content/Second-Intermediate-Period-of-Egypt/",
+      "id": "Second Intermediate Period of Egypt",
+      "title": "Second Intermediate Period of Egypt",
+      "group": "Ancient Egypt",
+      "start": -1650,
+      "end": -1550
+    },
+    {
+      "url": "/Content/Third-Intermediate-Period-of-Egypt/",
+      "id": "Third Intermediate Period of Egypt",
+      "title": "Third Intermediate Period of Egypt",
+      "group": "Ancient Egypt",
+      "start": -1070,
+      "end": -664
+    },
+    {
+      "url": "/Content/Ancient-Greece/",
+      "id": "Ancient Greece",
+      "title": "Ancient Greece",
+      "group": "\"null\"",
+      "start": -3000,
+      "end": -146
+    },
+    {
+      "url": "/Content/Greek-Archaic-Period/",
+      "id": "Greek Archaic Period",
+      "title": "Greek Archaic Period",
+      "group": "Greece",
+      "start": -800,
+      "end": -500
+    },
+    {
+      "url": "/Content/Greek-Bronze-Age/",
+      "id": "Greek Bronze Age",
+      "title": "Greek Bronze Age",
+      "group": "Greece",
+      "start": -3000,
+      "end": -1100
+    },
+    {
+      "url": "/Content/Greek-Classical-Period/",
+      "id": "Greek Classical Period",
+      "title": "Greek Classical Period",
+      "group": "Greece",
+      "start": -500,
+      "end": -323
+    },
+    {
+      "url": "/Content/Greek-Dark-Ages/",
+      "id": "Greek Dark Ages",
+      "title": "Greek Dark Ages",
+      "group": "Greece",
+      "start": -1100,
+      "end": -800
+    },
+    {
+      "url": "/Content/Greek-Hellenistic-Period/",
+      "id": "Greek Hellenistic Period",
+      "title": "Greek Hellenistic Period",
+      "group": "Greece",
+      "start": -323,
+      "end": -146
+    },
+    {
+      "url": "/Content/Minoan-Civilization/",
+      "id": "Minoan Civilization",
+      "title": "Minoan Civilization",
+      "group": "Greece-sub",
+      "start": -3100,
+      "end": -1100
+    },
+    {
+      "url": "/Content/Mycenaean-Civilization/",
+      "id": "Mycenaean Civilization",
+      "title": "Mycenaean Civilization",
+      "group": "Greece-sub",
+      "start": -1700,
+      "end": -1100
+    },
+    {
+      "url": "/Content/Akkadian/",
+      "id": "Akkadian",
+      "title": "Akkadian",
+      "group": "Mesopotamia",
+      "start": -2334,
+      "end": -2154
+    },
+    {
+      "url": "/Content/Assyrian/",
+      "id": "Assyrian",
+      "title": "Assyrian",
+      "group": "Mesopotamia",
+      "start": -2600,
+      "end": -609
+    },
+    {
+      "url": "/Content/Babylonia/",
+      "id": "Babylonian",
+      "title": "Babylonian",
+      "group": "Mesopotamia",
+      "start": -2000,
+      "end": -539
+    },
+    {
+      "url": "/Content/Old-Babylonian-Period/",
+      "id": "Old Babylonian Period",
+      "title": "Old Babylonian Period",
+      "group": "None",
+      "start": -1894,
+      "end": -1595
+    },
+    {
+      "url": "/Content/Ancient-Rome/",
+      "id": "Ancient Rome",
+      "title": "Ancient Rome",
+      "group": "\"null\"",
+      "start": -753,
+      "end": 476
+    },
+    {
+      "url": "/Content/Eastern-Roman-Empire-(Byzantine-Empire)/",
+      "id": "Eastern Roman Empire (Byzantine Empire) ",
+      "title": "Eastern Roman Empire (Byzantine Empire) ",
+      "group": "Ancient Rome",
+      "start": 476,
+      "end": 1453
+    },
+    {
+      "url": "/Content/Roman-Empire/",
+      "id": "Roman Empire",
+      "title": "Roman Empire",
+      "group": "Ancient Rome",
+      "start": -27,
+      "end": 476
+    },
+    {
+      "url": "/Content/Roman-Kingdom/",
+      "id": "Roman Kingdom",
+      "title": "Roman Kingdom",
+      "group": "Ancient Rome",
+      "start": -753,
+      "end": -509
+    },
+    {
+      "url": "/Content/Roman-Republic/",
+      "id": "Roman Republic",
+      "title": "Roman Republic",
+      "group": "Ancient Rome",
+      "start": -509,
+      "end": -27
+    },
+    {
+      "url": "/Content/Crusades-Period/",
+      "id": "Crusades",
+      "title": "Crusades",
+      "group": "era-2",
+      "start": 1096,
+      "end": 1300
+    },
+    {
+      "url": "/Content/Early-Middle-Ages/",
+      "id": "Early Middle Ages",
+      "title": "Early Middle Ages",
+      "group": "era-1",
+      "start": 476,
+      "end": 800
+    },
+    {
+      "url": "/Content/Feudal-Period/",
+      "id": "Feudal Period",
+      "title": "Feudal Period",
+      "group": "era-2",
+      "start": 900,
+      "end": 1300
+    },
+    {
+      "url": "/Content/High-Middle-Ages/",
+      "id": "High Middle Ages",
+      "title": "High Middle Ages",
+      "group": "era-1",
+      "start": 800,
+      "end": 1300
+    },
+    {
+      "url": "/Content/Late-Middle-Ages/",
+      "id": "Late Middle Ages",
+      "title": "Late Middle Ages",
+      "group": "era-1",
+      "start": 1300,
+      "end": 1500
+    },
+    {
+      "url": "/Content/Medieval-Age/",
+      "id": "Medieval Age",
+      "title": "Medieval Age",
+      "group": "era-0",
+      "start": 476,
+      "end": 1500
+    },
+    {
+      "url": "/Content/Age-of-Exploration/",
+      "id": "Age of Exploration",
+      "title": "Age of Exploration",
+      "group": "era-2",
+      "start": 1418,
+      "end": 1620
+    },
+    {
+      "url": "/Content/Classical-Age/",
+      "id": "Classical Age",
+      "title": "Classical Age",
+      "group": "era-1",
+      "start": -500,
+      "end": 476
+    },
+    {
+      "url": "/Content/Contemporary-Period/",
+      "id": "Contemporary Period",
+      "title": "Contemporary Period",
+      "group": "era-1",
+      "start": 1950,
+      "end": 2030
+    },
+    {
+      "url": "/Content/Early-Modern-Period/",
+      "id": "Early Modern Period",
+      "title": "Early Modern Period",
+      "group": "era-1",
+      "start": 1500,
+      "end": 1750
+    },
+    {
+      "url": "/Content/French-Revolution/",
+      "id": "French Revolution",
+      "title": "French Revolution",
+      "group": "era-2",
+      "start": 1789,
+      "end": 1899
+    },
+    {
+      "url": "/Content/Industrial-Revolution/",
+      "id": "Industrial Revolution",
+      "title": "Industrial Revolution",
+      "group": "era-2",
+      "start": 1760,
+      "end": 1840
+    },
+    {
+      "url": "/Content/Late-Modern-Period/",
+      "id": "Late Modern Period",
+      "title": "Late Modern Period",
+      "group": "era-1",
+      "start": 1750,
+      "end": 1945
+    },
+    {
+      "url": "/Content/Modern-History/",
+      "id": "Modern History",
+      "title": "Modern History",
+      "group": "era-0",
+      "start": 1500,
+      "end": 2030
+    },
+    {
+      "url": "/Content/Renaissance/",
+      "id": "Renaissance",
+      "title": "Renaissance",
+      "group": "era-2",
+      "start": 1300,
+      "end": 1600
+    },
+    {
+      "url": "/Content/Scientific-Revolution/",
+      "id": "Scientific Revolution",
+      "title": "Scientific Revolution",
+      "group": "era-2",
+      "start": 1543,
+      "end": 1687
+    },
+    {
+      "url": "/Content/World-War-I/",
+      "id": "World War I",
+      "title": "World War I",
+      "group": "era-2",
+      "start": 1914,
+      "end": 1918
+    },
+    {
+      "url": "/Content/World-War-II/",
+      "id": "World War II",
+      "title": "World War II",
+      "group": "era-2",
+      "start": 1939,
+      "end": 1945
+    },
+    {
+      "url": "/Content/Mesolithic/",
+      "id": "Mesolithic",
+      "title": "Mesolithic",
+      "group": "era-1",
+      "start": -10000,
+      "end": -8000
+    },
+    {
+      "url": "/Content/Neolithic/",
+      "id": "Neolithic",
+      "title": "Neolithic",
+      "group": "era-1",
+      "start": -8000,
+      "end": -3000
+    },
+    {
+      "url": "/Content/Paleolithic/",
+      "id": "Paleolithic",
+      "title": "Paleolithic",
+      "group": "era-1",
+      "start": -2500000,
+      "end": -10000
+    },
+    {
+      "url": "/Content/Prehistory/",
+      "id": "Prehistory",
+      "title": "Prehistory",
+      "group": "era-0",
+      "start": -3300000,
+      "end": -3000
+    },
+    {
+      "url": "/Content/Pythagoras/",
+      "id": "Pythagoras",
+      "title": "Pythagoras",
+      "group": "people",
+      "start": -570,
+      "end": -495
+    },
+    {
+      "url": "/Content/Galileo-Galilei/",
+      "id": "Galileo Galilei",
+      "title": "Galileo Galilei",
+      "group": "people",
+      "start": 1564,
+      "end": 1642
+    },
+    {
+      "url": "/Content/Isaac-Newton/",
+      "id": "Isaac Newton",
+      "title": "Isaac Newton",
+      "group": "people",
+      "start": 1642,
+      "end": 1726
+    }
+  ]
+}

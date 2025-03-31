@@ -1,0 +1,188 @@
+{
+    "eras": [
+        {
+            "name": "Prehistory",
+            "id": 1,
+            "start": -3300000,
+            "end": -3000,
+            "color": "#E9C46A",
+            "subdivisions": [
+                {
+                    "id": 101,
+                    "name": "Paleolithic",
+                    "start": -3300000,
+                    "end": -10000,
+                    "color": "#F4A261",
+                    "subdivisions": [
+                        {
+                            "id": 1011,
+                            "name": "Lower Paleolithic",
+                            "start": -3300000,
+                            "end": -300000,
+                            "color": "#E76F51"
+                        },
+                        {
+                            "id": 1012,
+                            "name": "Middle Paleolithic",
+                            "start": -300000,
+                            "end": -50000,
+                            "color": "#F79D65"
+                        },
+                        {
+                            "id": 1013,
+                            "name": "Upper Paleolithic",
+                            "start": -50000,
+                            "end": -10000,
+                            "color": "#FDC48B"
+                        }
+                    ]
+                },
+                {
+                    "id": 102,
+                    "name": "Neolithic",
+                    "start": -10000,
+                    "end": -3000,
+                    "color": "#F4A261"
+                }
+            ]
+        },
+        {
+            "name": "Ancient Age",
+            "id": 2,
+            "start": -3000,
+            "end": 400,
+            "color": "#E9A44C",
+            "subdivisions": [
+                {
+                    "id": 201,
+                    "name": "Bronze Age",
+                    "start": -3000,
+                    "end": -1200,
+                    "color": "#FDC87D",
+                    "subdivisions": [
+                        {
+                            "id": 2011,
+                            "name": "Early Bronze Age",
+                            "start": -3000,
+                            "end": -2000,
+                            "color": "#F4B56A"
+                        },
+                        {
+                            "id": 2012,
+                            "name": "Middle Bronze Age",
+                            "start": -2000,
+                            "end": -1500,
+                            "color": "#F7C98C"
+                        },
+                        {
+                            "id": 2013,
+                            "name": "Late Bronze Age",
+                            "start": -1500,
+                            "end": -1200,
+                            "color": "#FFE0A6"
+                        }
+                    ]
+                },
+                {
+                    "id": 202,
+                    "name": "Iron Age",
+                    "start": -1200,
+                    "end": 400,
+                    "color": "#F4A261",
+                    "subdivisions": [
+                    {
+                        "name": "Early Iron Age",
+                        "start": -1200,
+                        "end": -800,
+                        "description": "The transition from the Bronze Age to the Iron Age, marked by the earliest use of iron for tools and weapons.",
+                        "regions": ["Europe (Hallstatt Culture)", "Near East", "South Asia", "Africa"]
+                    },
+                    {
+                        "name": "Middle Iron Age",
+                        "start": -800,
+                        "end": -500,
+                        "description": "Ironworking techniques become more sophisticated, and the rise of complex societies and early states.",
+                        "regions": ["Europe (La Tène Culture)", "Near East (Assyrian and Neo-Babylonian Empires)", "South Asia (Vedic Period)"]
+                    },
+                    {
+                        "name": "Late Iron Age",
+                        "start": -500,
+                        "end": 0,
+                        "description": "The peak of Iron Age societies with the rise of powerful empires, kingdoms, and cities.",
+                        "regions": ["Europe (Celtic Tribes)", "Near East (Persian Empire)", "South Asia (Maurya Empire)", "Africa"]
+                    },
+                    {
+                        "name": "Transitional Iron Age",
+                        "start": 0,
+                        "end": 400,
+                        "description": "The transition period where Iron Age cultures overlap with the Classical period, leading to the rise of empires like Rome and Persia.",
+                        "regions": ["Europe (Roman Empire)", "Near East (Parthian Empire)", "South Asia (Gupta Empire)", "Africa"]
+                    }
+                ]
+                }
+            ]
+        },
+        {
+            "name": "Medieval Age",
+            "id": 3,
+            "start": 400,
+            "end": 1500,
+            "color": "#C471ED",
+            "subdivisions": [
+                {
+                    "id": 301,
+                    "name": "Early Middle Ages",
+                    "start": 400,
+                    "end": 1000,
+                    "color": "#E299F7"
+                },
+                {
+                    "id": 302,
+                    "name": "High Middle Ages",
+                    "start": 1000,
+                    "end": 1300,
+                    "color": "#D788F6",
+                    "subdivisions": [
+                        {
+                            "id": 3021,
+                            "name": "Feudal Period",
+                            "start": 1000,
+                            "end": 1200,
+                            "color": "#C583F4"
+                        },
+                        {
+                            "id": 3022,
+                            "name": "Crusades Period",
+                            "start": 1200,
+                            "end": 1300,
+                            "color": "#D69FF7"
+                        }
+                    ]
+                },
+                {
+                    "id": 303,
+                    "name": "Late Middle Ages",
+                    "start": 1300,
+                    "end": 1500,
+                    "color": "#E8B5F9"
+                }
+            ]
+        },
+        {
+            "name": "Modern Age",
+            "id": 4,
+            "start": 1500,
+            "end": 1800,
+            "color": "#90CAF9",
+            "subdivisions": []
+        },
+        {
+            "name": "Contemporary Age",
+            "id": 5,
+            "start": 1800,
+            "end": 2025,
+            "color": "#64B5F6",
+            "subdivisions": []
+        }
+    ]
+}

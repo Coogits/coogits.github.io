@@ -84,4 +84,12 @@ function positionResultsContainer() {
 }
 
 // Add event listener to trigger searchContent when typing
-document.getElementById('searchQuery').addEventListener('input', searchContent);
+document.addEventListener('DOMContentLoaded', function () {
+    let searchInput = document.getElementById('searchQuery');
+
+    if (searchInput) {
+        searchInput.addEventListener('input', searchContent);
+    } else {
+        console.error("Error: #searchQuery not found in the DOM!");
+    }
+});

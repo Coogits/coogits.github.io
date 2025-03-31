@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Telecommunications</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a></p>
+<div class="header-block h1">
+<h1 id="telecommunications">Telecommunications</h1>
+<p><strong>Telecommunications</strong> refers to the <strong>transmission, reception, and exchange of information</strong> over long distances using various technologies. This can include voice, data, text, images, and video, transmitted through wired, wireless, optical, or satellite communication systems.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="models">Models</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="osi-model"><a href="/Content/OSI-Model/">OSI Model</a></h4><div class="header-button"></div></div>
+<p>The <strong>OSI model</strong> is a <strong>theoretical framework</strong> created by ISO (International Organization for Standardization) to standardize communication across different systems. It is <strong>general</strong> and <strong>flexible</strong>, covering many networking concepts, even those not used in TCP/IP.</p>
+<ol>
+<li><strong>Physical</strong> – Transmission media, cables, signals.</li>
+<li><strong>Data Link</strong> – MAC addresses, error detection (Ethernet, Wi-Fi).</li>
+<li><strong>Network</strong> – Logical addressing &amp; routing (IP, ICMP, ARP).</li>
+<li><strong>Transport</strong> – Reliable or fast delivery (TCP, UDP).</li>
+<li><strong>Session</strong> – Connection management (SIP, PPTP).</li>
+<li><strong>Presentation</strong> – Data formatting &amp; encryption (SSL/TLS).</li>
+<li><strong>Application</strong> – High-level services (HTTP, FTP, SMTP).</li>
+</ol>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="tcp-ip-model">TCP/IP Model</h4><div class="header-button"></div></div>
+<p>A <strong>simplified</strong> version of OSI, used in <strong>modern networking</strong><br />
+It is <strong>practical</strong>, <strong>simpler</strong>, and <strong>directly tied to real protocols</strong> (like TCP, IP, and HTTP).</p>
+<ol>
+<li><strong>Network Access</strong> – Physical and data link layers combined.</li>
+<li><strong>Internet</strong> – Routing and addressing (IP, ICMP, ARP).</li>
+<li><strong>Transport</strong> – Communication control (TCP, UDP).</li>
+<li><strong>Application</strong> – Services for users (HTTP, FTP, SMTP).</li>
+</ol>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="osi-vs--tcp-ip">OSI vs. TCP/IP</h4><div class="header-button"></div></div>
+<p>However, you <strong>can map TCP/IP layers to OSI layers</strong>, as TCP/IP roughly follows the same principles but <strong>collapses some layers together</strong>:</p>
+<table>
+<thead>
+<tr>
+<th><strong>OSI Model (7 Layers)</strong></th>
+<th><strong>TCP/IP Model (4 Layers)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7. Application</td>
+<td>Application</td>
+</tr>
+<tr>
+<td>6. Presentation</td>
+<td>(Merged into Application)</td>
+</tr>
+<tr>
+<td>5. Session</td>
+<td>(Merged into Application)</td>
+</tr>
+<tr>
+<td>4. Transport</td>
+<td>Transport</td>
+</tr>
+<tr>
+<td>3. Network</td>
+<td>Internet</td>
+</tr>
+<tr>
+<td>2. Data Link</td>
+<td>Network Access</td>
+</tr>
+<tr>
+<td>1. Physical</td>
+<td>(Merged into Network Access)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="strong-fundamental-steps-of-data-transmission--strong"><strong>Fundamental Steps of Data Transmission</strong></h3><div class="header-button"></div></div>
+<ol>
+<li><strong>Set of Symbols</strong> – Define the data or message to be transmitted, represented in a symbolic form (e.g., binary bits, electrical signals, or waveforms).</li>
+<li><strong>Encode</strong> – Convert the symbols into a transmission-friendly format, such as digital encoding, modulation (AM, FM, QAM), or compression.</li>
+<li><strong>Transmit</strong> – Send the encoded signal over a communication medium (e.g., copper wire, fiber optics, radio waves).</li>
+<li><strong>Propagation Channel</strong> – The medium through which the signal travels, which may introduce noise, attenuation, interference, or distortion.</li>
+<li><strong>Receive</strong> – Capture the transmitted signal at the destination (e.g., an antenna, a network card, or a sensor).</li>
+<li><strong>Decode</strong> – Process the received signal to extract the original data, involving demodulation, error correction, and signal reconstruction.</li>
+<li><strong>Interpret &amp; Use</strong> – The final step where the extracted data is understood and utilized by the receiving system or user.</li>
+</ol>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="fundamental-concepts">Fundamental Concepts</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Electromagnetic Waves</strong> – How signals are transmitted wirelessly.</li>
+<li><strong>Frequency &amp; Wavelength</strong> – Radio spectrum usage (AM/FM, UHF/VHF, microwave).</li>
+<li><strong>Decibels (dB) &amp; Signal Power</strong> – Measuring transmission strength.</li>
+<li><strong>Latency, Jitter, and Packet Loss</strong> – Performance factors in networks.</li>
+<li><strong>Bitrate vs Baud Rate</strong> – Data transmission speed vs signal changes.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="signal-transmission">Signal Transmission</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Analog Signal</strong> – Continuous waveforms representing information.</li>
+<li><strong>Digital Signal</strong> – Discrete binary data transmission (0s and 1s).</li>
+<li><strong>Modulation and Demodulation</strong><br />
+Techniques for encoding information onto a carrier wave.
+<ul>
+<li>Amplitude Modulation (AM)</li>
+<li>Frequency Modulation (FM)</li>
+<li>Phase Modulation (PM)</li>
+<li>Quadrature Amplitude Modulation (QAM)</li>
+</ul>
+</li>
+<li><strong>Multiplexing Techniques:</strong>
+<ul>
+<li><strong>FDM (Frequency Division Multiplexing)</strong> – Different frequencies for different signals.</li>
+<li><strong>TDM (Time Division Multiplexing)</strong> – Assigns time slots for different signals.</li>
+<li><strong>CDMA (Code Division Multiple Access)</strong> – Used in mobile networks.</li>
+</ul>
+</li>
+<li><strong>Bandwidth and Data Rate</strong> – Relationship between channel capacity and speed.</li>
+<li><strong>Noise and Interference</strong> – Types of noise (thermal, impulse, crosstalk) and mitigation techniques.</li>
+<li><strong>Signal Propagation</strong> – Attenuation, reflection, diffraction, and refraction in different media.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="telecommunications-networks">Telecommunications Networks</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Wired Networks</strong>
+<ul>
+<li>Public Switched Telephone Network (PSTN)</li>
+<li>Integrated Services Digital Network (ISDN)</li>
+<li>Fiber-optic Networks</li>
+</ul>
+</li>
+<li><strong>Wireless Networks</strong>
+<ul>
+<li>Cellular Networks (2G, 3G, 4G, 5G)</li>
+<li>Wi-Fi and Bluetooth Technologies</li>
+<li>Satellite Communication Networks</li>
+</ul>
+</li>
+<li><strong>Internet Infrastructure</strong>
+<ul>
+<li>TCP/IP Model</li>
+<li>Domain Name System (DNS)</li>
+<li>Internet Backbone and ISPs</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="network-architectures--amp--topologies">Network Architectures &amp; Topologies</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Circuit Switching vs. Packet Switching</strong></li>
+<li><strong>LAN, WAN, MAN, PAN</strong> – Local, wide, metropolitan, and personal area networks.</li>
+<li><strong>Network Topologies</strong>
+<ul>
+<li>Star</li>
+<li>Ring</li>
+<li>Bus</li>
+<li>Mesh</li>
+<li>Hybrid</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="telecommunications-protocols"><a href="/Content/Telecommunications-Protocols/">Telecommunications Protocols</a></h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="osi-model--7-layers">OSI Model (7 Layers)</h4><div class="header-button"></div></div>
+<p>Defines <strong>network communication functions</strong> in seven layers:</p>
+<ol>
+<li><strong>Physical</strong> – Transmission media, cables, signals.</li>
+<li><strong>Data Link</strong> – MAC addresses, error detection (Ethernet, Wi-Fi).</li>
+<li><strong>Network</strong> – Logical addressing &amp; routing (IP, ICMP, ARP).</li>
+<li><strong>Transport</strong> – Reliable or fast delivery (TCP, UDP).</li>
+<li><strong>Session</strong> – Connection management (SIP, PPTP).</li>
+<li><strong>Presentation</strong> – Data formatting &amp; encryption (SSL/TLS).</li>
+<li><strong>Application</strong> – High-level services (HTTP, FTP, SMTP).</li>
+</ol>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="tcp-ip-model--4-layers">TCP/IP Model (4 Layers)</h4><div class="header-button"></div></div>
+<p>A <strong>simplified</strong> version of OSI, used in <strong>modern networking</strong>:</p>
+<ol>
+<li><strong>Network Access</strong> – Physical and data link layers combined.</li>
+<li><strong>Internet</strong> – Routing and addressing (IP, ICMP, ARP).</li>
+<li><strong>Transport</strong> – Communication control (TCP, UDP).</li>
+<li><strong>Application</strong> – Services for users (HTTP, FTP, SMTP).</li>
+</ol>
+<ul>
+<li><strong>Mobile Network Standards</strong>
+<ul>
+<li>GSM, CDMA</li>
+<li>LTE, 5G NR</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#telecommunications">Telecommunications</a></li>
+<ul>
+<li class="toc-level-3"><a href="#models">Models</a></li>
+<ul>
+<li class="toc-level-4"><a href="#osi-model">OSI Model</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#tcp-ip-model">TCP/IP Model</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#osi-vs--tcp-ip">OSI vs. TCP/IP</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#strong-fundamental-steps-of-data-transmission--strong"><strong>Fundamental Steps of Data Transmission</strong></a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#fundamental-concepts">Fundamental Concepts</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#signal-transmission">Signal Transmission</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#telecommunications-networks">Telecommunications Networks</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#network-architectures--amp--topologies">Network Architectures &amp; Topologies</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#telecommunications-protocols">Telecommunications Protocols</a></li>
+<ul>
+<li class="toc-level-4"><a href="#osi-model--7-layers">OSI Model (7 Layers)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#tcp-ip-model--4-layers">TCP/IP Model (4 Layers)</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

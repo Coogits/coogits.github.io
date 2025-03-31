@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OSI Model</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Telecommunications/">Telecommunications</a></p>
+<div class="header-block h1">
+<h1 id="osi-model">OSI Model</h1>
+<p>The <strong>OSI (Open Systems Interconnection) Model</strong> is a <strong>conceptual framework</strong> that standardizes the functions of a <strong>telecommunication or computing system</strong> into <strong>seven hierarchical layers</strong>.<br />
+It was developed by the <strong>International Organization for Standardization (ISO)</strong> in 1984 to provide a <strong>universal reference model</strong> for network communication.</p>
+<p>Each layer in the OSI model defines specific tasks and interactions, ensuring <strong>interoperability</strong> between different systems, devices, and protocols.<br />
+The model helps <strong>design, troubleshoot, and understand</strong> network communication by clearly separating different functionalities, from <strong>physical transmission</strong> to <strong>application-level services</strong>.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="osi-model-layers">OSI Model Layers</h3><div class="header-button"></div></div>
+<p>Protocols are structured based on the <strong>OSI (Open Systems Interconnection) Model</strong>, which consists of seven layers:</p>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="1--physical-layer">1. Physical Layer</h4><div class="header-button"></div></div>
+<p>(Layer 1) – Transmission Medium &amp; Hardware</p>
+<ul>
+<li><strong>Electromagnetic Waves</strong> – Basics of wireless transmission.</li>
+<li><strong>Frequency &amp; Wavelength</strong> – Spectrum allocation (AM/FM, UHF/VHF, microwave).</li>
+<li><strong>Signal Power &amp; Decibels (dB)</strong> – Measuring signal strength.</li>
+<li><strong>Bitrate vs Baud Rate</strong> – Data transmission speed vs signal changes.</li>
+<li><strong>Transmission Media:</strong>
+<ul>
+<li><strong>Copper-based Networks</strong> – Twisted Pair (Ethernet), Coaxial Cable (Cable TV).</li>
+<li><strong>Fiber Optic Networks</strong> – Single-mode vs Multi-mode fibers.</li>
+<li><strong>Wireless Technologies</strong> – Cellular (2G-5G), Wi-Fi, Bluetooth, Satellite, Microwave.</li>
+</ul>
+</li>
+<li><strong>Modulation Techniques:</strong>
+<ul>
+<li><strong>AM/FM/PM</strong> – Analog modulation types.</li>
+<li><strong>QAM (Quadrature Amplitude Modulation)</strong> – Used in digital communication.</li>
+<li><strong>OFDM (Orthogonal Frequency-Division Multiplexing)</strong> – Used in Wi-Fi and 4G/5G.</li>
+</ul>
+</li>
+<li><strong>Multiplexing Techniques:</strong>
+<ul>
+<li><strong>FDM (Frequency Division Multiplexing)</strong>.</li>
+<li><strong>TDM (Time Division Multiplexing)</strong>.</li>
+<li><strong>CDMA (Code Division Multiple Access)</strong>.</li>
+<li><strong>SDM (Space Division Multiplexing)</strong> – Used in fiber optics and MIMO.</li>
+<li><strong>OFDMA (Orthogonal Frequency Division Multiple Access)</strong> – Used in LTE and 5G.</li>
+</ul>
+</li>
+<li><strong>Fiber Optic Communication</strong> – Optical data transmission for high-speed networking.</li>
+<li><strong>DSL (Digital Subscriber Line) &amp; Modems</strong> – Broadband internet over telephone lines.</li>
+<li><strong>Advanced Concepts</strong>:
+<ul>
+<li><strong>MIMO (Multiple Input Multiple Output)</strong> – Used in 4G, 5G, and Wi-Fi to improve speed and reliability.</li>
+<li><strong>Link Budget &amp; Path Loss</strong> – Calculating signal degradation over distance.</li>
+<li><strong>Radio Wave Propagation Models</strong> – Reflection, Diffraction, Scattering.</li>
+<li><strong>Power Line Communication (PLC)</strong> – Data transmission over electrical wiring.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="2--data-link-layer">2. Data Link Layer</h4><div class="header-button"></div></div>
+<p>(Layer 2) – Reliable Data Transfer &amp; Addressing</p>
+<ul>
+<li><strong>MAC (Medium Access Control)</strong> – Controls how devices access the transmission medium.</li>
+<li><strong>LLC (Logical Link Control)</strong> – Manages frame synchronization and error checking.</li>
+<li><strong>HDLC (High-Level Data Link Control)</strong> – Used in WANs for reliable communication.</li>
+<li><strong>PPP (Point-to-Point Protocol)</strong> – Used in direct communication links.</li>
+<li><strong>VLAN (Virtual LAN)</strong> – Isolates network segments within a LAN.</li>
+<li><strong>Ethernet (802.3)</strong> – Standard for wired LAN communication.</li>
+<li><strong>Wi-Fi (802.11)</strong> – Wireless LAN standard.</li>
+<li><strong>Error Detection &amp; Correction</strong> – Parity, CRC, Hamming Code.</li>
+<li><strong>Wireless Technologies</strong>:
+<ul>
+<li><strong>Wi-Fi (IEEE 802.11)</strong> – Wireless communication in local networks.</li>
+<li><strong>Bluetooth (IEEE 802.15)</strong> – Short-range wireless communication.</li>
+<li><strong>2G (GSM, CDMA)</strong> – Circuit-switched voice and SMS.</li>
+<li><strong>3G (UMTS, CDMA2000)</strong> – Introduced packet-switching.</li>
+<li><strong>4G (LTE, LTE-Advanced)</strong> – High-speed mobile broadband.</li>
+<li><strong>5G NR (New Radio) – mmWave &amp; Sub-6 GHz</strong> – Ultra-fast mobile data.</li>
+</ul>
+</li>
+<li><strong>Key Protocols</strong>:
+<ul>
+<li><strong>CSMA/CD (Carrier Sense Multiple Access with Collision Detection)</strong> – Used in Ethernet.</li>
+<li><strong>CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)</strong> – Used in Wi-Fi.</li>
+<li><strong>Frame Relay &amp; ATM (Asynchronous Transfer Mode)</strong> – Older but still relevant in some networks.</li>
+</ul>
+</li>
+<li><strong>Industrial &amp; IoT Networks</strong>:
+<ul>
+<li><strong>Industrial Ethernet (PROFINET, EtherCAT, Modbus-TCP)</strong> – Used in manufacturing.</li>
+<li><strong>Fieldbus Protocols (CAN, PROFIBUS)</strong> – Real-time control systems.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="3--network-layer">3. Network Layer</h4><div class="header-button"></div></div>
+<p>(Layer 3) – Addressing &amp; Routing</p>
+<ul>
+<li><strong>IP (Internet Protocol) – IPv4 &amp; IPv6</strong> – Governs addressing and packet delivery.
+<ul>
+<li><strong>IPv6 Transition Mechanisms</strong> – Dual Stack, Tunneling, NAT64.</li>
+<li><strong>Autonomous Systems &amp; ASN (Autonomous System Numbers)</strong> – Used in BGP routing.</li>
+</ul>
+</li>
+<li><strong>ICMP (Internet Control Message Protocol)</strong> – Error reporting and diagnostics.</li>
+<li><strong>ARP (Address Resolution Protocol)</strong> – Maps IP addresses to MAC addresses.</li>
+<li><strong>NAT (Network Address Translation)</strong> – Enables multiple devices to share a public IP.</li>
+<li><strong>Routing Protocols:</strong>
+<ul>
+<li><strong>Static vs Dynamic Routing</strong>.</li>
+<li><strong>BGP (Border Gateway Protocol)</strong> – Manages routing between ISPs.</li>
+<li><strong>OSPF (Open Shortest Path First)</strong> – Dynamic routing for large networks.</li>
+<li><strong>RIP (Routing Information Protocol)</strong> – Simple distance-vector routing protocol.</li>
+</ul>
+</li>
+<li><strong>Subnetting &amp; IP Address Allocation</strong> – CIDR, NAT, DHCP.</li>
+<li><strong>SDN (Software-Defined Networking) &amp; Virtualization</strong>:
+<ul>
+<li><strong>SDN (Software-Defined Networking)</strong> – Separates control and data planes.</li>
+<li><strong>NFV (Network Function Virtualization)</strong> – Virtualizing network services (firewalls, load balancer</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="4--transport-layer">4. Transport Layer</h4><div class="header-button"></div></div>
+<p>(Layer 4) – End-to-End Communication</p>
+<ul>
+<li><strong>TCP (Transmission Control Protocol)</strong> – Reliable, connection-oriented communication.</li>
+<li><strong>UDP (User Datagram Protocol)</strong> – Fast, connectionless communication.</li>
+<li><strong>SCTP (Stream Control Transmission Protocol)</strong> – Enhanced version of TCP for signaling.</li>
+<li><strong>DCCP (Datagram Congestion Control Protocol)</strong> – Supports real-time multimedia applications.</li>
+<li><strong>Flow Control &amp; Congestion Control</strong> – Windowing, Buffering.</li>
+<li><strong>Network Performance Metrics</strong> – Latency, Jitter, Packet Loss.
+<strong>Advanced</strong></li>
+<li><strong>QUIC (Quick UDP Internet Connections)</strong> – Faster than TCP, used by Google and HTTP/3.</li>
+<li><strong>RTP/RTCP (Real-time Transport Protocol &amp; Control Protocol)</strong> – Used in VoIP and streaming.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="5--session-layer">5. Session Layer</h3><div class="header-button"></div></div>
+<p>(Layer 5) – Connection Management</p>
+<ul>
+<li><strong>SIP (Session Initiation Protocol)</strong> – Establishes and manages VoIP and multimedia sessions.</li>
+<li><strong>PPTP (Point-to-Point Tunneling Protocol)</strong> – Used for VPNs.</li>
+<li><strong>RPC (Remote Procedure Call)</strong> – Enables communication between programs on different systems.</li>
+<li><strong>NetBIOS (Network Basic Input/Output System)</strong> – Used for LAN communication.</li>
+<li><strong>Authentication &amp; Authorization</strong> – Managing user sessions.</li>
+<li><strong>Session Establishment &amp; Termination</strong> – Handshake mechanisms.</li>
+<li><strong>LEO/MEO/GEO Satellites</strong> – Starlink, OneWeb, VSAT.</li>
+<li><strong>Ka-band, Ku-band Communications</strong> – Satellite frequency bands.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="6--presentation-layer">6. Presentation Layer</h3><div class="header-button"></div></div>
+<p>(Layer 6) – Data Formatting &amp; Encryption</p>
+<ul>
+<li><strong>SSL/TLS (Secure Sockets Layer / Transport Layer Security)</strong> – Encrypts network communication.</li>
+<li><strong>JPEG, PNG, MP3, MP4</strong> – Compression and formatting for images, audio, and video.</li>
+<li><strong>ASCII, Unicode</strong> – Text encoding standards.</li>
+<li><strong>MIME (Multipurpose Internet Mail Extensions)</strong> – Formats multimedia email content.</li>
+<li><strong>Data Encoding &amp; Compression</strong> – ASCII, Unicode, MPEG, JPEG.</li>
+<li><strong>Data Encryption &amp; Security</strong> – TLS/SSL, AES, RSA.</li>
+<li><strong>Cybersecurity &amp; Network Management:</strong>
+<ul>
+<li><strong>RADIUS &amp; TACACS+</strong> – Authentication protocols for ISPs and enterprises.</li>
+<li><strong>Zero Trust Networking (ZTN)</strong> – Security approach for modern networks.</li>
+<li><strong>Network Telemetry &amp; AI-driven Optimization</strong> – Used in 5G and SD-WAN.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="7--application-layer">7. Application Layer</h3><div class="header-button"></div></div>
+<p>(Layer 7) – High-Level Communication Services</p>
+<ul>
+<li><strong>Web Protocols:</strong>
+<ul>
+<li><strong>HTTP/HTTPS (Hypertext Transfer Protocol Secure)</strong> – Web communication.</li>
+</ul>
+</li>
+<li><strong>File Transfer Protocols:</strong>
+<ul>
+<li><strong>FTP (File Transfer Protocol), SFTP (Secure FTP)</strong> – File transfers.</li>
+</ul>
+</li>
+<li><strong>Email Protocols:</strong>
+<ul>
+<li><strong>SMTP (Simple Mail Transfer Protocol), IMAP, POP3</strong> – Email transmission.</li>
+</ul>
+</li>
+<li><strong>Name Resolution:</strong>
+<ul>
+<li><strong>DNS (Domain Name System)</strong> – Translates domain names to IP addresses.</li>
+</ul>
+</li>
+<li><strong>VoIP (Voice over IP) Protocols:</strong>
+<ul>
+<li><strong>SIP (Session Initiation Protocol)</strong> – Manages voice/video calls.</li>
+<li><strong>RTP (Real-time Transport Protocol)</strong> – Transports multimedia data.</li>
+<li><strong>H.323</strong> – VoIP and video conferencing standard.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#osi-model">OSI Model</a></li>
+<ul>
+<li class="toc-level-3"><a href="#osi-model-layers">OSI Model Layers</a></li>
+<ul>
+<li class="toc-level-4"><a href="#1--physical-layer">1. Physical Layer</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#2--data-link-layer">2. Data Link Layer</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#3--network-layer">3. Network Layer</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#4--transport-layer">4. Transport Layer</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#5--session-layer">5. Session Layer</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#6--presentation-layer">6. Presentation Layer</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#7--application-layer">7. Application Layer</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>
