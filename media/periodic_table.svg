@@ -1,0 +1,42 @@
+<svg width="1330" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Hydrogen (H) -->
+    <a href="/content/hydrogen/" target="_blank">
+        <rect x="10" y="10" width="60" height="60" fill="lightblue"/>
+        <text x="40" y="40" font-size="20" text-anchor="middle" dy=".3em">H</text>
+    </a>
+    
+    <!-- Helium (He) -->
+    <a href="/content/helium/" target="_blank">
+        <rect x="1260" y="10" width="60" height="60" fill="lightblue"/>
+        <text x="1290" y="40" font-size="20" text-anchor="middle" dy=".3em">He</text>
+    </a>
+    
+    <!-- Lithium (Li) -->
+    <a href="/content/lithium/" target="_blank">
+        <rect x="10" y="80" width="60" height="60" fill="lightgreen"/>
+        <text x="40" y="110" font-size="20" text-anchor="middle" dy=".3em">Li</text>
+    </a>
+
+    <!-- Beryllium (Be) -->
+    <a href="/content/beryllium/" target="_blank">
+        <rect x="80" y="80" width="60" height="60" fill="lightgreen"/>
+        <text x="110" y="110" font-size="20" text-anchor="middle" dy=".3em">Be</text>
+    </a>
+	
+    <a href="/content/beryllium/" target="_blank">
+        <rect x="10" y="150" width="60" height="60" fill="lightgreen"/>
+        <text x="40" y="180" font-size="20" text-anchor="middle" dy=".3em">Na</text>
+    </a>
+	
+    <a href="/content/beryllium/" target="_blank">
+        <rect x="10" y="220" width="60" height="60" fill="lightgreen"/>
+        <text x="40" y="250" font-size="20" text-anchor="middle" dy=".3em">K</text>
+    </a>
+	
+	<a href="/content/beryllium/" target="_blank">
+        <rect x="80" y="220" width="60" height="60" fill="lightgreen"/>
+        <text x="110" y="250" font-size="20" text-anchor="middle" dy=".3em">Ca</text>
+    </a>
+
+    <!-- More elements would follow in a similar pattern -->
+</svg>

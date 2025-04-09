@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Application Layer</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Telecommunications/">Telecommunications</a> &gt; <a href="/Content/OSI-Model/">OSI Model</a></p>
+<div class="header-block h1">
+<h1 id="application-layer">Application Layer</h1>
+<p>The <strong>Application Layer</strong> is the <strong>seventh and topmost layer</strong> of the OSI (Open Systems Interconnection) model. It <strong>directly interfaces with end-user applications</strong>, providing the necessary network services and protocols to <strong>enable user-level functions over a network</strong>.</p>
+<blockquote class="callout default">
+<p>⚠️ Important: The Application Layer does <strong>not</strong> refer to the actual software application (e.g., a browser or email client), but to the <strong>layer that provides communication services</strong> for these applications.</p>
+</blockquote>
+### **Core Responsibilities**
+<div class="header-block h4">
+<div class="header-h4"><h4 id="1--network-service-access">1. Network Service Access</h4><div class="header-button"></div></div>
+<ul>
+<li>Acts as a bridge between <strong>application programs</strong> and the underlying network.</li>
+<li>Enables applications to <strong>request and receive network services</strong> (e.g., downloading a file or resolving a hostname).</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="2--standardized-communication">2. Standardized Communication</h4><div class="header-button"></div></div>
+<ul>
+<li>Provides <strong>standard protocols</strong> that allow applications across different platforms and systems to communicate reliably.</li>
+<li>Examples: Email protocols (SMTP), Web protocols (HTTP), Name resolution (DNS).</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="3--application-specific-services">3. Application-Specific Services</h4><div class="header-button"></div></div>
+<ul>
+<li>Offers functionality tailored to different tasks:
+<ul>
+<li>File transfer (FTP, SFTP)</li>
+<li>Email sending/receiving (SMTP, IMAP, POP3)</li>
+<li>Remote login (Telnet, SSH)</li>
+<li>Name resolution (DNS)</li>
+<li>Network monitoring (SNMP)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="4--data-representation-and-formatting">4. Data Representation and Formatting</h4><div class="header-button"></div></div>
+<ul>
+<li>Although the Presentation Layer is responsible for <strong>data formatting</strong>, in many real-world implementations (like TCP/IP), these responsibilities are collapsed into the Application Layer.</li>
+<li>The Application Layer often ensures that data sent between systems is <strong>interpretable</strong>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="5--user-authentication-and-authorization">5. User Authentication and Authorization</h4><div class="header-button"></div></div>
+<ul>
+<li>May include mechanisms for verifying <strong>user identity</strong>, particularly in protocols like SSH, HTTP(S), or FTP.</li>
+<li>These mechanisms ensure <strong>access control</strong> to networked resources.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="6--error-handling-and-logging">6. Error Handling and Logging</h4><div class="header-button"></div></div>
+<ul>
+<li>Handles <strong>errors at the application level</strong>, such as &quot;file not found&quot;, &quot;host unreachable&quot;, or &quot;mailbox full&quot;.</li>
+<li>Logs can be generated at this layer to track access and usage statistics.</li>
+</ul>
+</div>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="examples-of-application-layer-protocols">Examples of Application Layer Protocols</h3><div class="header-button"></div></div>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Purpose</th>
+<th>Use Case Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HTTP/HTTPS</strong></td>
+<td>HyperText Transfer Protocol</td>
+<td>Browsing web pages</td>
+</tr>
+<tr>
+<td><strong>FTP/SFTP/TFTP</strong></td>
+<td>File Transfer Protocols</td>
+<td>Uploading/downloading files</td>
+</tr>
+<tr>
+<td><strong>SMTP/IMAP/POP3</strong></td>
+<td>Email Transmission and Access</td>
+<td>Sending/receiving emails</td>
+</tr>
+<tr>
+<td><strong>DNS</strong></td>
+<td>Domain Name System</td>
+<td>Resolving <code>example.com</code> to IP addresses</td>
+</tr>
+<tr>
+<td><strong>Telnet/SSH</strong></td>
+<td>Remote Terminal Access</td>
+<td>Logging into remote servers</td>
+</tr>
+<tr>
+<td><strong>SNMP</strong></td>
+<td>Simple Network Management Protocol</td>
+<td>Monitoring routers, switches, and servers</td>
+</tr>
+<tr>
+<td><strong>LDAP</strong></td>
+<td>Directory Access Protocol</td>
+<td>Enterprise user directory and authentication</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="osi-vs-tcp-ip--layer-collapsing">OSI vs TCP/IP: Layer Collapsing</h3><div class="header-button"></div></div>
+<p>In practice, <strong>TCP/IP collapses OSI Layers 5 (Session), 6 (Presentation), and 7 (Application)</strong> into a single <strong>Application Layer</strong>. Thus, data encoding (e.g., encryption, compression) and session management may also be handled at this level depending on the protocol.</p>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="key-takeaways">Key Takeaways</h3><div class="header-button"></div></div>
+<ul>
+<li>The Application Layer <strong>provides network services directly to user applications</strong>.</li>
+<li>It’s concerned with <strong>what</strong> the application wants to do (send an email, open a webpage), not <strong>how</strong> the data gets transmitted—that’s handled by lower layers.</li>
+<li>It is <strong>protocol-rich</strong>, and its correctness is crucial for user-visible network functionality.</li>
+</ul>
+
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#application-layer">Application Layer</a></li>
+<ul>
+<li class="toc-level-4"><a href="#1--network-service-access">1. Network Service Access</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#2--standardized-communication">2. Standardized Communication</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#3--application-specific-services">3. Application-Specific Services</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#4--data-representation-and-formatting">4. Data Representation and Formatting</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#5--user-authentication-and-authorization">5. User Authentication and Authorization</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#6--error-handling-and-logging">6. Error Handling and Logging</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#examples-of-application-layer-protocols">Examples of Application Layer Protocols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#osi-vs-tcp-ip--layer-collapsing">OSI vs TCP/IP: Layer Collapsing</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#key-takeaways">Key Takeaways</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

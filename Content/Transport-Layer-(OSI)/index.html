@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transport Layer</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Telecommunications/">Telecommunications</a> &gt; <a href="/Content/OSI-Model/">OSI Model</a></p>
+<div class="header-block h1">
+<h1 id="transport-layer">Transport Layer</h1>
+<p>The <strong>Transport Layer</strong> is the fourth layer in the <strong>Open Systems Interconnection (OSI)</strong> model. Its principal role is to facilitate <strong>process-to-process communication</strong>, enabling reliable or unreliable data transmission between applications running on different hosts. It acts as an <strong>intermediary</strong> between the <strong>Network Layer</strong> (Layer 3), which handles host-to-host communication, and the <strong>Session Layer</strong> (Layer 5), which manages session control and dialog maintenance.</p>
+<p>At this layer, communication is established <strong>end-to-end</strong> between the source and destination systems, abstracting the details of the underlying network.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="primary-responsibilities-and-mechanisms">Primary Responsibilities and Mechanisms:</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="1--end-to-end-connection-management">1. End-to-End Connection Management</h4><div class="header-button"></div></div>
+<ul>
+<li>Establishes and manages logical connections between applications on different hosts.</li>
+<li>Supports <strong>connection-oriented</strong> (e.g., TCP) and <strong>connectionless</strong> (e.g., UDP) communication.</li>
+<li>Responsible for <strong>connection establishment</strong>, <strong>maintenance</strong>, and <strong>termination</strong> in reliable protocols.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="2--segmentation-and-reassembly">2. Segmentation and Reassembly</h4><div class="header-button"></div></div>
+<ul>
+<li>Converts large messages from the Session or Application layers into <strong>smaller segments or datagrams</strong> suitable for transmission by the Network Layer.</li>
+<li>At the receiving end, the Transport Layer <strong>reassembles</strong> these segments into the original message using <strong>sequence numbers</strong>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="3--reliability-and-data-integrity">3. Reliability and Data Integrity</h4><div class="header-button"></div></div>
+<ul>
+<li>Ensures data is delivered <strong>accurately and in order</strong>, even over unreliable networks.</li>
+<li>Employs mechanisms such as:
+<ul>
+<li><strong>Acknowledgment (ACK)</strong></li>
+<li><strong>Retransmission of lost segments</strong></li>
+<li><strong>Timeouts</strong></li>
+<li><strong>Error detection</strong> using checksums</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="4--flow-control">4. Flow Control</h4><div class="header-button"></div></div>
+<ul>
+<li>Prevents the sender from overwhelming the receiver with excessive data.</li>
+<li>Example: <strong>TCP’s Sliding Window Protocol</strong> dynamically adjusts the amount of data in transit based on the receiver's buffer availability.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="5--error-control">5. Error Control</h4><div class="header-button"></div></div>
+<ul>
+<li>Includes <strong>error detection</strong> (via checksums) and <strong>error correction</strong> (via retransmissions).</li>
+<li>Ensures the integrity of data through <strong>per-segment verification</strong>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="6--congestion-control">6. Congestion Control</h4><div class="header-button"></div></div>
+<ul>
+<li>Adjusts transmission rate to minimize congestion in the network.</li>
+<li>Example: <strong>TCP congestion control algorithms</strong> such as:
+<ul>
+<li><strong>Slow Start</strong></li>
+<li><strong>Congestion Avoidance</strong></li>
+<li><strong>Fast Retransmit/Fast Recovery</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="7--multiplexing-and-demultiplexing">7. Multiplexing and Demultiplexing</h4><div class="header-button"></div></div>
+<ul>
+<li>Enables multiple applications to share the same transport connection.</li>
+<li>Utilizes <strong>port numbers</strong> to distinguish between different communication sessions on the same host.</li>
+<li>Demultiplexing ensures received segments are forwarded to the correct application process.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="transport-layer-protocols">Transport Layer Protocols</h3><div class="header-button"></div></div>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Type</th>
+<th>Features</th>
+<th>Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TCP</strong> (Transmission Control Protocol)</td>
+<td>Connection-oriented, reliable</td>
+<td>Sequencing, ACKs, flow &amp; congestion control, full-duplex communication</td>
+<td>Web, email, file transfer</td>
+</tr>
+<tr>
+<td><strong>UDP</strong> (User Datagram Protocol)</td>
+<td>Connectionless, unreliable</td>
+<td>Lightweight, minimal overhead, no ACK or retransmissions</td>
+<td>VoIP, gaming, DNS, streaming</td>
+</tr>
+<tr>
+<td><strong>SCTP</strong> (Stream Control Transmission Protocol)</td>
+<td>Connection-oriented, reliable</td>
+<td>Supports multi-streaming and multi-homing, message-oriented</td>
+<td>Telecom, signaling over IP</td>
+</tr>
+<tr>
+<td><strong>DCCP</strong> (Datagram Congestion Control Protocol)</td>
+<td>Connection-oriented, unreliable</td>
+<td>Adds congestion control to UDP-style transport</td>
+<td>Streaming media</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="port-numbers">Port Numbers:</h3><div class="header-button"></div></div>
+<p>Defined by the <strong>Internet Assigned Numbers Authority (IANA)</strong>:</p>
+<ul>
+<li><strong>Well-Known Ports (0–1023):</strong><br />
+Used by system processes (e.g., HTTP: 80, HTTPS: 443, FTP: 21)</li>
+<li><strong>Registered Ports (1024–49151):</strong><br />
+Used by user processes and applications</li>
+<li><strong>Dynamic/Private Ports (49152–65535):</strong><br />
+Used for ephemeral or temporary connections</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="examples-of-transport-layer-in-practice">Examples of Transport Layer in Practice:</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="tcp-example---web-browsing">TCP Example – Web Browsing</h4><div class="header-button"></div></div>
+<ol>
+<li><strong>Connection Setup</strong>: TCP three-way handshake (SYN, SYN-ACK, ACK)</li>
+<li><strong>Data Transfer</strong>: Reliable delivery using sequence numbers and acknowledgments</li>
+<li><strong>Connection Teardown</strong>: Graceful termination using FIN/ACK</li>
+</ol>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="udp-example---online-gaming">UDP Example – Online Gaming</h4><div class="header-button"></div></div>
+<ul>
+<li>Low-latency communication without guarantee of delivery</li>
+<li>Suitable where <strong>timeliness</strong> is more important than accuracy</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="sctp-example---mobile-networks">SCTP Example – Mobile Networks</h4><div class="header-button"></div></div>
+<ul>
+<li>Used in signaling for LTE/5G infrastructure (e.g., between base stations and core network)</li>
+<li>Provides multi-homing (redundancy across multiple IP paths)</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="relation-to-the-osi-model">Relation to the OSI Model:</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Below:</strong> Relies on the <strong>Network Layer</strong> to route data between hosts.</li>
+<li><strong>Above:</strong> Supports the <strong>Session Layer</strong> in managing connections between applications.</li>
+<li>Bridges the gap between <strong>host-to-host</strong> (Layer 3) and <strong>process-to-process</strong> (Layer 5) communication.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="transport-layer-header-structure--example--tcp">Transport Layer Header Structure (Example: TCP)</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Source Port</strong></li>
+<li><strong>Destination Port</strong></li>
+<li><strong>Sequence Number</strong></li>
+<li><strong>Acknowledgment Number</strong></li>
+<li><strong>Header Length</strong></li>
+<li><strong>Flags (SYN, ACK, FIN, etc.)</strong></li>
+<li><strong>Window Size</strong></li>
+<li><strong>Checksum</strong></li>
+<li><strong>Urgent Pointer</strong></li>
+</ul>
+<p>These fields provide the control necessary to ensure ordered, error-checked, and reliable communication.</p>
+
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#transport-layer">Transport Layer</a></li>
+<ul>
+<li class="toc-level-3"><a href="#primary-responsibilities-and-mechanisms">Primary Responsibilities and Mechanisms:</a></li>
+<ul>
+<li class="toc-level-4"><a href="#1--end-to-end-connection-management">1. End-to-End Connection Management</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#2--segmentation-and-reassembly">2. Segmentation and Reassembly</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#3--reliability-and-data-integrity">3. Reliability and Data Integrity</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#4--flow-control">4. Flow Control</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#5--error-control">5. Error Control</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#6--congestion-control">6. Congestion Control</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#7--multiplexing-and-demultiplexing">7. Multiplexing and Demultiplexing</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#transport-layer-protocols">Transport Layer Protocols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#port-numbers">Port Numbers:</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#examples-of-transport-layer-in-practice">Examples of Transport Layer in Practice:</a></li>
+<ul>
+<li class="toc-level-4"><a href="#tcp-example---web-browsing">TCP Example – Web Browsing</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#udp-example---online-gaming">UDP Example – Online Gaming</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#sctp-example---mobile-networks">SCTP Example – Mobile Networks</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#relation-to-the-osi-model">Relation to the OSI Model:</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#transport-layer-header-structure--example--tcp">Transport Layer Header Structure (Example: TCP)</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

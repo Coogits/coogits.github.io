@@ -103,7 +103,7 @@
 </ol>
 </div>
 <div class="header-block h4">
-<div class="header-h4"><h4 id="tcp-ip-model">TCP/IP Model</h4><div class="header-button"></div></div>
+<div class="header-h4"><h4 id="tcp-ip-model-tcp-ip-model"><a href="/Content/TCP-IP-Model/">TCP/IP Model</a></h4><div class="header-button"></div></div>
 <p>A <strong>simplified</strong> version of OSI, used in <strong>modern networking</strong><br />
 It is <strong>practical</strong>, <strong>simpler</strong>, and <strong>directly tied to real protocols</strong> (like TCP, IP, and HTTP).</p>
 <ol>
@@ -155,9 +155,18 @@ It is <strong>practical</strong>, <strong>simpler</strong>, and <strong>directly
 </tbody>
 </table>
 </div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="encapsulation-decapsulation">Encapsulation/Decapsulation</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Encapsulation</strong>:<br />
+Is the process that the layers are encoded from the higher to the lower level: $$Applicaiton\to Network$$</li>
+<li><strong>Decapsulation</strong>:<br />
+Is the process that the layers are decoded from the lower to the higher level: $$Network\to Application$$</li>
+</ul>
+</div>
 </div>
 <div class="header-block h3">
-<div class="header-h3"><h3 id="strong-fundamental-steps-of-data-transmission--strong"><strong>Fundamental Steps of Data Transmission</strong></h3><div class="header-button"></div></div>
+<div class="header-h3"><h3 id="fundamental-steps-of-data-transmission">Fundamental Steps of Data Transmission</h3><div class="header-button"></div></div>
 <ol>
 <li><strong>Set of Symbols</strong> – Define the data or message to be transmitted, represented in a symbolic form (e.g., binary bits, electrical signals, or waveforms).</li>
 <li><strong>Encode</strong> – Convert the symbols into a transmission-friendly format, such as digital encoding, modulation (AM, FM, QAM), or compression.</li>
@@ -167,68 +176,6 @@ It is <strong>practical</strong>, <strong>simpler</strong>, and <strong>directly
 <li><strong>Decode</strong> – Process the received signal to extract the original data, involving demodulation, error correction, and signal reconstruction.</li>
 <li><strong>Interpret &amp; Use</strong> – The final step where the extracted data is understood and utilized by the receiving system or user.</li>
 </ol>
-</div>
-<div class="header-block h3">
-<div class="header-h3"><h3 id="fundamental-concepts">Fundamental Concepts</h3><div class="header-button"></div></div>
-<ul>
-<li><strong>Electromagnetic Waves</strong> – How signals are transmitted wirelessly.</li>
-<li><strong>Frequency &amp; Wavelength</strong> – Radio spectrum usage (AM/FM, UHF/VHF, microwave).</li>
-<li><strong>Decibels (dB) &amp; Signal Power</strong> – Measuring transmission strength.</li>
-<li><strong>Latency, Jitter, and Packet Loss</strong> – Performance factors in networks.</li>
-<li><strong>Bitrate vs Baud Rate</strong> – Data transmission speed vs signal changes.</li>
-</ul>
-</div>
-<div class="header-block h3">
-<div class="header-h3"><h3 id="signal-transmission">Signal Transmission</h3><div class="header-button"></div></div>
-<ul>
-<li><strong>Analog Signal</strong> – Continuous waveforms representing information.</li>
-<li><strong>Digital Signal</strong> – Discrete binary data transmission (0s and 1s).</li>
-<li><strong>Modulation and Demodulation</strong><br />
-Techniques for encoding information onto a carrier wave.
-<ul>
-<li>Amplitude Modulation (AM)</li>
-<li>Frequency Modulation (FM)</li>
-<li>Phase Modulation (PM)</li>
-<li>Quadrature Amplitude Modulation (QAM)</li>
-</ul>
-</li>
-<li><strong>Multiplexing Techniques:</strong>
-<ul>
-<li><strong>FDM (Frequency Division Multiplexing)</strong> – Different frequencies for different signals.</li>
-<li><strong>TDM (Time Division Multiplexing)</strong> – Assigns time slots for different signals.</li>
-<li><strong>CDMA (Code Division Multiple Access)</strong> – Used in mobile networks.</li>
-</ul>
-</li>
-<li><strong>Bandwidth and Data Rate</strong> – Relationship between channel capacity and speed.</li>
-<li><strong>Noise and Interference</strong> – Types of noise (thermal, impulse, crosstalk) and mitigation techniques.</li>
-<li><strong>Signal Propagation</strong> – Attenuation, reflection, diffraction, and refraction in different media.</li>
-</ul>
-</div>
-<div class="header-block h3">
-<div class="header-h3"><h3 id="telecommunications-networks">Telecommunications Networks</h3><div class="header-button"></div></div>
-<ul>
-<li><strong>Wired Networks</strong>
-<ul>
-<li>Public Switched Telephone Network (PSTN)</li>
-<li>Integrated Services Digital Network (ISDN)</li>
-<li>Fiber-optic Networks</li>
-</ul>
-</li>
-<li><strong>Wireless Networks</strong>
-<ul>
-<li>Cellular Networks (2G, 3G, 4G, 5G)</li>
-<li>Wi-Fi and Bluetooth Technologies</li>
-<li>Satellite Communication Networks</li>
-</ul>
-</li>
-<li><strong>Internet Infrastructure</strong>
-<ul>
-<li>TCP/IP Model</li>
-<li>Domain Name System (DNS)</li>
-<li>Internet Backbone and ISPs</li>
-</ul>
-</li>
-</ul>
 </div>
 <div class="header-block h3">
 <div class="header-h3"><h3 id="network-architectures--amp--topologies">Network Architectures &amp; Topologies</h3><div class="header-button"></div></div>
@@ -245,41 +192,7 @@ Techniques for encoding information onto a carrier wave.
 </ul>
 </li>
 </ul>
-</div>
-<div class="header-block h3">
-<div class="header-h3"><h3 id="telecommunications-protocols"><a href="/Content/Telecommunications-Protocols/">Telecommunications Protocols</a></h3><div class="header-button"></div></div>
-<div class="header-block h4">
-<div class="header-h4"><h4 id="osi-model--7-layers">OSI Model (7 Layers)</h4><div class="header-button"></div></div>
-<p>Defines <strong>network communication functions</strong> in seven layers:</p>
-<ol>
-<li><strong>Physical</strong> – Transmission media, cables, signals.</li>
-<li><strong>Data Link</strong> – MAC addresses, error detection (Ethernet, Wi-Fi).</li>
-<li><strong>Network</strong> – Logical addressing &amp; routing (IP, ICMP, ARP).</li>
-<li><strong>Transport</strong> – Reliable or fast delivery (TCP, UDP).</li>
-<li><strong>Session</strong> – Connection management (SIP, PPTP).</li>
-<li><strong>Presentation</strong> – Data formatting &amp; encryption (SSL/TLS).</li>
-<li><strong>Application</strong> – High-level services (HTTP, FTP, SMTP).</li>
-</ol>
-</div>
-<div class="header-block h4">
-<div class="header-h4"><h4 id="tcp-ip-model--4-layers">TCP/IP Model (4 Layers)</h4><div class="header-button"></div></div>
-<p>A <strong>simplified</strong> version of OSI, used in <strong>modern networking</strong>:</p>
-<ol>
-<li><strong>Network Access</strong> – Physical and data link layers combined.</li>
-<li><strong>Internet</strong> – Routing and addressing (IP, ICMP, ARP).</li>
-<li><strong>Transport</strong> – Communication control (TCP, UDP).</li>
-<li><strong>Application</strong> – Services for users (HTTP, FTP, SMTP).</li>
-</ol>
-<ul>
-<li><strong>Mobile Network Standards</strong>
-<ul>
-<li>GSM, CDMA</li>
-<li>LTE, 5G NR</li>
-</ul>
-</li>
-</ul>
 
-</div>
 </div>
 </div>
         </div>
@@ -292,35 +205,20 @@ Techniques for encoding information onto a carrier wave.
 <li class="toc-level-4"><a href="#osi-model">OSI Model</a></li>
 </ul>
 <ul>
-<li class="toc-level-4"><a href="#tcp-ip-model">TCP/IP Model</a></li>
+<li class="toc-level-4"><a href="#tcp-ip-model-tcp-ip-model">TCP/IP Model</a></li>
 </ul>
 <ul>
 <li class="toc-level-4"><a href="#osi-vs--tcp-ip">OSI vs. TCP/IP</a></li>
 </ul>
+<ul>
+<li class="toc-level-4"><a href="#encapsulation-decapsulation">Encapsulation/Decapsulation</a></li>
+</ul>
 </ul>
 <ul>
-<li class="toc-level-3"><a href="#strong-fundamental-steps-of-data-transmission--strong"><strong>Fundamental Steps of Data Transmission</strong></a></li>
-</ul>
-<ul>
-<li class="toc-level-3"><a href="#fundamental-concepts">Fundamental Concepts</a></li>
-</ul>
-<ul>
-<li class="toc-level-3"><a href="#signal-transmission">Signal Transmission</a></li>
-</ul>
-<ul>
-<li class="toc-level-3"><a href="#telecommunications-networks">Telecommunications Networks</a></li>
+<li class="toc-level-3"><a href="#fundamental-steps-of-data-transmission">Fundamental Steps of Data Transmission</a></li>
 </ul>
 <ul>
 <li class="toc-level-3"><a href="#network-architectures--amp--topologies">Network Architectures &amp; Topologies</a></li>
-</ul>
-<ul>
-<li class="toc-level-3"><a href="#telecommunications-protocols">Telecommunications Protocols</a></li>
-<ul>
-<li class="toc-level-4"><a href="#osi-model--7-layers">OSI Model (7 Layers)</a></li>
-</ul>
-<ul>
-<li class="toc-level-4"><a href="#tcp-ip-model--4-layers">TCP/IP Model (4 Layers)</a></li>
-</ul>
 </ul>
 </ul>
 </nav>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Frequency</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Physical-Quantity/">Physical Quantity</a></p>
+<div class="header-block h1">
+<h1 id="frequency">Frequency</h1>
+<p><strong>Frequency</strong> is the number of occurrences of a repeating event per unit of time. It is typically measured in <strong>hertz (Hz)</strong>, where 1 Hz equals 1 cycle per second. In the context of waves, frequency refers to the number of complete oscillations (or cycles) a wave undergoes in one second.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="symbols">Symbols</h3><div class="header-button"></div></div>
+<ul>
+<li>$f\quad$ <strong>Frequency</strong> (unit: Hertz (<strong>Hz</strong>))</li>
+<li>$T\quad$ <strong>Period</strong> (unit: seconds <strong>s</strong>). Represent the time taken for one complete cycle.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="formulas">Formulas</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Frequency</strong>:<br />
+The frequency $f$ of a wave is given by:  $$f=\cfrac{1}{T}$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="contexts">Contexts</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="in-electromagnetic-waves">In electromagnetic waves</h4><div class="header-button"></div></div>
+<p>In <strong>electromagnetic waves</strong><sup id="cite_ref-1" class="footnote-container"><a href="#footnote-1" class="footnote-reference">[1]</a><span class="footnote-tooltip"><a href="/Content/Electromagnetic-Wave/">Electromagnetic Wave</a></span></sup>, the frequency determines the wave's energy. Higher frequencies (e.g., X-rays, ultraviolet) have higher energy, while lower frequencies (e.g., radio waves) have lower energy.</p>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="in-telecommunications">In telecommunications</h4><div class="header-button"></div></div>
+<p>In <strong>telecommunications</strong><sup id="cite_ref-2" class="footnote-container"><a href="#footnote-2" class="footnote-reference">[2]</a><span class="footnote-tooltip"><a href="/Content/Telecommunications/">Telecommunications</a></span></sup>, the frequency of the signal dictates the <strong>bandwidth</strong> available for communication, influencing the data transfer rate. Higher frequencies are used for high-speed data transmission but may have shorter ranges due to greater susceptibility to obstacles and attenuation.</p>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="in-sound-waves">In sound waves</h4><div class="header-button"></div></div>
+<p>In <strong>sound wave</strong>, the frequency is perceived as <strong>pitch</strong>. A higher frequency corresponds to a higher pitch (e.g., a whistle), and a lower frequency corresponds to a lower pitch (e.g., a drum beat).</p>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="in-kinematics">In Kinematics</h4><div class="header-button"></div></div>
+<p>In <strong>Kinematics</strong><sup id="cite_ref-3" class="footnote-container"><a href="#footnote-3" class="footnote-reference">[3]</a><span class="footnote-tooltip"><a href="/Content/Kinematics/">Kinematics</a></span></sup>, specifically in <strong>Harmonic Motion</strong><sup id="cite_ref-4" class="footnote-container"><a href="#footnote-4" class="footnote-reference">[4]</a><span class="footnote-tooltip"><a href="/Content/Simple-Harmonic-Motion/">Simple Harmonic Motion</a></span></sup> and <strong>Circular Motion</strong><sup id="cite_ref-5" class="footnote-container"><a href="#footnote-5" class="footnote-reference">[5]</a><span class="footnote-tooltip"><a href="/Content/Circular-Motion/">Circular Motion</a></span></sup>, frequency refers to how often oscillations or rotations occur. In <strong>Simple Harmonic Motion (SHM)</strong>, it determines the number of oscillations per unit of time, while in <strong>Circular Motion</strong>, it represents the number of full rotations per unit of time.</p>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="references">References</h3><div class="header-button"></div></div><ul><li id="footnote-1" class="footnote-item" data-footnote-id="1"><strong>1</strong>. <a href="/Content/Electromagnetic-Wave/">Electromagnetic Wave</a></li><li id="footnote-2" class="footnote-item" data-footnote-id="2"><strong>2</strong>. <a href="/Content/Telecommunications/">Telecommunications</a></li><li id="footnote-3" class="footnote-item" data-footnote-id="3"><strong>3</strong>. <a href="/Content/Kinematics/">Kinematics</a></li><li id="footnote-4" class="footnote-item" data-footnote-id="4"><strong>4</strong>. <a href="/Content/Simple-Harmonic-Motion/">Simple Harmonic Motion</a></li><li id="footnote-5" class="footnote-item" data-footnote-id="5"><strong>5</strong>. <a href="/Content/Circular-Motion/">Circular Motion</a></li></ul>
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#frequency">Frequency</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#formulas">Formulas</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#contexts">Contexts</a></li>
+<ul>
+<li class="toc-level-4"><a href="#in-electromagnetic-waves">In electromagnetic waves</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#in-telecommunications">In telecommunications</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#in-sound-waves">In sound waves</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#in-kinematics">In Kinematics</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#references">References</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

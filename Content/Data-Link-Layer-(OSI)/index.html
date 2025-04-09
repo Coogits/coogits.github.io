@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Datalink Layer</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Telecommunications/">Telecommunications</a> &gt; <a href="/Content/OSI-Model/">OSI Model</a></p>
+<div class="header-block h1">
+<h1 id="datalink-layer">Datalink Layer</h1>
+<p>The <strong>Data Link Layer</strong> (Layer 2) of the OSI (Open Systems Interconnection) model is responsible for the reliable transfer of data frames between two directly connected nodes over a physical medium. It ensures that data is delivered error-free, in sequence, and without duplication, functioning as an interface between the physical layer and the network layer.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="core-functions">Core Functions</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="framing">Framing</h4><div class="header-button"></div></div>
+<ul>
+<li>The Data Link Layer breaks the raw bit stream from the Physical Layer into <strong>frames</strong>, which are structured units of data that include both the payload (actual data) and control information (such as header and trailer).</li>
+<li>A frame typically includes:
+<ul>
+<li><strong>Frame header</strong>: Contains control information, such as source and destination addresses (MAC addresses), frame type, and other protocol-specific information.</li>
+<li><strong>Data</strong>: The actual payload or user data.</li>
+<li><strong>Frame trailer</strong>: Contains error detection information like a <strong>Cyclic Redundancy Check (CRC)</strong> or checksum.</li>
+</ul>
+</li>
+<li>The framing process ensures that the data stream can be recognized, distinguished, and properly reassembled by the receiver.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="error-handling">Error Handling</h4><div class="header-button"></div></div>
+<ul>
+<li>One of the primary roles of the Data Link Layer is to ensure that data frames are transmitted correctly. It detects errors caused by noise or interference in the physical medium.</li>
+<li><strong>Error Detection</strong>: Common techniques include <strong>Parity Bits</strong>, <strong>Checksums</strong>, and <strong>Cyclic Redundancy Check (CRC)</strong>, where the sender calculates a checksum based on the data and appends it to the frame. The receiver recalculates the checksum upon receipt and compares it to the one sent. If they do not match, an error is assumed.</li>
+<li><strong>Error Correction</strong>: Some Data Link Layer protocols (such as <strong>HDLC</strong>) can request retransmission of erroneous frames, ensuring reliable data transfer in cases of corruption. Others might use <strong>Automatic Repeat reQuest (ARQ)</strong> protocols to achieve this.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="flow-control">Flow Control:</h4><div class="header-button"></div></div>
+<ul>
+<li>Flow control ensures that the sending device does not overwhelm the receiving device with data, especially when the receiving device has limited processing or buffer capacity.</li>
+<li>The Data Link Layer employs various flow control methods:
+<ul>
+<li><strong>Stop-and-wait</strong>: The sender waits for an acknowledgment of each frame before sending the next.</li>
+<li><strong>Sliding window</strong>: Allows the sender to send multiple frames before needing acknowledgment, enhancing efficiency.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="medium-access-control--mac">Medium Access Control (MAC):</h4><div class="header-button"></div></div>
+<ul>
+<li>The <strong>Medium Access Control (MAC)</strong> sublayer of the Data Link Layer is responsible for controlling access to the shared communication medium. This is essential in environments where multiple devices share the same physical medium (e.g., a wired or wireless network).</li>
+<li>The MAC sublayer uses different techniques to avoid <strong>collisions</strong> (when two devices attempt to transmit at the same time) and to ensure fair access:
+<ul>
+<li><strong>CSMA/CD (Carrier Sense Multiple Access with Collision Detection)</strong>: Used in Ethernet networks, where devices &quot;listen&quot; for a clear channel before transmitting and back off if a collision is detected.</li>
+<li><strong>TDMA (Time Division Multiple Access)</strong>: Divides the time into slots and assigns each device a specific time window to transmit.</li>
+<li><strong>CDMA (Code Division Multiple Access)</strong>: Assigns a unique code to each device to distinguish signals on the same frequency.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="addressing">Addressing</h4><div class="header-button"></div></div>
+<ul>
+<li>The Data Link Layer uses <strong>MAC addresses</strong> to uniquely identify devices on a local network. A <strong>MAC address</strong> is a hardware address assigned to the network interface card (NIC) of each device and serves as a unique identifier for devices on a Local Area Network (LAN).</li>
+<li>The <strong>MAC address</strong> is used by the Data Link Layer to direct frames to the correct device on the network. Unlike <strong>IP addresses</strong> at the Network Layer, which are used for routing across networks, MAC addresses are used for direct communication between devices within the same network.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="link-management">Link Management</h4><div class="header-button"></div></div>
+<ul>
+<li>The Data Link Layer is also responsible for managing the link between devices, ensuring that the connection is properly established, maintained, and terminated. It ensures that devices synchronize their transmission and reception of frames, and it manages the flow of frames to ensure that frames are delivered in order.</li>
+<li>For example, in <strong>PPP (Point-to-Point Protocol)</strong>, the Data Link Layer handles link establishment, authentication, and configuration management.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="data-link-layer-protocols">Data Link Layer Protocols</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Ethernet</strong>: The most widely used protocol for LANs. Ethernet operates in the Data Link Layer and defines frame structure, MAC addressing, and collision handling (CSMA/CD).</li>
+<li><strong>PPP (Point-to-Point Protocol)</strong>: Used to establish direct connections between two devices, such as over dial-up or serial links. PPP provides authentication, error detection, and compression.</li>
+<li><strong>HDLC (High-Level Data Link Control)</strong>: A bit-oriented protocol used for synchronous communication, widely used in point-to-point WAN links.</li>
+<li><strong>Wi-Fi (IEEE 802.11)</strong>: A protocol that defines wireless LAN communication, operating both at the Data Link Layer and Physical Layer.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="the-relationship-with-other-layers">The Relationship with Other Layers</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Physical Layer (Layer 1)</strong>: The Data Link Layer builds on the Physical Layer by providing the necessary data structures (frames) and mechanisms for error correction and flow control to ensure reliable data transmission.</li>
+<li><strong>Network Layer (Layer 3)</strong>: The Data Link Layer interacts with the Network Layer by providing logical addressing through MAC addresses and supporting the routing of data frames between different devices on a network.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="example--ethernet-and-wi-fi-in-data-link-layer">Example: Ethernet and Wi-Fi in Data Link Layer</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Ethernet</strong>: In Ethernet, devices are connected via cables, and data is sent as frames with source and destination MAC addresses. It employs <strong>CSMA/CD</strong> to avoid collisions when multiple devices attempt to transmit simultaneously.</li>
+<li><strong>Wi-Fi (IEEE 802.11)</strong>: In wireless LANs, Wi-Fi provides similar functionality but over the air, where the Data Link Layer handles framing, MAC addressing, and collision avoidance using protocols such as <strong>CSMA/CA</strong> (Carrier Sense Multiple Access with Collision Avoidance).</li>
+</ul>
+
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#datalink-layer">Datalink Layer</a></li>
+<ul>
+<li class="toc-level-3"><a href="#core-functions">Core Functions</a></li>
+<ul>
+<li class="toc-level-4"><a href="#framing">Framing</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#error-handling">Error Handling</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#flow-control">Flow Control:</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#medium-access-control--mac">Medium Access Control (MAC):</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#addressing">Addressing</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#link-management">Link Management</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#data-link-layer-protocols">Data Link Layer Protocols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#the-relationship-with-other-layers">The Relationship with Other Layers</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#example--ethernet-and-wi-fi-in-data-link-layer">Example: Ethernet and Wi-Fi in Data Link Layer</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

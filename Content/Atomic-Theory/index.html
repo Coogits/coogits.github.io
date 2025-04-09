@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Atomic Theory</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a></p>
+<div class="header-block h1">
+<h1 id="atomic-theory">Atomic Theory</h1>
+<p><strong>Atomic theory</strong> is a scientific framework that explains the composition, structure, and behavior of matter in terms of atoms—the smallest units of an element that retain its chemical properties. It describes how atoms interact, combine, and rearrange in chemical processes, forming the basis of chemistry and materials science.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="key-principles-of-atomic-theory">Key Principles of Atomic Theory</h3><div class="header-button"></div></div>
+<ul>
+<li>
+<p><strong>All matter is composed of atoms</strong><br />
+Every solid, liquid, gas, and plasma is made up of atoms, which are extremely small and cannot be seen with the naked eye.</p>
+</li>
+<li>
+<p><strong>Atoms of a given element are identical in mass and properties</strong><br />
+(Note: This was part of Dalton’s original model, but we now know about <strong>isotopes</strong>, which are atoms of the same element with different masses.)</p>
+</li>
+<li>
+<p><strong>Atoms of different elements have different properties and masses</strong></p>
+</li>
+<li>
+<p><strong>Atoms combine in simple, whole-number ratios to form compounds</strong><br />
+For example, water (H₂O) consists of two hydrogen atoms and one oxygen atom.</p>
+</li>
+<li>
+<p><strong>Chemical reactions involve rearrangement of atoms</strong><br />
+Atoms are not created or destroyed in a chemical reaction—they are simply rearranged to form new substances.</p>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="atom-structure">Atom Structure</h3><div class="header-button"></div></div>
+<p>Atoms are not indivisible — they are composed of smaller subatomic particles.</p>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="proton--atom"><a href="/Content/Proton-(Atom)/">Proton (Atom)</a></h4><div class="header-button"></div></div>
+<p>Positively charged particles located in the nucleus.</p>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="neutron--atom"><a href="/Content/Neutron-(Atom)/">Neutron (Atom)</a></h4><div class="header-button"></div></div>
+<p>Neutral particles also found in the nucleus.</p>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="electron--atom"><a href="/Content/Electron-(Atom)/">Electron (Atom)</a></h4><div class="header-button"></div></div>
+<p>Negatively charged particles that orbit the nucleus in energy levels.</p>
+<div class="header-block h5">
+<h5 id="electron-configuration"><a href="/Content/Electron-Configuration/">Electron Configuration</a></h5>
+<div class="header-block h6">
+<h6 id="quantum-number">Quantum Number</h6>
+<ol>
+<li><strong>Principal Quantum Number (n)</strong></li>
+<li><strong>Azimuthal Quantum Number (ℓ)</strong></li>
+<li><strong>Magnetic Quantum Number (mₗ)</strong></li>
+<li><strong>Spin Quantum Number (mₛ)</strong></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="history">History</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="1--democritus">1. Democritus</h4><div class="header-button"></div></div>
+<ul>
+<li>(~400 BCE) – The Origin of the Atom</li>
+<li><strong>Who</strong>: Greek philosopher</li>
+<li><strong>Contribution</strong>: First proposed that all matter is made of small, indivisible units called <em>atomos</em> (&quot;uncuttable&quot;).</li>
+<li><strong>Significance</strong>: Although not based on experiments, his idea laid the philosophical groundwork for atomic theory.</li>
+</ul>
+<blockquote class="callout default">
+<p>&quot;Nothing exists except atoms and empty space; everything else is opinion.&quot; – Democritus</p>
+</blockquote>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="2--john-dalton">2. John Dalton</h4><div class="header-button"></div></div>
+<ul>
+<li>(1766–1844) – First Scientific Atomic Theory</li>
+<li><strong>Who</strong>: English chemist and physicist</li>
+<li><strong>Contribution</strong>: Formulated the first modern atomic theory based on scientific experiments.</li>
+<li><strong>Major Points</strong>:
+<ul>
+<li>All elements are made of atoms.</li>
+<li>Atoms of a given element are identical in mass and properties.</li>
+<li>Atoms combine in whole-number ratios to form compounds.</li>
+<li>Atoms are rearranged in reactions, not created or destroyed.</li>
+</ul>
+</li>
+</ul>
+<blockquote class="callout default">
+<p>Dalton’s model explained the law of conservation of mass and the law of definite proportions.</p>
+</blockquote>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="3--j-j--thomson">3. J.J. Thomson</h4><div class="header-button"></div></div>
+<ul>
+<li>(1856–1940) – Discovery of the Electron</li>
+<li><strong>Who</strong>: British physicist</li>
+<li><strong>Contribution</strong>: Discovered the <strong>electron</strong> through cathode ray experiments (1897).</li>
+<li><strong>Model</strong>: Proposed the <strong>Plum Pudding Model</strong>, where electrons were embedded in a positive &quot;soup&quot; of charge.</li>
+<li><strong>Impact</strong>: Showed atoms are divisible and contain internal structure.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="4--ernest-rutherford">4. Ernest Rutherford</h4><div class="header-button"></div></div>
+<ul>
+<li>(1871–1937) – Nuclear Model of the Atom</li>
+<li><strong>Who</strong>: New Zealand-born British physicist</li>
+<li><strong>Contribution</strong>: Conducted the <strong>gold foil experiment</strong> (1909).</li>
+<li><strong>Discovery</strong>: Found that most alpha particles passed through foil, but some deflected sharply.</li>
+<li><strong>Conclusion</strong>: Atoms have a dense, positively charged <strong>nucleus</strong>, with electrons orbiting around it.</li>
+<li><strong>Model</strong>: Introduced the <strong>nuclear model</strong>, replacing Thomson’s.</li>
+</ul>
+<blockquote class="callout default">
+<p>Called the “father of nuclear physics,” Rutherford also discovered the proton.</p>
+</blockquote>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="5--niels-bohr">5. Niels Bohr</h4><div class="header-button"></div></div>
+<ul>
+<li>(1885–1962) – Quantized Electron Orbits</li>
+<li><strong>Who</strong>: Danish physicist</li>
+<li><strong>Contribution</strong>: Modified Rutherford’s model to explain atomic spectra.</li>
+<li><strong>Key Idea</strong>: Electrons occupy <strong>discrete energy levels</strong> (orbits), and light is emitted/absorbed when electrons change levels.</li>
+<li><strong>Model</strong>: The <strong>Bohr Model</strong> (1913), particularly successful for hydrogen.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="6--erwin-schrödinger">6. Erwin Schrödinger</h4><div class="header-button"></div></div>
+<ul>
+<li>(1887–1961) – Quantum Mechanical Model</li>
+<li><strong>Who</strong>: Austrian physicist</li>
+<li><strong>Contribution</strong>: Developed the <strong>Schrödinger equation</strong>, treating electrons as wave-like.</li>
+<li><strong>Model</strong>: Replaced Bohr’s orbits with <strong>orbitals</strong>—regions where electrons are likely to be found.</li>
+<li><strong>Impact</strong>: Laid the foundation for modern <strong>quantum mechanics</strong>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="7--werner-heisenberg">7. Werner Heisenberg</h4><div class="header-button"></div></div>
+<ul>
+<li>(1901–1976) – Uncertainty Principle</li>
+<li><strong>Who</strong>: German physicist</li>
+<li><strong>Contribution</strong>: Formulated the <strong>Heisenberg Uncertainty Principle</strong>, stating we cannot precisely know both the position and momentum of an electron.</li>
+<li><strong>Significance</strong>: Undermined the idea of fixed orbits and supported the probabilistic nature of quantum theory.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="8--james-chadwick">8. James Chadwick</h4><div class="header-button"></div></div>
+<ul>
+<li>(1891–1974) – Discovery of the Neutron</li>
+<li><strong>Who</strong>: British physicist</li>
+<li><strong>Contribution</strong>: Discovered the <strong>neutron</strong> in 1932, completing the basic picture of atomic structure.</li>
+<li><strong>Impact</strong>: Explained atomic mass discrepancies and enabled understanding of nuclear reactions.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="9--quantum-mechanical-model">9. Quantum Mechanical Model</h4><div class="header-button"></div></div>
+<ul>
+<li>(1920s–present)</li>
+<li>Introduced by <strong>Schrödinger, Heisenberg, and others</strong>.</li>
+<li>Electrons are described as wave-like entities in <strong>probability clouds</strong> or <strong>orbitals</strong>, not fixed paths.</li>
+<li><strong>Heisenberg’s Uncertainty Principle</strong> states that the exact position and momentum of an electron cannot be simultaneously known.</li>
+</ul>
+
+</div>
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#atomic-theory">Atomic Theory</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-principles-of-atomic-theory">Key Principles of Atomic Theory</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#atom-structure">Atom Structure</a></li>
+<ul>
+<li class="toc-level-4"><a href="#proton--atom">Proton (Atom)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#neutron--atom">Neutron (Atom)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#electron--atom">Electron (Atom)</a></li>
+<ul>
+<li class="toc-level-5"><a href="#electron-configuration">Electron Configuration</a></li>
+<ul>
+<li class="toc-level-6"><a href="#quantum-number">Quantum Number</a></li>
+</ul>
+</ul>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#history">History</a></li>
+<ul>
+<li class="toc-level-4"><a href="#1--democritus">1. Democritus</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#2--john-dalton">2. John Dalton</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#3--j-j--thomson">3. J.J. Thomson</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#4--ernest-rutherford">4. Ernest Rutherford</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#5--niels-bohr">5. Niels Bohr</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#6--erwin-schrödinger">6. Erwin Schrödinger</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#7--werner-heisenberg">7. Werner Heisenberg</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#8--james-chadwick">8. James Chadwick</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#9--quantum-mechanical-model">9. Quantum Mechanical Model</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

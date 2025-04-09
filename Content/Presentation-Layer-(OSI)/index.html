@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Presentation Layer</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Telecommunications/">Telecommunications</a> &gt; <a href="/Content/OSI-Model/">OSI Model</a></p>
+<div class="header-block h1">
+<h1 id="presentation-layer">Presentation Layer</h1>
+<p>The <strong>Presentation Layer</strong> is the sixth layer of the <strong>OSI (Open Systems Interconnection)</strong> model. Its primary role is to <strong>translate, encrypt, compress, and format data</strong> so that it is correctly interpreted by the application layer at the receiving end.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="detailed-definition">Detailed Definition</h3><div class="header-button"></div></div>
+<p>The <strong>Presentation Layer</strong> acts as a <strong>translator</strong> between the <strong>Application Layer</strong> (Layer 7) and the <strong>lower layers</strong> of the OSI model. It ensures that data sent by the application layer of one system is readable by the application layer of another, despite possible differences in data formats, encoding methods, or system architecture.</p>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="core-responsibilities">Core Responsibilities</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="encoding"><a href="/Content/Encoding/">Encoding</a></h4><div class="header-button"></div></div>
+<ul>
+<li>Converts data between different encoding schemes to ensure interoperability between heterogeneous systems.</li>
+<li>Examples: <strong>ASCII ↔ EBCDIC</strong>, <strong>JSON ↔ XML</strong>, <strong>CSV ↔ YAML</strong>.</li>
+<li>Character Code Translation
+<ul>
+<li>Ensures that character encoding is compatible between systems (e.g., Unicode ↔ UTF-8 ↔ UTF-16).</li>
+<li>Examples: <strong>Unicode ↔ UTF-8 ↔ UTF-16</strong>, <strong>ISO/IEC 8859 ↔ Windows-1252</strong>.</li>
+</ul>
+</li>
+<li>Data Serialization
+<ul>
+<li>Structures complex data (like objects, graphs, records) into a standard format for transmission and reconstructs it on the receiving side.</li>
+<li>Example: using <strong>XDR</strong>, <strong>ASN.1</strong>, or <strong>Google Protocol Buffers</strong>.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="data-compression"><a href="/Content/Data-Compression/">Data Compression</a></h4><div class="header-button"></div></div>
+<ul>
+<li>Reduces the size of data to improve transmission speed and reduce bandwidth usage.</li>
+<li>Examples: ZIP, JPEG, MPEG.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="data-encryption-data-encryption-and-decryption"><a href="/Content/Data-Encryption/">Data Encryption and Decryption</a></h4><div class="header-button"></div></div>
+<ul>
+<li>Provides confidentiality by encrypting data before transmission and decrypting it at the destination.</li>
+<li>Examples: SSL/TLS encryption at this layer conceptually (though technically implemented lower in real-world stacks).</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="examples-of-protocols-and-standards">Examples of Protocols and Standards</h3><div class="header-button"></div></div>
+<p>While not always represented as separate protocols, the following are associated with presentation-layer functionality:</p>
+<ul>
+<li><strong>MIME (Multipurpose Internet Mail Extensions)</strong> — for formatting multimedia email.</li>
+<li><strong>TLS/SSL</strong> — while often considered part of the transport layer in practice, they conceptually serve presentation-layer functions.</li>
+<li><strong>JPEG, GIF, PNG</strong> — image formats involve compression and encoding.</li>
+<li><strong>MP3, AAC</strong> — audio data compression and representation.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="why-it-s-often-merged-in-practice">Why It’s Often Merged in Practice</h3><div class="header-button"></div></div>
+<p>In the <strong>TCP/IP model</strong>, the <strong>Presentation Layer is not defined as a separate layer</strong>. Instead, its functionality is typically implemented within:</p>
+<ul>
+<li><strong>Application Layer protocols</strong> (e.g., HTTPS handles encryption, FTP might handle encoding)</li>
+<li><strong>Middleware and libraries</strong> (e.g., SSL/TLS libraries, JSON serializers)</li>
+</ul>
+
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#presentation-layer">Presentation Layer</a></li>
+<ul>
+<li class="toc-level-3"><a href="#detailed-definition">Detailed Definition</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#core-responsibilities">Core Responsibilities</a></li>
+<ul>
+<li class="toc-level-4"><a href="#encoding">Encoding</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#data-compression">Data Compression</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#data-encryption-data-encryption-and-decryption">Data Encryption and Decryption</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#examples-of-protocols-and-standards">Examples of Protocols and Standards</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#why-it-s-often-merged-in-practice">Why It’s Often Merged in Practice</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

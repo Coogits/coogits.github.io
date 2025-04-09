@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Electron Configuration</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Chemistry/">Chemistry</a> &gt; <a href="/Content/Element-(Matter)/">Element (Matter)</a></p>
+<div class="header-block h1">
+<h1 id="electron-configuration">Electron Configuration</h1>
+<p><strong>Electron configuration</strong> refers to the arrangement of electrons in the <strong>orbitals</strong> of an atom.<br />
+Electrons are distributed in various energy levels or <strong>shells</strong>, and within each shell, they occupy orbitals according to specific rules, such as the <strong>Aufbau principle</strong>, the <strong>Pauli exclusion principle</strong>, and <strong>Hund's rule</strong>. This configuration determines an element’s chemical properties and its reactivity.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="structure">Structure</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="1--principal-quantum-number--n">1. Principal Quantum Number (n)</h4><div class="header-button"></div></div>
+<ul>
+<li>Indicates the <strong>main energy level</strong> (or &quot;shell&quot;).</li>
+<li>Can be represented as numbers or characters:
+<ul>
+<li>n = 1 = K</li>
+<li>n = 2 = L</li>
+<li>n = 3 = M</li>
+<li>n = 4 = N</li>
+</ul>
+</li>
+<li>Higher <strong>n</strong> means higher energy and farther from the nucleus.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="2--azimuthal-quantum-number--ℓ">2. Azimuthal Quantum Number (ℓ)</h4><div class="header-button"></div></div>
+<ul>
+<li>Describes the <strong>subshell or orbital shape</strong>.</li>
+<li>Values: ℓ = 0 to (n - 1)</li>
+<li>Corresponds to:
+<ul>
+<li>ℓ = 0 → <strong>s orbital</strong></li>
+<li>ℓ = 1 → <strong>p orbital</strong></li>
+<li>ℓ = 2 → <strong>d orbital</strong></li>
+<li>ℓ = 3 → <strong>f orbital</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="3--magnetic-quantum-number--mₗ">3. Magnetic Quantum Number (mₗ)</h4><div class="header-button"></div></div>
+<ul>
+<li>Specifies the <strong>orientation</strong> of the orbital in space.</li>
+<li>Values: mₗ = -ℓ to +ℓ (including 0)</li>
+<li>Determines the number of orbitals in each subshell.
+<ul>
+<li>s (ℓ=0) → 1 orbital</li>
+<li>p (ℓ=1)  → 3 orbitals</li>
+<li>d (ℓ=2)  → 5 orbitals</li>
+<li>f (ℓ=3)  → 5 orbitals</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="4--spin-quantum-number--mₛ">4. Spin Quantum Number (mₛ)</h4><div class="header-button"></div></div>
+<ul>
+<li>Describes the <strong>spin</strong> of the electron.</li>
+<li>Values: <strong>+½ or -½</strong></li>
+<li>No two electrons in the same atom can have the same four quantum numbers (Pauli Exclusion Principle).</li>
+<li>Due to the <strong>Pauli Principle</strong>, each orbital can hold a maximum of two electrons with opposite spins.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="notation">Notation</h3><div class="header-button"></div></div>
+<p>Electron configuration is typically written by listing the energy levels, subshells, and the number of electrons in each subshell. For example:</p>
+<ul>
+<li><strong>1s² 2s² 2p⁶ 3s² 3p⁶</strong> (for <strong>Neon, Ne</strong>) indicates the electron configuration for Neon, where:
+<ul>
+<li>The first energy level (1s) holds 2 electrons.</li>
+<li>The second energy level has 2 electrons in the 2s subshell and 6 electrons in the 2p subshell.</li>
+<li>The third energy level has 2 electrons in the 3s subshell and 6 electrons in the 3p subshell.
+For elements beyond <strong>Neon</strong>, electron configurations will continue filling orbitals in the next available energy levels.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="graphical-representation">Graphical Representation</h3><div class="header-button"></div></div>
+<p>The <strong>electron configuration</strong> can also be represented graphically using <strong>orbital diagrams</strong>, where: $$
+\textbf{Shell 1: }
+\begin{array}{|c|}
+\hline
+\uparrow\downarrow\\
+\hline
+\end{array}
+\quad
+\begin{array}{|c|c|c|}
+\hline
+\uparrow\downarrow &amp; \uparrow\downarrow &amp; \uparrow\downarrow  \\
+\hline
+\end{array}
+\quad
+\begin{array}{|c|c|c|c|c|}
+\hline
+\uparrow\downarrow &amp; \uparrow\downarrow &amp; \uparrow\downarrow &amp; \uparrow\downarrow &amp; \uparrow\downarrow \\
+\hline
+\end{array}
+$$
+Each <strong>box</strong> represents an <strong>orbital</strong>, and arrows indicate electrons:</p>
+<ul>
+<li>$\uparrow\quad$ Represent the <a href="/Content/Electron-(Atom)/">Electron (Atom)</a> with <strong>Spin</strong> UP</li>
+<li>$\downarrow\quad$ Represent the <a href="/Content/Electron-(Atom)/">Electron (Atom)</a> with <strong>Spin</strong> Down</li>
+<li><strong>Box with arrows</strong> : An <strong>orbital</strong>, which can hold up to two electrons (opposite spins)</li>
+<li><strong>Grouped boxes</strong> : A <strong>subshell</strong> —
+<ul>
+<li>1 box for <strong>s</strong> subshell (1 orbital)</li>
+<li>3 boxes for <strong>p</strong> subshell (3 orbitals)</li>
+<li>5 boxes for <strong>d</strong> subshell (5 orbitals)</li>
+<li>7 boxes for <strong>f</strong> subshell (7 orbitals)</li>
+</ul>
+</li>
+<li><strong>Line of grouped boxes:</strong> Represent the <strong>Energy Level</strong> or <strong>Shell</strong></li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="principles">Principles</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Pauli Exclusion Principle</strong>:<br />
+No two electrons in the same atom can have identical sets of quantum numbers. This means each orbital can hold a maximum of two electrons with opposite spins.</li>
+<li><strong>Hund's Rule</strong>:<br />
+When electrons occupy degenerate orbitals (orbitals of the same energy), they will first fill them singly with parallel spins before pairing up.</li>
+<li><strong>Aufbau Principle</strong>:<br />
+Electrons fill orbitals starting from the lowest energy level and move to higher energy levels as needed.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="example--electron-configuration-of-carbon--c">Example: Electron Configuration of Carbon (C)</h3><div class="header-button"></div></div>
+<ul>
+<li>Carbon has an atomic number of 6, meaning it has 6 electrons. Its electron configuration is:
+<ul>
+<li><strong>1s² 2s² 2p²</strong><br />
+The first energy level (1s) holds 2 electrons, the second energy level (2s) holds 2 electrons, and the remaining 2 electrons are placed in the 2p subshell.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="importance-of-electron-configuration">Importance of Electron Configuration</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Chemical Behavior</strong>:<br />
+The electron configuration determines how atoms interact in chemical reactions. The electrons in the outermost shell, called <strong>valence electrons</strong>, are particularly important in bonding and chemical reactions.</li>
+<li><strong>Periodic Table Organization</strong>:<br />
+The electron configuration explains the arrangement of elements in the Periodic Table. Elements in the same group have similar electron configurations, especially in their outermost shells, leading to similar chemical properties.</li>
+</ul>
+
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#electron-configuration">Electron Configuration</a></li>
+<ul>
+<li class="toc-level-3"><a href="#structure">Structure</a></li>
+<ul>
+<li class="toc-level-4"><a href="#1--principal-quantum-number--n">1. Principal Quantum Number (n)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#2--azimuthal-quantum-number--ℓ">2. Azimuthal Quantum Number (ℓ)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#3--magnetic-quantum-number--mₗ">3. Magnetic Quantum Number (mₗ)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#4--spin-quantum-number--mₛ">4. Spin Quantum Number (mₛ)</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#notation">Notation</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#graphical-representation">Graphical Representation</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#principles">Principles</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#example--electron-configuration-of-carbon--c">Example: Electron Configuration of Carbon (C)</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#importance-of-electron-configuration">Importance of Electron Configuration</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

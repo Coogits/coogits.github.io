@@ -124,6 +124,12 @@ body {
 
 /* --------------------------------------------------------------- */
 
+strong {
+  font-weight: bold;
+}
+body strong {
+  font-weight: bold;
+}
 body {
   margin: 0;
   padding: 0;
@@ -131,7 +137,6 @@ body {
   font-size: var(--font-size);
   line-height: 1.2; /* Relative to the font size */
   font-family: 'Times New Roman', serif;
-  font-weight: lighter;
 }
 
 .mdBody {
@@ -670,3 +675,5 @@ h4 a::after {
 #timeline-container a {
   color:#000;
 }
+
+/*-----------------------------------*/

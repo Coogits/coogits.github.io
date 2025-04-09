@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiplexing Techniques</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Telecommunications/">Telecommunications</a> &gt; <a href="/Content/OSI-Model/">OSI Model</a> &gt; <a href="/Content/Physical-Layer-(OSI)/">Physical Layer (OSI)</a></p>
+<div class="header-block h1">
+<h1 id="multiplexing-techniques">Multiplexing Techniques</h1>
+<p>Multiplexing is a technique used in telecommunications to combine multiple signals or data streams into one transmission medium, allowing for the efficient utilization of the available bandwidth.<br />
+The primary objective of multiplexing is to maximize the usage of a single communication channel or resource by enabling the transmission of several signals simultaneously without interference.<br />
+Each signal is typically assigned its own time slot, frequency band, or phase, depending on the type of multiplexing used.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="key-aspects">Key Aspects</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Combining Signals</strong>: Multiple signals (which could be data, voice, or video) are combined for transmission over a single physical medium (e.g., a fiber-optic cable, radio wave, or twisted pair).</li>
+<li><strong>Efficiency</strong>: The technique helps optimize the use of costly and limited resources such as bandwidth and physical medium (wires, frequencies, etc.).</li>
+<li><strong>Separation of Signals</strong>: Even though the signals are transmitted together, they are logically separated at the receiver end, often through specialized demultiplexing techniques.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="access-types-in-multiplexing">Access Types in Multiplexing</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="centralized-access">Centralized Access</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Definition</strong>: In centralized access, a central entity governs access to the shared communication medium. This entity manages the allocation of resources to avoid conflicts and ensure efficient transmission.</li>
+<li><strong>Examples</strong>:
+<ul>
+<li><strong>Polling</strong>: A central controller sequentially requests each device for data transmission, allowing devices to send data only when polled.</li>
+<li><strong>Token Passing</strong>: A control token circulates among devices in a network. Only the device holding the token is permitted to transmit, ensuring orderly access.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="distributed-access">Distributed Access</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Definition</strong>: In distributed access, multiple devices share the communication medium without a central controller. Access is managed by individual devices through various protocols that handle contention and resource allocation.</li>
+</ul>
+<div class="header-block h5">
+<h5 id="deterministic-access">Deterministic Access</h5>
+<ul>
+<li><strong>Definition</strong>: In deterministic access schemes, transmission opportunities are predetermined based on a fixed schedule or predefined allocation, ensuring that no conflicts occur during transmission.
+<ul>
+<li><strong>Examples</strong>:
+<ul>
+<li><strong>Time Division Multiplexing (TDM)</strong>: Devices are allocated specific time slots for transmission, ensuring that only one device transmits during each slot.</li>
+<li><strong>Frequency Division Multiplexing (FDM)</strong>: Devices are assigned unique frequency bands within the spectrum, ensuring simultaneous transmissions without overlap.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="code-division-multiple-access--cdma">Code Division Multiple Access (CDMA)</h5>
+<ul>
+<li><strong>Definition</strong>: CDMA is a spread-spectrum technique where each device is assigned a unique code for transmission. Multiple devices can transmit simultaneously within the same frequency band, with each signal being distinguishable due to its unique code.
+<ul>
+<li><strong>Example</strong>:
+<ul>
+<li><strong>Wideband CDMA (WCDMA)</strong>: Commonly used in cellular networks, where each communication is encoded with a unique spreading code to allow multiple simultaneous transmissions.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="contention-based-access">Contention-Based Access</h5>
+<ul>
+<li><strong>Definition</strong>: In contention-based access, devices compete for the shared medium. Devices must detect channel availability and handle possible transmission conflicts, often through backoff strategies and retransmission mechanisms.
+<ul>
+<li><strong>Examples</strong>:
+<ul>
+<li><strong>Carrier Sense Multiple Access (CSMA)</strong>: Devices listen to the medium to detect if it is idle before attempting transmission. If the medium is busy, the device defers transmission.</li>
+<li><strong>CSMA with Collision Detection (CSMA/CD)</strong>: After transmission, devices monitor the channel for collisions and retransmit if necessary. This technique is commonly used in Ethernet networks.</li>
+<li><strong>CSMA with Collision Avoidance (CSMA/CA)</strong>: Used primarily in wireless networks (such as Wi-Fi), where devices attempt to avoid collisions by deferring transmission until the channel is clear.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="static-vs--dynamic-multiplexing">Static vs. Dynamic Multiplexing</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="static-multiplexing">Static Multiplexing</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Definition</strong>: In static multiplexing, resources are divided into fixed segments and allocated to users or channels in advance, without any changes during transmission. The allocation of bandwidth or time slots is predetermined, and each user gets a dedicated portion of the available capacity.</li>
+<li><strong>Channel Types</strong>: <strong>Physical Channels</strong>. In static multiplexing, the division of these physical channels is predetermined, with each user or signal assigned a specific portion (e.g., time slots in TDM or frequency bands in FDM).</li>
+<li><strong>Examples</strong>:
+<ul>
+<li><strong>Time Division Multiplexing (TDM)</strong>: Divides time into fixed slots, with each user allocated a specific slot for transmission.</li>
+<li><strong>Frequency Division Multiplexing (FDM)</strong>: Divides the available frequency spectrum into fixed bands, with each user assigned a specific frequency for communication.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="dynamic-multiplexing">Dynamic Multiplexing</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Definition</strong>: Dynamic multiplexing adjusts the allocation of resources in real-time based on demand or network conditions. It allows more flexible and efficient use of available bandwidth or time, adapting to changing traffic loads or user requirements.</li>
+<li><strong>Channel Types</strong>: <strong>Logical Channels</strong>. In dynamic multiplexing, the allocation of these logical channels is flexible and can adjust based on demand or real-time conditions (e.g., in on-demand access methods like CSMA/CA).</li>
+</ul>
+<div class="header-block h5">
+<h5 id="dynamic-multiplexing-types">Dynamic Multiplexing Types</h5>
+<ul>
+<li><strong>On-Demand Allocation</strong>: Resources are allocated dynamically based on the immediate needs of users or devices. This method adjusts the allocation as traffic conditions change.
+<ul>
+<li><strong>Examples</strong>:
+<ul>
+<li><strong>Carrier Sense Multiple Access with Collision Avoidance (CSMA/CA)</strong>: Used in Wi-Fi networks, where devices dynamically sense the channel before transmitting to avoid collisions.</li>
+<li><strong>Random Access Protocols</strong>: Systems like Ethernet use dynamic access methods, where devices send data when the channel is free, dynamically allocating bandwidth as needed.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Pre-Allocation</strong>: Resources are pre-allocated but can be adjusted dynamically based on real-time traffic or user needs, offering a more flexible approach than static multiplexing.
+<ul>
+<li><strong>Examples</strong>:
+<ul>
+<li><strong>Asynchronous Transfer Mode (ATM)</strong>: Bandwidth is pre-allocated to each user but can be adjusted based on demand, allowing more efficient use of network resources.</li>
+<li><strong>Packet-Switched Networks</strong>: Resources are allocated to data packets dynamically, such as in the case of the Internet, where the path and bandwidth can change based on network congestion or other conditions.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="types-of-multiplexing-techniques">Types of Multiplexing Techniques</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="time-division-multiplexing--tdm">Time Division Multiplexing (TDM)</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>How It Works</strong>:<br />
+TDM allocates different time slots to each signal on a shared communication channel. Each signal is transmitted in a sequence, with each one being given a specific time window for transmission.</li>
+<li><strong>Access Control</strong>:<br />
+The access control is based on the timing sequence, ensuring that no two devices transmit at the same time, usually <strong>Static Allocated</strong>.</li>
+<li><strong>Applications</strong>:<br />
+Common in digital communication systems, such as in telephone networks, where voice calls are digitized and transmitted over time slots in a multiplexed stream.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="frequency-division-multiplexing--fdm">Frequency Division Multiplexing (FDM)</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>How It Works</strong>:<br />
+FDM divides the available bandwidth into several non-overlapping frequency bands. Each signal is modulated onto a different frequency carrier and transmitted simultaneously on these separate frequency bands.</li>
+<li><strong>Access Control</strong>:<br />
+The control here is based on frequency allocation, ensuring that no two devices use the same frequency band.</li>
+<li><strong>Applications</strong>:<br />
+Used in analog radio and television broadcasting, satellite communication, and early telephone networks (e.g., analog phone systems).</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="wavelength-division-multiplexing--wdm">Wavelength Division Multiplexing (WDM)</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>How It Works</strong>:<br />
+A form of FDM used in optical fiber communication, where different signals are transmitted at different wavelengths (colors) of light. Each signal is assigned a different wavelength of light to carry data through optical fibers.</li>
+<li><strong>Applications</strong>:<br />
+WDM is widely used in high-speed internet and long-distance communications via optical fiber, offering very high bandwidth and capacity.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="code-division-multiplexing--cdm">Code Division Multiplexing (CDM)</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>How It Works</strong>:<br />
+In CDM, each signal is assigned a unique code, and all signals are transmitted simultaneously over the same frequency band. The receiver uses the code to distinguish between signals and recover them.</li>
+<li><strong>Access Control</strong>:<br />
+The control is based on assigning unique codes to users, which allows them to share the same channel.</li>
+<li><strong>Applications</strong>:<br />
+Used in wireless systems such as CDMA (Code Division Multiple Access) cellular networks.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="space-division-multiplexing--sdm">Space Division Multiplexing (SDM)</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>How It Works</strong>:<br />
+SDM utilizes multiple physical paths (such as fiber-optic cables or antennas) to transmit multiple signals simultaneously. This is often done using multiple antennas or fibers, each carrying a separate stream of data.</li>
+<li><strong>Applications</strong>:<br />
+Used in modern fiber-optic communication systems, MIMO (Multiple Input Multiple Output) antenna systems, and spatially separated communication networks.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="polling-and-token-based-access">Polling and Token-based Access</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Access Method</strong>:<br />
+In polling-based access, a central controller or &quot;polling&quot; entity requests permission from each device to transmit. Each device responds in turn, and the central controller determines the transmission schedule.</li>
+<li><strong>Token-based Access</strong>:<br />
+In <strong>token passing</strong>, as explained earlier, a token is passed around the network, and only the device holding the token is allowed to transmit. This ensures <strong>deterministic access</strong>.</li>
+<li><strong>Access Control</strong>:<br />
+Polling and token-based methods provide <strong>centralized access control</strong>, as a central entity or token ensures orderly access to the shared medium.</li>
+<li><strong>Example</strong>:<br />
+Token Ring networks use token passing for access control. In polling systems, systems like <strong>Modbus</strong> use a master-slave structure to control access to the network.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="demand-assignment--da">Demand Assignment (DA)</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Access Method</strong>:<br />
+In DA, devices request access to the channel when they need to transmit, and the central controller grants access based on availability. This system allows devices to access the medium dynamically, as needed.</li>
+<li><strong>Access Control</strong>:<br />
+The access control is based on demand, with the central controller managing which device gets access to the communication medium at any given time.</li>
+<li><strong>Example</strong>:<br />
+<strong>Dynamic Frequency Assignment (DFA)</strong> systems in satellite communication use this type of access.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="carrier-sense-multiple-access-with-collision-detection--csma-cd">Carrier Sense Multiple Access with Collision Detection (CSMA/CD)</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Access Method</strong>:<br />
+CSMA/CD is a <strong>contention-based</strong> access method where devices &quot;listen&quot; to the channel before transmitting to ensure it is not already in use. If two devices transmit simultaneously, a collision occurs, and both devices must retransmit after a random delay.</li>
+<li><strong>Access Control</strong>:<br />
+The access control here is based on <strong>sensing the carrier</strong> (the channel) to determine whether it is idle or in use. If the channel is busy, devices must wait until it is free.</li>
+<li><strong>Example</strong>:<br />
+Ethernet networks (such as those using the <strong>IEEE 802.3</strong> standard) use CSMA/CD to manage data transmission.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="aloha">Aloha</h4><div class="header-button"></div></div>
+
+</div>
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#multiplexing-techniques">Multiplexing Techniques</a></li>
+<ul>
+<li class="toc-level-3"><a href="#key-aspects">Key Aspects</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#access-types-in-multiplexing">Access Types in Multiplexing</a></li>
+<ul>
+<li class="toc-level-4"><a href="#centralized-access">Centralized Access</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#distributed-access">Distributed Access</a></li>
+<ul>
+<li class="toc-level-5"><a href="#deterministic-access">Deterministic Access</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#code-division-multiple-access--cdma">Code Division Multiple Access (CDMA)</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#contention-based-access">Contention-Based Access</a></li>
+</ul>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#static-vs--dynamic-multiplexing">Static vs. Dynamic Multiplexing</a></li>
+<ul>
+<li class="toc-level-4"><a href="#static-multiplexing">Static Multiplexing</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#dynamic-multiplexing">Dynamic Multiplexing</a></li>
+<ul>
+<li class="toc-level-5"><a href="#dynamic-multiplexing-types">Dynamic Multiplexing Types</a></li>
+</ul>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#types-of-multiplexing-techniques">Types of Multiplexing Techniques</a></li>
+<ul>
+<li class="toc-level-4"><a href="#time-division-multiplexing--tdm">Time Division Multiplexing (TDM)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#frequency-division-multiplexing--fdm">Frequency Division Multiplexing (FDM)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#wavelength-division-multiplexing--wdm">Wavelength Division Multiplexing (WDM)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#code-division-multiplexing--cdm">Code Division Multiplexing (CDM)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#space-division-multiplexing--sdm">Space Division Multiplexing (SDM)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#polling-and-token-based-access">Polling and Token-based Access</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#demand-assignment--da">Demand Assignment (DA)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#carrier-sense-multiple-access-with-collision-detection--csma-cd">Carrier Sense Multiple Access with Collision Detection (CSMA/CD)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#aloha">Aloha</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

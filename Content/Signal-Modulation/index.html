@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signal Modulation</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Telecommunications/">Telecommunications</a> &gt; <a href="/Content/OSI-Model/">OSI Model</a> &gt; <a href="/Content/Physical-Layer-(OSI)/">Physical Layer (OSI)</a></p>
+<div class="header-block h1">
+<h1 id="signal-modulation">Signal Modulation</h1>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Amfm3-en-de.gif" style="width: 250px; float: right; margin-left: 10px;" /> 
+Signal modulation is the process of altering a carrier wave's properties (amplitude, frequency, or phase) to encode information for transmission. Different modulation techniques are employed based on the communication medium and desired signal characteristics.
+<br clear="both" />
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="waveforms">Waveforms</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Carrier Signal</strong>:<br />
+The high-frequency signal that carries the information, with a constant amplitude but varying frequency.</li>
+<li><strong>Modulating Signal</strong>:<br />
+The lower-frequency signal that contains the information. This signal influences the frequency of the carrier.</li>
+<li><strong>Frequency Deviation</strong>:<br />
+The extent to which the carrier frequency is varied by the modulating signal.<br />
+Larger deviations represent higher frequencies, and smaller deviations result in a less pronounced frequency change.</li>
+</ul>
+</div>
+<div class="header-block h2">
+<h2 id="analogic-modulation">Analogic Modulation</h2>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="amplitude-modulation--am"><a href="/Content/Amplitude-Modulation-(AM)/">Amplitude Modulation (AM)</a></h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Definition</strong>:
+Amplitude Modulation (AM) involves varying the amplitude (strength) of the carrier wave in proportion to the input signal. This technique is commonly used in analog audio broadcasting (e.g., AM radio).</li>
+<li><strong>How It Works</strong>:<br />
+In AM, the carrier wave’s amplitude increases and decreases to reflect the intensity of the audio or data signal being transmitted.</li>
+<li><strong>Applications</strong>:<br />
+AM is used in traditional radio broadcasting, aviation communication, and some forms of long-range communication. However, it is more susceptible to noise and interference due to variations in signal strength.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="frequency-modulation--fm"><a href="/Content/Frequency-Modulation-(FM)/">Frequency Modulation (FM)</a></h3><div class="header-button"></div></div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/FM_Modulation_-_en.png" style="width: 450px; float: right; margin-left: 10px;" /> 
+<br clear="both" />
+<ul>
+<li><strong>Definition</strong>:
+Frequency Modulation (FM) works by varying the frequency of the carrier wave in accordance with the amplitude of the input signal. The frequency changes by small amounts, with the degree of deviation determined by the strength of the signal.</li>
+<li><strong>How It Works</strong>:<br />
+In FM, the carrier frequency shifts up and down, depending on the frequency of the modulating signal, allowing for a more robust signal with better resistance to noise.</li>
+<li><strong>Applications</strong>:<br />
+FM is widely used in high-fidelity audio broadcasting (FM radio), television sound transmission, and two-way radio communication. FM signals offer better sound quality and noise immunity compared to AM signals.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="phase-modulation--pm">Phase Modulation (PM)</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Definition</strong>:<br />
+Phase Modulation (PM) changes the phase of the carrier signal based on the modulating signal. The phase shift varies according to the instantaneous amplitude of the input signal.</li>
+<li><strong>How It Works</strong>:<br />
+PM alters the position of the signal’s waveform, or phase, at specific intervals. It is closely related to frequency modulation but uses phase shifts rather than frequency shifts.</li>
+<li><strong>Applications</strong>:<br />
+PM is used in digital communication systems, such as in some forms of satellite communication and wireless networking. It is also part of more complex modulation schemes like <strong>Quadrature Phase Shift Keying (QPSK)</strong>.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h2">
+<h2 id="digital-modulation">Digital Modulation</h2>
+<p>Digital modulation techniques are methods of encoding digital information onto a carrier wave by altering its amplitude, frequency, or phase. These techniques allow digital data to be transmitted over analog channels.</p>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="amplitude-shift-key--ask">Amplitude Shift Key (ASK)</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Definition</strong>:<br />
+Amplitude Shift Keying (ASK) is a modulation scheme where the amplitude of the carrier signal is varied in proportion to the digital data signal. A binary &quot;1&quot; is represented by one amplitude level, and a binary &quot;0&quot; is represented by another.</li>
+<li><strong>How It Works</strong>:<br />
+In ASK, the carrier wave’s amplitude is switched between two levels (usually high and low) to represent the binary values 1 and 0, respectively.</li>
+<li><strong>Applications</strong>:<br />
+ASK is simple and widely used in low-speed communication systems, such as <strong>RFID</strong>, <strong>infrared communication</strong>, and <strong>AM radio</strong> for digital data transmission.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="frequency-shift-key--fsk">Frequency Shift Key (FSK)</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Definition</strong>:<br />
+Frequency Shift Keying (FSK) modulates the frequency of the carrier wave to represent digital data. Each binary value (1 or 0) corresponds to a distinct frequency.</li>
+<li><strong>How It Works</strong>:<br />
+In FSK, a &quot;1&quot; might correspond to a higher frequency, and a &quot;0&quot; to a lower frequency, or vice versa. The carrier’s frequency is changed depending on the input data.</li>
+<li><strong>Applications</strong>:<br />
+FSK is used in <strong>fax machines</strong>, <strong>modems</strong>, and <strong>radio communication systems</strong>, where higher resistance to noise and interference is required compared to ASK.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="phase-shift-key--psk">Phase Shift Key (PSK)</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Definition</strong>:<br />
+Phase Shift Keying (PSK) involves varying the phase of the carrier signal to encode digital data. Each phase shift corresponds to a specific bit pattern, typically 0s and 1s.</li>
+<li><strong>How It Works</strong>:<br />
+In PSK, the carrier's phase is shifted at specific intervals to represent the data. For example, in <strong>Binary PSK (BPSK)</strong>, one phase represents a 0, and another represents a 1.</li>
+<li><strong>Applications</strong>:<br />
+PSK is commonly used in <strong>Wi-Fi</strong>, <strong>satellite communication</strong>, and <strong>Bluetooth</strong>, where efficiency in bandwidth usage and error resistance are important.</li>
+</ul>
+
+</div>
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#signal-modulation">Signal Modulation</a></li>
+<ul>
+<li class="toc-level-3"><a href="#waveforms">Waveforms</a></li>
+</ul>
+<ul>
+<li class="toc-level-2"><a href="#analogic-modulation">Analogic Modulation</a></li>
+<ul>
+<li class="toc-level-3"><a href="#amplitude-modulation--am">Amplitude Modulation (AM)</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#frequency-modulation--fm">Frequency Modulation (FM)</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#phase-modulation--pm">Phase Modulation (PM)</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-2"><a href="#digital-modulation">Digital Modulation</a></li>
+<ul>
+<li class="toc-level-3"><a href="#amplitude-shift-key--ask">Amplitude Shift Key (ASK)</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#frequency-shift-key--fsk">Frequency Shift Key (FSK)</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#phase-shift-key--psk">Phase Shift Key (PSK)</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

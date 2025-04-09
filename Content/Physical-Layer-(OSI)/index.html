@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Physical Layer</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Computer-Science/">Computer Science</a> &gt; <a href="/Content/Telecommunications/">Telecommunications</a> &gt; <a href="/Content/OSI-Model/">OSI Model</a></p>
+<div class="header-block h1">
+<h1 id="physical-layer">Physical Layer</h1>
+<p>The <strong>Physical Layer</strong> (Layer 1) of the OSI model is responsible for the <strong>transmission and reception of raw data bits</strong> over a physical medium. This layer deals with the hardware aspects of communication, such as the <strong>cables</strong>, <strong>switches</strong>, <strong>network interface cards</strong>, <strong>electrical signals</strong>, <strong>optical signals</strong>, and <strong>radio waves</strong> that physically transmit data between devices.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="electromagnetic-wave"><a href="/Content/Electromagnetic-Wave/">Electromagnetic Wave</a></h3><div class="header-button"></div></div>
+<p>In telecommunications, electromagnetic waves serve as the medium for wireless signal transmission. The frequency band used impacts range, penetration, and data capacity:</p>
+<ul>
+<li><strong>Radio and microwaves</strong>: Wi-Fi, Bluetooth, satellite, and cellular networks.</li>
+<li><strong>Infrared</strong>: Remote controls and short-range communication.</li>
+<li><strong>Optical waves</strong>: Fiber-optic communication.</li>
+</ul>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="magnetic-permeability"><a href="/Content/Magnetic-Permeability/">Magnetic Permeability</a></h4><div class="header-button"></div></div>
+<p>Magnetic permeability affects:</p>
+<ul>
+<li><strong>Electromagnetic wave propagation</strong>: Influences interaction with radio and microwave signals.</li>
+<li><strong>Transformer and inductor design</strong>: Materials with high permeability enhance magnetic field storage.</li>
+<li><strong>Antenna design</strong>: Affects impedance matching and shielding.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="frequency-wave-frequency"><a href="/Content/Frequency/">Wave Frequency</a></h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Definition</strong>: The number of oscillations per second, measured in <strong>hertz (Hz)</strong>.</li>
+<li><strong>Telecommunications Role</strong>: Higher frequencies allow faster data transmission, but lower frequencies penetrate obstacles better.
+<ul>
+<li><strong>Low frequencies</strong>: Long-range, better penetration (e.g., AM radio).</li>
+<li><strong>High frequencies</strong>: Higher data capacity, shorter range (e.g., microwave, millimeter waves for 5G).</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="wavelength">Wavelength</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Definition</strong>: The length of one complete cycle, inversely related to frequency.</li>
+<li><strong>Telecommunications Role</strong>: Affects propagation and obstacle penetration.
+<ul>
+<li><strong>Longer wavelengths</strong>: Better for long-range and penetration (e.g., radio waves).</li>
+<li><strong>Shorter wavelengths</strong>: Suited for high-speed transmission (e.g., fiber-optic, high-frequency applications).</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="wave-amplitude">Wave Amplitude</h4><div class="header-button"></div></div>
+<p><strong>Amplitude</strong> refers to the maximum displacement of a wave from its equilibrium (rest) position. It represents the strength or intensity of the wave, such as the height of the wave in a sound signal or the peak voltage in an electrical signal.<br />
+In telecommunications, the amplitude of a signal is crucial because it directly impacts the strength and clarity of the transmission.</p>
+<ul>
+<li><strong>In Audio Signals</strong>:  Higher amplitudes correspond to louder sounds, while lower amplitudes result in quieter sounds.</li>
+<li><strong>In Electrical Signals</strong>:  Higher amplitudes mean stronger signals that can travel further or penetrate better through mediums.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="decibel"><a href="/Content/Decibel/">Decibel</a></h4><div class="header-button"></div></div>
+<p>The decibel (dB) is used to express signal strength, power, and loss in telecommunications, often for gain and attenuation measurements.</p>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="signal-modulation"><a href="/Content/Signal-Modulation/">Signal Modulation</a></h3><div class="header-button"></div></div>
+<p>Signal modulation is the process of altering a carrier wave's properties (amplitude, frequency, or phase) to encode information for transmission. Different modulation techniques are employed based on the communication medium and desired signal characteristics.</p>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="analogic-modulation">Analogic Modulation</h4><div class="header-button"></div></div>
+<div class="header-block h5">
+<h5 id="amplitude-modulation--am">Amplitude Modulation (AM)</h5>
+<p>Amplitude Modulation (AM) involves varying the amplitude (strength) of the carrier wave in proportion to the input signal. This technique is commonly used in analog audio broadcasting (e.g., AM radio).</p>
+</div>
+<div class="header-block h5">
+<h5 id="frequency-modulation--fm">Frequency Modulation (FM)</h5>
+<p>Frequency Modulation (FM) works by varying the frequency of the carrier wave in accordance with the amplitude of the input signal. The frequency changes by small amounts, with the degree of deviation determined by the strength of the signal.</p>
+</div>
+<div class="header-block h5">
+<h5 id="phase-modulation--pm">Phase Modulation (PM)</h5>
+<p>Phase Modulation (PM) changes the phase of the carrier signal based on the modulating signal. The phase shift varies according to the instantaneous amplitude of the input signal.</p>
+</div>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="digital-modulation">Digital Modulation</h4><div class="header-button"></div></div>
+<div class="header-block h5">
+<h5 id="amplitude-shift-key--ask">Amplitude Shift Key (ASK)</h5>
+</div>
+<div class="header-block h5">
+<h5 id="frequency-shift-key--fsk">Frequency Shift Key (FSK)</h5>
+</div>
+<div class="header-block h5">
+<h5 id="phase-shift-key--psk">Phase Shift Key (PSK)</h5>
+</div>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="bitrate-vs-baud-rate">Bitrate vs Baud Rate</h3><div class="header-button"></div></div>
+<p>In telecommunications, <strong>bitrate</strong> and <strong>baud rate</strong> are two key metrics that describe data transmission speed, but they refer to different aspects of the signal:</p>
+<ul>
+<li><strong>Bitrate</strong>:<br />
+The <strong>bitrate</strong> is the number of <strong>bits transmitted per second</strong> (bps). It reflects the amount of actual data (0s and 1s) sent over a communication channel. For example, a bitrate of 1000 bps means 1000 bits of data are transmitted every second.</li>
+<li><strong>Baud Rate</strong>:<br />
+The <strong>baud rate</strong> (or symbol rate) is the number of <strong>signal changes (symbols) per second</strong>. Each symbol may represent one or more bits depending on the modulation technique used.</li>
+</ul>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="relationship">Relationship</h4><div class="header-button"></div></div>
+<p><strong>Bitrate = Baud Rate × Number of bits per symbol</strong></p>
+<ul>
+<li>If each symbol carries 1 bit → Bitrate = Baud Rate</li>
+<li>If each symbol carries 4 bits (e.g., 16-QAM) → Bitrate = 4 × Baud Rate</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="example">Example:</h4><div class="header-button"></div></div>
+<p>A 16-QAM signal transmits 4 bits per symbol. If the baud rate is 1,000 symbols/sec, the bitrate is:
+1,000 × 4 = <strong>4,000 bps</strong></p>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="multiplexing-techniques"><a href="/Content/Multiplexing-Techniques/">Multiplexing Techniques</a></h3><div class="header-button"></div></div>
+<p><strong>Multiplexing</strong> is a method used in telecommunications to <strong>combine multiple signals</strong> into a single transmission channel, allowing efficient use of bandwidth and infrastructure. It enables multiple data streams to share the same physical medium without interfering with each other.</p>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="types-of-multiplexing-techniques">Types of Multiplexing Techniques</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Time Division Multiplexing (TDM)</strong><br />
+Each signal is assigned a specific time slot in a repeating sequence. Only one signal transmits at a time, but they alternate rapidly, giving the illusion of simultaneous transmission.</li>
+<li><strong>Frequency Division Multiplexing (FDM)</strong><br />
+Each signal is transmitted on a different frequency within the available bandwidth. This is common in analog systems like radio and cable TV.</li>
+<li><strong>Wavelength Division Multiplexing (WDM)</strong><br />
+A form of FDM used in optical fiber communication. Different data channels are sent over distinct light wavelengths (colors) through a single fiber.</li>
+<li><strong>Code Division Multiple Access (CDMA)</strong><br />
+All signals share the same frequency and time but use unique codes for separation. Common in mobile and satellite communications.</li>
+<li><strong>Space Division Multiplexing (SDM)</strong><br />
+Separate signals are transmitted in distinct physical paths or channels, such as different wires, fiber cores, or antenna beams.</li>
+</ul>
+
+</div>
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#physical-layer">Physical Layer</a></li>
+<ul>
+<li class="toc-level-3"><a href="#electromagnetic-wave">Electromagnetic Wave</a></li>
+<ul>
+<li class="toc-level-4"><a href="#magnetic-permeability">Magnetic Permeability</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#frequency-wave-frequency">Wave Frequency</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#wavelength">Wavelength</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#wave-amplitude">Wave Amplitude</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#decibel">Decibel</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#signal-modulation">Signal Modulation</a></li>
+<ul>
+<li class="toc-level-4"><a href="#analogic-modulation">Analogic Modulation</a></li>
+<ul>
+<li class="toc-level-5"><a href="#amplitude-modulation--am">Amplitude Modulation (AM)</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#frequency-modulation--fm">Frequency Modulation (FM)</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#phase-modulation--pm">Phase Modulation (PM)</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#digital-modulation">Digital Modulation</a></li>
+<ul>
+<li class="toc-level-5"><a href="#amplitude-shift-key--ask">Amplitude Shift Key (ASK)</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#frequency-shift-key--fsk">Frequency Shift Key (FSK)</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#phase-shift-key--psk">Phase Shift Key (PSK)</a></li>
+</ul>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#bitrate-vs-baud-rate">Bitrate vs Baud Rate</a></li>
+<ul>
+<li class="toc-level-4"><a href="#relationship">Relationship</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#example">Example:</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#multiplexing-techniques">Multiplexing Techniques</a></li>
+<ul>
+<li class="toc-level-4"><a href="#types-of-multiplexing-techniques">Types of Multiplexing Techniques</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

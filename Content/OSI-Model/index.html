@@ -94,34 +94,38 @@ The model helps <strong>design, troubleshoot, and understand</strong> network co
 <div class="header-h3"><h3 id="osi-model-layers">OSI Model Layers</h3><div class="header-button"></div></div>
 <p>Protocols are structured based on the <strong>OSI (Open Systems Interconnection) Model</strong>, which consists of seven layers:</p>
 <div class="header-block h4">
-<div class="header-h4"><h4 id="1--physical-layer">1. Physical Layer</h4><div class="header-button"></div></div>
+<div class="header-h4"><h4 id="1----physical-layer--osi">1. <a href="/Content/Physical-Layer-(OSI)/">Physical Layer (OSI)</a></h4><div class="header-button"></div></div>
 <p>(Layer 1) – Transmission Medium &amp; Hardware</p>
 <ul>
-<li><strong>Electromagnetic Waves</strong> – Basics of wireless transmission.</li>
+<li><strong><a href="/Content/Electromagnetic-Wave/">Electromagnetic Wave</a></strong> – Basics of wireless transmission.
+<ul>
 <li><strong>Frequency &amp; Wavelength</strong> – Spectrum allocation (AM/FM, UHF/VHF, microwave).</li>
 <li><strong>Signal Power &amp; Decibels (dB)</strong> – Measuring signal strength.</li>
-<li><strong>Bitrate vs Baud Rate</strong> – Data transmission speed vs signal changes.</li>
-<li><strong>Transmission Media:</strong>
-<ul>
-<li><strong>Copper-based Networks</strong> – Twisted Pair (Ethernet), Coaxial Cable (Cable TV).</li>
-<li><strong>Fiber Optic Networks</strong> – Single-mode vs Multi-mode fibers.</li>
-<li><strong>Wireless Technologies</strong> – Cellular (2G-5G), Wi-Fi, Bluetooth, Satellite, Microwave.</li>
 </ul>
 </li>
-<li><strong>Modulation Techniques:</strong>
+<li><strong><a href="/Content/Signal-Modulation/">Signal Modulation</a></strong>
 <ul>
 <li><strong>AM/FM/PM</strong> – Analog modulation types.</li>
-<li><strong>QAM (Quadrature Amplitude Modulation)</strong> – Used in digital communication.</li>
+<li><strong>ASM/FSM/PSM</strong> – Digital modulation types.</li>
+<li><strong>QAM (Quadrature Amplitude Modulation)</strong> – Digital modulation <strong>ASM</strong> and <strong>PSM</strong>.</li>
 <li><strong>OFDM (Orthogonal Frequency-Division Multiplexing)</strong> – Used in Wi-Fi and 4G/5G.</li>
 </ul>
 </li>
-<li><strong>Multiplexing Techniques:</strong>
+<li><strong><a href="/Content/Multiplexing-Techniques/">Multiplexing Techniques</a></strong>
 <ul>
 <li><strong>FDM (Frequency Division Multiplexing)</strong>.</li>
 <li><strong>TDM (Time Division Multiplexing)</strong>.</li>
 <li><strong>CDMA (Code Division Multiple Access)</strong>.</li>
 <li><strong>SDM (Space Division Multiplexing)</strong> – Used in fiber optics and MIMO.</li>
 <li><strong>OFDMA (Orthogonal Frequency Division Multiple Access)</strong> – Used in LTE and 5G.</li>
+</ul>
+</li>
+<li><strong>Bitrate vs Baud Rate</strong> – Data transmission speed vs signal changes.</li>
+<li><strong>Transmission Media:</strong>
+<ul>
+<li><strong>Copper-based Networks</strong> – Twisted Pair (Ethernet), Coaxial Cable (Cable TV).</li>
+<li><strong>Fiber Optic Networks</strong> – Single-mode vs Multi-mode fibers.</li>
+<li><strong>Wireless Technologies</strong> – Cellular (2G-5G), Wi-Fi, Bluetooth, Satellite, Microwave.</li>
 </ul>
 </li>
 <li><strong>Fiber Optic Communication</strong> – Optical data transmission for high-speed networking.</li>
@@ -137,7 +141,7 @@ The model helps <strong>design, troubleshoot, and understand</strong> network co
 </ul>
 </div>
 <div class="header-block h4">
-<div class="header-h4"><h4 id="2--data-link-layer">2. Data Link Layer</h4><div class="header-button"></div></div>
+<div class="header-h4"><h4 id="2----data-link-layer--osi">2. <a href="/Content/Data-Link-Layer-(OSI)/">Data Link Layer (OSI)</a></h4><div class="header-button"></div></div>
 <p>(Layer 2) – Reliable Data Transfer &amp; Addressing</p>
 <ul>
 <li><strong>MAC (Medium Access Control)</strong> – Controls how devices access the transmission medium.</li>
@@ -174,7 +178,7 @@ The model helps <strong>design, troubleshoot, and understand</strong> network co
 </ul>
 </div>
 <div class="header-block h4">
-<div class="header-h4"><h4 id="3--network-layer">3. Network Layer</h4><div class="header-button"></div></div>
+<div class="header-h4"><h4 id="3----network-layer--osi">3. <a href="/Content/Network-Layer-(OSI)/">Network Layer (OSI)</a></h4><div class="header-button"></div></div>
 <p>(Layer 3) – Addressing &amp; Routing</p>
 <ul>
 <li><strong>IP (Internet Protocol) – IPv4 &amp; IPv6</strong> – Governs addressing and packet delivery.
@@ -204,7 +208,7 @@ The model helps <strong>design, troubleshoot, and understand</strong> network co
 </ul>
 </div>
 <div class="header-block h4">
-<div class="header-h4"><h4 id="4--transport-layer">4. Transport Layer</h4><div class="header-button"></div></div>
+<div class="header-h4"><h4 id="4----transport-layer--osi">4. <a href="/Content/Transport-Layer-(OSI)/">Transport Layer (OSI)</a></h4><div class="header-button"></div></div>
 <p>(Layer 4) – End-to-End Communication</p>
 <ul>
 <li><strong>TCP (Transmission Control Protocol)</strong> – Reliable, connection-oriented communication.</li>
@@ -218,9 +222,8 @@ The model helps <strong>design, troubleshoot, and understand</strong> network co
 <li><strong>RTP/RTCP (Real-time Transport Protocol &amp; Control Protocol)</strong> – Used in VoIP and streaming.</li>
 </ul>
 </div>
-</div>
-<div class="header-block h3">
-<div class="header-h3"><h3 id="5--session-layer">5. Session Layer</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="5----session-layer--osi">5. <a href="/Content/Session-Layer-(OSI)/">Session Layer (OSI)</a></h4><div class="header-button"></div></div>
 <p>(Layer 5) – Connection Management</p>
 <ul>
 <li><strong>SIP (Session Initiation Protocol)</strong> – Establishes and manages VoIP and multimedia sessions.</li>
@@ -233,8 +236,8 @@ The model helps <strong>design, troubleshoot, and understand</strong> network co
 <li><strong>Ka-band, Ku-band Communications</strong> – Satellite frequency bands.</li>
 </ul>
 </div>
-<div class="header-block h3">
-<div class="header-h3"><h3 id="6--presentation-layer">6. Presentation Layer</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="6----presentation-layer--osi">6. <a href="/Content/Presentation-Layer-(OSI)/">Presentation Layer (OSI)</a></h4><div class="header-button"></div></div>
 <p>(Layer 6) – Data Formatting &amp; Encryption</p>
 <ul>
 <li><strong>SSL/TLS (Secure Sockets Layer / Transport Layer Security)</strong> – Encrypts network communication.</li>
@@ -252,8 +255,8 @@ The model helps <strong>design, troubleshoot, and understand</strong> network co
 </li>
 </ul>
 </div>
-<div class="header-block h3">
-<div class="header-h3"><h3 id="7--application-layer">7. Application Layer</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="7----application-layer--osi">7. <a href="/Content/Application-Layer-(OSI)/">Application Layer (OSI)</a></h4><div class="header-button"></div></div>
 <p>(Layer 7) – High-Level Communication Services</p>
 <ul>
 <li><strong>Web Protocols:</strong>
@@ -287,6 +290,7 @@ The model helps <strong>design, troubleshoot, and understand</strong> network co
 
 </div>
 </div>
+</div>
         </div>
 <nav class="table-of-contents" id="table-of-contents">
 <ul>
@@ -294,26 +298,26 @@ The model helps <strong>design, troubleshoot, and understand</strong> network co
 <ul>
 <li class="toc-level-3"><a href="#osi-model-layers">OSI Model Layers</a></li>
 <ul>
-<li class="toc-level-4"><a href="#1--physical-layer">1. Physical Layer</a></li>
+<li class="toc-level-4"><a href="#1----physical-layer--osi">1. Physical Layer (OSI)</a></li>
 </ul>
 <ul>
-<li class="toc-level-4"><a href="#2--data-link-layer">2. Data Link Layer</a></li>
+<li class="toc-level-4"><a href="#2----data-link-layer--osi">2. Data Link Layer (OSI)</a></li>
 </ul>
 <ul>
-<li class="toc-level-4"><a href="#3--network-layer">3. Network Layer</a></li>
+<li class="toc-level-4"><a href="#3----network-layer--osi">3. Network Layer (OSI)</a></li>
 </ul>
 <ul>
-<li class="toc-level-4"><a href="#4--transport-layer">4. Transport Layer</a></li>
-</ul>
-</ul>
-<ul>
-<li class="toc-level-3"><a href="#5--session-layer">5. Session Layer</a></li>
+<li class="toc-level-4"><a href="#4----transport-layer--osi">4. Transport Layer (OSI)</a></li>
 </ul>
 <ul>
-<li class="toc-level-3"><a href="#6--presentation-layer">6. Presentation Layer</a></li>
+<li class="toc-level-4"><a href="#5----session-layer--osi">5. Session Layer (OSI)</a></li>
 </ul>
 <ul>
-<li class="toc-level-3"><a href="#7--application-layer">7. Application Layer</a></li>
+<li class="toc-level-4"><a href="#6----presentation-layer--osi">6. Presentation Layer (OSI)</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#7----application-layer--osi">7. Application Layer (OSI)</a></li>
+</ul>
 </ul>
 </ul>
 </nav>
