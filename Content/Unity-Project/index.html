@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unity Project</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+        <!--  <script type="module" src="/system/interactable-svg.js"></script> -->
+
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Projects/">Projects</a></p>
+<div class="header-block h1">
+<h1 id="unity-project">Unity Project</h1>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="sviluppo-di-un--applicazione-videoludica-per-l-apprendimento-di-informatica--fisica-e-matematica">Sviluppo di un' applicazione videoludica per l'Apprendimento di Informatica, Fisica e Matematica</h3><div class="header-button"></div></div>
+<p><strong>Obbiettivi</strong>: Il progetto ha come obiettivo la creazione di un videogioco che permette il controllo di una pedina, denominata &quot;character&quot;, questa pedina si muoverà in uno spazio bidimensionale ($\mathbb{R}^2$) rispettando le leggi della fisica rispondendo agli input dell'utente. Le principali aree di sviluppo comprendono:</p>
+<ul>
+<li><strong>Organizzazione e Gestione</strong>: Implementazione di codice indipendente che possa essere condiviso con un Team, espanso e reso facilmente leggibile:
+<ul>
+<li><strong>Programmazione Modulare</strong>: Suddivisione del codice in moduli per facilitarne la gestione e l'espansione del progetto.</li>
+</ul>
+</li>
+<li><strong>Informatica</strong>: Applicare le tecniche informatiche acquisite per risolvere problemi complessi attraverso algoritmi eseguibili dal calcolatore. Il progetto prevede l'uso di:
+<ul>
+<li><strong>Linguaggio di Programmazione</strong>: Utilizzo delle funzionalità offerte dal linguaggio per istruire il calcolatore e tradurre il problema in codice.</li>
+</ul>
+</li>
+<li><strong>Fisica</strong>: Simulazione del movimento di un corpo che interagisce con l'ambiente sotto l'azione di <strong>Forze</strong>. Sarà necessario applicare:
+<ul>
+<li><strong>Meccanica Classica</strong>: Sfruttando i principi base della <strong>Dinamica</strong>, per determinare le cause degli spostamenti, e della <strong>Cinematica</strong>, per determinarne gli effetti.</li>
+</ul>
+</li>
+<li><strong>Matematica</strong>: Applicazione della matematica necessaria per risolvere le formule fisiche, logiche, e applicare gli strumenti utili alla computazione in spazi vettoriali: si prevede l'uso di:
+<ul>
+<li><strong>Algebra</strong>, <strong>Geometria Analitica</strong>: Utilizzo di <strong>Equazioni</strong>, <strong>Vettori</strong> e <strong>Derivate</strong> per rendere possibile l'interpretazione quantitativa del problema da parte del calcolatore</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>Strumenti Utilizzati</strong>:</p>
+<ul>
+<li><strong>Ambiente di Sviluppo</strong>:
+<ul>
+<li><strong>Unity</strong>: Una piattaforma di sviluppo integrata (<strong>IDE</strong>) dedicata alla creazione di applicazioni interattive in tempo reale.</li>
+</ul>
+</li>
+<li><strong>Linguaggio di programmazione</strong>:
+<ul>
+<li><code>C#</code>: Una scelta ideale per applicazioni videoludiche grazie alla sua natura orientata agli oggetti (<strong>OOP</strong>). Le principali caratteristiche che rendono il <code>C#</code> adatto includono:
+<ul>
+<li><strong>Programmabilità Procedurale</strong>: Consente l’esecuzione sequenziale di istruzioni.</li>
+<li><strong>Event-Driven Programming</strong>: Permette la gestione di eventi, essenziale per interazioni basate sull’input utente.</li>
+<li><strong>Polimorfismo ed Ereditarietà:</strong> Facilitano il riutilizzo del codice e l’espansione delle funzionalità attraverso l’uso di classi derivate.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Altri strumenti</strong>:
+<ul>
+<li><strong>Diagrammi di flusso</strong>: Per rappresentare graficamente il flusso logico dell’algoritmo e semplificarne la comprensione.</li>
+<li><strong>Pseudocodice</strong>: Per tradurre in un linguaggio comprensibile l’algoritmo prima della sua implementazione, rendendo più agevole il passaggio verso il codice sorgente.</li>
+</ul>
+</li>
+<li><strong>Altri software usati</strong>:
+<ul>
+<li><strong>Krita</strong>: Per il disegno a mano libera delle bozze e dei placeholder.</li>
+<li><strong>Photoshop</strong>: Per l'editing dei colori e l'applicazione dei filtri.</li>
+<li><strong>Blender</strong>: Per la creazione di modelli poligonali.</li>
+<li><strong>Desmos</strong>: Per la creazione di grafici matematici e la visualizzazione di concetti geometrici, utili per la simulazione del movimento in spazi vettoriali.</li>
+</ul>
+</li>
+</ul>
+<hr />
+</div>
+<div class="header-block h2">
+<h2 id="fasi-dello-sviluppo">Fasi dello sviluppo</h2>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="1--analisi-dell-algoritmo">1. Analisi dell'algoritmo:</h3><div class="header-button"></div></div>
+<p>L'algoritmo che guida il comportamento del &quot;character&quot; si suddivide in due sotto-problemi principali che saranno trattati in moduli separati:</p>
+<ol>
+<li><strong>Fase di input</strong>: L'utente interagisce con il sistema tramite periferiche di input: il Software gestisce questa fase nei seguenti passaggi:
+<ol>
+<li><strong>Intercetta l'input</strong>: i segnali provenienti dalle periferiche di input vengono intercettati dal software.</li>
+<li><strong>Processamento del segnale</strong>: Il software processa il segnale ricevuto come:
+<ul>
+<li><strong>Movimento in avanti</strong>: Il software interpreta l'input come un vettore da far processare alla simulazione fisica.</li>
+<li><strong>Salto</strong>: Il segnale viene tradotto in un evento.</li>
+</ul>
+</li>
+<li><strong>Reindirizza il comando</strong>: Dopo l'elaborazione, il comando viene indirizzato al modulo appropriato:
+<ul>
+<li><strong>Movimento in avanti</strong>: Il dato viene inviato alla simulazione fisica per essere elaborato.</li>
+<li><strong>Salto</strong>: Viene creato un evento utilizzando il paradigma di programmazione <strong>Event-Driven</strong>.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>Simulazione fisica</strong>: La simulazione fisica si suddivide in un a prima parte dedicata alla <strong>Dinamica</strong> e una seconda che si occupa della <strong>Cinematica</strong>.
+<ol>
+<li><strong>Dinamica - calcolo delle Forze</strong>: In questa fase vengono calcolate le forze che agiscono sul &quot;character&quot;.
+<ul>
+<li><strong>Forza di input</strong>: La forza necessaria per spostare la pedina in base all'input ricevuto.</li>
+<li><strong>Attrito</strong>: Implementazione di un sistema di attrito in modo da permettere alla pedina di decelerare al contatto col suolo.</li>
+<li><strong>Gestione Dell'evento salto</strong>: L'evento sarà gestito parallelamente al loop della simulazione, applicando un impulso alla pedina.</li>
+<li><strong>Forza Peso</strong>: Viene applicata la Forza Peso dall'accelerazione gravitazionale $g=9,81 \cfrac{m}{s^2}$.</li>
+</ul>
+</li>
+<li><strong>Dinamica - somma delle Forze</strong>: Le Forze verranno sommate ottenendo la <strong>Forza Risultante</strong> così da poter essere applicate agevolmente alla componente accelerazione:
+<ul>
+<li><strong>Forza Risultante</strong>: La combinazione delle forze segue il <strong>Principio di Sovrapposizione</strong>, sommando vettorialmente il contributo delle Forze.</li>
+</ul>
+</li>
+<li><strong>Cinematica - Urti e vincoli</strong>: la cinematica tiene conto degli eventuali vincoli e urti a cui il &quot;character&quot; è soggetto:
+<ul>
+<li><strong>Urto Anelastico</strong>: In caso di collisione, l'algoritmo ridistribuisce la velocità residua considerando l’energia persa (urti perfettamente anelastici).</li>
+<li><strong>Reazione Vincolare</strong>: Se il &quot;character&quot; è soggetto a un vincolo (ad esempio, il suolo o un muro), la componente della velocità lungo il versore normale al vincolo viene annullata.</li>
+</ul>
+</li>
+<li><strong>Cinematica - reiterazione temporale</strong>: La simulazione continua ad aggiornare la posizione per intervalli di tempo:
+<ul>
+<li><strong>Aggiornamento</strong>: La simulazione procede aggiornando la posizione del &quot;character&quot; per intervalli di $\Delta t$.</li>
+<li><strong>Reiterazione</strong>: Se si verificano urti questi vengono calcolati iterativamente finché:
+<ul>
+<li>La velocità del &quot;character&quot; si annulla.</li>
+<li>La posizione finale raggiunge il tempo finale $\Delta t$.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="1--analisi-fisica-e-matematica">1. Analisi fisica e matematica</h3><div class="header-button"></div></div>
+<p>Da un analisi preliminare emerge la necessità di applicare <strong>Formule Fisiche e Matematiche</strong>; l'intento di creare un'applicazione che integri forze in input, richiede anche che tali forze vengano dissipate per rendere l'esperienza più realistica. Per questo motivo, si introducono forze di attrito, le quali contribuiranno a rendere il sistema meno isolato, simulando perdite energetiche tipiche dei sistemi reali. Non essendo necessari rimbalzi, si pone l'obbiettivo di modellare gli urti come anelastici, in modo da rappresentare una dissipazione aggiuntiva dell'energia meccanica. Per il calcolo delle intersezioni, si è considerato inizialmente di mettere a sistema e risolvere le equazioni lineari, ma alla fine si è scelto di sfruttare gli strumenti offerti dall'ambiente di sviluppo, rendendo il codice più efficiente e compatto. le principali formule individuate sono:</p>
+<ul>
+<li><strong>Forza</strong>: Per il calcolo delle forze si utilizzerà il <strong>Primo Principio della Dinamica</strong> (o <strong>Primo Principio di Newton</strong>):
+<ul>
+<li>$\overrightarrow{F}=m\overrightarrow{a}\qquad$</li>
+<li>dove $m$ è la <strong>massa</strong> del corpo e $\overrightarrow{a}$ l'<strong>accelerazione</strong>.</li>
+</ul>
+</li>
+<li><strong>Attrito</strong>: L'attrito è una forza proporzionale alla Forza perpendicolare al piano, che agisce parallelamente al piano e con verso opposto al moto:
+<ul>
+<li>$F_A=-\hat{u}\;\mu \overrightarrow{F}_{\perp}$</li>
+<li>dove $-\hat u$ è il versore parallelo al piano e con verso contrario al moto, mentre $\overrightarrow{F}_{\perp}$ la forza perpendicolare al piano.</li>
+</ul>
+</li>
+<li><strong>Impulso</strong>: Per il salto verrà utilizzato un impulso che si andrà a sommare come <em>forza costante</em>:
+<ul>
+<li>$\overrightarrow{F}_I=\cfrac{\overrightarrow{I}}{\Delta t}\qquad \Delta{t}&gt;0$</li>
+<li>l'impulso $\overrightarrow{I}$ è definito come da differenza di <em>quantità di moto</em> $\Delta\overrightarrow{p}$ ; la <em>forza media</em> nell'intervallo di tempo $\Delta t$ è rappresentata come $\overrightarrow{F}_I$.</li>
+</ul>
+</li>
+<li><strong>Forza risultante</strong>: A cui si applicherà il <strong>Principio di Sovrapposizione delle Forze</strong>:
+<ul>
+<li>$\overrightarrow{F}_{ris}=\displaystyle\sum_{i=1}^n\overrightarrow{F}_i\qquad$</li>
+<li>dove $\overrightarrow{F}_i$ sono le forze in gioco prese singolarmente.</li>
+</ul>
+</li>
+<li><strong>Accelerazione</strong>: Dalla Forza risultate si ricava l'accelerazione:
+<ul>
+<li>$\overrightarrow{a}=\cfrac{\overrightarrow{F_{ris}}}{m}\qquad m&gt;0$</li>
+</ul>
+</li>
+<li><strong>Velocità Istantanea</strong>: La velocità istantanea viene calcolata <strong>integrando l'accelerazione rispetto al tempo</strong>:
+<ul>
+<li>$\overrightarrow{v}(t)=a\Delta{t}+v_0$</li>
+<li>dove $\Delta{t}$ rappresenta l'<em>intervallo di tempo</em>, mentre $v_0$ la <em>velocità iniziale</em></li>
+</ul>
+</li>
+<li><strong>Velocità Media</strong>: La velocità media è ottenuta <strong>integrando la posizione rispetto al tempo</strong>:
+<ul>
+<li>$\overrightarrow{v}=\cfrac{\Delta{\overrightarrow{s}}}{\Delta{t}}=\cfrac{\overrightarrow{s_f}-\overrightarrow{s_i}}{t_f-t_i}\qquad \Delta{t}&gt;0$</li>
+<li>dove $\Delta{s}=(\overrightarrow{s_f}-\overrightarrow{s_i})$è lo spostamento nell'intervallo di tempo $\Delta{t}=(t_f-t_i)$.</li>
+</ul>
+</li>
+<li><strong>Posizione</strong>: Suddividendo il moto in <em>intervalli di tempo molto piccoli</em>, è possibile <em>approssimare</em> lo spostamento come un <strong>Moto Rettilineo Uniforme</strong>, semplificando i calcoli:
+<ul>
+<li>$s(t)=v\Delta{t}+s_0$</li>
+<li>$t$ rappresenta il tempo relativo alla posizione e $s_0$ è la posizione iniziale, $\Delta t$ rappresenta l'intervallo di tempo $\Delta t=t_f-t_i$.</li>
+</ul>
+</li>
+<li><strong>Urto anelastico e vincoli</strong>: Per simulare l'atterraggio e le reazioni vincolari, la velocità viene proiettata sul piano tramite il <strong>prodotto scalare</strong>:
+<ul>
+<li>$|\overrightarrow{v}|\;\hat{u}(\hat{u}\cdot\hat{v})\qquad$</li>
+<li>dove $\overrightarrow{v}$ è il vettore velocità mentre $\hat{u}$ è il versore parallelo al piano.</li>
+</ul>
+</li>
+<li><strong>Prodotto scalare</strong>: Il prodotto scalare consente di determinare la componente di una grandezza lungo una specifica direzione, essenziale per calcolare la velocità dopo l'urto e rispettare i vincoli del piano. Una calcolatrice grafica è stata utilizzata per visualizzare la direzione e l'entità delle forze, garantendo che i risultati fossero coerenti con l'analisi teorica.</li>
+</ul>
+<div style="page-break-after: always;"></div>
+<hr />
+</div>
+</div>
+<div class="header-block h2">
+<h2 id="3--progettazione-mediante-diagramma-di-flusso">3. Progettazione mediante Diagramma di Flusso:</h2>
+<p>Modellare l'algoritmo utilizzando un <strong>Diagramma di Flusso</strong> (Flow-Chart) aiuterà a creare una mappa concettuale intuitiva, suddividendo il processo in blocchi. Questo approccio sarà utile in seguito per trascrivere l'algoritmo in codice.
+L'analisi preliminare consente di distinguere due sezioni principali del codice:</p>
+<ol>
+<li><strong>Sezione Dinamica</strong>: Si occuperà del calcolo delle forze applicate. Questa sezione non richiederà iterazioni, poiché la forza risultante sarà disponibile senza ulteriori modifiche.</li>
+<li><strong>Sezione Cinematica</strong>: Potrà gestire due situazioni:
+<ul>
+<li><strong>Senza collisioni</strong>: In questo caso, sarà sufficiente calcolare la nuova posizione dell'oggetto.</li>
+<li><strong>Con collisioni</strong>: Ogni collisione richiederà il ricalcolo della velocità. Sarà quindi necessario implementare un ciclo che gestisca tutte le collisioni, aggiornando la velocità finché non si raggiunge una configurazione priva di ulteriori urti.
+Una volta verificata l'assenza di collisioni, la nuova posizione potrà essere calcolata. Nel caso di velocità nulla, la posizione rimarrà invariata rispetto a quella iniziale.</li>
+</ul>
+</li>
+</ol>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="4--progettazione-mediante-pseudocodice">4. Progettazione mediante Pseudocodice:</h3><div class="header-button"></div></div>
+<p>Prima di implementare il codice nel linguaggio di programmazione, sarà utile creare uno schema intuitivo ma più dettagliato delle fasi dell'algoritmo. A tale scopo si è scelto di utilizzare uno <strong>Pseudocodice</strong> che descrive i passaggi principali, rendendo le operazioni più esplicite e facilitandone la successiva trascrizione nel linguaggio di programmazione <strong>C#</strong>.</p>
+<ul>
+<li>Partendo dall'inizializzazione delle costanti e delle variabili, l'obiettivo è descrivere il ciclo che risolverà la fisica richiesta dal problema.</li>
+<li>l'algoritmo verrà richiamato dall'ambiente di sviluppo ad intervalli di circa <strong>2 centesimi di secondo</strong> ($2\cdot 10^{-2}\;s$) e continuerà fintanto che il programma sarà in esecuzione.</li>
+<li>La sezione di <strong>Dinamica</strong> si occuperà di calcolare le forze.</li>
+<li>La sezione di <strong>Cinematica</strong> si occuperà di calcolare velocità e spostamenti.</li>
+<li>La sezione degli <strong>urti</strong> si occuperà di ricalcolare velocità e spostamenti in caso di urti.</li>
+<li>Risolti gli urti si aggiornerà la <strong>posizione</strong> finale.</li>
+</ul>
+<pre><code class="language-pseudo">----------------------------------------------- Pseudocodice del ciclo Fisico ---------------------------------
+// --- INIZIALIZZAZIONE PARAMETRI ---
+INIZIALIZZA gravità a -9.81 // Accelerazione gravitazionale terrestre (m/s^2)
+INIZIALIZZA massa 
+INIZIALIZZA coeffAttritoStat // Coefficiente di attrito statico
+INIZIALIZZA coeffAttritoDin // Coefficiente di attrito dinamico
+INIZIALIZZA accelerazioneSpostamento // accelerazione applicata dall'input
+
+// --- CICLO PRINCIPALE DELLA FISICA ---
+WHILE FisicaAttiva:
+	// --- DINAMICA ---
+	IF: toccaSuolo()
+		// Forza di spostamento basata sull'accelerazione impostata
+		ForzeTotali += inputSpostamento * accelerazioneSpostamento * massa
+		// Applicazione della forza di attrito
+		IF: Velocità = 0
+			ForzeTotali += coeffAttritoStat * ForzaNormale
+		Else:
+			ForzeTotali += coeffAttritoDin * ForzaNormale
+	// Applicazione della forza peso
+	ForzeTotali += gravità * massa
+	// --- CINEMATICA ---
+	// Applicazione della velocità da parte di tutte le forze
+	velocità += ForzeTotali / massa * DeltaT
+	// Continua fino a velocità nulla o tempo esaurito
+	WHILE velocità &gt; 0 AND DeltaT &gt; 0
+		// Calcolo spostamento parziale
+		spostamentoDeltaT = DeltaT 
+		spostamento = velocità * spostamentoDeltaT
+		// --- TEST COLLISIONI ---
+		IF: Collisione(spostamento)
+			// Aggiornamento parametri per la collisione
+			spostamentoDeltaT = collisioneDeltaT
+			spostamento = spostamentoCollisione
+			// aggiorna velocità dopo l'urto
+			velocità = nuovaVelocità()
+		// --- AGGIORNAMENTO POSIZIONE ---
+		posizione += spostamento // Aggiorna posizione
+		DeltaT -= spostamentoDeltaT // Riduce tempo rimanente
+	END WHILE
+END WHILE 
+</code></pre>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="strong-struttura-dell-algoritmo--strong"><strong>Struttura dell'Algoritmo</strong></h4><div class="header-button"></div></div>
+<ol>
+<li><strong>Inizializzazione:</strong>
+<ul>
+<li>Vengono definite le costanti fisiche (gravità) e i parametri variabili (massa, attrito, accelerazione).</li>
+<li>Questi parametri determinano il comportamento fisico dell'oggetto nella simulazione.</li>
+</ul>
+</li>
+<li><strong>Ciclo Principale:</strong>
+<ul>
+<li><strong>Fase Dinamica:</strong> Calcola la forza risultante applicata all'oggetto considerando:
+<ol>
+<li>Forza di spostamento dall'input.</li>
+<li>Forze di attrito statico e dinamico.</li>
+<li>Peso derivante dalla gravità.</li>
+</ol>
+</li>
+<li><strong>Fase Cinematica</strong>: Calcola velocità e posizione:
+<ul>
+<li>Aggiorna la velocità in base alla forza risultante e al tempo trascorso.</li>
+<li>Esegue un sotto-ciclo per calcolare la posizione effettiva, iterando finché c'è uno spostamento ($vt\neq0$).
+<ul>
+<li><strong>Gestione delle Collisioni:</strong>
+<ul>
+<li>Se rilevata, aggiorna i parametri di velocità e spostamento in base alla dinamica dell'urto, modificando la direzione o il modulo della velocità.</li>
+</ul>
+</li>
+<li><strong>Aggiornamento della Posizione:</strong>
+<ul>
+<li>La posizione viene aggiornata sommando lo spostamento calcolato, mentre il tempo trascorso viene sottratto dal tempo totale disponibile.</li>
+</ul>
+</li>
+<li><strong>Condizioni di Arresto:</strong>
+<ul>
+<li>Il ciclo si interrompe quando la velocità diventa nulla o il tempo disponibile si esaurisce.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="il-codice-è-progettato-per-garantire-che">Il codice è progettato per garantire che:</h4><div class="header-button"></div></div>
+<ul>
+<li>Ogni forza venga applicata coerentemente rispettando i principi della dinamica.</li>
+<li>Le collisioni siano gestite in modo realistico con cambiamenti nella velocità.</li>
+<li>Le ottimizzazioni riducano il carico computazionale fermando il ciclo anticipatamente, quando non sono più richieste simulazioni.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="5--programmazione-e-implementazione-del-codice-di-input-in--code-c---code">5. Programmazione e Implementazione del codice di input in <code>C#</code></h3><div class="header-button"></div></div>
+<p>L'implementazione del codice di input non ha richiesto una progettazione preliminare in quanto non molto elaborato.
+Allo stato attuale il codice implementa soltanto <strong>due</strong> tipologie di input:</p>
+<ul>
+<li>Spostamento: Permette all'utente di guidare la pedina attraverso spostamenti orizzontali.</li>
+<li>Salto: Consente movimenti anche in verticale.
+Al momento, il modulo di <strong>input</strong> comunica direttamente con il modulo di <strong>fisica</strong>; in futuro verrà implementata un'<strong>interfaccia di comunicazione</strong>.
+Il codice può essere agevolmente <strong>esteso</strong>, consentendo l'aggiunta di nuovi input e l'interfacciamento con diversi tipi di moduli (interfacce grafiche, moduli di intelligenza artificiale, ecc.).</li>
+</ul>
+<pre><code class="language-cs">using UnityEngine; // the library is needed to access the main calsses and functions
+public class PlayerInputScript : MonoBehaviour, InputInterface // class inherited from MonoBehaviour class
+{
+	private CharacterPhysics physics; // reference to the Physics module
+	[SerializeField] private string JumpInputName = &quot;Jump&quot;; // the name of the input for jumping
+	private Vector2 inputMove; // the vector that represents the input
+	private void Start() // method called once when the program is started
+	{
+		physics = GetComponent&lt;CharacterPhysics&gt;(); // get the physics module component
+		if(!physics) // check if the module exists, if not, it will be notified
+			Debug.LogError(&quot;Add the CharacterPhysics Component&quot;);
+	}
+	private void Update() // main loop
+    {
+	    Vector2 newInputMove = new Vector2(Input.GetAxis(&quot;Horizontal&quot;), Input.GetAxis(&quot;Vertical&quot;)); // get the input from the engine
+	    if (inputMove != newInputMove) // the moviment input is changed?
+        {
+            physics.movementVector = newInputMove; // set the value in the physics module (it should be changed to improve modularity)
+            inputMove = newInputMove; // update the old value with the new one
+        }
+        if (Input.GetButtonDown(JumpInputName)) // get the jump input
+        {
+            physics.Jump(); // call the jump event in the physics module (this is where the interface would be implemented)
+        }
+    }
+}
+</code></pre>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-inclusione-delle-librerie">Descrizione Inclusione delle Librerie:</h4><div class="header-button"></div></div>
+<p>per librerie si intende algoritmi e strutture dati che ampliano le funzionalità del codice.</p>
+<pre><code class="language-cs">using UnityEngine; 
+</code></pre>
+<ul>
+<li><code>UnityEngine</code> è necessario per accedere alle funzionalità di Unity, come il sistema di input e la gestione degli oggetti.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-classe-principale">Descrizione Classe Principale:</h4><div class="header-button"></div></div>
+<p>dichiarazione come classe derivata di  <strong><code>MonoBehaviour</code></strong> sfruttando le proprietà di ereditarietà e polimorfismo del linguaggio C#.</p>
+<pre><code class="language-cs">public class PlayerInputScript : MonoBehaviour, InputInterface 
+</code></pre>
+<ul>
+<li><strong>Ereditarietà</strong>: La classe <code>PlayerInputScript</code> eredita da <code>MonoBehaviour</code>, acquisendo tutte le sue funzionalità di base. Questa tecnica mantenere una struttura comune tra tutti gli script.</li>
+<li><strong>Polimorfismo</strong>: Implementando l'interfaccia <code>InputInterface</code>, la classe garantisce che fornisca una struttura comune per la gestione degli input.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-dichiarazioni-variabili">Descrizione Dichiarazioni Variabili</h4><div class="header-button"></div></div>
+<p>vengono dichiarate le <strong>variabili di istanza</strong>.</p>
+<pre><code class="language-cs">private CharacterPhysics physics;
+[SerializeField] private string JumpInputName = &quot;Jump&quot;;
+private Vector2 inputMove;
+</code></pre>
+<ul>
+<li><strong><code>CharacterPhysics</code></strong>: la classe che gestisce la simulazione fisica del &quot;character&quot;.</li>
+<li><strong><code>JumpInputName</code></strong>: utilizzata per configurare dinamicamente il comando associato al salto. Questo rende il codice flessibile rendendo possibile la sua modifica.</li>
+<li><strong><code>inputMove</code></strong>: variabile versore per l'input del movimento, si è scelto di includere l'asse verticale per una futura estensione.</li>
+<li><code>[SerializeField]</code> : tecnica per <strong>gestire metadati</strong> associati ai campi privati.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-metodo--strong--code-start--code---strong">Descrizione Metodo <strong><code>Start</code></strong>:</h4><div class="header-button"></div></div>
+<p>Ridefinizione della classe, la quale viene eseguita una sola volta all'inizio della simulazione.</p>
+<pre><code class="language-cs">	private void Start()
+	{
+		physics = GetComponent&lt;CharacterPhysics&gt;();
+		if(!physics)
+			Debug.LogError(&quot;Error: the object required a CharacterPhysics component&quot;);
+	}
+</code></pre>
+<ul>
+<li><strong>Programmazione basata su componenti (CBP)</strong>: Il metodo <code>GetComponent&lt;T&gt;()</code> implementa un algoritmo di ricerca per accedere dinamicamente ai componenti aumentando la modularità del software.</li>
+<li><strong>Validazione preventiva</strong>: La verifica della presenza di <code>physics</code> è un esempio di controllo runtime per evitare errori che potrebbero interrompere l'esecuzione.</li>
+<li><strong>Debugging</strong>: l'utilizzo di <code>Debug.LogError</code> rappresenta una tecnica per tracciare problemi senza fermare il programma, aiutando durante lo sviluppo.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-metodo--code-update--code">Descrizione Metodo <code>Update</code>:</h4><div class="header-button"></div></div>
+<p>Il cuore del sistema di input, il metodo Update() viene eseguito ad ogni frame</p>
+<pre><code class="language-cs">	private void Update()
+</code></pre>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-input-movimento">Descrizione Input Movimento</h4><div class="header-button"></div></div>
+<pre><code class="language-cs">Vector2 newInputMove = new Vector2(Input.GetAxis(&quot;Horizontal&quot;), Input.GetAxis(&quot;Vertical&quot;));
+if (inputMove != newInputMove)
+{
+	physics.movementVector = newInputMove;
+	inputMove = newInputMove;
+}
+</code></pre>
+<ul>
+<li><strong>Ottimizzazione del flusso</strong>: L'algoritmo confronta il nuovo input (<code>newInputMove</code>) con il precedente (<code>inputMove</code>). Questo riduce le chiamate inutili al motore fisico migliorando le prestazioni.</li>
+<li><strong>Overload degli operatori</strong>: Il confronto diretto tra vettori (<code>Vector2</code>) utilizza l'overload dell'operatore <code>!=</code>, altro esempio di polimorfismo.</li>
+<li><strong><code>Input.GetAxis</code></strong>: Legge i valori degli assi &quot;Horizontal&quot; e &quot;Vertical&quot;, configurati nelle impostazioni di input dall'ambiente di sviluppo.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-input-salto">Descrizione Input Salto</h4><div class="header-button"></div></div>
+<pre><code class="language-cs">if (Input.GetButtonDown(JumpInputName))
+{
+	physics.Jump();
+}
+</code></pre>
+<ul>
+<li><strong>Architettura Event-Driven</strong>: l'implementazione della funzione evento <code>physics.Jump()</code> fa in modo che il codice di salto venga eseguito solo quando necessario.</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="6--programmazione-e-implementazione-del-codice-di-simulazione-fisica-in--code-c---code">6. Programmazione e Implementazione del codice di simulazione fisica in <code>C#</code></h3><div class="header-button"></div></div>
+<p>L'implementazione del codice fisico è la sfida più impegnativa del progetto. La fase di progettazione ha aiutato a schematizzare il flusso logico e le fasi cruciali dell'algoritmo, agevolando la conversione del codice il linguaggio di programmazione <strong>C#</strong>. Le istruzioni sono state arricchite per aumentarne l'affidabilità e l'efficienza, e sono stati aggiunti comandi per fornire allo sviluppatore un feedback visivo sulle variabili e sulle costanti del software.
+Il codice è strutturato in modo da permettere l'aggiunta di metodi che applicano altri tipi di forze (ad esempio attriti viscosi o nuovi tipi di input).</p>
+<pre><code class="language-cs">using UnityEngine;
+public class CharacterMovement2D : MonoBehaviour
+{
+	/*----------------------------------- Instance Variables --------------------------------------------------------------------------------*/
+    [SerializeField] private float characterMass; // character's mass, must be positive
+    [SerializeField] private float JumpImpulse; // jump impulse, this value can bee very small and may require future tweaking
+    [SerializeField] private float moveAcceleration; // movement acceleration
+    [SerializeField] private int maxCinematicLoopIterations; // this is the maximum loop's cycles in the cinematic simulation
+    [SerializeField] private float staticFrictionCoefficient; // must be positive and greater than dynamic friction
+    [SerializeField] private float dynamicFrictionCoefficient; // must be positive and less than static friction
+    [SerializeField] private float minVelocity; // the character is moving if the velocity is greater than minVelocity
+    [SerializeField] private float maxVelocity; // clamp the movement velocity to this value
+    private CapsuleCollider2D capsule;
+    private Vector2 desiredVelocity = new Vector2.zero; // the requested velocity in the simulation
+    private Vector2 actualVelocity = new Vector2.zero; // the velocity after collisions the frictions are applied 
+    private Vector2 groundNormal = new Vector2.up; // the ground's perpendicular verctor
+    private Vector2 movementVector = new Vector2.zero; // the input from the input module
+    private Vector2 totalForces = new Vector2.zero; // are the sum of all the forces
+    private const float gravity = -9.81f;
+    void Start()/*------------------------ Start Method ---------------------------------------------------------------------------------------*/
+    {
+	    if (characterMass &lt;= 0)  // character's mass can't be negative
+		    Debug.LogError(&quot;Character's mass must be greater than zero!&quot;);
+	    if (staticFrictionCoefficient &lt; 0 || dynamicFrictionCoefficient &lt; 0) // friction coefficient can't be negative
+		    Debug.LogError(&quot;Friction coefficients must be non-negative!&quot;);
+	    if (staticFrictionCoefficient &lt; dynamicFrictionCoefficient) // static friction must be greater than dynamic friction
+		    Debug.LogError(&quot;Static friction must be greater than Dynamic friction&quot;);
+	    capsule = GetComponent&lt;CapsuleCollider2D&gt;(); // get the capsule component
+    }
+    private void FixedUpdate()/*----------------------------- Physics Simulation Loop ---------------------------------------------------------*/
+    {
+        /*--------------------------------------------------- Dynamic Simulation --------------------------------------------------------------*/
+        float deltaT = Time.fixedDeltaTime; // set the deltaT for better readability
+        if ( IsGrounded() ) // if the character in on ground
+        {
+	        if (Mathf.Abs(actualVelocity.x) &gt; maxVelocity) // prevent the character to move faster than maxVelocity
+	            totalForces += movementVector * moveAcceleration * characterMass; // add the movement force
+	        // force perpenducular to the ground
+	        Vector2 normalForce = characterMass * gravity * Vector2.Dot(groundNormal, Vector2.up) * groundNormal.normalized;
+	        Vector2 groundParallel = -Vector2.Perpendicular(groundNormal).normalized;  // versor parallel to the ground
+	        groundParallel *= Mathf.Sign(-actualVelocity.x); // opposite to the motion
+	        Vector2 frictionForce = Vector2.zero; // initialize the friction force
+	        if (Mathf.Abs(actualVelocity.x) &gt; minVelocity)  // dynamic friction
+	            frictionForce = dynamicFrictionCoefficient * normalForce.magnitude * groundParallel;
+	        else  // static friction
+	            frictionForce = staticFrictionCoefficient * normalForce.magnitude * groundParallel;
+	        totalForces += frictionForce; // add the friction forces
+	        Debug.DrawRay(transform.position, frictionForce, Color.red); // debug the friction vector
+        }
+        totalForces += new Vector2(0, characterMass * gravity); // add the gravitational force
+        /*--------------------------------------------------- Kinematics Simulation  ---------------------------------------------------------*/
+        Vector2 acceleration = totalForces / characterMass; // compute the acceleration
+        desiredVelocity += acceleration * deltaT; // compute the desired velocity
+        totalForces = Vector2.zero; // reset the force
+        Debug.DrawRay(transform.position, groundNormal, Color.green); // debug the ground normal
+        Debug.DrawRay(transform.position, desiredVelocity, Color.blue); // debug the velocity normal
+        Vector2 position_0 = new Vector2(transform.position.x, transform.position.y); //create a new 2d variable for cleaner computation
+        actualVelocity = Vector2.zero; // reset the actual velocity, will keep this value if the kinematic cycle will skip
+        /*----------------------------------- Kinematics Simulation Loop -----------------------------------------------------------*/
+        for (int i = 0; desiredVelocity.magnitude &gt; 0 &amp;&amp; deltaT &gt; 0; i++) // exit if the character is not moving or the time reach the end
+        {
+            if(i &gt;= maxCinematicLoopIterations) // this will be used to prevent infinite loops
+            {
+	            Debug.Log(&quot;Kinematic exit because it reached the maxCinematicLoopIterations, the current limit is &quot; + i.ToString());
+	            break;
+            }
+            float movingDeltaT = deltaT; // the time interval to the final position, always equal or less (in case of collision) than deltaT
+            float movingDistance = desiredVelocity.magnitude * deltaT; // distance between the initial position and the final position
+            Vector2 movingVersor = desiredVelocity.normalized; // velocity versor
+            // this will check the intersection between the capsule and the rest of the world
+            RaycastHit2D collision = Physics2D.CapsuleCast(position_0, capsule.size , 0, 0, movingVersor, movingDistance);
+            if (collision.collider) // there is a collision
+            {
+                Vector2 surfaceVersor = -Vector2.Perpendicular(collision.normal).normalized; // gound perpendicular versor
+                // multiplying the velocity and the surface versor by the dot product between the versors
+                desiredVelocity = surfaceVersor * Vector2.Dot(desiredVelocity.normalized, surfaceVersor) * desiredVelocity.magnitude;
+                movingDeltaT = deltaT * (collision.distance / movingDistance); // the time until the collision 
+                movingDistance = collision.distance; // distance until the collision
+                Debug.DrawRay(collision.point, surfaceVersor, Color.purple); // debug the surface versor
+            }
+            if (movingDeltaT &gt; 0) // actual velocity avoiding zero division
+	            actualVelocity = movingDistance / movingDeltaT * movingVersor;
+            position_0 += movingVersor * movingDistance; // new position
+            deltaT -= movingDeltaT; // subtract the passed time until the computed position
+        }
+        /*----------------------------------------------------------------------------------------------------------------------------*/
+        transform.position = position_0; // Update the actual position with the previously 2D variable created.
+    }
+    /*------------------------------------------------------------- Jump Event -----------------------------------------------------------*/
+    public void Jump() // jump event triggered by the input module
+    {
+        if (IsGrounded()) // check if the character is on ground
+        {
+	        totalForces += new Vector2(0, JumpImpulse / Time.fixedDeltaTime); // this code may have some issues
+        }
+    }
+    private bool IsGrounded() // this function check if the character is on ground
+    {
+        // Check for intersection between the downward ray from the capsule and the world
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, capsule.size.y / 2 + 0.1f); 
+        if (hit.collider) // is there a collision?
+	        groundNormal = hit.normal; // store the ground normal
+        return hit; // return if the character is on ground
+    }
+}
+</code></pre>
+<hr />
+<hr />
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-variabili-di-istanza">Descrizione Variabili di Istanza:</h4><div class="header-button"></div></div>
+<p>Definizione variabili per la simulazione fisica.</p>
+<pre><code class="language-cs">    [SerializeField] private float characterMass; // massa della pedina
+    [SerializeField] private float JumpImpulse; // impulso per il salto
+    [SerializeField] private float moveAcceleration; // accelerazione applicata dall'input dell'utente
+    [SerializeField] private int maxCinematicLoopIterations; // numero massimo di cicli nel loop di cinematica
+    [SerializeField] private float staticFrictionCoefficient; // coefficiente di attrito statico
+    [SerializeField] private float dynamicFrictionCoefficient; // coefficiente di attrito dinamico
+    private CapsuleCollider2D capsule; // componente capsula, figura geometrica che approssima la pedina
+    private Vector2 desiredVelocity = new Vector2.zero; // velocità desiderata dall'input
+    private Vector2 actualVelocity = new Vector2.zero; // velocità vera considerando gli urti e i vincoli 
+    private Vector2 groundNormal = new Vector2.up; // versore perpendicolare alla superficie del suolo
+    private Vector2 movementVector = new Vector2.zero; // versore per il movimento richiesto dall'utente
+    private Vector2 totalForces = new Vector2.zero; // forza risultate, è la somma di tutte le forze
+    private const float gravity = -9.81f; // accelerazione gravitazionale
+</code></pre>
+<ul>
+<li>I nomi delle variabili sono abbastanza auto-esplicativi, bisogna però tenere a mente:
+<ul>
+<li>I valori <code>characterMass</code>, <code>JumpImpulse</code>, <code>moveAcceleration</code> e i coefficienti di attrito devono essere <strong>valori positivi</strong>.</li>
+</ul>
+</li>
+<li><code>staticFrictionCoefficient</code> e <code>dynamicFrictionCoefficient</code>: sono i <strong>coefficienti di attrito</strong>.</li>
+<li><code>maxCinematicLoopIterations</code>: Viene utilizzato per il <strong>debug</strong> del ciclo di dinamica; rappresenta il <strong>numero massimo di cicli</strong> della simulazione dinamica.</li>
+<li><code>movementVector</code>: <strong>Vettore unitario di input</strong> per lo spostamento; variabile settata in modo diretto dal <strong>modulo di input</strong> (verrà in futuro implementata un' interfaccia di comunicazione).</li>
+<li><code>totalForces</code>: La <strong>somma di tutte le forze</strong> esercitate sul corpo come la forza peso, l'impulso del salto, la forza applicata per muovere la pedina.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-ciclo-start">Descrizione Ciclo Start</h4><div class="header-button"></div></div>
+<p>Verifica di alcune variabile e si inizializza il componente capsula per le collisioni.</p>
+<pre><code class="language-cs">void Start() // metodo richiamato quando parte l'applicazione
+{
+	if (characterMass &lt;= 0) // se la massa è negativa viene notificato
+		Debug.LogError(&quot;Character mass must be greater than zero!&quot;);
+	if (staticFrictionCoefficient &lt; 0 || dynamicFrictionCoefficient &lt; 0) // se uno dei coefficienti di attrito sono negativi viene notificato 
+		Debug.LogError(&quot;Friction coefficients must be non-negative!&quot;);
+	if (staticFrictionCoefficient &lt; dynamicFrictionCoefficient) // si notifica se l'attrito dinamico è maggiore di quello statico
+		Debug.LogError(&quot;Static friction must be greater than Dynamic friction&quot;);
+	capsule = GetComponent&lt;CapsuleCollider2D&gt;();
+}
+</code></pre>
+<ul>
+<li>Si testa che le variabili fisiche abbiano <strong>valori positivi</strong>.</li>
+<li>Il <strong>coefficiente di attrito statico</strong> deve essere maggiore rispetto al <strong>coefficiente di attrito dinamico</strong>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-simulazione-dinamica---calcolo-delle-forze">Descrizione Simulazione Dinamica - calcolo delle forze</h4><div class="header-button"></div></div>
+<p>Calcolo delle forze esercitate sul corpo quando la pedina è a <strong>contatto con il suolo</strong> e calcolo della <strong>forza peso</strong>.</p>
+<pre><code class="language-cs">float deltaT = Time.fixedDeltaTime;
+if ( IsGrounded() )
+{
+	if (Mathf.Abs(actualVelocity.x) &gt; maxVelocity) // previene velocità più elevate di maxVelocity
+	    totalForces += movementVector * moveAcceleration * characterMass; // applica l'accelerazione alla forza totale
+	 // vettore forza perpendicolare al piano
+	Vector2 normalForce = characterMass * gravity * Vector2.Dot(groundNormal, Vector2.up) * groundNormal.normalized;
+	Vector2 groundParallel = -Vector2.Perpendicular(groundNormal).normalized; // versore parallelo al piano
+	groundParallel *= Mathf.Sign(-actualVelocity.x); // verso opposto al moto
+	Vector2 frictionForce = Vector2.zero;
+	if (Mathf.Abs(actualVelocity.x) &gt; minVelocity) // attrito dinamico
+		frictionForce = dynamicFrictionCoefficient * normalForce.magnitude * groundParallel;
+	else // attrito statico
+		staticFrictionCoefficient * normalForce.magnitude * groundParallel;
+	totalForces += frictionForce; // somma le forze
+	Debug.DrawRay(transform.position, frictionForce, Color.red); // visualizza la forza di attrito
+}
+totalForces += new Vector2(0, characterMass * gravity);
+</code></pre>
+<ul>
+<li><strong>Forze</strong>: viene calcolata la forza per lo spostamento dalla formula $\overrightarrow{F}=m\overrightarrow{a}$, mentre l'attrito dalla formula $\overrightarrow{F}_a=-\hat{u}\;\mu\overrightarrow{F}_{\perp}$:
+<ul>
+<li>$\overrightarrow{F}\quad$ vettore <a href="/Content/Forza/">Forza</a> espressa nel sistema internazionale in Newton $[N]$; nel codice rappresentata come <code>totalForces</code>.</li>
+<li>$\overrightarrow{F}_a\quad$ rappresenta la Forza di <a href="/Content/Attrito-Radente/">Attrito Radente</a> (che può essere statica o dinamica), tale forza ha direzione parallela al piano e un verso opposto alla forza applicata sul corpo (<code>frictionForce</code>).</li>
+<li>$\overrightarrow{F}_{\perp}\quad$ rappresenta la forza perpendicolare al piano, nel nostro caso <code>normalForce</code>.</li>
+<li>$\overrightarrow{a}\quad$ vettore accelerazione espressa in metri al secondo $\left[\cfrac{m}{s}\right]$, abbiamo come velocità <code>gravity</code> e <code>moveAcceleration</code>.</li>
+<li>$m\quad$ <a href="/Content/Massa/">Massa</a> in chilogrammi.</li>
+<li>$\mu\quad$ coefficiente di attrito, <code>dynamicFrictionCoefficient</code>(dinamico, ovvero quando c'è movimento) oppure <code>staticFrictionCoefficient</code>(statico, in stato di quiete).</li>
+<li>$-\hat{u}\quad$ rappresenta il vettore parallelo al piano con verso opposto al moto, nel codice <code>groundParallel</code>.</li>
+</ul>
+</li>
+<li>la <a href="/Content/Forza-Peso/">Forza Peso</a> viene ricavata dall' equazione $\overrightarrow{F}=m\overrightarrow{g}$</li>
+<li><code>frictionForce</code>: Forza risultate di tutte le forze applicate.</li>
+<li><code>Mathf.Min()</code>: La funzione assicura che il modulo della forza di attrito non sia maggiore alla forza totale.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-ciclo-di-cinematica">Descrizione Ciclo di Cinematica</h4><div class="header-button"></div></div>
+<p>Se c'è uno <strong>spostamento</strong> il programma entrerà nel ciclo per <strong>determinare la nuova posizione</strong>.</p>
+<pre><code class="language-cs">Vector2 acceleration = totalForces / characterMass;
+desiredVelocity += acceleration * deltaT;
+totalForces = Vector2.zero;
+Debug.DrawRay(transform.position, groundNormal, Color.green);
+Debug.DrawRay(transform.position, desiredVelocity, Color.blue);
+for (int i = 0; desiredVelocity.magnitude &gt; 0 &amp;&amp; deltaT &gt; 0; i++)
+{
+	if(i &gt;= maxCinematicLoopIterations)
+	{
+		Debug.Log(&quot;Kinematic exit because it reached the maxCinematicLoopIterations, the current limit is &quot; + i.ToString());
+		break;
+	}
+</code></pre>
+<ul>
+<li>Si applica l'<strong>accelerazione</strong> dalla forza risultante.</li>
+<li>Si ricava la <strong>velocità</strong> desiderata dalle forze le quali vengono esaurite in quanto applicate, poi il codice passa al ciclo iterativo.</li>
+<li>Il ciclo <strong>termina</strong> se la <strong>velocità è nulla</strong> o è stato calcolato lo spostamento per <strong>tutto l'intervallo di tempo</strong>.
+. Se uno dei due valori (<code>desiredVelocity.magnitude</code> o <code>deltaT</code>) è uguale a zero, lo spostamento ricavato dal prodotto velocità per tempo sarebbe nullo.</li>
+<li><code>maxCinematicLoopIterations</code>:  La variabile è utilizzata per evitare che, in fase di sviluppo, il ciclo entri in un <strong>loop infinito</strong>.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-cinematica---prima-fase">Descrizione Cinematica - prima fase</h4><div class="header-button"></div></div>
+<p><strong>Inizializzazione dei dati fisici</strong> e il <strong>test di intersezione</strong> tra la capsula, che rappresenta il &quot;character&quot;, e l'ambiente circostante.</p>
+<pre><code class="language-cs">float movingDeltaT = deltaT; // movingDeltaT è l'intervallo di tempo nello spostamento, viene inizializzato per l'intero spostamento
+float movingDistance = desiredVelocity.magnitude * deltaT; // distanza percorsa durante lo spostamento
+Vector2 movingVersor = desiredVelocity.normalized; // versore di spostamento
+RaycastHit2D collision = Physics2D.CapsuleCast(position_0, capsule.size , 0, 0, movingVersor, movingDistance); // test per le collisioni
+</code></pre>
+<ul>
+<li>Vengono inizializzate le variabili per il test di intersezione.
+<ul>
+<li><code>movingDeltaT</code>: Rappresenta l'intervallo di tempo nello spostamento, eventualmente ridotta in caso di collisioni.</li>
+<li><code>movingDistance</code>: Rappresenta la distanza percorsa applicando la velocità al corpo, ridotta in seguito da eventuali collisioni.</li>
+</ul>
+</li>
+<li>Viene calcolato il <strong>versore dello spostamento</strong> e fatto il <strong>test di collisione</strong> tra la capsula e l'ambiente.</li>
+<li><code>Physics2D.CapsuleCast()</code>: Funzione che ritorna le informazioni del test di intersezioni: se è avvenuta, la distanza, il punto di intersezione, eccetera.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-cinematica---collisione">Descrizione Cinematica - Collisione</h4><div class="header-button"></div></div>
+<p>Se è <strong>avvenuta una collisione</strong> l'algoritmo utilizza gli strumenti di <strong>Geometria Analitica</strong> e <strong>Cinematica</strong> per far cambiare velocità al corpo.</p>
+<pre><code class="language-cs">if (collision.collider) // determina se c'è stata una collisione
+{
+	Vector2 surfaceVersor = -Vector2.Perpendicular(collision.normal).normalized; // si ricava il versore perpendicolare al piano
+	// ricalcolo della velocità causata dall'impatto
+	desiredVelocity = surfaceVersor * Vector2.Dot(desiredVelocity.normalized, surfaceVersor) * desiredVelocity.magnitude;
+	movingDistance = collision.distance; // acquisizione della distanza alla collisione
+	movingDeltaT = deltaT * (collision.distance / movingDistance); // si ricava anche il tempo alla collisione 
+	Debug.DrawRay(collision.point, surfaceVersor, Color.purple); // visualizza il versore parallelo al piano
+}
+</code></pre>
+<ul>
+<li>La nuova velocità causata dall'urto viene gestita dalla formula:
+<ul>
+<li>$|\overrightarrow{v}|\cdot\hat{u}(\hat{u}\cdot\hat{v})$
+<ul>
+<li>$|\overrightarrow{v}|\quad$ modulo del vettore velocità, (<code>desiredVelocity.magnitude</code>).</li>
+<li>$\hat{u}\quad$ versore parallelo alla superficie (<code>surfaceVersor</code>).</li>
+<li>$\hat{v}\quad$ versore velocità (<code>desiredVelocity.normalized</code>).</li>
+<li>$\hat{u}\cdot\hat{v}\quad$ rappresenta il  <strong>Prodotto Scalare</strong> tra i due vettori (<code>Vector2.Dot()</code>).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Avendo a disposizione solo la distanza di collisione, è necessario ricavare il tempo (<code>movingDeltaT</code>) utilizzando la <strong>proporzione</strong>:
+<ul>
+<li>$\cfrac{d_0}{t_0}=\cfrac{d_1}{t_1}\quad\to\quad d_0t_1=t_0d_1 \quad\to\quad t_1=\cfrac{t_0d_1}{d_0}$
+<ul>
+<li>$d_0,t_0\quad$ sono rispettivamente <code>movingDistance</code>(la distanza per intero) e <code>deltaT</code>(l'intervallo per intero).</li>
+<li>$d_1,t_1\quad$ rappresentano rispettivamente <code>collision.distance</code>(distanza di collisione) e <code>movingDeltaT</code>(tempo di collisione).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>Debug.DrawRay</code>: utile per testare il codice</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-cinematica---fase-finale">Descrizione Cinematica - fase finale</h4><div class="header-button"></div></div>
+<p>Si determina la <strong>nuova posizione</strong> e la <strong>velocità effettiva</strong>, l'algoritmo <strong>reitererà</strong> allora dalla prima fase del ciclo.</p>
+<pre><code class="language-cs">if (movingDeltaT &gt; 0) // evita una divisione per zero
+	actualVelocity = movingDistance / movingDeltaT * movingVersor;
+position_0 += movingVersor * movingDistance; // new position
+deltaT -= movingDeltaT; // subtract the passed time until the computed position
+</code></pre>
+<ul>
+<li>Viene calcolata la <strong>velocità media effettiva</strong> (<strong>evitando una divisione per zero</strong> nel caso in cui la collisione sia avvenuta nel tempo zero).
+<ul>
+<li>$\overrightarrow{v}=\cfrac{\Delta{\overrightarrow{s}}}{\Delta{t}}=\cfrac{|\Delta{\overrightarrow{s}}|}{\Delta{t}}\hat{s}\qquad \Delta{t}&gt;0$
+<ul>
+<li>$\overrightarrow{v}\quad$ la velocità effettiva <code>actualVelocity</code></li>
+<li>$|\Delta{\overrightarrow{s}}|\quad$ lo spostamento in modulo <code>movingDistance</code></li>
+<li>$\Delta{t}\quad$ l'intervallo di tempo <code>movingDeltaT</code></li>
+<li>$\hat{s}\quad$ il versore spostamento <code>movingVersor</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Applica lo spostamento tenendo conto delle collisioni.</li>
+<li><code>deltaT -= movingDeltaT</code>: Sottrae il tempo trascorso per lo spostamento, se non ci sono state collisioni i due intervalli di tempo saranno uguali con risultato nullo.</li>
+<li>Il ciclo riprende dall'inizio, se non ci saranno state collisioni o se la pedina si è arrestata il ciclo termina, altrimenti viene reiterato il ciclo per calcolare la nuova posizione.</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="descrizione-funzione-evento--code-salto--code">Descrizione Funzione evento <code>salto</code></h4><div class="header-button"></div></div>
+<p>La funzione evento verrà richiamata dal modulo di input alla pressione del relativo tasto.</p>
+<pre><code class="language-cs">public void Jump()
+{
+	if (IsGrounded()) 
+	{ 
+		totalForces += new Vector2(0, JumpImpulse / Time.fixedDeltaTime);
+	}
+}
+private bool IsGrounded() 
+{ 
+	RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, capsule.size.y / 2 + 0.1f); 
+	if (hit.collider) 
+		groundNormal = hit.normal;
+	return hit;
+}
+</code></pre>
+<ul>
+<li>La <strong>Forza</strong> applicata sul corpo dal salto si ricava dalla definizione di Impulso (per <strong>forze costanti</strong>) $\overrightarrow{I}=\overrightarrow{F}\Delta t$ risolvendo l'equazione per la forza:
+<ul>
+<li>$\overrightarrow{F}=\cfrac{\overrightarrow{I}}{\Delta t}$.
+<ul>
+<li>$\overrightarrow{I}\quad$ Impulso, in Newton per secondo $[N\cdot s]$; nel codice equivale a <code>JumpImpulse</code>.</li>
+<li>$\Delta{t}\quad$ L'intervallo di tempo in secondi; per simulazioni fisiche, Unity mette a disposizione la variabile <code>Time.fixedDeltaTime</code>.</li>
+<li>$\overrightarrow{F}\quad$ Forza dell'impulso in Newton $[N]$; nel codice è <code>totalForces</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>IsGrounded()</code>: determina se il &quot;character&quot; sta toccando terra ed eventualmente la funzione acquisisce il vettore perpendicolare alla superficie .</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#unity-project">Unity Project</a></li>
+<ul>
+<li class="toc-level-3"><a href="#sviluppo-di-un--applicazione-videoludica-per-l-apprendimento-di-informatica--fisica-e-matematica">Sviluppo di un' applicazione videoludica per l'Apprendimento di Informatica, Fisica e Matematica</a></li>
+</ul>
+<ul>
+<li class="toc-level-2"><a href="#fasi-dello-sviluppo">Fasi dello sviluppo</a></li>
+<ul>
+<li class="toc-level-3"><a href="#1--analisi-dell-algoritmo">1. Analisi dell'algoritmo:</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#1--analisi-fisica-e-matematica">1. Analisi fisica e matematica</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-2"><a href="#3--progettazione-mediante-diagramma-di-flusso">3. Progettazione mediante Diagramma di Flusso:</a></li>
+<ul>
+<li class="toc-level-3"><a href="#4--progettazione-mediante-pseudocodice">4. Progettazione mediante Pseudocodice:</a></li>
+<ul>
+<li class="toc-level-4"><a href="#strong-struttura-dell-algoritmo--strong"><strong>Struttura dell'Algoritmo</strong></a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#il-codice-è-progettato-per-garantire-che">Il codice è progettato per garantire che:</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#5--programmazione-e-implementazione-del-codice-di-input-in--code-c---code">5. Programmazione e Implementazione del codice di input in <code>C#</code></a></li>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-inclusione-delle-librerie">Descrizione Inclusione delle Librerie:</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-classe-principale">Descrizione Classe Principale:</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-dichiarazioni-variabili">Descrizione Dichiarazioni Variabili</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-metodo--strong--code-start--code---strong">Descrizione Metodo <strong><code>Start</code></strong>:</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-metodo--code-update--code">Descrizione Metodo <code>Update</code>:</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-input-movimento">Descrizione Input Movimento</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-input-salto">Descrizione Input Salto</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#6--programmazione-e-implementazione-del-codice-di-simulazione-fisica-in--code-c---code">6. Programmazione e Implementazione del codice di simulazione fisica in <code>C#</code></a></li>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-variabili-di-istanza">Descrizione Variabili di Istanza:</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-ciclo-start">Descrizione Ciclo Start</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-simulazione-dinamica---calcolo-delle-forze">Descrizione Simulazione Dinamica - calcolo delle forze</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-ciclo-di-cinematica">Descrizione Ciclo di Cinematica</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-cinematica---prima-fase">Descrizione Cinematica - prima fase</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-cinematica---collisione">Descrizione Cinematica - Collisione</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-cinematica---fase-finale">Descrizione Cinematica - fase finale</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#descrizione-funzione-evento--code-salto--code">Descrizione Funzione evento <code>salto</code></a></li>
+</ul>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

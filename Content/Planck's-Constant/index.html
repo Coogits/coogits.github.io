@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Planck's Constant</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+        <!--  <script type="module" src="/system/interactable-svg.js"></script> -->
+
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Physics/">Physics</a> &gt; <a href="/Content/Physical-Quantity/">Physical Quantity</a> &gt; <a href="/Content/Physical-Constant/">Physical Constant</a></p>
+<div class="header-block h1">
+<h1 id="planck-s-constant">Planck's Constant</h1>
+<p><strong>Planck’s constant</strong> is a fundamental physical constant that describes the <strong>quantum of action</strong> in quantum mechanics.<br />
+It relates the <strong>energy</strong> of a photon to the <strong>frequency</strong> of its associated electromagnetic wave.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="symbols">Symbols</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>$h$</strong> is Planck’s constant $h = 6.62607015 \times 10^{-34}\ \text{J·s}$</li>
+<li>$\hbar$ is the <strong>Reduced Planck's constant</strong>  $\hbar=\cfrac{h}{2\pi}$</li>
+<li><strong>$E$</strong> is the <a href="/Content/Energy-(Physics)/">energy</a> of a photon (unit: joules, <strong>J</strong>)</li>
+<li><strong>$f$</strong> is the <a href="/Content/Frequency/">Frequency</a> of the electromagnetic wave (unit: hertz, <strong>Hz</strong>)</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="formula">Formula</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Planck's constant</strong><br />
+Planck's constant is defined as:  $$E=hf$$</li>
+<li><strong>Value</strong>:<br />
+Planck's constant value:  $$h = 6.62607015 \times 10^{-34}\ \text{J·s}$$</li>
+</ul>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="reduced-planck-s-constant">Reduced Planck's constant</h4><div class="header-button"></div></div>
+<p>The <strong>reduced Planck constant</strong>, denoted by <strong>ℏ (h-bar)</strong>, is a fundamental constant used extensively in <strong>quantum mechanics</strong>.</p>
+<ul>
+<li><strong>Formula</strong>:<br />
+It is derived by dividing Planck’s constant (<strong>ℎ</strong>) by <strong>2π</strong>, making it more convenient for equations involving circular motion or waveforms:  $$\hbar=\cfrac{h}{2\pi}$$</li>
+<li><strong>Value</strong><br />
+Reduced Planck's constant value: $$\hbar = 1.054571817 \times 10^{-34}\ \text{J·s}$$</li>
+</ul>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="properties">Properties</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Quantum Effect</strong>:<br />
+It defines the <strong>scale</strong> at which quantum effects become significant.</li>
+<li><strong>Quantum Physics</strong>:<br />
+Central to quantum physics, especially in phenomena like the <strong>photoelectric effect</strong> and <strong>quantum energy levels</strong>.
+<ul>
+<li>Appears in many core equations, such as <strong>Heisenberg's uncertainty principle</strong> and <strong>Schrödinger’s equation</strong>.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="see-also">See Also</h3><div class="header-button"></div></div>
+<ul>
+<li><strong><a href="/Content/Max-Planck/">Max Planck</a></strong></li>
+</ul>
+
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#planck-s-constant">Planck's Constant</a></li>
+<ul>
+<li class="toc-level-3"><a href="#symbols">Symbols</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#formula">Formula</a></li>
+<ul>
+<li class="toc-level-4"><a href="#reduced-planck-s-constant">Reduced Planck's constant</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#properties">Properties</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#see-also">See Also</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

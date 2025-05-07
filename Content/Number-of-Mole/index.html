@@ -17,6 +17,8 @@
         <script src="/system/styles.js"></script>
         <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
         <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+        <!--  <script type="module" src="/system/interactable-svg.js"></script> -->
+
 
         <link rel="stylesheet" href="/system/pygments.css">
         <link rel="stylesheet" href="/system/styles.css"> 
@@ -95,17 +97,45 @@
 <li>$N_A\quad$ <a href="/Content/Avogadro-Constant/">Avogadro Constant</a> ($N_A=6.02214076\times10^{23} \frac{\text{ entities}}{mol}$)</li>
 <li>$u\quad$ atomic mass unit</li>
 <li>$m\quad$ <a href="/Content/Mass/">Mass</a> of the substance (in grams, g)</li>
-<li>$M\quad$ molar mass (unit: $\cfrac{g}{mol}$)</li>
+<li>$M\quad$ <a href="/Content/Molar-Mass/">Molar Mass</a> (unit: $\cfrac{g}{mol}$)</li>
+<li>$^{12}C\quad$ <strong><a href="/Content/Carbon/">Carbon-12</a></strong></li>
 </ul>
 </div>
 <div class="header-block h3">
 <div class="header-h3"><h3 id="formulas">Formulas</h3><div class="header-button"></div></div>
 <ul>
 <li><strong>One Mole</strong>:<br />
-One mole of any substance contains exactly $6.02214076\cdot10^{23}$ elementary entities. This number is known as <strong>Avogadro's number</strong>: $$1\;m=6.02214076\cdot10^{23}\text{ entities}$$</li>
-<li><strong>Number of Mole Relations</strong>: $$n=\cfrac{N}{N_A}=\cfrac{m}{M}=\cfrac{Nu}{M}$$</li>
+One mole is defined as the number of atoms in <strong>12 grams of carbon-12</strong> ($^{12}C$):  $$n=\,^{12}C\cdot12\text{ g}$$
+One mole of any substance contains exactly $6.02214076\cdot10^{23}$ elementary entities. This number is known as <strong>Avogadro's number</strong>: $$n=N_A\text{ entities}$$</li>
+<li><strong>Number of Mole Relations</strong>:<br />
+The number of moles $n$ is related to the total number of particles $N$, the mass $m$, and the molar mass $M$ as follows: $$n=\cfrac{N}{N_A}=\cfrac{m}{M}=\cfrac{Nu}{M}$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="examples">Examples</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="carbon">Carbon</h4><div class="header-button"></div></div>
+<p>Find the mole of 24 grams of Carbon:</p>
+<ul>
+<li>$M=12\, \text{g}$ (the <a href="/Content/Molar-Mass/">Molar Mass</a> for each element can be found in the <a href="/Content/Periodic-Table/">Periodic Table</a>)</li>
+<li>$n=\cfrac{24\,\text{g}}{12\,\text{g}}=2\,\text{mol}$</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="water">Water</h4><div class="header-button"></div></div>
+<p>find the mole of 24 grams of water</p>
+<ul>
+<li>Find the <a href="/Content/Molar-Mass/">Molar Mass</a>
+<ul>
+<li>Hydrogen (H): 1.01 g/mol × 2 = 2.02 g/mol</li>
+<li>Oxygen (O): 16.00 g/mol<br />
+<strong>Molar mass of H₂O</strong> = 2.02 + 16.00 = <strong>18.02 g/mol</strong></li>
+</ul>
+</li>
+<li>$n=\cfrac{24}{18.02}\approx1.333$</li>
 </ul>
 
+</div>
 </div>
 </div>
         </div>
@@ -117,6 +147,15 @@ One mole of any substance contains exactly $6.02214076\cdot10^{23}$ elementary e
 </ul>
 <ul>
 <li class="toc-level-3"><a href="#formulas">Formulas</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#examples">Examples</a></li>
+<ul>
+<li class="toc-level-4"><a href="#carbon">Carbon</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#water">Water</a></li>
+</ul>
 </ul>
 </ul>
 </nav>

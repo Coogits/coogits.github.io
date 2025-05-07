@@ -17,6 +17,8 @@
         <script src="/system/styles.js"></script>
         <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
         <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+        <!--  <script type="module" src="/system/interactable-svg.js"></script> -->
+
 
         <link rel="stylesheet" href="/system/pygments.css">
         <link rel="stylesheet" href="/system/styles.css"> 
@@ -83,17 +85,63 @@
         </div>
         <ul id="searchResults"></ul>
         <div class="mdBody">
-<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Chemistry/">Chemistry</a> &gt; <a href="/Content/Element-(Matter)/">Element (Matter)</a></p>
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Chemistry/">Chemistry</a> &gt; <a href="/Content/Chemical-Element/">Chemical Element</a> &gt; <a href="/Content/Atomic-Theory/">Atomic Theory</a> &gt; <a href="/Content/Electron-(Atom)/">Electron (Atom)</a></p>
 <div class="header-block h1">
 <h1 id="electron-configuration">Electron Configuration</h1>
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Klechkovski_rule.svg" style="width: 250px; float: right; margin-left: 10px;" />  
 <p><strong>Electron configuration</strong> refers to the arrangement of electrons in the <strong>orbitals</strong> of an atom.<br />
-Electrons are distributed in various energy levels or <strong>shells</strong>, and within each shell, they occupy orbitals according to specific rules, such as the <strong>Aufbau principle</strong>, the <strong>Pauli exclusion principle</strong>, and <strong>Hund's rule</strong>. This configuration determines an element’s chemical properties and its reactivity.</p>
+Electrons are distributed in various energy levels or <strong>shells</strong>, and within each shell, they occupy orbitals according to specific rules, such as the <strong>Aufbau principle</strong>, the <strong>Pauli exclusion principle</strong>, and <strong>Hund's rule</strong>. This configuration determines an element’s chemical properties and its reactivity.
+<br clear="both" /></p>
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
-<div class="header-h3"><h3 id="structure">Structure</h3><div class="header-button"></div></div>
+<div class="header-h3"><h3 id="terminology">Terminology</h3><div class="header-button"></div></div>
+<table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Preferred Term(s)</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic Chemistry</td>
+<td><strong>Shell</strong>, <strong>Energy Level</strong></td>
+<td>Simple, intuitive</td>
+</tr>
+<tr>
+<td>Bonding or Valence Electrons</td>
+<td><strong>Shell</strong>, <strong>Subshell</strong></td>
+<td>Helps explain outer electrons</td>
+</tr>
+<tr>
+<td>Electron Configurations</td>
+<td><strong>Subshell</strong>, <strong>Orbital</strong></td>
+<td>You need to say things like 1s² 2s² 2p⁶</td>
+</tr>
+<tr>
+<td>Quantum Mechanics</td>
+<td><strong>Quantum Numbers</strong>, <strong>Orbitals</strong></td>
+<td>Describes position, spin, etc. in detail</td>
+</tr>
+<tr>
+<td>Visuals or Diagrams</td>
+<td><strong>Shell</strong>, <strong>Orbital</strong></td>
+<td>Easy to map conceptually</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="octet-rule"><a href="/Content/Octet-Rule/">Octet Rule</a></h3><div class="header-button"></div></div>
+<p><strong>Atoms tend to gain, lose, or share electrons in order to have eight electrons in their valence (outermost) shell</strong>, achieving a stable electron configuration similar to that of the noble gases.</p>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="quantum-number">Quantum Number</h3><div class="header-button"></div></div>
 <div class="header-block h4">
 <div class="header-h4"><h4 id="1--principal-quantum-number--n">1. Principal Quantum Number (n)</h4><div class="header-button"></div></div>
 <ul>
 <li>Indicates the <strong>main energy level</strong> (or &quot;shell&quot;).</li>
+<li><strong>Values</strong>: $n=\{1,2,\ldots,+\infty\}$</li>
 <li>Can be represented as numbers or characters:
 <ul>
 <li>n = 1 = K</li>
@@ -109,7 +157,7 @@ Electrons are distributed in various energy levels or <strong>shells</strong>, a
 <div class="header-h4"><h4 id="2--azimuthal-quantum-number--ℓ">2. Azimuthal Quantum Number (ℓ)</h4><div class="header-button"></div></div>
 <ul>
 <li>Describes the <strong>subshell or orbital shape</strong>.</li>
-<li>Values: ℓ = 0 to (n - 1)</li>
+<li>Values: $\ell=\{0,1,\ldots,n-1\}$</li>
 <li>Corresponds to:
 <ul>
 <li>ℓ = 0 → <strong>s orbital</strong></li>
@@ -124,7 +172,7 @@ Electrons are distributed in various energy levels or <strong>shells</strong>, a
 <div class="header-h4"><h4 id="3--magnetic-quantum-number--mₗ">3. Magnetic Quantum Number (mₗ)</h4><div class="header-button"></div></div>
 <ul>
 <li>Specifies the <strong>orientation</strong> of the orbital in space.</li>
-<li>Values: mₗ = -ℓ to +ℓ (including 0)</li>
+<li>Values: $m_l=\{-\ell,0,+\ell\}$</li>
 <li>Determines the number of orbitals in each subshell.
 <ul>
 <li>s (ℓ=0) → 1 orbital</li>
@@ -139,7 +187,7 @@ Electrons are distributed in various energy levels or <strong>shells</strong>, a
 <div class="header-h4"><h4 id="4--spin-quantum-number--mₛ">4. Spin Quantum Number (mₛ)</h4><div class="header-button"></div></div>
 <ul>
 <li>Describes the <strong>spin</strong> of the electron.</li>
-<li>Values: <strong>+½ or -½</strong></li>
+<li>Values:  $m_s=\{-\frac{1}{2},+\frac{1}{2}\}$</li>
 <li>No two electrons in the same atom can have the same four quantum numbers (Pauli Exclusion Principle).</li>
 <li>Due to the <strong>Pauli Principle</strong>, each orbital can hold a maximum of two electrons with opposite spins.</li>
 </ul>
@@ -162,7 +210,7 @@ For elements beyond <strong>Neon</strong>, electron configurations will continue
 <div class="header-block h3">
 <div class="header-h3"><h3 id="graphical-representation">Graphical Representation</h3><div class="header-button"></div></div>
 <p>The <strong>electron configuration</strong> can also be represented graphically using <strong>orbital diagrams</strong>, where: $$
-\textbf{Shell 1: }
+\textbf{Shell 3: }
 \begin{array}{|c|}
 \hline
 \uparrow\downarrow\\
@@ -200,12 +248,44 @@ Each <strong>box</strong> represents an <strong>orbital</strong>, and arrows ind
 <div class="header-block h3">
 <div class="header-h3"><h3 id="principles">Principles</h3><div class="header-button"></div></div>
 <ul>
-<li><strong>Pauli Exclusion Principle</strong>:<br />
-No two electrons in the same atom can have identical sets of quantum numbers. This means each orbital can hold a maximum of two electrons with opposite spins.</li>
-<li><strong>Hund's Rule</strong>:<br />
-When electrons occupy degenerate orbitals (orbitals of the same energy), they will first fill them singly with parallel spins before pairing up.</li>
-<li><strong>Aufbau Principle</strong>:<br />
-Electrons fill orbitals starting from the lowest energy level and move to higher energy levels as needed.</li>
+<li>
+<p><strong>Hund's Rule</strong>:<br />
+When electrons occupy degenerate orbitals (orbitals of the same energy), they will first fill them singly with parallel spins before pairing up. $$
+\begin{array}{|c|c|c|}
+\hline
+\uparrow\ &amp; \uparrow\ &amp; \uparrow\  \\
+\hline
+\end{array}
+$$
+Wrong: $$
+\begin{array}{|c|c|c|}
+\hline
+\uparrow\downarrow &amp; \ \ &amp; \ \  \\
+\hline
+\end{array}
+$$</p>
+</li>
+<li>
+<p><strong>Pauli Exclusion Principle</strong>:<br />
+No two electrons in the same atom can have identical sets of quantum numbers. This means each orbital can hold a maximum of two electrons with opposite spins.  $$
+\begin{array}{|c|c|c|}
+\hline
+\uparrow\downarrow &amp; \uparrow\ &amp; \uparrow\  \\
+\hline
+\end{array}
+$$
+Wrong: $$
+\begin{array}{|c|c|c|}
+\hline
+\uparrow\uparrow &amp; \uparrow\ &amp; \uparrow\  \\
+\hline
+\end{array}
+$$</p>
+</li>
+<li>
+<p><strong>Aufbau Principle</strong>:<br />
+Electrons fill orbitals starting from the lowest energy level and move to higher energy levels as needed. $$1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p → 7s\ldots$$</p>
+</li>
 </ul>
 </div>
 <div class="header-block h3">
@@ -235,7 +315,13 @@ The electron configuration explains the arrangement of elements in the Periodic 
 <ul>
 <li class="toc-level-1"><a href="#electron-configuration">Electron Configuration</a></li>
 <ul>
-<li class="toc-level-3"><a href="#structure">Structure</a></li>
+<li class="toc-level-3"><a href="#terminology">Terminology</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#octet-rule">Octet Rule</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#quantum-number">Quantum Number</a></li>
 <ul>
 <li class="toc-level-4"><a href="#1--principal-quantum-number--n">1. Principal Quantum Number (n)</a></li>
 </ul>

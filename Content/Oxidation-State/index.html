@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Oxidation State</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+        <!--  <script type="module" src="/system/interactable-svg.js"></script> -->
+
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Chemistry/">Chemistry</a> &gt; <a href="/Content/Chemical-Element/">Chemical Element</a></p>
+<div class="header-block h1">
+<h1 id="oxidation-state">Oxidation State</h1>
+<p>The <strong>oxidation state</strong> of an atom in a compound is a number that represents the <strong>hypothetical charge</strong> the atom would have if <strong>all bonds were purely ionic</strong> (i.e., if electrons were fully transferred, not shared).</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="process">Process</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="example--h₂o">Example: H₂O</h4><div class="header-button"></div></div>
+<ol>
+<li>Start with the molecule:<br />
+Draw the molecular structure using the Lewis structure (total charge is 0):  $$H_2O\quad\text{ drawn as }\quad H-\overline{\underline O}-H$$</li>
+<li><strong>Break the bonds</strong> hypothetically and assign electrons based on <strong>electronegativity</strong>:<br />
+Oxygen is more electronegative than Hydrogen, so it <strong>takes both bonding electrons</strong> from each H–O bond.  $$H\cdot\;\cdot \overline{\underline O}\cdot\;\cdot H\quad\to\quad H\;\rvert\overline{\underline O}\lvert\;H$$</li>
+<li><strong>Calculate resulting charges</strong>:
+<ul>
+<li><strong>Hydrogen</strong> normally has 1 electron. Now it has <strong>0 electrons</strong>, so it <strong>loses</strong> 1:  $$1-0=1$$</li>
+<li><strong>Oxygen</strong> normally has 6 valence electrons. Now it has <strong>8 electrons</strong>, so it <strong>gains</strong> 2: $$6-8=-2$$</li>
+</ul>
+</li>
+<li><strong>Final oxidation states</strong>:<br />
+The result of each difference $N_i-N_f$ (initial minus final electrons) gives the oxidation state: $$H_2^{+1}O^{-2}$$</li>
+<li><strong>Verify</strong>:<br />
+the <strong>sum of all oxidation states equals the total charge</strong> of the molecule:  $$2\cdot(+1)+(-2)=0$$</li>
+</ol>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="common-oxidation-states">Common Oxidation States</h3><div class="header-button"></div></div>
+<ul>
+<li>Oxygen (O)
+<ul>
+<li>for oxides: -2
+<ul>
+<li>e.g. water (<code>H₂O</code>), sodium oxide (<code>Na₂O</code>), perchloric anhydride (<code>Cl₂O₇</code>)</li>
+</ul>
+</li>
+<li>for dioxides: -1
+<ul>
+<li>e.g. hydrogen peroxide (<code>H₂O₂</code>), sodium peroxide (<code>Na₂O</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Hydrogen (H)
+<ul>
+<li>Almost always: +1
+<ul>
+<li>e.g. <code>H₂OH</code></li>
+</ul>
+</li>
+<li><strong>In metal hydrides</strong> (hydride ion, $H^{-}$): -1  <!-- ioni idruro -->
+<ul>
+<li>e.g. sodium hydride (<code>NaH</code>), potassium hydride  (<code>KH</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Alkali metals (Group 1)
+<ul>
+<li>Always: +1
+<ul>
+<li>Examples: $Li^+,Na^+,K^+$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Alkaline earth metals (Group 2)
+<ul>
+<li>Always: +2
+<ul>
+<li>Examples: $Mg^{2+}, Ca^{2+}, Ba^{2+}$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Carbon (C)
+<ul>
+<li>carbon monoxide (<code>CO</code>): +2</li>
+<li>Carbon dioxide (<code>CO₂</code>): +4</li>
+<li>Organic Compound:
+<ul>
+<li>Depends on the specific bonds — use the electron-counting process above to calculate.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Nitrogen (N)
+<ul>
+<li>multiple values</li>
+</ul>
+</li>
+<li>Fluorine (F)
+<ul>
+<li>Always: -1</li>
+</ul>
+</li>
+<li>Halogens
+<ul>
+<li>Halides: -1 <!-- Alogenuri -->
+<ul>
+<li>e.g.  chlorides ($Cl^-$), bromides($Bl^-$), iodides($I^-$)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="element-s-oxidation-states">Element's Oxidation States</h3><div class="header-button"></div></div>
+<p>The oxidation state on elements or elemental molecules is always zero</p>
+
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#oxidation-state">Oxidation State</a></li>
+<ul>
+<li class="toc-level-3"><a href="#process">Process</a></li>
+<ul>
+<li class="toc-level-4"><a href="#example--h₂o">Example: H₂O</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#common-oxidation-states">Common Oxidation States</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#element-s-oxidation-states">Element's Oxidation States</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Molecule</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+        <!--  <script type="module" src="/system/interactable-svg.js"></script> -->
+
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Chemistry/">Chemistry</a></p>
+<div class="header-block h1">
+<h1 id="molecule">Molecule</h1>
+<p>A <strong>molecule</strong> is a group of <strong>two or more atoms</strong> that are <strong>chemically bonded</strong> together in a fixed arrangement. It is the <strong>smallest unit</strong> of a <strong>chemical substance</strong> that retains the <strong>composition</strong> and <strong>chemical properties</strong> of that substance.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="composition-and-structure">Composition and Structure</h3><div class="header-button"></div></div>
+<ul>
+<li>Molecules are formed when atoms <strong>share electrons</strong> through <strong>covalent bonds</strong>.</li>
+<li>The atoms in a molecule are arranged in a <strong>definite geometric structure</strong>, governed by the nature of chemical bonding (bond angles, bond lengths).</li>
+<li>The overall <strong>electrical neutrality</strong> of a molecule distinguishes it from ions.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="compound">Compound</h3><div class="header-button"></div></div>
+<p>A <strong>compound</strong> is a substance formed when two or more elements chemically combine in fixed proportions. Examples include <strong>water (H₂O)</strong> and <strong>carbon dioxide (CO₂)</strong>.</p>
+<ul>
+<li>Binary Compound</li>
+<li>Ternary Compound</li>
+<li>Quaternary Compound</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="types-of-molecules">Types of Molecules</h3><div class="header-button"></div></div>
+<ol>
+<li><strong>Based on Atomic Composition</strong>:
+<ul>
+<li><strong>Elemental Molecules</strong>: Atoms of the <em>same element</em><br />
+→ e.g., <strong>O₂</strong>, <strong>N₂</strong>, <strong>Cl₂</strong><br />
+These represent <strong>pure elements</strong> in molecular form.</li>
+<li><strong>Compound Molecules</strong>: Atoms of <em>different elements</em><br />
+→ e.g., <strong>H₂O</strong>, <strong>CO₂</strong>, <strong>CH₄</strong><br />
+These are <strong>chemical compounds</strong>.</li>
+</ul>
+</li>
+<li><strong>Based on Number of Atoms</strong>:
+<ul>
+<li><strong>Diatomic Molecules</strong>: 2 atoms<br />
+→ e.g., <strong>O₂</strong>, <strong>HCl</strong></li>
+<li><strong>Triatomic Molecules</strong>: 3 atoms<br />
+→ e.g., <strong>H₂O</strong>, <strong>CO₂</strong></li>
+<li><strong>Polyatomic Molecules</strong>: More than 3 atoms<br />
+→ e.g., <strong>C₆H₁₂O₆</strong> (glucose), <strong>HNO₃</strong></li>
+</ul>
+</li>
+<li><strong>Based on Size and Complexity</strong>:
+<ul>
+<li><strong>Small molecules</strong>: Simple molecules like <strong>CO₂</strong>, <strong>NH₃</strong></li>
+<li><strong>Macromolecules</strong>: Large molecules like <strong>proteins</strong>, <strong>DNA</strong>, <strong>polymers</strong></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="properties-of-molecules">Properties of Molecules</h3><div class="header-button"></div></div>
+<ul>
+<li>Exhibit <strong>specific physical and chemical properties</strong> based on the arrangement of atoms and bonds (e.g., polarity, solubility).</li>
+<li>Can exist in all <strong>states of matter</strong> (solid, liquid, gas).</li>
+<li>Do <strong>not carry a net charge</strong>, unlike ions.</li>
+</ul>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="molar-mass"><a href="/Content/Molar-Mass/">Molar Mass</a></h4><div class="header-button"></div></div>
+<p><strong>Molar mass</strong> is the <strong>mass of one mole</strong>, represent also the sum of atomic masses.</p>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="chemical-bond"><a href="/Content/Chemical-Bond/">Chemical Bond</a></h4><div class="header-button"></div></div>
+<p>Electrons are involved in chemical reactions, as atoms often interact by transferring or sharing electrons. This defines <strong>ionic</strong> and <strong>covalent bonding</strong>.</p>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="oxidation-state"><a href="/Content/Oxidation-State/">Oxidation State</a></h3><div class="header-button"></div></div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="types">Types</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="oxide"><a href="/Content/Oxide/">Oxide</a></h4><div class="header-button"></div></div>
+<p>An <strong>oxide</strong> is a <strong>binary compound</strong> that consists of <strong>oxygen</strong> combined with <strong>another element</strong>.</p>
+</div>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="examples">Examples</h3><div class="header-button"></div></div>
+<table>
+<thead>
+<tr>
+<th>Molecule</th>
+<th>Composition</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O₂</td>
+<td>2 oxygen atoms</td>
+<td>Elemental</td>
+<td>Nonpolar, diatomic</td>
+</tr>
+<tr>
+<td>H₂O</td>
+<td>2 H + 1 O</td>
+<td>Compound</td>
+<td>Polar, bent structure</td>
+</tr>
+<tr>
+<td>CH₄</td>
+<td>1 C + 4 H</td>
+<td>Compound</td>
+<td>Nonpolar, tetrahedral</td>
+</tr>
+<tr>
+<td>C₆H₁₂O₆</td>
+<td>6 C, 12 H, 6 O</td>
+<td>Compound</td>
+<td>Sugar molecule (glucose)</td>
+</tr>
+<tr>
+<td>NH₃</td>
+<td>1 N + 3 H</td>
+<td>Compound</td>
+<td>Polar, trigonal pyramidal</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="molecule-vs-atom-vs-ion">Molecule vs Atom vs Ion</h3><div class="header-button"></div></div>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Atom</th>
+<th>Molecule</th>
+<th>Ion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Composition</td>
+<td>Single particle</td>
+<td>Two or more atoms</td>
+<td>Atom or molecule with charge</td>
+</tr>
+<tr>
+<td>Charge</td>
+<td>Neutral</td>
+<td>Neutral</td>
+<td>Positive (cation) or negative (anion)</td>
+</tr>
+<tr>
+<td>Bonding</td>
+<td>Not bonded</td>
+<td>Covalent bonds</td>
+<td>May involve ionic or covalent bonds</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>O</td>
+<td>O₂, H₂O</td>
+<td>Na⁺, Cl⁻, NH₄⁺</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#molecule">Molecule</a></li>
+<ul>
+<li class="toc-level-3"><a href="#composition-and-structure">Composition and Structure</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#compound">Compound</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#types-of-molecules">Types of Molecules</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#properties-of-molecules">Properties of Molecules</a></li>
+<ul>
+<li class="toc-level-4"><a href="#molar-mass">Molar Mass</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#chemical-bond">Chemical Bond</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#oxidation-state">Oxidation State</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#types">Types</a></li>
+<ul>
+<li class="toc-level-4"><a href="#oxide">Oxide</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#examples">Examples</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#molecule-vs-atom-vs-ion">Molecule vs Atom vs Ion</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

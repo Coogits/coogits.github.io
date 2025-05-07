@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Dot Product (Vector)</title>
+        <title>Dot Product</title>
         
         <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
         <meta charset="UTF-8">
@@ -17,6 +17,8 @@
         <script src="/system/styles.js"></script>
         <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
         <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+        <!--  <script type="module" src="/system/interactable-svg.js"></script> -->
+
 
         <link rel="stylesheet" href="/system/pygments.css">
         <link rel="stylesheet" href="/system/styles.css"> 
@@ -85,7 +87,7 @@
         <div class="mdBody">
 <p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Mathematics/">Mathematics</a> &gt; <a href="/Content/Algebra/">Algebra</a> &gt; <a href="/Content/Linear-Algebra/">Linear Algebra</a> &gt; <a href="/Content/Vector-(Math)/">Vector</a></p>
 <div class="header-block h1">
-<h1 id="dot-product--vector">Dot Product (Vector)</h1>
+<h1 id="dot-product">Dot Product</h1>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Dot_Product.svg" style="width: 250px; float: right; margin-left: 10px;" />The <strong>dot product</strong> (also known as the <strong>scalar product</strong> or inner product) is an algebraic operation that takes two vectors and returns a single number (scalar).</p>
 <br clear="both" />
 <button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
@@ -114,8 +116,16 @@ Using the modules and the <strong>cosine</strong> of the angle $\alpha$ between 
 The dot product is commutative: $$\vec{v_1}\cdot\vec{v_2}=\vec{v_2}\cdot\vec{v_1}$$</li>
 <li><strong>Distributive</strong><br />
 The dot Product is Distributive:   $$\vec{v_3}\cdot(\vec{v_1}+\vec{v_2})=\vec{v_3}\cdot\vec{v_1}+\vec{v_3}\cdot\vec{v_2}$$</li>
-<li><strong>Perpendicular vectors</strong><br />
-The dot product between two perpendicular vectors is zero:   $$\vec{v_1}\cdot\vec{v_2}=0\qquad\text{if }\vec{v_1}\perp\vec{v_2}$$</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="special-cases">Special cases</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Orthogonal vectors</strong><br />
+The dot product between two orthogonal (perpendicular $\theta=90\degree$) vectors is zero:   $$\vec{v_1}\cdot\vec{v_2}=0\qquad\text{if }\vec{v_1}\perp\vec{v_2}$$</li>
+<li><strong>Parallel Vectors</strong>
+If the vector are parallel there are a case where the vectors are <strong>concordant</strong> (same direction, $0\degree$):  $$\vec{v_1}\cdot\vec{v_2}=\lvert\vec{v_1}\rvert\lvert\vec{v_2}\rvert\quad\text{if }\vec{v_1}\parallel\vec{v_2}$$
+<strong>Discordant</strong> (Opposite direction, $180\degree$):  $$\vec{v_1}\cdot\vec{v_2}=-\lvert\vec{v_1}\rvert\lvert\vec{v_2}\rvert\quad\text{if }\vec{v_1}\parallel-\vec{v_2}$$</li>
 </ul>
 </div>
 </div>
@@ -140,7 +150,7 @@ The dot product between two perpendicular vectors is zero:   $$\vec{v_1}\cdot\ve
         </div>
 <nav class="table-of-contents" id="table-of-contents">
 <ul>
-<li class="toc-level-1"><a href="#dot-product--vector">Dot Product (Vector)</a></li>
+<li class="toc-level-1"><a href="#dot-product">Dot Product</a></li>
 <ul>
 <li class="toc-level-3"><a href="#symbols">Symbols</a></li>
 </ul>
@@ -151,6 +161,9 @@ The dot product between two perpendicular vectors is zero:   $$\vec{v_1}\cdot\ve
 </ul>
 <ul>
 <li class="toc-level-4"><a href="#properties">Properties</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#special-cases">Special cases</a></li>
 </ul>
 </ul>
 <ul>

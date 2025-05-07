@@ -21,20 +21,16 @@
       "title": "thank you for contacting us "
     },
     {
-      "url": "/Content/Transmission-Control-Protocol-(TCP)/",
-      "title": "transmission control protocol tcp"
-    },
-    {
-      "url": "/Content/Untitled/",
-      "title": "untitled"
-    },
-    {
       "url": "/Content/Alkali-Metals/",
       "title": "alkali metals"
     },
     {
       "url": "/Content/Alkaline-Earth-Metals/",
       "title": "alkaline earth metals"
+    },
+    {
+      "url": "/Content/Chemical-Elements-List/",
+      "title": "chemical elements list"
     },
     {
       "url": "/Content/Chemistry/",
@@ -45,8 +41,76 @@
       "title": "electron configuration"
     },
     {
-      "url": "/Content/Element-(Matter)/",
-      "title": "element"
+      "url": "/Content/Molar-Mass/",
+      "title": "molar mass"
+    },
+    {
+      "url": "/Content/Molecule/",
+      "title": "molecule"
+    },
+    {
+      "url": "/Content/Nomenclatura-Chimica/",
+      "title": "nomenclatura chimica"
+    },
+    {
+      "url": "/Content/Octet-Rule/",
+      "title": "octet rule"
+    },
+    {
+      "url": "/Content/Oxidation-State/",
+      "title": "oxidation state"
+    },
+    {
+      "url": "/Content/Oxide/",
+      "title": "oxide"
+    },
+    {
+      "url": "/Content/Chemical-Bond/",
+      "title": "chemical bound"
+    },
+    {
+      "url": "/Content/Covalent-Bond/",
+      "title": "covalent bond"
+    },
+    {
+      "url": "/Content/Ionic-Bond/",
+      "title": "ionic bond"
+    },
+    {
+      "url": "/Content/Atomic-Number/",
+      "title": "atomic number"
+    },
+    {
+      "url": "/Content/Chemical-Element/",
+      "title": "chemical element"
+    },
+    {
+      "url": "/Content/Mass-Number/",
+      "title": "mass number"
+    },
+    {
+      "url": "/Content/Metal,-Non-Metal,-Metalloid/",
+      "title": "metal nonmetal metalloid"
+    },
+    {
+      "url": "/Content/Periodic-Table/",
+      "title": "periodic table"
+    },
+    {
+      "url": "/Content/Ponderal-Laws/",
+      "title": "ponderal laws"
+    },
+    {
+      "url": "/Content/Carbon/",
+      "title": "carbon"
+    },
+    {
+      "url": "/Content/Hydrogen/",
+      "title": "hydrogen"
+    },
+    {
+      "url": "/Content/Oxygen/",
+      "title": "oxygen"
     },
     {
       "url": "/Content/Computer-Science/",
@@ -383,6 +447,10 @@
     {
       "url": "/Content/Telecommunications/",
       "title": "telecommunications"
+    },
+    {
+      "url": "/Content/Transmission-Control-Protocol-(TCP)/",
+      "title": "transmission control protocol tcp"
     },
     {
       "url": "/Content/Transport-Layer-(OSI)/",
@@ -817,6 +885,10 @@
       "title": "square of binomial special products"
     },
     {
+      "url": "/Content/Percentage/",
+      "title": "percentage"
+    },
+    {
       "url": "/Content/Proportion/",
       "title": "proportion"
     },
@@ -874,7 +946,7 @@
     },
     {
       "url": "/Content/Dot-Product-(Vector)/",
-      "title": "dot product vector"
+      "title": "dot product"
     },
     {
       "url": "/Content/Vector-(Math)/",
@@ -1313,22 +1385,6 @@
       "title": "physics"
     },
     {
-      "url": "/Content/Atomic-Theory/",
-      "title": "atomic theory"
-    },
-    {
-      "url": "/Content/Electron-(Atom)/",
-      "title": "electron"
-    },
-    {
-      "url": "/Content/Neutron-(Atom)/",
-      "title": "neutron"
-    },
-    {
-      "url": "/Content/Proton-(Atom)/",
-      "title": "proton"
-    },
-    {
       "url": "/Content/Classical-Physics/",
       "title": "classical physics"
     },
@@ -1665,6 +1721,26 @@
       "title": "thermodynamic transformation"
     },
     {
+      "url": "/Content/Particle-Physics/",
+      "title": "particle physics"
+    },
+    {
+      "url": "/Content/Atomic-Theory/",
+      "title": "atomic theory"
+    },
+    {
+      "url": "/Content/Electron-(Atom)/",
+      "title": "electron"
+    },
+    {
+      "url": "/Content/Neutron-(Atom)/",
+      "title": "neutron"
+    },
+    {
+      "url": "/Content/Proton-(Atom)/",
+      "title": "proton"
+    },
+    {
       "url": "/Content/Boyle-Robert/",
       "title": "boyle robert"
     },
@@ -1675,6 +1751,10 @@
     {
       "url": "/Content/Isaac-Newton/",
       "title": "isaac newton"
+    },
+    {
+      "url": "/Content/Max-Planck/",
+      "title": "max planck"
     },
     {
       "url": "/Content/Angular-Momentum/",
@@ -1837,6 +1917,10 @@
       "title": "physical constant"
     },
     {
+      "url": "/Content/Planck's-Constant/",
+      "title": "plancks constant"
+    },
+    {
       "url": "/Content/Universal-Gas-Constant/",
       "title": "universal gas constant"
     },
@@ -1903,6 +1987,10 @@
     {
       "url": "/Content/Local-AI-Chatbot/",
       "title": "local ai chatbot"
+    },
+    {
+      "url": "/Content/Unity-Project/",
+      "title": "unity project"
     }
   ]
 }

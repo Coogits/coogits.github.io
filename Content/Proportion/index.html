@@ -17,6 +17,8 @@
         <script src="/system/styles.js"></script>
         <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
         <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+        <!--  <script type="module" src="/system/interactable-svg.js"></script> -->
+
 
         <link rel="stylesheet" href="/system/pygments.css">
         <link rel="stylesheet" href="/system/styles.css"> 
@@ -99,20 +101,44 @@
 <div class="header-block h3">
 <div class="header-h3"><h3 id="notation">Notation</h3><div class="header-button"></div></div>
 <ul>
-<li><strong>Formal Definition</strong>: A proportion is a relationship of the form: $$\cfrac{a}{b}=\cfrac{c}{d} \qquad b,d\neq0$$</li>
+<li><strong>Formal Definition</strong>:<br />
+A proportion is a relationship of the form:  $$\cfrac{a}{b}=\cfrac{c}{d} \qquad b,d\neq0$$</li>
 </ul>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="percentage"><a href="/Content/Percentage/">Percentage</a></h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Percentage as Proportion</strong><br />
+Percentage is essentially a proportion:  $$\cfrac{\text{part}}{\text{whole}}=\cfrac{x\%}{100}$$</li>
+</ul>
+</div>
 </div>
 <div class="header-block h3">
 <div class="header-h3"><h3 id="properties">Properties</h3><div class="header-button"></div></div>
 <p>Applying the <a href="/Content/Properties-of-Equality/">Properties of Equality</a> to a generic proportion $\cfrac{{\textcolor{red}a}}{{\textcolor{green}b}} = \cfrac{{\textcolor{blue}c}}{{\textcolor{violet}d}}$:</p>
 <ul>
-<li><strong>Cross-Multiplication Property</strong>: Often used to solve proportions for unknown values: $${\color{red}a}{\color{violet}d}={\color{green}b}{\color{blue}c}$$</li>
-<li><strong>Reciprocal Property</strong>: the reciprocals are also equal: $$\cfrac{{\color{green}b}}{{\color{red}a}} = \cfrac{{\color{violet}d}}{{\color{blue}c}}$$</li>
-<li><strong>Alternando Properties (Means):</strong> you can switch the means: $$\cfrac{{\color{red}a}}{{\color{blue}c}} = \cfrac{{\color{green}b}}{{\color{violet}d}}$$</li>
-<li><strong>Alternando Properties (Extremes):</strong> you can switch the extremes: $$\cfrac{{\color{violet}d}}{{\color{green}b}} = \cfrac{{\color{blue}c}}{{\color{red}a}}$$</li>
-<li><strong>Componendo Property:</strong> then the ratio of the sum of the numerator and denominator to the denominator is also equal:$$\cfrac{{\color{red}a}+{\color{green}b}}{{\color{green}b}} = \cfrac{{\color{blue}c}+{\color{violet}d}}{{\color{violet}d}}$$</li>
-<li><strong>Dividendo Property</strong>: the ratio of the difference of the numerator and denominator to the denominator is also equal: $$\cfrac{{\color{red}a}-{\color{green}b}}{{\color{green}b}} = \cfrac{{\color{blue}c}-{\color{violet}d}}{{\color{violet}d}}$$</li>
-<li><strong>Componendo and Dividendo</strong>: It relates a proportion involving sums and differences to a simpler proportion: $$\cfrac{{\color{red}a}+{\color{green}b}}{{{\color{red}a}-\color{green}b}} = \cfrac{{\color{blue}c}+{\color{violet}d}}{{\color{blue}c}-{\color{violet}d}}$$</li>
+<li><strong>Cross-Multiplication Property</strong>:<br />
+Often used to solve proportions for unknown values: $${\color{red}a}{\color{violet}d}={\color{green}b}{\color{blue}c}$$</li>
+<li><strong>Reciprocal Property</strong>:<br />
+the reciprocals are also equal: $$\cfrac{{\color{green}b}}{{\color{red}a}} = \cfrac{{\color{violet}d}}{{\color{blue}c}}$$</li>
+<li><strong>Alternando Properties (Means):</strong><br />
+you can switch the means: $$\cfrac{{\color{red}a}}{{\color{blue}c}} = \cfrac{{\color{green}b}}{{\color{violet}d}}$$</li>
+<li><strong>Alternando Properties (Extremes):</strong><br />
+you can switch the extremes: $$\cfrac{{\color{violet}d}}{{\color{green}b}} = \cfrac{{\color{blue}c}}{{\color{red}a}}$$</li>
+<li><strong>Componendo Property:</strong><br />
+then the ratio of the sum of the numerator and denominator to the denominator is also equal:$$\cfrac{{\color{red}a}+{\color{green}b}}{{\color{green}b}} = \cfrac{{\color{blue}c}+{\color{violet}d}}{{\color{violet}d}}$$</li>
+<li><strong>Dividendo Property</strong>:<br />
+the ratio of the difference of the numerator and denominator to the denominator is also equal: $$\cfrac{{\color{red}a}-{\color{green}b}}{{\color{green}b}} = \cfrac{{\color{blue}c}-{\color{violet}d}}{{\color{violet}d}}$$</li>
+<li><strong>Componendo and Dividendo</strong>:<br />
+It relates a proportion involving sums and differences to a simpler proportion: $$\cfrac{{\color{red}a}+{\color{green}b}}{{{\color{red}a}-\color{green}b}} = \cfrac{{\color{blue}c}+{\color{violet}d}}{{\color{blue}c}-{\color{violet}d}}$$</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="rule">Rule</h3><div class="header-button"></div></div>
+<p>To build a proportion, always keep the same type of quantity in the same position: numerator or denominator.<br />
+You can even simplify both by the same unit — that's what makes the proportion valid.</p>
+<ul>
+<li>Example:<br />
+3 Apples costs 9€, how much cost 6 apples:  $$\cfrac{\text{€}}{\text{apples}}\to\cfrac{9}{3}=\cfrac{x}{6}$$</li>
 </ul>
 
 </div>
@@ -126,9 +152,15 @@
 </ul>
 <ul>
 <li class="toc-level-3"><a href="#notation">Notation</a></li>
+<ul>
+<li class="toc-level-4"><a href="#percentage">Percentage</a></li>
+</ul>
 </ul>
 <ul>
 <li class="toc-level-3"><a href="#properties">Properties</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#rule">Rule</a></li>
 </ul>
 </ul>
 </nav>

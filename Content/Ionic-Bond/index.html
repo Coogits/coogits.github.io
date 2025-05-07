@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ionic Bond</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+        <!--  <script type="module" src="/system/interactable-svg.js"></script> -->
+
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Chemistry/">Chemistry</a> &gt; <a href="/Content/Molecule/">Molecule</a> &gt; <a href="/Content/Chemical-Bond/">Chemical Bond</a></p>
+<div class="header-block h1">
+<h1 id="ionic-bond">Ionic Bond</h1>
+<p>An <strong>ionic bond</strong> is a type of chemical bond that occurs when <strong>electrons</strong> are transferred from one atom to another, resulting in the formation of <strong>oppositely charged ions</strong>.<br />
+This typically happens between a <strong>metal</strong> and a <strong>non-metal</strong>.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="process">Process</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Condition</strong>:<br />
+the two atoms have a difference in electronegativity greater than 1.9</li>
+<li><strong>Formation</strong>:
+<ul>
+<li>The metal atom loses one or more electrons to become a positively charged ion (<strong>cation</strong>).</li>
+<li>The non-metal atom gains the electrons to become a negatively charged ion (<strong>anion</strong>).</li>
+</ul>
+</li>
+<li><strong>Attraction</strong>:<br />
+The oppositely charged ions are attracted to each other due to the <a href="/Content/Electrostatic-Force/">Electrostatic Force</a>, forming a stable compound.</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="metals-and-non-metals">Metals and non-Metals</h3><div class="header-button"></div></div>
+<p>A list of Metals (Blue) and non-Metals (red) elements
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Metalli%2C_semimetalli%2C_nonmetalli.png" style="width: 100%" /></p>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="example">Example:</h3><div class="header-button"></div></div>
+<p>In <strong>sodium chloride (NaCl)</strong>:</p>
+<ul>
+<li><strong>Sodium (Na)</strong> loses one electron to become <strong>Na⁺</strong>.</li>
+<li><strong>Chlorine (Cl)</strong> gains one electron to become <strong>Cl⁻</strong>.</li>
+<li>The positive <strong>Na⁺</strong> and negative <strong>Cl⁻</strong> ions are attracted to each other, forming the ionic bond in <strong>NaCl</strong>.</li>
+</ul>
+
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#ionic-bond">Ionic Bond</a></li>
+<ul>
+<li class="toc-level-3"><a href="#process">Process</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#metals-and-non-metals">Metals and non-Metals</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#example">Example:</a></li>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

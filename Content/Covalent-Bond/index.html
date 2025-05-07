@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Covalent Bond</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+        <!--  <script type="module" src="/system/interactable-svg.js"></script> -->
+
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Chemistry/">Chemistry</a> &gt; <a href="/Content/Molecule/">Molecule</a> &gt; <a href="/Content/Chemical-Bond/">Chemical Bond</a></p>
+<div class="header-block h1">
+<h1 id="covalent-bond">Covalent Bond</h1>
+<p>A <strong>covalent bond</strong> is a type of chemical bond formed when two <strong>atoms</strong> share one or more <strong>pairs of electrons</strong> in order to achieve a full outer electron shell, typically in <strong>non-metals</strong>.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="characteristics">Characteristics</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Strong Chemical Bond</strong>:<br />
+the <strong>covalent bond is considered a strong chemical bond</strong>.
+<ul>
+<li>It involves the <strong>sharing of electrons</strong> between atoms, which creates a <strong>stable electron configuration</strong>.</li>
+<li>The <strong>electrostatic attraction</strong> between the positively charged nuclei and the shared electrons holds the atoms tightly together.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="process">Process</h3><div class="header-button"></div></div>
+<ul>
+<li><strong>Formation</strong>:
+<ul>
+<li>Atoms share electrons to fill their outermost energy levels, achieving greater stability.</li>
+<li>Each shared pair of electrons constitutes one covalent bond.</li>
+</ul>
+</li>
+<li><strong>Characteristics</strong>:
+<ul>
+<li>Covalent bonds can form between atoms of the <strong>same element</strong> (e.g., <strong>H₂</strong>, <strong>O₂</strong>) or <strong>different elements</strong> (e.g., <strong>H₂O</strong>).</li>
+<li>The strength of a covalent bond depends on the number of electron pairs shared: single, double, or triple bonds.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="types-of-covalent-bonds">### Types of Covalent Bonds</h3><div class="header-button"></div></div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="by-quantity-of-shared-electrons">By Quantity of Shared Electrons</h4><div class="header-button"></div></div>
+<div class="header-block h5">
+<h5 id="1--single-covalent-bond">1. Single Covalent Bond</h5>
+<ul>
+<li>In a <strong>single covalent bond</strong>, two atoms share <strong>one pair of electrons</strong>.</li>
+<li>It is the most common type of bond and is typically formed between atoms of <strong>non-metals</strong>.</li>
+<li><strong>Example</strong>:<br />
+In <strong>hydrogen (H₂)</strong>, each hydrogen atom shares one electron, forming a single covalent bond: $$H-H$$</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="2--double-covalent-bond">2. Double Covalent Bond</h5>
+<ul>
+<li>A <strong>double covalent bond</strong> involves the sharing of <strong>two pairs of electrons</strong> between two atoms.</li>
+<li>This bond is stronger than a single covalent bond.</li>
+<li><strong>Example</strong>:<br />
+In <strong>oxygen (O₂)</strong>, two oxygen atoms share two pairs of electrons: $$O=O$$</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="3--triple-covalent-bond">3. Triple Covalent Bond</h5>
+<ul>
+<li>A <strong>triple covalent bond</strong> occurs when <strong>three pairs of electrons</strong> are shared between two atoms.</li>
+<li>It is even stronger than a double bond.
+<strong>Example</strong>:<br />
+In <strong>nitrogen (N₂)</strong>, two nitrogen atoms share three pairs of electrons: $$N\equiv N$$</li>
+</ul>
+</div>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="by-electronegativity-difference">By Electronegativity Difference</h4><div class="header-button"></div></div>
+<div class="header-block h5">
+<h5 id="polar-covalent-bond">Polar Covalent Bond</h5>
+<ul>
+<li>A <strong>polar covalent bond</strong> forms when two atoms share electrons <strong>unequally</strong>, resulting in a slight electrical dipole. One atom attracts the shared electrons more strongly due to its higher <strong>electronegativity</strong>.</li>
+<li>The atom with the greater electronegativity becomes slightly <strong>negative</strong>, and the other becomes slightly <strong>positive</strong>.</li>
+<li><strong>Example</strong>:<br />
+In <strong>water (H₂O)</strong>, oxygen is more electronegative than hydrogen, so the electrons are more attracted to oxygen, making it slightly negative and hydrogen slightly positive.</li>
+</ul>
+</div>
+<div class="header-block h5">
+<h5 id="nonpolar-covalent-bond">Nonpolar Covalent Bond</h5>
+<ul>
+<li>A <strong>nonpolar covalent bond</strong> occurs when two atoms share electrons <strong>equally</strong>. This typically happens between atoms of the same element or when the electronegativities of the two atoms are very similar.</li>
+<li><strong>Example</strong>:<br />
+In <strong>oxygen (O₂)</strong>, both oxygen atoms have the same electronegativity, so they share the electrons equally: $$O=O$$</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#covalent-bond">Covalent Bond</a></li>
+<ul>
+<li class="toc-level-3"><a href="#characteristics">Characteristics</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#process">Process</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#types-of-covalent-bonds">### Types of Covalent Bonds</a></li>
+<ul>
+<li class="toc-level-4"><a href="#by-quantity-of-shared-electrons">By Quantity of Shared Electrons</a></li>
+<ul>
+<li class="toc-level-5"><a href="#1--single-covalent-bond">1. Single Covalent Bond</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#2--double-covalent-bond">2. Double Covalent Bond</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#3--triple-covalent-bond">3. Triple Covalent Bond</a></li>
+</ul>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#by-electronegativity-difference">By Electronegativity Difference</a></li>
+<ul>
+<li class="toc-level-5"><a href="#polar-covalent-bond">Polar Covalent Bond</a></li>
+</ul>
+<ul>
+<li class="toc-level-5"><a href="#nonpolar-covalent-bond">Nonpolar Covalent Bond</a></li>
+</ul>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chemical Bound</title>
+        
+        <link rel="icon" type="image/x-icon" href="/system/Logo.ico">
+        <meta charset="UTF-8">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+
+        <script id="Prism-script" async src="/system/prism.js"></script>
+        <link href="/system/prism.css" rel="stylesheet" />
+        
+        <script type="text/javascript" src="/system/timeline.js"></script>
+        <script src="/system/search.js"></script>
+        <script src="/system/styles.js"></script>
+        <script src="/system/mathjax-config.js"></script>  <!-- Load MathJax Config -->
+        <script type="module" src="/system/mermaid-setup.js"></script> <!-- Load mermaid Config -->
+        <!--  <script type="module" src="/system/interactable-svg.js"></script> -->
+
+
+        <link rel="stylesheet" href="/system/pygments.css">
+        <link rel="stylesheet" href="/system/styles.css"> 
+        <link rel="stylesheet" href="/system/code.css"> 
+        <link rel="stylesheet" href="/system/callouts_style.css"> 
+        <link rel="stylesheet" href="/system/TOC.css"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <img src="/system/Logo.png" alt="Logo" height="100" class="center">
+
+        <div class="navbar">
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="navbar_hamburger()">&#9776;</a>
+            <div class="navbar-contents" id="navbar-contents">
+                <a href="/">&#x2302; Home</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <div class="dropdown">
+                    <button class="dropbtn">Math
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Mathematics/">Mathematics</a>
+                        <a href="/Content/Discrete-Mathematics/">Discrete Math</a>
+                        <a href="/Content/Arithmetic/">Arithmetic</a>
+                        <a href="/Content/Algebra/">Algebra</a>
+                        <a href="/Content/Geometry/">Geometry</a>
+                        <a href="/Content/Analysis-1/">Analysis 1</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Physics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Physics/">Physics</a>
+                        <a href="/Content/Classical-Physics/">Classical Physics</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Informatics
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/Content/Computer-Science/">Computer Science</a>
+                        <a href="/Content/Hardware/">Hardware</a>
+                        <a href="/Content/Software/">Software</a>
+                        <a href="/Content/Programming/">Programming</a>
+                    </div>
+                </div>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/Projects/">Projects</a>
+                <hr style="width:50%;text-align:left;margin-left:0">
+                <a href="/Content/About/">About</a>
+                <a href="/Content/Contact-Form/">Contacts</a>
+            </div>
+            <a href="/"><img src="/system/logo-name.svg" alt="Home" height="50"></a>
+            
+            <!-- Your navbar content here -->
+            <div class="search-container">
+                <input type="text" id="searchQuery" placeholder="Search..." onkeyup="searchContent()">
+            </div>
+        </div>
+        <ul id="searchResults"></ul>
+        <div class="mdBody">
+<p class="breadcrumb"><a href="/">Home</a> &gt; <a href="/Content/Chemistry/">Chemistry</a> &gt; <a href="/Content/Molecule/">Molecule</a></p>
+<div class="header-block h1">
+<h1 id="chemical-bound">Chemical Bound</h1>
+<p>A <strong>chemical bond</strong> is a <strong>force of attraction</strong> that holds <strong>atoms, ions, or molecules together</strong> in a chemical compound.<br />
+These bonds form because <strong>atoms seek to achieve a more stable electron configuration</strong>, often resembling that of a <strong>noble gas</strong> (full valence shell).<br />
+Chemical bonds involve the <strong>interaction of valence electrons</strong> between participating atoms.</p>
+<button class="toc-toggle" id="toc-toggle" onclick="toggleTOC()">&#8942;&#9776; Index &nbsp;&#751;</button><div class="header-block h3">
+<div class="header-h3"><h3 id="bond-energy">Bond Energy</h3><div class="header-button"></div></div>
+<p><strong>Bond energy</strong> (also known as <strong>bond dissociation energy</strong>) is the <strong>amount of energy required to break a chemical bond</strong> in a molecule, separating the atoms and converting the molecule into individual atoms.<br />
+It represents the strength of the bond and is typically measured in <strong>kilojoules per mole (kJ/mol)</strong> or <strong>calories per mole (cal/mol)</strong>.</p>
+</div>
+<div class="header-block h3">
+<div class="header-h3"><h3 id="strong-chemical-bonds">Strong Chemical Bonds</h3><div class="header-button"></div></div>
+<p><strong>Strong chemical bonds</strong> form between atoms based on the <strong>difference in electronegativity (ΔE)</strong> — a measure of how strongly an atom attracts electrons in a bond.</p>
+<ul>
+<li><strong>Formula</strong>:<br />
+<strong>Electronegativity Difference ($\Delta E$)</strong> determines the <strong>type of bond</strong>:: $$\begin{cases}\Delta E&lt;0.4&amp;\to\text{Covalent, Nonpolar}\\\Delta E=\{0.4, 1.9\}&amp;\to\text{Covalent, Polar}\\\Delta E&gt;1.9&amp;\to\text{Ionic}\end{cases}$$</li>
+</ul>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="covalent-bond"><a href="/Content/Covalent-Bond/">Covalent Bond</a></h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Definition</strong>: Formed by <strong>sharing of electrons</strong> between two atoms.</li>
+<li><strong>Occurs Between</strong>: Typically nonmetals.</li>
+<li><strong>Types</strong>:
+<ul>
+<li><strong>Single bond</strong> = 1 shared pair of electrons</li>
+<li><strong>Double bond</strong> = 2 shared pairs of electrons</li>
+<li><strong>Triple bond</strong> = 3 shared pairs of electrons</li>
+<li><strong>Nonpolar covalent bond</strong> = equal sharing of electrons</li>
+<li><strong>Polar covalent bond</strong> = unequal sharing of electrons (due to difference in electronegativity)</li>
+</ul>
+</li>
+<li><strong>Example</strong>: H₂O, CO₂</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="ionic-bond"><a href="/Content/Ionic-Bond/">Ionic Bond</a></h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Definition</strong>: Formed by the <strong>transfer of electrons</strong> from one atom to another.</li>
+<li><strong>Occurs Between</strong>: Metals (which lose electrons) and nonmetals (which gain them).</li>
+<li><strong>Result</strong>: Formation of oppositely charged ions (cations and anions) that attract each other.</li>
+<li><strong>Example</strong>: NaCl (Sodium Chloride)</li>
+</ul>
+</div>
+<div class="header-block h4">
+<div class="header-h4"><h4 id="metallic-bond">Metallic Bond</h4><div class="header-button"></div></div>
+<ul>
+<li><strong>Definition</strong>: A bond formed by the <strong>delocalized sharing of free electrons</strong> among a lattice of metal atoms.</li>
+<li><strong>Gives Rise To</strong>: Electrical conductivity, malleability, ductility.</li>
+<li><strong>Example</strong>: Copper (Cu), Iron (Fe)</li>
+</ul>
+
+</div>
+</div>
+</div>
+        </div>
+<nav class="table-of-contents" id="table-of-contents">
+<ul>
+<li class="toc-level-1"><a href="#chemical-bound">Chemical Bound</a></li>
+<ul>
+<li class="toc-level-3"><a href="#bond-energy">Bond Energy</a></li>
+</ul>
+<ul>
+<li class="toc-level-3"><a href="#strong-chemical-bonds">Strong Chemical Bonds</a></li>
+<ul>
+<li class="toc-level-4"><a href="#covalent-bond">Covalent Bond</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#ionic-bond">Ionic Bond</a></li>
+</ul>
+<ul>
+<li class="toc-level-4"><a href="#metallic-bond">Metallic Bond</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+
+        <footer>
+            <span class="left"><p>Author: Puccio Giovanni Battista</p></span>
+            <span class="left">Contact: <a href="/Content/Contact-Form/">pccgnn89@hotmail.it</a></span>
+        </footer>
+    </body>
+</html>

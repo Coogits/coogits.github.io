@@ -677,3 +677,37 @@ h4 a::after {
 }
 
 /*-----------------------------------*/
+
+.Interactable_svg {
+  width: 100%;
+  height: auto;  /* Set a height or adjust as needed */
+  max-height: 500px;
+  overflow: auto;
+  position: relative;
+}
+
+#svgObject {
+  width: 100%;  /* Set a fixed width in pixels */
+}
+
+#zoomInBtn,
+#zoomOutBtn {
+  display: flex;
+  position: absolute;
+  right: 10px; /* Place them at the right */
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 100; /* Make sure the buttons stay on top */
+}
+
+/* Position the Zoom Out button below the Zoom In button */
+#zoomOutBtn {
+  top: 50px; /* Move the Zoom Out button below the Zoom In button */
+}
+
+#zoomInBtn {
+  top: 10px; /* Top position for the Zoom In button */
+}
